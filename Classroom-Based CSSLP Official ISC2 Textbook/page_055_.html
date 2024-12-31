@@ -1,0 +1,842 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"
+    style="padding: 0px; font-size: 100%; --USER__lineHeight: 1; --USER__pageMargins: 1; --USER__view: readium-scroll-on;"
+    class="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Security Testing Strategy and Plan (6.1)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="overflow: hidden auto;">
+    <div xmlns:epub="http://www.idpf.org/2007/ops" epub:type="pagebreak" id="pagebreak_55"
+        class="hidden-pagebreak comment78305" title="55"></div>
+
+    <div xmlns:epub="http://www.idpf.org/2007/ops" id="dbb56a8f-9108-44c8-a76b-ca85546707c5"
+        class="screen rendered comment78305" aria-hidden="false">
+        <div class="screengrid comment78305">
+            <header class="screen__margin screen__header u-hide-element vstdonthighlight">
+
+                <div class="screen__heading u-float--clearfix comment78305">
+                    <div class="screen__icon u-float--left comment78305"></div>
+                    <h2 class="screen__title comment78305" tabindex="-1"></h2>
+                </div>
+
+
+                <div class="screen__instructions comment78305"></div>
+            </header>
+        </div>
+
+        <div class="screen__content comment78305">
+
+            <div class="block rendered comment78305">
+                <div id="bd4d508e-7fc8-4b86-9385-ab5e4f3b63cc" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Security Testing Strategy and Plan
+                                (6.1)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c2c61897-d09d-467e-afe1-5d97cf167959" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Each organization’s software testing strategy must address
+                                    functional and nonfunctional testing. Security testing plans will need to leverage
+                                    manual and automated tools, techniques, and processes. Development processes and
+                                    methodologies adopted by the organization (i.e., Agile and DevOps) may have a direct
+                                    impact on the level of test automation.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1fab65f2-7449-4dfa-925d-efab3d9a6bec" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Objectives<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="31fc2607-5acc-4ec2-b7de-91551cfcf02c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>Identify common security testing techniques.</li>
+                                    <li>Describe the testing environment.</li>
+                                    <li>Identify the organization's software security standards and guidelines.</li>
+                                    <li>Explain the benefits of the crowdsourced security and bug bounty program.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f06b996d-ea8a-4b2f-be76-e91fb75558f0" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Overview<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="62806a66-e42f-4e83-b9d8-1f90494c9369" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Ad hoc security testing is neither efficient nor effective.
+                                    Software enterprises must define a <strong><button
+                                            data-definition title="A reference to a high-level document that describes an organization’s overall approach to testing the software."
+                                            class="rendered">testing strategy</button> </strong>that informs functional
+                                    and nonfunctional test coverage based on attack vectors, a framework such as MITRE
+                                    ATT&amp;CK, threat types, or intelligence sources. Regardless of methodology, the
+                                    security testing strategy should define the organization's overall approach.</p>
+                                <p class="comment78305">Once an approach is established at the enterprise level,
+                                    development organizations should create test plans focused on executing software
+                                    testing strategy. The software testing plan should be facilitated by automated
+                                    testing tools when processes are repeatable and manual processes when automation is
+                                    not viable or a process will not be repeated. The test plan must include provisions
+                                    for measuring results. Without pass/fail criteria, the software test results cannot
+                                    be objectively evaluated.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="31fbb68c-67a3-4b90-92ba-c1c1f37a29df" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Security Testing Techniques<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="944b3980-3853-47c1-a917-269412dc3c72" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Application security testing techniques are numerous. Commonly
+                                    used security testing techniques include white box, black box, and gray box testing,
+                                    defined below.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6f3d2356-dd36-4897-be75-55e7ab8a215c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">White Box Testing<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c166fd06-ca2e-40a7-8cd2-7b7dbb9bae16" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">White box testing is a technique that involves the direct
+                                    analysis of source code. Keep in mind that static analysis security testing (SAST)
+                                    tools for white box testing scale well. In white box testing, the testers are given
+                                    knowledge of how the software is implemented and how it works. The testing focuses
+                                    on how the software does what it does.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7a92217c-d9ce-4e18-adab-e7fa4c5246f8" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--25 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_055_01.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_055_01.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 145.641px; left: 338.563px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 1: White Box Testing</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="18285d10-f58c-4e52-f529-84ab7c0ee742"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="17cfad0f-464a-4795-b71b-0b6f0eee4f87" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">White box testing is performed based on the knowledge of how the
+                                    system is implemented. It includes analyzing data flow, control flow, information
+                                    flow, coding practices, and exception and error handling within the system, to test
+                                    the intended and unintended software behavior. White box testing can be performed to
+                                    validate whether code implementation follows intended design, to validate
+                                    implemented security functionality, and to uncover exploitable
+                                    vulnerabilities.<sup>1</sup></p>
+                                <p class="comment78305">White box testing requires knowing what makes software secure or
+                                    insecure, how to think like an attacker, and how to use different testing tools and
+                                    techniques. The first step in white box testing is to comprehend and analyze
+                                    available design documentation, source code and other relevant development
+                                    artifacts; knowing what makes software secure is a fundamental requirement. Second,
+                                    to create tests that exploit software, a tester must think like an attacker. Third,
+                                    to perform testing effectively, testers need to know the different tools and
+                                    techniques available for white box testing. The three requirements do not work in
+                                    isolation, but together.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5e9ec071-c66a-481d-9193-167b2c91dfbc" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Black Box Testing<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1a29a97f-8992-4b50-aaae-d4f044711807" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Black box testing techniques, although appropriate for all
+                                    levels of testing (component through acceptance), are best suited for uncovering
+                                    software issues where specifications exist. With no knowledge of
+                                    components/structures, testing remains focused on inputs and outputs and what the
+                                    software does, rather than how it is done.</p>
+                                <p class="comment78305">Black box techniques should be used primarily to assess the
+                                    security of individual high-risk compiled components; interactions between
+                                    components; and interactions between the entire application or application system
+                                    with its users, other systems, and the external environment.<sup>2</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4e7c9b44-2e5b-4133-a042-86d92944a69d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>1</sup> Vincent C. Hu, Rick Kuhn, Dylan Yaga; National
+                                    Institute of Standards and Technology; NIST SP 800-192 -- Verification and Test
+                                    Methods for Access Control Policies/Models; <a
+                                        href="https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-192.pdf"
+                                        target="_blank">https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-192.pdf</a>;
+                                    retrieved July 2023.</p>
+                                <p class="comment78305"><sup>2</sup> Karen Scarfone, Murugiah Souppaya, Amanda Cody,
+                                    Angela Orebaugh; National Institute of Standards and Technology; NIST SP 800-115 --
+                                    Technical Guide to Information Security Testing and Assessment; <a
+                                        href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-115.pdf"
+                                        target="_blank">https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-115.pdf</a>;
+                                    retrieved July 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="49a1adb9-b8ee-4a0d-aca4-ff2f458e6c79" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--25 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_055_02.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_055_02.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 156.311px; left: 338.563px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 2: Black Box Testing</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="1fa1c3d2-741f-47e5-c51e-143386c68a73"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f2b16f46-3a34-4ebe-a03a-4fd8cbec9124" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Black Box Penetration Tests<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a638b456-a82d-4130-b19c-0626bef1dc3f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">While black box penetration test results can be impressive and
+                                    useful to demonstrate how vulnerabilities are exposed in a production environment,
+                                    they are not the most effective or efficient way to secure an application. It is
+                                    difficult for dynamic testing to test the entire code base, particularly if many
+                                    nested conditional statements exist. If the source code for the application is
+                                    available, it should be given to the security staff to assist them while performing
+                                    their review. It is possible to discover vulnerabilities within the application
+                                    source that would be missed during a black box engagement.<sup>3</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="fd858d3c-1983-4b73-ad0a-aa4646bd89f5" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>3</sup> Matteo Meucci and Andrew Muller, project leaders;
+                                    OWASP Testing Guide 4.0; <a
+                                        href="https://owasp.org/www-project-web-security-testing-guide/assets/archive/OWASP_Testing_Guide_v4.pdf"
+                                        target="_blank">https://owasp.org/www-project-web-security-testing-guide/assets/archive/OWASP_Testing_Guide_v4.pdf</a>;
+                                    retrieved July 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="bf2a761d-a3e0-4958-b0df-6a6ee79d59d2" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Gray Box Testing<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ebdcc9f1-69ba-463c-a378-0ef56d6d5bb8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Between black box and white box testing lies gray box testing,
+                                    which uses limited knowledge of the program internals. In principle, this could mean
+                                    that the tester knows about some parts of the source code and not others, but in
+                                    practice, it usually just means that the tester has access to design artifacts more
+                                    detailed than specifications or requirements. For example, the tests may be based on
+                                    an architecture diagram or a state-based model of the program’s behavior.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="54c02562-fdba-4f7c-bf70-5e8bf30b3b9f" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--75 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_055_03.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_055_03.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 131.061px; left: 490px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 3: Gray Box Testing</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="1eeb0400-1af7-45af-988a-22f1a5f0a977"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="af2b76c5-2be5-46ce-8cb2-c9869c10089b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Environment<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="75b3db96-e6b1-4064-8911-df90bb0cde81" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">There are several types of environments and trust boundaries
+                                    (the points where privilege levels change) that demarcate one environment from the
+                                    other. The threat model should include a logical and physical, end-to-end scenario,
+                                    and when you are performing environment testing, all the components should be
+                                    thoroughly tested.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="fa5fe870-4d9d-43c9-baf0-b3c60d7d3a0d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Interoperability<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="bf81ce45-6c13-41c2-92b4-f2f2b615ddb0" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">When conducting environmental testing, certain aspects of
+                                    software need to be tested. This includes upstream and downstream dependency checks
+                                    and configuration mismatch checks.</p>
+                                <ul>
+                                    <li><strong>Upstream and downstream dependencies check: </strong>It is critical to
+                                        consider the context of the application or software that you are testing as it
+                                        relates to the other applications, both upstream and downstream in the
+                                        environment. This is particularly true in cases that address cryptography. For
+                                        example, if an application encrypts data, then testing should make sure that the
+                                        downstream application that consumes that data has a way to decrypt it and that
+                                        in all upstream and downstream levels, the key to encrypt and decrypt is
+                                        appropriately secured.</li>
+                                    <li><strong>Configuration mismatch check: </strong>To prevent cases where the
+                                        software runs perfectly in development and testing environments but has issues
+                                        in production or user environments, it is critical to check for configuration
+                                        mismatches when conducting environment testing.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0d18bda5-3bc1-4910-875c-1b83cdb1bdc0" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Test Harness<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="33d009bf-3960-4b14-b03f-0987d2523e3f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Typically used for test automation and increased productivity, a
+                                    test harness consists of many items such as drivers, stubs, and other tools needed
+                                    to successfully run a test. Benefits of using a test harness include ability to
+                                    schedule a test, handling, complex conditions that could be difficult to simulate by
+                                    testers, keying in inputs for software under test, capturing outputs generated
+                                    during the test, and flexibility/support for debugging.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="fae74072-e5ec-44b6-bb02-73ca4f27b176" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Standards and Guidelines<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e61a67ee-3d13-4ab1-b8c7-fb4eb27ede6f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Examples of organizations that have produced documented
+                                    standards and guidelines relevant to software security include:</p>
+                                <ul>
+                                    <li>International Organization for Standardization (ISO)</li>
+                                    <li>National Institute of Standards and Technology (NIST)</li>
+                                    <li>Open-Source Security Testing Methodology Manual (OSSTMM)</li>
+                                    <li>Software Engineering Institute (SEI)</li>
+                                    <li>OWASP Testing Guide</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="bd8baabb-5a5a-49ec-bad6-9946f9addc07" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">International Organization for
+                                Standardization (ISO)<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8ddc390e-deb4-4efb-a5be-7d64204e4298" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The International Organization for Standardization (ISO) creates
+                                    documents that provide requirements, specifications, guidelines, or characteristics
+                                    that can be used consistently to ensure that materials, products, processes, and
+                                    services are fit for their purpose. These are two of their standards pertinent to
+                                    software security:</p>
+                                <ul>
+                                    <li><em>ISO/IEC 27000 series. </em>Information security management systems</li>
+                                    <li><em>ISO/IEC 15408. </em>Information technology, security techniques, evaluation
+                                        criteria for IT security</li>
+                                </ul>
+                                <p class="comment78305">The ISO/IEC 27000 family of standards helps organizations keep
+                                    information assets secure. Using this family of standards will help your
+                                    organization manage the security of assets such as financial information,
+                                    intellectual property, employee details, or information entrusted to you by third
+                                    parties.</p>
+                                <ul>
+                                    <li><em>ISO/IEC 27001. </em>The best-known standard in the family, this provides
+                                        requirements for an information security management system (ISMS). An ISMS is a
+                                        systematic approach to managing sensitive company information so that it remains
+                                        secure. It includes people, processes, and IT systems by applying a risk
+                                        management process. It can help small, medium, and large businesses in any
+                                        sector keep information assets secure. The ISO/IEC 27001 control sets include a
+                                        group of controls related to system acquisition, development, and maintenance.
+                                        Controls in this group aim to ensure that information security is an integral
+                                        part of information systems throughout the life cycle.</li>
+                                    <li><em>ISO/IEC 27034. </em>This is a standard for application security that offers
+                                        guidance on information security to those specifying, designing, and programming
+                                        or procuring, implementing, and using application systems.</li>
+                                    <li><em>ISO/IEC 15408. </em>This establishes the general concepts and principles for
+                                        the Common Criteria for Information Technology Security Evaluation. Common
+                                        Criteria is an international framework and standard for security specification
+                                        and evaluation of a variety of IT products (e.g., operating systems, TPM chips).
+                                        Common Criteria ratings can be used when evaluating products and building
+                                        confidence levels that certain products can meet an organization’s needs and
+                                        requirements. Evaluation Assurance Levels (EAL) of 1 through 7 are defined.
+                                        Selecting the right protection profile is the key to assurance and confidence
+                                        building.</li>
+                                    <li><em>ISO/IEC 29119. </em>This defines a set of standards for software testing
+                                        that can be used by any organization when performing any form of software
+                                        testing and using any life cycle. The standard provides context for the role of
+                                        software testing in quality management and as part of validation and
+                                        verification of software systems. It details implementations for tools including
+                                        static and dynamic.<ul>
+                                            <li>ISO/IEC/IEEE 29119-1: Software test definitions and concepts</li>
+                                            <li>ISO/IEC/IEEE 29119-2: Software test process model for any SDLC</li>
+                                            <li>ISO/IEC/IEEE 29119-3: Software test documentation and templates</li>
+                                            <li>ISO/IEC/IEEE 29119-4: Software test design</li>
+                                            <li>ISO/IEC/IEEE 29119-5: Software test case development</li>
+                                        </ul>
+                                    </li>
+                                    <li><em>ISO/IEC 25000. </em>This defines a standard known as Software Quality
+                                        Requirements and Evaluation (SQuaRE) aimed at organizing and enhancing software
+                                        quality requirements and evaluation processes.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="99d81e10-4fe6-4187-b819-db1f30fa4e4c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">NISTIR 8397<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="277ee37f-dcb3-4400-a50d-f83af2671939" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">NISTIR 8397: Guidelines on Minimum Standards for Developer
+                                    Verification of Software provides guidance for complying with the United States
+                                    Executive Order (EO) 14028, <em>Improving the Nation’s Cybersecurity. </em>Although
+                                    the document focuses on U.S. EO compliance, it provides excellent general coverage
+                                    of secure software testing processes from threat modeling to memory-safe source code
+                                    compilation.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="28201164-87dc-4e65-b0c7-59b904f4b775" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Open-Source Security Testing
+                                Methodology Manual (OSSTMM)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3d39dbaa-7733-4fdd-aa88-4a34416e4b5b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The Open-Source Security Testing Methodology Manual (OSSTMM)
+                                    offers guidelines for conducting comprehensive security testing that results in
+                                    consistent and measurable results.</p>
+                                <p class="comment78305">As published and described by ISECOM:</p>
+                                <p style="margin-left: 40px;" class="comment78305"><em>The Open-Source Security Testing
+                                        Methodology Manual (OSSTMM) provides a methodology for a thorough security test,
+                                        herein referred to as an OSSTMM audit. An OSSTMM audit is an accurate
+                                        measurement of security at an operational level that is void of assumptions and
+                                        anecdotal evidence. As a methodology it is designed to be consistent and
+                                        repeatable. As an open-source project, it allows for any security tester to
+                                        contribute ideas for performing more accurate, actionable, and efficient
+                                        security tests.<sup>4</sup></em></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b3951987-36d5-4fa5-b108-425d21b1af67" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>4</sup> Pete Herzog; ISECOM; OSSTMM3 - The Open Source
+                                    Security Testing Methodology Manual - Contemporary Security Testing and Analysis; <a
+                                        href="https://www.isecom.org/OSSTMM.3.pdf"
+                                        target="_blank">https://www.isecom.org/OSSTMM.3.pdf</a>; retrieved July 2023.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="24bbcf8b-027b-439c-adf1-13a66e814a1a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">OWASP Testing Guide<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="51915754-f3c4-4633-ab3b-50a0a723d789" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The OWASP Testing Guide covers the procedures and tools for
+                                    testing the security of applications and can be used as part of a comprehensive
+                                    application security verification.</p>
+                                <p class="comment78305">This guide can be used as a reference and as a methodology to
+                                    help determine the gap between existing practices and industry best practices. It
+                                    allows organizations to compare themselves against industry peers, to understand the
+                                    magnitude of resources required to test and maintain software, or to prepare for an
+                                    audit. The OWASP Testing Guide can benefit developers, software testers, and
+                                    security specialists.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="cff69560-9a11-4de8-b358-46f1680575d5" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Crowdsourcing<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ad7a9bbb-9cd1-46b4-8e4d-79f5e9b6a590" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Historically, the concept of turning to the public to seek
+                                    individuals’ ideas, opinions, feedback, and even contributions has produced good
+                                    results for organizations. Crowdsourcing is in general about involving a diverse
+                                    group of talent in producing creative work.</p>
+                                <p class="comment78305">As an emerging form of outsourcing software development,
+                                    crowdsourcing relies on the collective power of the development community and the
+                                    specialized skills within this community to achieve innovation. It relies on the
+                                    dissemination of tasks among considerably large and diverse groups of independent
+                                    workers.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5e452fc2-306a-443b-8485-652f4826b87b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Crowdsourced Security<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="9f44eec1-29bb-4a0c-99a6-819f82795247" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">It should be noted that crowdsourcing has created a business
+                                    model, and many services/activities may subsequently be crowdsourced. Given the
+                                    current shortage of cybersecurity talent, with respect to security testing,
+                                    communities of ethical vulnerability researchers have been established.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6fe0233b-214d-4658-afe1-1b3d40230356" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h5 class="heading heading--subheadingc comment78305">Bug Bounty<br /></h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b769b35a-20b5-4cd5-a098-1494502053ac" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Bug bounty programs are publicly available, community-driven
+                                    activities with the objective of finding vulnerabilities or exploits in software.
+                                    Penetration testers, who are sometimes called bug hunters, dedicate their time and
+                                    efforts to this task in return for recognition and compensation. Leveraging a
+                                    community of researchers and active testers that commit their efforts to identifying
+                                    software issues can benefit all organizations in various industries.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="screengrid comment78305">
+            <footer class="screen__margin screen__footer u-hide-element vstdonthighlight">
+                <div class="feedback comment78305">
+                    <div class="feedback__content js-feedback-focus comment78305" tabindex="-1"></div>
+                </div>
+                <div class="control-btns comment78305"></div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay-root vstdonthighlight rendered u-hidden comment78305" style="overflow-y: auto;">
+        <div class="modal-cover-holder comment78305">
+            <div class="modal-cover-outer comment78305">
+                <div class="modal-cover comment78305"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

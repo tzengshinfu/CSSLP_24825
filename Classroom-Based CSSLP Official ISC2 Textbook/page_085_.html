@@ -1,0 +1,348 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"
+    style="padding: 0px; font-size: 100%; --USER__lineHeight: 1; --USER__pageMargins: 1; --USER__view: readium-scroll-on;"
+    class="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Security of Third-Party Software (8.2)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="overflow: hidden auto;">
+    <div xmlns:epub="http://www.idpf.org/2007/ops" epub:type="pagebreak" id="pagebreak_85"
+        class="hidden-pagebreak comment78305" title="85"></div>
+
+    <div xmlns:epub="http://www.idpf.org/2007/ops" id="0aae7742-415c-405e-a260-66b210c6ced9"
+        class="screen rendered comment78305" aria-hidden="false">
+        <div class="screengrid comment78305">
+            <header class="screen__margin screen__header u-hide-element vstdonthighlight">
+
+                <div class="screen__heading u-float--clearfix comment78305">
+                    <div class="screen__icon u-float--left comment78305"></div>
+                    <h2 class="screen__title comment78305" tabindex="-1"></h2>
+                </div>
+
+
+                <div class="screen__instructions comment78305"></div>
+            </header>
+        </div>
+
+        <div class="screen__content comment78305">
+
+            <div class="block rendered comment78305">
+                <div id="16719f11-9938-4ea2-856c-a47a6b4e6d31" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Security of Third-Party Software
+                                (8.2)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="28dc28ce-daf8-4fbb-b890-648690d81abf" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Organizations frequently go to great lengths to assure their own
+                                    code’s security yet make assumptions about the security of third-party software.
+                                    Applications developed internally often rely on open-source and third-party
+                                    libraries and components. Security verification of these components is critical.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="fe100584-00ff-4c23-bc38-28d4da2141f5" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Objectives<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3c7b591b-731c-456b-ad19-3740eb5fbe8d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>Explain security risks associated with third-party software.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="59b3b15a-08cb-4495-a3a5-b74736414818" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Overview<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="eff0e469-9397-4842-a0af-025266bc2b3e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Tracing all the changes, releases, modifications, packaging, and
+                                    distribution that a component has undergone (i.e., determining its pedigree) is not
+                                    an easy task.</p>
+                                <p class="comment78305">OWASP’s Software Component Verification Standard (SCVS) can help
+                                    identify and reduce risk in a software supply chain.</p>
+                                <p class="comment78305">Attacks on the software supply chain can vary in complexity.
+                                    Securing code repositories and the build environment can help mitigate some risks,
+                                    as can code signing. In contrast, using insecure communication protocols and P2P
+                                    applications can introduce security risks.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3407f419-35b4-4c9f-9dfe-f7bddad042dc" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">OWASP Software Component Verification
+                                Standard<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c4d9298e-fdac-438a-b18c-ab9959e64f18" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The Software Component Verification Standard (SCVS) is a
+                                    community-driven effort to establish a framework for identifying activities,
+                                    controls, and best practices, which can help in identifying and reducing risk in a
+                                    software supply chain.</p>
+                                <p class="comment78305">SCVS has the following goals:</p>
+                                <ul>
+                                    <li>Develop a common taxonomy of activities, controls, and best-practices that can
+                                        reduce risk in a software supply chain.</li>
+                                    <li>Devise a path to baseline and mature software supply-chain
+                                        vigilance.<sup>7</sup></li>
+                                </ul>
+                                <p class="comment78305">According to OWASP’s Software Component Verification Standard,
+                                    SCVS provides a standardized way to assess supply chain transparency provided by
+                                    contract or outsourced software developers, based on the documentation and metadata
+                                    present in the supplier's software development workflow and/or provided with
+                                    software deliverables. Specifically, the provision of a software bill of materials
+                                    (SBOM) can be requested or required by software customers to establish supply chain
+                                    visibility and differentiate suppliers. Because of the tiered and topical structure
+                                    of SCVS, it can be used for analysis of alternatives and/or used in whole or in part
+                                    to evaluate proposals for procurement. SCVS controls at different levels can be used
+                                    to qualify eligibility for procurement, or as an element of numerical scoring of
+                                    proposals.<sup>8</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4e1cb8d9-54f5-4e5f-ab51-3d19b1b142cd" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>7</sup> OWASP Software Component Verification Standard; <a
+                                        href="https://owasp.org/www-project-software-component-verification-standard/"
+                                        target="_blank">https://owasp.org/www-project-software-component-verification-standard/</a>;
+                                    retrieved May 2023.</p>
+                                <p class="comment78305"><sup>8</sup> Software Component Verification Standard; <a
+                                        href="https://owasp-scvs.gitbook.io/scvs/using-scvs"
+                                        target="_blank">https://owasp-scvs.gitbook.io/scvs/using-scvs</a>; retrieved May
+                                    2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ff4acbc1-995a-47f7-a8e4-09b107657c4d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Interdiction Mitigation<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="122c3e75-37b5-459a-bdbb-9b06deab4fdb" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">As previously discussed, risks across the supply chain must be
+                                    identified, assessed, and managed. One of those risks is intentional supply chain
+                                    disruption. For example, cyberattacks on the software supply chain networks, which
+                                    would obviously be intentional, could cause a supply chain disruption.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="44ce558f-db89-406a-953d-7187cd63ab91" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Software Supply-Chain Attack<br />
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f98a0e48-0a9a-439c-83a1-153292016aa0" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Attacks on the software supply chain can vary in complexity. A
+                                    simple attack could be one that targets a patch site and introduces malware files
+                                    with the hope that the user downloads the malicious software instead of a legitimate
+                                    patch, for example. More sophisticated attacks could aim to introduce malicious
+                                    logic into the source code prior to the code being digitally signed.</p>
+                                <p class="comment78305">According to NIST, “Software supply chain attacks are
+                                    particularly bothersome and insidious because they violate the basic and assumed
+                                    trust between software provider and consumer. Customers have been correctly
+                                    conditioned to buy and install software only from trusted sources and to download
+                                    and use patches or updates only from authorized vendor sites. Now, customers must be
+                                    wary of performing those basic, proper and prudent cybersecurity tasks when
+                                    purchasing software and maintaining systems, since even authorized resources may be
+                                    compromised. Attackers have broken this trust by surreptitiously infecting software
+                                    with malware in the development and distribution process in ways virtually
+                                    impossible to detect. In these instances, attackers have successfully compromised
+                                    the software development cycle and inserted malware before the code has been
+                                    compiled and signed – therefore, creating a package that includes malware
+                                    undetectable by typical customers and anti-virus, anti-malware programs. In other
+                                    instances, attackers have disrupted distribution channels by placing dummy code,
+                                    updates and patches on sites that customers use to obtain software releases and,
+                                    ironically, security updates.”<sup>9</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="103a2a27-437a-45bb-9ff5-dcd1c00bf3ac" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>9</sup> National Institute of Standards and Technology;
+                                    “Software Supply Chain Attacks”; <a
+                                        href="https://csrc.nist.gov/CSRC/media/Projects/Supply-chain-Risk-Management/documents/ssca/2017-winter/NCSC_Placemat.pdf"
+                                        target="_blank">https://csrc.nist.gov/CSRC/media/Projects/Supply-chain-Risk-Management/documents/ssca/2017-winter/NCSC_Placemat.pdf</a>;
+                                    retrieved July 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c0fc20cf-0a56-434a-a526-4320226556b3" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Certification and Assessment<br />
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8d7c6d21-0bf5-4a2e-a3fc-56d1f8dfc729" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Organizations may opt to assess a potential supplier by
+                                    requesting SBOM or other artifacts, or by conducting an analysis via SCVS or other
+                                    methods. Presented in order of rigor, there are many acceptable means of validation
+                                    that include periodic reassessment such as self-attestation, site visits,
+                                    third-party assessments, and certifications. The level of rigor should align with
+                                    the criticality of the software or service being acquired with respect to the
+                                    inheriting organization. Suppliers should be given a higher level of trust if they
+                                    have been certified using third-party assessments when compared with
+                                    self-attestation.</p>
+                                <p class="comment78305">Software developers, system engineering integrators, and service
+                                    providers should embrace reuse of applicable assessment and certification
+                                    artifacts to support C-SCRM when available. Some examples might include supplier
+                                    <strong><button
+                                            data-definition title="The best-known standard for information security management systems. Provides guidance for establishing, implementing, maintaining, and continually improving an information security management system. Source: https://www.iso.org/standard/27001"
+                                            class="rendered">ISO 27001</button> </strong>certification or CMMC maturity
+                                    level. For assessing cloud software suppliers, the acquisition process may include
+                                    auditing of <strong><button
+                                            data-definition title="Formerly a separate tool for assessment of cloud implementation, this is now part of the Cloud Controls Matrix (CCM)."
+                                            class="rendered">Consensus Assessment Initiate Questionnaire (CAIQ)</button>
+                                    </strong>artifacts generated as part of a <strong><button
+                                            data-definition title="A tool for the systematic assessment of a cloud implementation that provides guidance on which security controls should be implemented by which actor within the cloud supply chain. Source: https://cloudsecurityalliance.org/research/cloud- controls-matrix/"
+                                            class="rendered">Cloud Controls Matrix (CCM)</button> </strong>effort by the
+                                    supplier. Artifact reuse is efficient and aids both acquisition and supplier to
+                                    realize cost savings. Security practitioners should help organizations identify and
+                                    include security assessment considerations early in the acquisition process. 
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="screengrid comment78305">
+            <footer class="screen__margin screen__footer u-hide-element vstdonthighlight">
+                <div class="feedback comment78305">
+                    <div class="feedback__content js-feedback-focus comment78305" tabindex="-1"></div>
+                </div>
+                <div class="control-btns comment78305"></div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay-root vstdonthighlight rendered comment78305 u-hidden" style="overflow-y: auto;">
+        <div class="modal-cover-holder comment78305">
+            <div class="modal-cover-outer comment78305">
+                <div class="modal-cover comment78305"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,1691 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"
+    style="padding: 0px; font-size: 100%; --USER__lineHeight: 1; --USER__pageMargins: 1; --USER__view: readium-scroll-on;"
+    class="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Reusable Technologies (4.3)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="overflow: hidden auto;">
+    <div xmlns:epub="http://www.idpf.org/2007/ops" epub:type="pagebreak" id="pagebreak_36"
+        class="hidden-pagebreak comment78305" title="36"></div>
+
+    <div xmlns:epub="http://www.idpf.org/2007/ops" id="0601885a-ee24-42ba-9014-27c5c870ca9c"
+        class="screen rendered comment78305" aria-hidden="false">
+        <div class="screengrid comment78305">
+            <header class="screen__margin screen__header u-hide-element vstdonthighlight">
+
+                <div class="screen__heading u-float--clearfix comment78305">
+                    <div class="screen__icon u-float--left comment78305"></div>
+                    <h2 class="screen__title comment78305" tabindex="-1"></h2>
+                </div>
+
+
+                <div class="screen__instructions comment78305"></div>
+            </header>
+        </div>
+
+        <div class="screen__content comment78305">
+
+            <div class="block rendered comment78305">
+                <div id="3eec5af5-6e1c-439f-9a21-fec2de91e7c6" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Reusable Technologies (4.3)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="66f23cf3-0d5a-4f01-880a-c1f7422c0e73" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Security practitioners are concerned with confidentiality,
+                                    integrity, and availability of the systems and software throughout the life cycle.
+                                    One consideration for maintaining the continuity of operations for systems includes
+                                    the useful life of all subcomponents, especially when a system is designed to last
+                                    an extended period. One way to reduce the risk of subcomponent replacement within
+                                    the system life cycle is to embrace modular components. Modular or reusable security
+                                    components can also reduce the overall financial impact of implementing secure
+                                    system designs—especially with authentication and authorization.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b6011b8e-8a65-49c4-a0c2-7e0f258d9ad1" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Objectives<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="df70dbea-6b46-4551-a6a3-a843512c913b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>Compare and distinguish various authentication and authorization mechanisms.
+                                    </li>
+                                    <li>Describe credential management.</li>
+                                    <li>Identify the principles and tools used in network security.</li>
+                                    <li>Describe the methods used to maintain database security.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7cf18b8c-f02e-4fae-a045-cca1989a1d3e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Overview<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="abfcbd1e-dcdb-424c-9f64-b7127e803c77" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The authentication function may be performed using single or
+                                    multiple factors. Single sign-on (SSO) is used to simplify authentication and
+                                    provide access to different resources on different systems. Federated identity
+                                    mechanisms aim to provide access to multiple systems across different enterprises.
+                                    SAML and OAuth support these concepts but have different workflows and may be better
+                                    suited for specific scenarios.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4528095a-b9b7-4e39-851e-3623b51f6e57" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Authentication<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ee2ac417-19a1-42a2-9512-4f4efece9ff7" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><strong><button
+                                            data-definition title="The act of identifying or verifying the eligibility of a station, originator, or individual to access specific categories of information."
+                                            class="rendered">Authentication</button> </strong>is the process of
+                                    verifying a subject’s identity through one or more authentication factors. This
+                                    verification may involve a password (something that you know), a physical token
+                                    (something that you have), or a biometric measure (something that you are).</p>
+                                <p class="comment78305">General authentication guidelines have been provided through
+                                    various resources, including OWASP; these include, among others:</p>
+                                <ul>
+                                    <li>Hashing passwords for storage versus encrypting them.</li>
+                                    <li>Using only safe functions to compare password hashes.</li>
+                                    <li>Transmitting passwords using strong transport such as TLS.</li>
+                                    <li>Providing generic authentication error messages.</li>
+                                </ul>
+                                <p class="comment78305">Broken authentication, one of the OWASP Top 10, serves as a good
+                                    example:</p>
+                                <ul>
+                                    <li><em>Threat Agents and Attack Vectors. </em>Attackers have access to hundreds of
+                                        millions of valid username and password combinations for credential stuffing,
+                                        default administrative account lists, automated brute force, and dictionary
+                                        attack tools. Session management attacks are well understood, particularly in
+                                        relation to unexpired session tokens.</li>
+                                    <li><em>Security Weakness. </em>The prevalence of broken authentication is
+                                        widespread due to the design and implementation of most identity and access
+                                        controls. Session management is the bedrock of authentication and access
+                                        controls and is present in all stateful applications. Attackers can detect
+                                        broken authentication using manual means and exploit them using automated tools
+                                        with password lists and dictionary attacks.</li>
+                                    <li><em>Impacts. </em>Attackers must gain access to only a few accounts, or just one
+                                        admin account, to compromise the system. Depending on the application’s domain,
+                                        this may allow money laundering, Social Security fraud, and identity theft, or
+                                        disclose legally protected highly sensitive information.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5f59b634-ee41-4e0d-897f-5c23e92b44e4" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Multifactor Authentication<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5dc6be6f-5755-4fe0-9cab-7a20e54d1c38" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><strong><button
+                                            data-definition title="An authentication process that involves using two or more distinct instances of the three factors of authentication for identity verification -- (something you know, something you have, something you are). The more factors used to determine a person’s identity, the greater the trust of authenticity."
+                                            class="rendered">Multifactor authentication (MFA)</button> </strong>involves
+                                    two or more factors. Once again, the primary factors used for authentication today
+                                    include something that you know, something that you have, and something that you
+                                    are.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7aa66b61-8c0c-41af-9963-c725e1800d28" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Single Sign-On<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f9d4134a-5bf3-4b69-bd8d-e2b3e07505a1" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Single sign-on (SSO) simplifies user authentication by allowing
+                                    subjects to log into a system with a single set of credentials and subsequently gain
+                                    access to resources on multiple systems without maintaining a different set of login
+                                    credentials. Details of how SSO works may be different from one implementation to
+                                    another, but they all use the concept of a central domain through which
+                                    authentication is performed.</p>
+                                <p class="comment78305">Various approaches and technologies have been introduced to
+                                    implement SSO and the related federation of identities for access management. In a
+                                    nutshell, eliminating multiple login systems in multiple domains requires
+                                    authentication to happen in a central domain and then be shared securely (i.e.,
+                                    using JSON signed Web Token) with other domains.</p>
+                                <p class="comment78305">Following the flow again for clarification from a high level,
+                                    when a subject attempts to access a resource in one domain, the subject is
+                                    redirected to the central authentication server. The absence or existence of an
+                                    authentication-related cookie determines whether the user has already been
+                                    authenticated or not. If no authentication-related cookie exists, one must be
+                                    generated. If one exists, the subject will be redirected back to the resource it was
+                                    originally trying to access.</p>
+                                <p class="comment78305">This is a simple case that omits many details, but it summarizes
+                                    the process. A discussion on SAML and OAuth will be presented later in this section.
+                                </p>
+                                <p class="comment78305">SSO systems are composed of a credential database, a master
+                                    secret server, and a single sign-on (SSO) server.</p>
+                                <p class="comment78305">Regardless of the approach or technologies used for this
+                                    purpose, safeguards and countermeasures must be put in place to mitigate the risk of
+                                    a single point of failure or compromise.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="43b6b564-1e0a-4543-866b-b57528157309" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Federated Identity<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6e3924a4-2a74-41ff-872d-92f0faf54f14" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">An interesting use case for SSO is in an environment where
+                                    multiple business partners allow a subject to undergo authentication and/or
+                                    authorization in one security domain, and subsequently to access resources in others
+                                    without the need for reauthentication. The concept has existed for many years, and
+                                    has been implemented using different approaches and technologies, including Security
+                                    Assertion Markup Language (SAML) and OAuth, depending on the objectives. SAML and
+                                    OAuth have different workflows, hence one may be better suited than the other for a
+                                    given scenario.</p>
+                                <p class="comment78305">SAML is used for both authentication and authorization between
+                                    two parties. There are two primary types of providers: a service provider (e.g.,
+                                    Office365) and an identity provider (e.g., Active Directory). The Service Provider
+                                    (SP) agrees to trust the Identity Provider (IdP) in the authentication process. This
+                                    is done through a SAML XML document sent by the IdP containing the user
+                                    authorization and authentication and then redirected to the service provider.
+                                    Relying on XML for transport, addressing security may require signing and encrypting
+                                    SAML requests.</p>
+                                <p class="comment78305">OAuth2 is an open standard used for authorization. OAuth only
+                                    authorizes devices, API, servers with access tokens rather than credentials, and it
+                                    works over HTTPS. Unlike SAML, OAuth does not use XML, and may rely on JSON for
+                                    transport. OAuth addresses some deficiencies of SAML in certain areas (e.g., mobile
+                                    platforms).</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d1232d48-57e2-4bee-9218-8b6cabe04ed1" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Authorization<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="382eb70a-38b7-46d1-b013-100c563a0476" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Upon successful authentication, authorization follows.
+                                    Authorization refers to rights and privileges granted to an individual or process
+                                    that enable access to computer resources and information assets.</p>
+                                <p class="comment78305">Simply put, authorization is the process where requests to
+                                    access a particular resource should be granted or denied. Authorization includes the
+                                    execution rules that determine what functionality and data the user (or Principal)
+                                    may access, ensuring the proper allocation of access rights after authentication is
+                                    successful.<sup>9</sup></p>
+                                <p class="comment78305">When designing authorization within the software, it is
+                                    important to ensure the rights and privileges of the subject are checked before
+                                    access is granted to the objects. Access control can be designed using different
+                                    models. The three primary access control models are:</p>
+                                <ul>
+                                    <li><em>Discretionary access control (DAC). </em>This model leaves an amount of
+                                        access control to the discretion of the object’s owner or anyone else who is
+                                        authorized to control the object’s access.</li>
+                                    <li><em>Nondiscretionary access control (NDAC). </em>As the name implies, policies
+                                        in this category have rules that are not established at the discretion of the
+                                        user.</li>
+                                    <li><em>Mandatory access control (MAC). </em>In this model, access control policy
+                                        decisions are made by a central authority, not by the individual owner of an
+                                        object, and the owner cannot change access rights.</li>
+                                </ul>
+                                <p class="comment78305">Additionally, access control can be role-based (RBAC) or
+                                    designed using the resource itself.</p>
+                                <p class="comment78305">As described by OWASP in its “Cheat Sheet Series:”</p>
+                                <p class="comment78305">“In Role-Based Access Control (RBAC), access decisions are based
+                                    on an individual’s roles and responsibilities within the organization or user base.
+                                </p>
+                                <p class="comment78305">“The process of defining roles is usually based on analyzing the
+                                    fundamental goals and structure of an organization and is usually linked to the
+                                    security policy. For instance, in a medical organization, the different roles of
+                                    users may include those such as a doctor, nurse, attendant, patient, etc. Obviously,
+                                    these members require different levels of access to perform their functions, but
+                                    also the types of web transactions and their allowed context vary greatly depending
+                                    on the security policy and any relevant regulations (HIPAA, Gramm-Leach-Bliley,
+                                    etc.).” </p>
+                                <p class="comment78305">The advantages of using this methodology are:</p>
+                                <ul>
+                                    <li>Roles are assigned based on organizational structure with emphasis on the
+                                        organizational security policy.</li>
+                                    <li>It is easy to use.</li>
+                                    <li>It is easy to administer.</li>
+                                    <li>It is built into most frameworks.</li>
+                                    <li>It aligns with security principles like segregation of duties and least
+                                        privileges.</li>
+                                </ul>
+                                <p class="comment78305">Problems that can be encountered while using this methodology
+                                    are:</p>
+                                <ul>
+                                    <li>Documentation of the roles and accesses must be strictly maintained.</li>
+                                    <li>Multitenancy cannot be implemented effectively unless there is a way to
+                                        associate the roles with multitenancy capability requirements (e.g., OU in
+                                        Active Directory).</li>
+                                    <li>There is a tendency for scope creep to occur.</li>
+                                    <li>It does not support data-based access control.</li>
+                                </ul>
+                                <p class="comment78305">Areas of caution while using RBAC are:</p>
+                                <ul>
+                                    <li>Roles must be transferred or delegated using strict signoffs and procedures.
+                                    </li>
+                                    <li>When users change their roles, the administrator must make sure that the earlier
+                                        access is revoked to ensure that they are assigned to roles on a need-to-know
+                                        basis.</li>
+                                    <li>Assurance for RBAC must be carried out using strict access control
+                                        reviews.<sup>10</sup></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="377584b2-c3a9-4bec-b010-bc2a39b3db21" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>9</sup> OWASP Foundation; “OWASP Cheat Sheet Series; <a
+                                        href="https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
+                                        target="_blank">https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html</a>;
+                                    retrieved June 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1e685546-6ee2-473f-9a55-e7ba7c8e64d7" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>10</sup> Ibid.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="57d732a4-81a0-41d6-a456-9baca8b2e461" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Credential Management<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="691ccdbe-6b38-41a9-85a2-e4a6e7096e38" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Managing credentials is a complex task that includes the
+                                    generation, verification, and life cycle of credentials.</p>
+                                <ul>
+                                    <li><em>Different forms of credentials. </em>Traditionally, credentials consist of a
+                                        user ID and password. They can come in different forms such as a smartcard or a
+                                        certificate.</li>
+                                    <li><em>Credential Management API (Windows). </em>Developers who write for Microsoft
+                                        Windows can use the Credential Management application programming interface
+                                        (API), including Credential Management User Interface (UI) functions, to obtain
+                                        and manage credential information such as usernames and passwords. These
+                                        functions request Windows account information to be used in place of the
+                                        credentials established while logging on. Such requests typically occur when the
+                                        logon credentials do not have permissions required by the application. The
+                                        Credential Management UI functions provide interfaces with the look and feel of
+                                        the Windows UI. These functions include customizable options that add a user’s
+                                        information to the user’s credentials store. </li>
+                                </ul>
+                                <p class="comment78305">A good credential management system should be flexible enough to
+                                    accommodate both internal and external access, differentiate roles and privileges,
+                                    and implement software security mechanisms for access control. Attacks directed
+                                    toward credential management systems will typically attempt to compromise a
+                                    credential that can be used in a privilege escalation attack. If detected, a process
+                                    must be in place to reissue credentials, which can be both expensive and
+                                    time-consuming. Security awareness training and setting appropriate management
+                                    expectations can go a long way toward preventing such attacks in the first place.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="33d2f285-847d-453d-a9a2-0546b459006a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Single Sign-On (SSO)<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2e39ae16-d3e1-41b6-a1f1-6a8554e783a2" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><strong><button
+                                            data-definition title="An authentication mechanism that allows a single identity to be shared across multiple applications."
+                                            class="rendered">Single Sign-On (SSO)</button> </strong>is an important
+                                    credential-management design consideration. It is also an important
+                                    interconnectivity design consideration. While the benefit of SSO is that it
+                                    simplifies user authentication across multiple applications (i.e., it requires the
+                                    user to log in only once and then be able to access applications or resources
+                                    downstream), it requires careful thought and consideration because it often
+                                    contradicts the complete mediation design principle. SSO is often implemented using
+                                    tokens that are created upon successful authentication and then passed around
+                                    between applications.</p>
+                                <p class="comment78305">Weak passwords in an SSO environment can pose a significant
+                                    risk. Single point of failure (SPOF) should also be considered. When implementing
+                                    SSO, along with design considerations for SPOF, necessary risk assessments should be
+                                    conducted and the risk posture identified.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="746d3369-5276-43c5-bd68-66b3e93b2ca2" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">X.509<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d33b45b0-0708-4a25-8365-669a74c2cdfc" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Before discussing digital certificates and the X.509 standard,
+                                    asymmetric algorithms and their function should be explored. The process is shown in
+                                    this figure.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f63eefd6-9f86-4bdd-8095-039f8eba1e62" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--75 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_036_01.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_036_01.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 244.359px; left: 476.594px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 10: Using Asymmetric Algorithms to Achieve
+                                        Confidentiality</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="f1c6cb7b-d73d-4021-b306-727fb528ca26"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="29063829-6cb7-4e60-82e1-c5f7a6941cde" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Asymmetric algorithms work based on a pair of keys: a private
+                                    key and a public key. Whichever key is used to encrypt a message, the other key will
+                                    be needed to decrypt the message. Which key is used to encrypt depends on the
+                                    objectives. To preserve the confidentiality of a message using asymmetric
+                                    algorithms, the message is encrypted using the public key of the message recipient,
+                                    so that only the message recipient—and no one else— may decrypt the message using
+                                    their private key.</p>
+                                <p class="comment78305">If the public key is to be made available securely to those who
+                                    need it (as the name “public” implies), a mechanism for this purpose would be
+                                    needed. The public-key infrastructure used for this purpose comprises several
+                                    components, including:</p>
+                                <ul>
+                                    <li>Certificate authority (CA)</li>
+                                    <li>Registration authority (RA)</li>
+                                    <li>Digital certificates</li>
+                                </ul>
+                                <p class="comment78305">X.509 is the standard for digital certificates. According to
+                                    X.509, there are several components (fields) in digital certificates, including the
+                                    public key and the validity period for the certificate. The certificate is normally
+                                    signed by the CA but may also be self-signed for specific purposes. Also keep in
+                                    mind that there are different types of certificates, including:</p>
+                                <ul>
+                                    <li>SSL client certificates</li>
+                                    <li>SSL server certificates</li>
+                                    <li>Object signing certificates</li>
+                                </ul>
+                                <p class="comment78305">When certificates expire, they are added to certificate
+                                    revocation lists (CRLs). These lists could potentially be long and time consuming to
+                                    process. They potentially may also be stale. Online Certificate Status Protocol
+                                    (OCSP) may address the shortcomings of CRLs.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0d3aebf1-3d06-4b47-8c01-faa96a6b5c46" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Flow Control<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1475c3be-5ec4-4170-89fd-5fec990a330f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">In distributed computing, the flow of information between
+                                    processes on two systems that may or may not be trusted poses security challenges.
+                                    Several security issues are related to information flow. Sensitive information
+                                    (e.g., bank account information, health information, Social Security numbers, credit
+                                    card statements) stored in a particular Web application should not be displayed on a
+                                    client browser to those who are not authorized to view that information. Protection
+                                    against malware such as spyware and Trojans means that network traffic that carries
+                                    malicious payload is not allowed to enter the network. By controlling the flow of
+                                    information or data, several threats to software can be mitigated and delivery of
+                                    valid messages guaranteed. The enforcement of security policies concerning the flow
+                                    of information to and from an application that is independent of code-level security
+                                    protection mechanisms can be useful in implementing security protection when the
+                                    code itself cannot be trusted. Firewalls, proxies, and middleware components such as
+                                    queuing infrastructure and technologies can be used to control the rate of data
+                                    transmission and allow or disallow the flow of information across trust boundaries.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8e937c80-8ed1-4347-b7d2-c3ff14763c4e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Proxy Servers<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5b27bdc2-cbde-47fa-9e31-e5ac33af4a4d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">By assuring that traffic always travels through a proxy (an
+                                    intermediary), various objectives may be achieved. Proxy servers may offer varying
+                                    levels of functionality. A proxy may be used as a gateway sitting between users and
+                                    the internet, in which case the proxy servers may also improve response time through
+                                    their caching capabilities.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4978812a-c548-4722-85c8-029f68368985" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Firewalls<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="57e288d3-8dcb-472d-9bb9-3cdaa363b527" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Firewalls are devices or programs that control the flow of
+                                    traffic between networks and hosts. As such, they enable organizations to delineate
+                                    security zones supporting various security postures in each zone. Firewalls are
+                                    commonly used to protect the internal trusted network from the outside, or control
+                                    connectivity to specific areas, and prevent unauthorized access to sensitive systems
+                                    and resources (e.g., production systems in the cloud). Firewalls may be network
+                                    based or host based. Web application firewalls (WAFs) can provide a layer of
+                                    protection for websites against common types of attacks including SQL injection and
+                                    cross-site scripting (XSS).</p>
+                                <p class="comment78305">For example, many enterprise networks employ firewalls to
+                                    restrict connectivity to and from the internal networks used to service more
+                                    sensitive functions, such as accounting or personnel. By employing firewalls to
+                                    control connectivity to these areas, an organization can prevent unauthorized access
+                                    to its systems and resources. Inclusion of a proper firewall provides an additional
+                                    layer of security. Organizations often need to use firewalls to meet security
+                                    requirements from mandates (e.g., FISMA); some mandates, such as the Payment Card
+                                    Industry Data Security Standard (PCI DSS), specifically require
+                                    firewalling.<sup>11</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b8b8044d-ca7d-46ad-a4e1-c311df858fab" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Protocols<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5660cb86-76c7-4217-85cd-91c8a3b5917b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Network protocols are a set of rules that govern the
+                                    communications between computers on a network. Rules of network protocol include
+                                    guidelines that regulate the following characteristics of a network: access method,
+                                    allowed physical topologies, types of cabling, and speed of data transfer. These are
+                                    some of the most common (present and past) network protocols:</p>
+                                <ul>
+                                    <li><em>Ethernet. </em>This uses an access method called CSMA/CD (carrier sense
+                                        multiple access/collision detection) for flow control.</li>
+                                    <li><em>Token ring. </em>This uses an access method that involves token passing for
+                                        flow control.</li>
+                                    <li><em>Fiber Distributed Data Interface (FDDI). </em>This is a network protocol
+                                        that is used primarily to interconnect two or more local area networks; it uses
+                                        an access method that involves token passing for flow control.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="dea79b6f-5887-4d16-98f2-69b565f9474f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>11</sup> Paul Hoffman, Karen Scarfone; National Institute
+                                    of Standards and Technology; <em>NIST SP-800-41, Rev. 1—Guidelines on Firewalls and
+                                        Firewall Policy; </em><a
+                                        href="https://www.govinfo.gov/content/pkg/GOVPUB-C13-f52fdee3827e2f5d903fa8b4b66d4855/pdf/GOVPUB-C13-f52fdee3827e2f5d903fa8b4b66d4855.pdf"
+                                        target="_blank">https://www.govinfo.gov/content/pkg/GOVPUB-C13-f52fdee3827e2f5d903fa8b4b66d4855/pdf/GOVPUB-C13f52fdee3827e2f5d903fa8b4b66d4855.pdf</a>;
+                                    retrieved June 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0dcbaf78-257f-4da9-b6f4-af776ac1914b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Queuing in Flow Control<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2ee690a0-207e-4575-b6b4-470df01963ea" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">A queue consists of a collection of data packets collectively
+                                    waiting to be transmitted by a network device using a predefined structure
+                                    methodology. These packets are bound to be routed over the network, lined up in a
+                                    sequential way with a changing header and trailer, and taken out of the queue for
+                                    transmission by a network device using some defined packet processing algorithm,
+                                    such as first in, first out (FIFO) order, or based on some priority.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="bb34bd8d-c655-4e20-8da2-dfe815f771e0" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Data Loss Prevention (DLP)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="853f6fb1-c1f2-4f6c-aa10-735f2c8a1e28" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">For a typical enterprise, millions of emails are sent and
+                                    received, and thousands of files are downloaded, saved, or transferred via various
+                                    channels or devices daily. Enterprises routinely store and transmit sensitive data
+                                    that customers, business partners, regulators, and shareholders expect them to
+                                    protect. Unfortunately, companies constantly fall victim to massive data loss, and
+                                    high-profile data leakage involving sensitive personal and corporate data continue.
+                                    Data loss could harm a company’s competitiveness and reputation and could also
+                                    invite compliance or reputational risks. Therefore, organizations should take
+                                    measures to understand the sensitive data they hold, how it is controlled, and how
+                                    to prevent data leaks.</p>
+                                <p class="comment78305">To properly safeguard sensitive data, organizations must develop
+                                    or adopt a classification system for data (e.g., unclassified, confidential, secret,
+                                    top secret) and label all data first. Each classification level should be protected
+                                    to a level commensurate with classification (i.e., data labeled top secret should be
+                                    safeguarded to higher levels than confidential data). In addition, metrics and
+                                    policies should be created with respect to data creation, storage, transmission, and
+                                    disposal. Organizations can implement technical controls, which are often referred
+                                    to as <strong><button
+                                            data-definition title="The ability to identify, monitor, and protect data in use, data in motion, and data at rest through deep packet content inspection, contextual security analysis of transaction, within a centralized management framework. CNSSI 4009-2015"
+                                            class="rendered">data loss prevention (DLP)</button> </strong>solutions. DLP
+                                    tools include features like application firewalls and IPS/IDS to facilitate data
+                                    transmission monitoring and approval using email alerts, logging, and traffic
+                                    blocking. DLP tools may be network-centric and monitor traffic or be installed on
+                                    user devices and servers. While some software and hardware are called DLP solutions,
+                                    the effort to prevent data confidentiality and integrity issues, starting with
+                                    labeling data, including all the above-mentioned actions, and ending with technical
+                                    tool implementations, is referenced as a DLP strategy where mitigations are included
+                                    in the overall organizational efforts for data management.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a55b4c94-eff8-42ac-a382-d1dbf074c154" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Virtualization<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="06caef34-ab28-41cf-8486-59d6d2cba326" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Virtualization involves sharing underlying resources to enable
+                                    more efficient and agile use of hardware, which drives management efficiency through
+                                    reduced personnel resourcing and maintenance. Virtualization can run multiple
+                                    operating systems (guests) and their associated applications on a single physical
+                                    host. The guest is an isolated software instance that is operable with other guests
+                                    also on the host, taking advantage of the resource abstraction capabilities provided
+                                    by the hypervisor to dynamically utilize resources from the host as needed. Hardware
+                                    virtualization, or platform virtualization, refers to the creation of a virtual
+                                    machine (VM) that acts like a real computer with an operating system.</p>
+                                <p class="comment78305">Software executed on these VMs is separated from the underlying
+                                    hardware resources. For example, a computer that is running Microsoft Windows may
+                                    host a VM that looks like a computer with the Linux operating system; Linux-based
+                                    software can be run on the VM.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a7916a70-e1c3-424a-a1f7-2272eef83c29" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Hypervisor<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="cc1c25a3-16e3-4e21-814e-590ea8d00a05" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">A <strong><button
+                                            data-definition title="The virtualization component that manages the guest OSs on a host and controls the flow of instructions between the guest OSs and the physical hardware. NIST SP 800-125"
+                                            class="rendered">hypervisor</button> </strong>is small form-factor software,
+                                    firmware, or hardware that gives the impression to the guest operating systems that
+                                    they are operating directly on the physical hardware of the host. It allows multiple
+                                    guest operating systems to share a single host and its hardware. The hypervisor
+                                    manages requests by VMs to access the physical hardware resources of the host,
+                                    abstracts them, and allows the VM to behave as if it is an independent machine.
+                                    There are two types of hypervisors:</p>
+                                <ul>
+                                    <li><em>Type 1: </em>
+                                        <ul>
+                                            <li>It is commonly known as an embedded, native, or bare-metal hypervisor.
+                                            </li>
+                                            <li>It works directly on the host hardware and can monitor operating systems
+                                                that run above the hypervisor.</li>
+                                            <li>Although small in size, its main task is sharing and managing hardware
+                                                resources between different guest operating systems.</li>
+                                        </ul>
+                                    </li>
+                                    <li><em>Type 2: </em>
+                                        <ul>
+                                            <li>It is installed after a traditional operating system and supports other
+                                                guest operating systems running above it as VMs.</li>
+                                            <li>It is completely dependent on the host operating system for its
+                                                operations.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="21e16ea3-96b6-4748-9029-3a3a6323e176" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Hypervisor Security<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4fce124e-e40d-48d1-8be9-1a0f5713bb96" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The hypervisor acts as the abstraction layer that provides the
+                                    management functions for required hardware resources among VMs.</p>
+                                <p class="comment78305">Compromising the hypervisor enables the hacker to gain control
+                                    over the VMs as well as the host. One example of a hypervisor attack is
+                                    hyperjacking, which involves installing a rogue hypervisor that can take complete
+                                    control of a host. This may be accomplished through the use of a VM-based rootkit
+                                    that attacks the original hypervisor, inserting a modified rogue hypervisor in its
+                                    place.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c6c43399-d4b1-4e2d-a6a2-7fb38b1b5ddf" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Software-Defined Infrastructure<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="eac502c6-42e7-4462-a0b5-dc07cba1f014" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">An infrastructure comprising Software Defined Networking (SDN),
+                                    Software Defined Storage (SDS), and Software Defined Compute (SDC) can provide the
+                                    opportunity for software to control the entire computing infrastructure. This would
+                                    enable the specification and configuration of the infrastructure resources that are
+                                    needed by an application to run, as part of the application’s code.</p>
+                                <p class="comment78305">From a security perspective, it is important to recognize that
+                                    software-defined infrastructure components such as SDN are not free of risk. Some of
+                                    the issues that were associated with the traditional architectures may still apply,
+                                    and new risks due to the new attack vectors (e.g., attack on SDN controller) should
+                                    also be taken into consideration.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f70b5feb-f225-48b7-b892-cbf959ef194f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Containers<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0d944e95-8ba5-4984-942e-1e3955a3c7a9" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Both VMs and containers allow multiple apps to share the same
+                                    physical infrastructure, but they use different methods of separation. VMs use a
+                                    hypervisor that provides hardware-level isolation of resources across VMs. Each VM
+                                    sees its own virtual hardware and includes a complete guest OS in addition to the
+                                    app and its data. VMs allow different OSs, such as Linux and Windows, to share the
+                                    same physical hardware.</p>
+                                <p class="comment78305">With containers, multiple apps share the same OS kernel instance
+                                    but are segregated from each other. The OS kernel is part of what is called the host
+                                    operating system. The host OS sits below the containers and provides OS capabilities
+                                    to them. Containers are OS-family specific; a Linux host can only run containers
+                                    built for Linux, and a Windows host can only run Windows containers. Also, a
+                                    container built for one OS family should run on any recent OS from that
+                                    family.<sup>12</sup></p>
+                                <p class="comment78305">VMs and containers each have their uses, and in fact some
+                                    container deployments may use the VM as opposed to running directly on the hardware.
+                                    This figure shows the VM deployment, a container deployment on “bare metal” (without
+                                    VMs), and a container deployment within a VM.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b23c37a0-1082-4764-a9e4-7087ba4ae83e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>12</sup> John Morello, Karen Scarfone, Murugiah Souppaya;
+                                    National Institute of Standards and Technology, <em>NIST SP 800-190— Application
+                                        Container Security Guide; </em><a
+                                        href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-190.pdf"
+                                        target="_blank">https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-190.pdf</a>;
+                                    retrieved June 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="effb8e32-469c-46e4-8a7c-467ca3052b3b" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--100 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_036_02.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_036_02.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 225.094px; left: 550.406px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 11: Virtual Machines and Container
+                                        Deployments<sup>13</sup></em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="38535c32-a997-4aa2-e89c-5dc9b735f8c4"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f6e2b1df-f546-4742-83a1-fb6c70c93f1a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Container Risks<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4a140c9c-c5bb-4747-a598-acf0036a9bcd" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">From a security perspective, the major risks to the core
+                                    components of container technologies include:</p>
+                                <ul>
+                                    <li>Compromise of an image or container</li>
+                                    <li>Misuse of a container to attack other containers, the host OS, other hosts, and
+                                        more</li>
+                                </ul>
+                                <p class="comment78305">Contributing to these risks are image risks, registry risks,
+                                    orchestrator risks, host OS risks, and others. For example, image risks may be due
+                                    to image vulnerabilities, image configuration defects, embedded malware, embedded
+                                    clear text secrets, or use of untrusted images.<sup>14</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a4ef82d7-5c27-4104-b81d-2ad4293138d8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>13</sup> Ibid.</p>
+                                <p class="comment78305"><sup>14</sup> For a comprehensive discussion of other types of
+                                    risks see NIST SP 800-190;</p>
+                                <p class="comment78305"><a
+                                        href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-190.pdf"
+                                        target="_blank">https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-190.pdf</a>.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f6fd2485-0c6c-4a7d-b114-3c0893d75e81" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Trusted Computing Base<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="49bf74ac-31df-4372-a023-a1f98b411b83" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">A <strong><button
+                                            data-definition title="Totality of protection mechanisms within a computer system, including hardware, firmware, and software, the combination responsible for enforcing a security policy. NIST SP 800-12 Rev.1"
+                                            class="rendered">trusted computing base (TCB)</button> </strong>is the
+                                    summation of all the hardware, firmware, and/or software components of a computer
+                                    system that are critical to its security. This means that those parts of a computer
+                                    system outside the TCB must not be able to misbehave in a way that would allow them
+                                    to violate the security policy.</p>
+                                <p class="comment78305">In contrast, the Trusted Platform Module (TPM) is a secure
+                                    cryptoprocessor. It is used to secure hardware by integrating cryptographic keys
+                                    into devices, the specification for which is written by a computer industry
+                                    consortium called Trusted Computing Group (TCG). <em>NIST SP 800-193— Platform
+                                        Firmware Resiliency Guidelines, </em>describes TPM and its capabilities as a
+                                    “security coprocessor capable of securely storing and using cryptographic keys and
+                                    measurements of the state of the platform. These capabilities can be used, among
+                                    other things, to secure data stored on the system, provide a strong device identity,
+                                    and to attest the state of the system.”</p>
+                                <p class="comment78305">Some software may take advantage of the TPM chip on the
+                                    motherboard, an example of which would be Microsoft Bitlocker.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7981bb6a-93c4-4177-96f1-049ed8bec888" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Database Security<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="043bc61a-6802-4b26-b108-34cd0afc8e70" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The database is a prime target for application-level attacks.
+                                    Application-level attacks are used to exploit vulnerabilities in your data access
+                                    code to gain access to the database. If all other attack vectors are closed, then
+                                    the application’s front door becomes the path of choice for an attacker to steal,
+                                    manipulate, and destroy data.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7569c14a-c7ce-49cd-b604-ce83ed4b0410" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Control Categories<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ea662899-148b-491e-a1f0-2ccf6fefb0fb" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li><em>Encryption. </em>Various precautions can be taken to secure databases. One
+                                        possibility is to encrypt sensitive data in the database and find mechanisms to
+                                        protect the encryption key. This can help mitigate the risk of unauthorized
+                                        disclosure for subjects without the knowledge of the key. Many database
+                                        management systems (DBMSs) support encryption. It is recommended that software
+                                        development teams familiarize themselves with the encryption capabilities of
+                                        their DBMS. In practice, the encryption solution required to achieve the
+                                        specific security objectives may be as simple as using the capabilities offered
+                                        by the DBMS or involve more complex solutions. For example, real-time I/O
+                                        encryption and decryption of the data and log files may be achieved through
+                                        Transparent Data Encryption (TDE), which may or may not be sufficient depending
+                                        on specifics of the requirements.<br />Note that for compliance with certain
+                                        standards, FIPS 140-2-compliant cryptographic services modules/providers may
+                                        have to be used.</li>
+                                    <li><em>Triggers. </em>A database trigger is a reference to a special type of
+                                        procedure that automatically executes in response to the occurrence of an event.
+                                        These events include INSERT, DELETE, UPDATE, CREATE, or even DROP among other
+                                        data manipulations or data definition events. Triggers can be useful for logging
+                                        events of special interest.</li>
+                                    <li><em>Views. </em>A database view can be thought of as a dynamic table—one that
+                                        can exclude certain columns from a table or one that spans multiple tables. This
+                                        can be valuable from a security perspective. When views are created, they may be
+                                        constructed in such a way that they will obscure the schema, which also is
+                                        valuable from a security perspective. The view is a way of portraying
+                                        information in the database. The best view for a particular purpose depends on
+                                        the information the user needs.<br />The view can be created by arranging the
+                                        data items in a specific order, highlighting certain items, or showing only
+                                        certain items. For any database, there are a number of possible views that may
+                                        be specified. Databases with many items tend to have more possible views than
+                                        databases with few items. Often thought of as a virtual table, the view doesn’t
+                                        actually store information but rather pulls it out of one or more existing
+                                        tables. Although impermanent, a view may be accessed repeatedly by storing its
+                                        criteria in a query. As well as being a security mechanism, the view can also be
+                                        used to hide complexity and support legacy code.</li>
+                                    <li><em>Privilege management. </em>Every database user needs certain privileges to
+                                        do their job. Granting appropriate privileges to appropriate users is the major
+                                        task in privilege management. Privilege is the key to unlock database access, so
+                                        managing privileges and roles is a vital responsibility of database
+                                        administrators. The administrator also needs to manage privileges for a user
+                                        role. The role is a named group of related privileges that is granted to users
+                                        or other roles. For databases with multiple users where many require a similar
+                                        set of access level, it is beneficial to use roles.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5b5d447a-eaf4-4849-99a2-afa1711f6225" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Programming Language Environment<br />
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6088e30e-7e35-49e1-8000-2198fbf03878" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">There are many programming languages. Some are functional like R
+                                    for statistics, and some are object-oriented such as C#, which is popular for .NET
+                                    framework development tasks. Some are high-level and like scripting— Python for
+                                    example—while others are low level such as Embedded C and used for developing
+                                    firmware. Abstracted from language, framework, and business use case considerations,
+                                    all software development efforts require environments for writing, running, testing,
+                                    and maintaining source code. Considerations often include compilers, linkers,
+                                    packagers, debuggers, emulators, and many other productivity tools for software
+                                    developers. The combination of modern development tools into a unified development
+                                    environment is referred to as an integrated development environment (IDE).</p>
+                                <p class="comment78305">Software design constraints, such as a mandated production
+                                    operating system, may drive language and IDE requirements. Some languages use an
+                                    intermediary runtime environment such as Java JVM and .NET Core. Using these
+                                    frameworks allows developers to write source and deploy to multiple hosting
+                                    operating systems. The intermediary runtime handles compatibility across platforms.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="aaf94f94-9ca6-4c11-9650-0124b433304a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Automatic Memory Management and
+                                Destruction of Unneeded Objects<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3eb06cc1-add7-4a08-abef-a11f996ef4cf" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Managed code refers to code written for managed programming
+                                    languages such as .NET and Java. These languages provide generalized ways to handle
+                                    the details of memory management and garbage collection. Garbage collection
+                                    facilitates the destruction of instantiated dangling objects in memory that have
+                                    gone out of scope but are not explicitly destroyed (closed), at the cost of a small
+                                    amount of overhead. This tradeoff ends error-prone tasks and allows the writing of
+                                    more compact, readable and error-free programs.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3a3f8308-327c-40db-b787-184d48759cb2" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Common Language Runtime (CLR)<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8a3a1c3f-4a61-45c6-b2ef-099515c43373" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The common language runtime (CLR) of the .NET Framework has its
+                                    own secure execution model that isn’t bound by the limitations of the operating
+                                    system it is running on. In addition, unlike the old principal-based security, the
+                                    CLR enforces security policy based on where code is coming from rather than who the
+                                    user is. This model, called code access security, makes sense in today’s environment
+                                    because so much code is installed over the internet and even a trusted user doesn’t
+                                    know when that code is safe.</p>
+                                <p class="comment78305">The CLR is the virtual machine component of Microsoft’s .NET
+                                    framework and is responsible for managing the execution of .NET programs. In a
+                                    process known as just-in-time (JIT) compilation, the compiled code is converted into
+                                    machine instructions that, in turn, are executed by the computer’s CPU. The CLR
+                                    provides additional services including memory management, type safety and exception
+                                    handling. All programs written for the .NET framework, regardless of programming
+                                    language, are executed by the CLR. It provides exception handling, garbage
+                                    collection, and thread management. CLR is common to all versions of the .NET
+                                    framework.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6a524389-d389-4277-8a5d-c957cdc82aef" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Java Virtual Machine<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a9b01732-5127-4725-8efc-899f4b93cb21" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The Java Virtual Machine (JVM) is an example of application
+                                    virtualization; it acts as an intermediary between the Java application code and the
+                                    operating system (OS).</p>
+                                <p class="comment78305">The Java Runtime Environment (JRE) is a bundle developed and
+                                    offered by Oracle Corporation that contains the Java Virtual Machine (JVM), class
+                                    libraries, and other components necessary to run Java applications and applets. The
+                                    JVM converts Java byte code into machine language and executes it. The JRE is both a
+                                    standalone and a web browser plug-in; the latter allows Java applets to run within a
+                                    browser. Without the JRE, Java programs and applets cannot be executed.<sup>15</sup>
+                                </p>
+                                <p class="comment78305">Security in Java relies on multiple mechanisms that include
+                                    subjecting bytecode to verification, and enforcing defined security policies to
+                                    prevent Java code from taking disallowed actions. This is accomplished through Java
+                                    bytecode verifier and Java security manager. There is also a garbage collector,
+                                    which facilitates memory management.</p>
+                                <p class="comment78305">Most general-purpose modern operating systems support
+                                    multitasking and manage resources (e.g., allocate/deallocate) for processes that
+                                    compete for these resources using various algorithms. Time-sharing is a common
+                                    method.</p>
+                                <p class="comment78305">Support for disk access and filesystems is also among the common
+                                    services of many operating systems. The particulars of the filesystem implementation
+                                    may be different from one operating system to another, but reliability and
+                                    optimization in utilization of the storage space are key requirements. Centralized
+                                    and distributed filesystems may have their own advantages and security challenges
+                                    that software security professionals need to understand.</p>
+                                <p class="comment78305">Operating systems may also include drivers for commonly used
+                                    devices; otherwise, these drivers must be obtained from other sources (e.g., device
+                                    manufacturer) before proper communication between the system and device can take
+                                    place. Assurance of the authenticity and integrity of all third-party software,
+                                    including drivers, should always be a consideration for information security
+                                    professionals. </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="40182466-13ed-406e-805a-79b7c2e27c2d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Operating System Controls and
+                                Services<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c0f341c2-5bae-43d3-8235-df860adb1177" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The operating system (OS) software manages the resources of the
+                                    system (e.g., CPU and memory) and provides a well-defined interface (i.e., through
+                                    system calls) for its services. The operating system (OS) comprises various
+                                    subsystems, including those responsible for scheduling tasks, memory management, and
+                                    I/O management. A typical operating system consists of some form of bootloader,
+                                    kernel, utilities, demons/services, shell/command interpreter, and graphical and
+                                    command line interfaces.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8a0aa26d-f2f7-444f-af41-e9e31d6c7237" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Kernel<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="64498d0e-947f-4418-a77b-c3c89f6f3bb7" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Known as the heart of the operating system, kernel services are
+                                    available to processes when needed.</p>
+                                <p class="comment78305">Modern operating systems have a clear distinction made between
+                                    the kernel mode and the user mode. This implies that kernel code executes at the
+                                    highest privilege level especially when compared with user application code.</p>
+                                <p class="comment78305">There is also the concept of the security kernel with the
+                                    responsibility for implementation of security functions such as the implementation
+                                    of the reference monitor to address the security principle of complete mediation. An
+                                    example of this is how your operating system validates whether certain operations
+                                    (e.g., read/write/execute) requested by a subject (process or user) on objects
+                                    (e.g., file within the filesystem) should be allowed.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="dd5b1822-8bb3-4213-8a97-88576861134d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Program Execution<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="00386d02-8756-4abe-b42b-2fd6d684a443" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Among the services provided by the operating system is the
+                                    provisioning of the ability to create a process from a program and assign resources
+                                    (e.g., memory space). One may better relate to this by thinking about how binaries
+                                    are loaded into the memory and execution is initiated.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c6982603-0090-47c1-96a7-c6853061612d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Kernel Interrupts<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="cb87d6d8-9b5c-45a9-9b20-364e72925e31" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Although discussion of kernel interrupts may only be relevant to
+                                    certain types of software developed today, it is important to understand that
+                                    interrupts are essential facilities that may be used to signal that an event needs
+                                    attention, allowing the operating system to take an action in response to the
+                                    occurrence of that event.</p>
+                                <p class="comment78305">An example is using the interrupts to signal to the processor
+                                    that a key has been pressed on the keyboard. Using this mechanism, one could
+                                    understand that this would be analogous to “Tap me on the shoulder to get my
+                                    attention” when some event occurs. This could certainly present a performance
+                                    advantage over constant polling of a device regarding the occurrence of some event.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="65b49c22-1944-4e11-b279-9ba924c09e62" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Modes of Operation<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="88ae8414-f240-4116-8f3b-4e21b08fa1a1" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Modern microprocessors support multiple modes, including at
+                                    least a supervisor mode to provide unlimited access to system resources and a user
+                                    mode restricting any such access.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="983b4ad4-d88d-4848-b859-41e87c50a768" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Memory Management<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d2d68867-6d37-4b14-b3fe-275a93240652" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Kernel must manage resources for various processes and threads
+                                    of execution. Memory space of a process requires protection from interference by
+                                    subjects. From a security perspective, memory is a critical resource whose improper
+                                    management/protection can lead to not only quality issues in software but also many
+                                    common software security vulnerabilities.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="700530c0-3b5c-428f-9f94-faa7988745b8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Virtual Memory<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f2d6a532-631a-44a6-9787-6d34ceb28a50" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Less frequently accessed memory can be temporarily stored on a
+                                    disk or other media to make that space available for use by other programs. Through
+                                    paging or segmentation techniques, the operating system may support the use of
+                                    virtual memory, that is, the usage of permanent storage space as an extension of the
+                                    main memory. This may be accomplished utilizing various algorithms used by the
+                                    operating system for this purpose.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4e95ea54-853f-4c8c-bb52-be931b892a31" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Other Operating System
+                                Facilities<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7da2a0af-cd68-4b69-839f-e6c437e38ab4" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>15</sup> National Institutes of Health; National Checklist
+                                    Program; Oracle JRE 8 UNIX STIG Ver 1, Rel 3 Checklist Details; <a
+                                        href="https://nvd.nist.gov/ncp/checklist/762"
+                                        target="_blank">https://nvd.nist.gov/ncp/checklist/762</a>; retrieved June 2023.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="screengrid comment78305">
+            <footer class="screen__margin screen__footer u-hide-element vstdonthighlight">
+                <div class="feedback comment78305">
+                    <div class="feedback__content js-feedback-focus comment78305" tabindex="-1"></div>
+                </div>
+                <div class="control-btns comment78305"></div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay-root vstdonthighlight rendered comment78305 u-hidden" style="overflow-y: auto;">
+        <div class="modal-cover-holder comment78305">
+            <div class="modal-cover-outer comment78305">
+                <div class="modal-cover comment78305"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

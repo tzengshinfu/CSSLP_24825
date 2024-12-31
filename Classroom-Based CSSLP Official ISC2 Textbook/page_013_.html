@@ -1,0 +1,467 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"
+    style="padding: 0px; font-size: 100%; --USER__lineHeight: 1; --USER__pageMargins: 1; --USER__view: readium-scroll-on;"
+    class="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Security Metrics (2.5)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="overflow: hidden auto;">
+    <div xmlns:epub="http://www.idpf.org/2007/ops" epub:type="pagebreak" id="pagebreak_13"
+        class="hidden-pagebreak comment78305" title="13"></div>
+
+    <div xmlns:epub="http://www.idpf.org/2007/ops" id="854eaec4-d739-4267-889c-d98b4052cc40"
+        class="screen rendered comment78305" aria-hidden="false">
+        <div class="screengrid comment78305">
+            <header class="screen__margin screen__header u-hide-element vstdonthighlight">
+
+                <div class="screen__heading u-float--clearfix comment78305">
+                    <div class="screen__icon u-float--left comment78305"></div>
+                    <h2 class="screen__title comment78305" tabindex="-1"></h2>
+                </div>
+
+
+                <div class="screen__instructions comment78305"></div>
+            </header>
+        </div>
+
+        <div class="screen__content comment78305">
+
+            <div class="block rendered comment78305">
+                <div id="01383148-ce4c-4672-bf9e-b4b7ceb68eb7" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Security Metrics (2.5)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="36427154-625d-4f6f-9acb-f9e9e808e9aa" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">According to NIST, metrics are tools designed to facilitate
+                                    decision making and improve performance and accountability through collection,
+                                    analysis, and reporting of relevant performance-related data. There are many
+                                    approaches that seek to provide actionable intelligence for software security.
+                                    Regardless of approach, security metrics should be aligned with or support business
+                                    goals.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f71b6b15-c76b-4609-9ea8-663b11a524aa" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Objectives<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="175579d8-913f-47b2-90b2-38d1bb1a3161" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>Identify the metrics in software development.</li>
+                                </ul>
+                                <p class="comment78305">Metrics are measurement information that must be clearly defined
+                                    before collection begins. Two common categories of general security metrics include
+                                    <button
+                                            data-definition title="A performance-based metric that measures strategic or operational targets and is often used for decision-making."
+                                        class="rendered"><strong xmlns="http://www.w3.org/1999/xhtml">key performance
+                                            indicator (KPI)</strong></button> and <strong><button
+                                            data-definition title="Critical predictors/indicators of undesirable events that can adversely impact an organization. The kind of metrics which are forward looking and contribute to the early warning sign that facilitates enterprise to report risks, prevent calamity, and remediate them promptly."
+                                            class="rendered">key risk indicator (KRI)</button>. </strong>KPIs are
+                                    metrics used by organizations to measure progress towards an organizational goal or
+                                    objective. Assuming security is part of organizationally defined goals then security
+                                    metrics would be included in organizational KPIs.
+                                </p>
+                                <p class="comment78305">KRIs are metrics that focus on monitoring risk. Typically, a
+                                    predefined threshold is established and once that threshold is reached, relevant
+                                    parties are alerted. KRI thresholds are defined largely by organizational risk
+                                    tolerance. KRIs aid in effectively reporting risk management results to stakeholders
+                                    so to inform organizational actions. KRIs focus on measuring risk management
+                                    efforts. KPIs focus on business goal performance.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b869b22f-2cf9-4073-83c1-7ec637645720" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Characteristics of Good Metrics<br />
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="24cfd9ca-5f54-4d04-b3b7-8c416a305204" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Characteristics of good metrics include:</p>
+                                <ul>
+                                    <li><em>They are consistent. </em>There should be no significant deviation between
+                                        each measurement.</li>
+                                    <li><em>They are contextually specific. </em>The metrics should be expressed in more
+                                        than one unit of measurement.</li>
+                                    <li><em>They are inexpensive. </em>The metrics should be generated automatically
+                                        instead of manually.</li>
+                                    <li><em>They are objective. </em>The findings should be indicative of the actual
+                                        state of security in the software or system, and not the opinion of the person
+                                        conducting the measurements or the stakeholder.</li>
+                                    <li><em>They are quantitative. </em>The metrics should be precise and expressed in
+                                        terms of cardinal numbers or as a percentage.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0c0d1fe3-1174-44b2-84cf-4e28226d7c23" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">General Software Development
+                                Metrics<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f1e1d48b-05ed-4b27-870a-b30ffc178ffd" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">DevSecOps methodology includes considerations for metrics
+                                    related to both the software development processes and the quality and security of
+                                    the software itself. In a rapid-paced delivery environment, metrics are important
+                                    for situational awareness as processes and products evolve. Below are some possible
+                                    operationsfocused metrics that can benefit both the business and software
+                                    stakeholders:</p>
+                                <ul>
+                                    <li>Deployment frequency</li>
+                                    <li>Lead time from development to production</li>
+                                    <li>Ratio of failed deployments</li>
+                                </ul>
+                                <p class="comment78305">Even if an organization has not embraced DevSecOps, it will
+                                    still depend on metrics for awareness. For instance, metrics regarding the average
+                                    amount of time to complete a feature (i.e., from the time that the requirements for
+                                    the feature are solidified and the user story is created, to the time that the
+                                    feature ends up in production) tracked over time could show increased or decreased
+                                    organizational efficiency. Perhaps an organization might create a metric to measure
+                                    the average amount of time to fix a software defect (i.e., from the time that the
+                                    defect is entered into the defect tracking system or into the backlog to the time
+                                    that the fix is applied and verified) based on priority. If higher priority software
+                                    defects sit in the backlog or work queue than lower priorities, then management may
+                                    want to investigate the reasoning.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8ada9f18-3ca2-4ada-8999-40fa93bcc6d2" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Software Assurance Metrics<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7d31795a-ae16-4e18-bcac-3a8ad567e820" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The previous section discussed the concept of operational
+                                    software metrics. Within software assurance metrics practitioners seek to understand
+                                    and describe the security flaws or technical debt of the software product that the
+                                    organization is creating. Or as defined by NIST, software assurance is the level of
+                                    confidence that software is free from vulnerabilities, either intentionally designed
+                                    into the software or accidentally inserted at any time during its life cycle, and
+                                    that the software functions as intended.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="85c1e980-5e87-4e53-bacb-467ba593759e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Cyclomatic Complexity<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="007a0b6b-5967-40f7-88ba-efdce1aeeff9" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Complexity almost always increases risk for projects and
+                                    processes, and software development is no exception. One method of measuring
+                                    software complexity is cyclomatic complexity. Cyclomatic complexity directly
+                                    describes the density of a code section (e.g., function block) and quantitatively
+                                    describes the number of possible linearly independent execution paths. Simply put,
+                                    it answers the question, “How many independent execution paths does a function
+                                    contain?” The higher the complexity measure the more risk an organization inherits
+                                    throughout the SDLC by committing the code section.</p>
+                                <p class="comment78305">For scope, a code section that contains no branching logic would
+                                    have a cyclomatic complexity of 1. Alternately, if the code section has two paths
+                                    for execution, then the cyclomatic complexity is 2. Below is a guide for
+                                    understanding the cyclomatic complexity consideration for a code section:</p>
+                                <ul>
+                                    <li>1-10—Simple (low risk)</li>
+                                    <li>1-20—Not Simple (moderate risk)</li>
+                                    <li>2-50—Complex (high risk)</li>
+                                    <li>&gt; 50 Untestable (very high risk)</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="81ee2979-ec4b-42e0-ae8d-cfa2ad6aa018" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Severity Levels<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b9c5c1a5-f95e-4eb3-890a-40771daa5070" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The NVD provides qualitative severity ratings based on
+                                    quantitative binning of Common Vulnerability Scoring System (CVSS) scores. These
+                                    categories of severity help organizations understand software flaws and prioritize
+                                    risk mitigating actions. At present there are two CVSS ratings that are utilized
+                                    (see below).</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="861f143e-f4f3-48a5-9c9d-cbd2c07ca882" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--75 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_013_01.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_013_01.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 130.906px; left: 476.594px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Table 2 Note: When referring to vulnerabilities and CVSS,
+                                        production code is implied.</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="9857a6b6-0b98-4d23-a20d-22a11f43b5b3"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="9d65f844-0746-4246-9cdf-ac1de35ce829" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Similarly, there is the Common Weakness Scoring System
+                                    (CWSS)<sup>15</sup>, which describes poor coding practices (before production)
+                                    within a range of 0 to 100. Often static analysis tools are used to discover
+                                    potential CWEs and assign a CWSS score for prioritization. Annually, the MITRE CWE
+                                    project releases a CWE TOP 25 list<sup>16</sup> based on the previous calendar years
+                                    data. Generally, as a minimum, organizations will reject source code additions that
+                                    contain coding issues related to the CWE TOP 25. The table below shows the results
+                                    from 2022.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c6d8d98c-b507-4c3b-ad87-1df958986e01" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--100 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_013_02.jpg" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./Domain_2_Page_13.jpg"
+                                    style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 345.375px; left: 550.406px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Table 5</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="7b797060-2b2a-4eeb-b9f1-597faee97eba"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="9e76fbe6-7393-4078-813a-956a0c2dad50" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">SAMATE<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8ca1df1f-512f-4fef-a089-fba5e7fc10fe" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The Software Assurance Metrics and Tool Evaluation (SAMATE)
+                                    project seeks to standardize software security metrics reporting for various
+                                    categories of software security assessment tools. For example, at the time of this
+                                    writing there are many vulnerability scanning tools that report the severities or
+                                    criticalities of defects differently. Without standardization of tool output,
+                                    aggregating and comparing vulnerability scanning tool results is a challenging
+                                    problem.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3fe73d1b-6dca-4a69-aba6-f548d096d68b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>15</sup> Common Weakness Enumeration: A Community Developed
+                                    List of Software and Hardware Weakness Types, Common Weakness Scoring System; <a
+                                        href="https://cwe.mitre.org/cwss/cwss_v1.0.1.html"
+                                        target="_blank">https://cwe.mitre.org/cwss/cwss_v1.0.1.html</a>; retrieved May
+                                    2023.</p>
+                                <p class="comment78305"><sup>16 </sup>Ibid.; <a
+                                        href="https://cwe.mitre.org/top25/archive/2022/2022_cwe_top25.html"
+                                        target="_blank">https://cwe.mitre.org/top25/archive/2022/2022_cwe_top25.html</a>;
+                                    retrieved June 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="17a3c8b0-d052-4425-bbbe-ebc01cbeccbc" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Measuring Software Security Through
+                                Attack Surface Evaluation<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ecbe21b4-1b85-4979-a0c4-04899ae95612" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Attack surface evaluation will be covered in detail in other
+                                    domains, but a brief introduction is necessary at this point. One established method
+                                    of measuring software security is a technique called attack surface evaluation. It
+                                    can help understand and manage application security risks as an application is
+                                    designed, implemented, and changed.</p>
+                                <p class="comment78305">In general, the larger the attack surface, the less secure the
+                                    application. With that noted, it should be expected that as an application evolves
+                                    over time and new features are added to it, its attack surface will increase
+                                    accordingly. In fact, the relative attack surface quotient (RASQ) may be used to
+                                    measure the attack surface of an application and track changes to the attack surface
+                                    over time. This method makes it possible to calculate an overall attack surface
+                                    score for the system and measure this score as changes are made to the system and to
+                                    how it is deployed.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="screengrid comment78305">
+            <footer class="screen__margin screen__footer u-hide-element vstdonthighlight">
+                <div class="feedback comment78305">
+                    <div class="feedback__content js-feedback-focus comment78305" tabindex="-1"></div>
+                </div>
+                <div class="control-btns comment78305"></div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay-root vstdonthighlight rendered comment78305 u-hidden" style="overflow-y: auto;">
+        <div class="modal-cover-holder comment78305">
+            <div class="modal-cover-outer comment78305">
+                <div class="modal-cover comment78305"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

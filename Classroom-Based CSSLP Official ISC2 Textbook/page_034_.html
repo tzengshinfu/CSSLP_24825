@@ -1,0 +1,2844 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"
+    style="padding: 0px; font-size: 100%; --USER__lineHeight: 1; --USER__pageMargins: 1; --USER__view: readium-scroll-on;"
+    class="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Security Architecture (4.1)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="overflow: hidden auto;">
+    <div xmlns:epub="http://www.idpf.org/2007/ops" epub:type="pagebreak" id="pagebreak_34"
+        class="hidden-pagebreak comment78305" title="34"></div>
+
+    <div xmlns:epub="http://www.idpf.org/2007/ops" id="9dbf7e46-92f2-4408-9239-73be77317a91"
+        class="screen rendered comment78305" aria-hidden="false">
+        <div class="screengrid comment78305">
+            <header class="screen__margin screen__header u-hide-element vstdonthighlight">
+
+                <div class="screen__heading u-float--clearfix comment78305">
+                    <div class="screen__icon u-float--left comment78305"></div>
+                    <h2 class="screen__title comment78305" tabindex="-1"></h2>
+                </div>
+
+
+                <div class="screen__instructions comment78305"></div>
+            </header>
+        </div>
+
+        <div class="screen__content comment78305">
+
+            <div class="block rendered comment78305">
+                <div id="4bd7b29c-92e7-4c3c-8835-065a1941ed84" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Security Architecture (4.1)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a2f136ba-e931-4fca-a648-bd36c21f9b66" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Building cyber-resilient software requires security to be
+                                    addressed at every architectural layer of a system. Security architecture aims to
+                                    provide guidelines for the secure design (and secure layering of functionality) of
+                                    software and systems. For systems designed absent of security architecture
+                                    considerations, organizations will have to bolster security by layering many
+                                    safeguards post-production to achieve an acceptable level of risk.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2a23ae1b-1ad6-48f0-8d2f-d5f32751841b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Objectives<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6e93d124-0140-4e8f-bbd6-b6b761008c8e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>Describe architecture and security-relevant design patterns.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6eeb3941-e6a6-42bc-aab9-ad80a1575a43" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Overview<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2b59e09a-5de9-4739-b176-ff52bec0ad0a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">A software security practitioner should understand how to assess
+                                    business needs to derive security architecture requirements. Cyber survivability
+                                    requirements will often be drafted to address the business need for confidentiality,
+                                    integrity, and availability of the software or system. This process often begins by
+                                    defining critical components whose function is essential to mission success. Design
+                                    decisions may be influenced by several factors, including legal and regulatory
+                                    requirements, benchmarking and good practices, cost and finance, and risk management
+                                    processes.</p>
+                                <p class="comment78305">According to OWASP, “The Security Architecture (SA) practice
+                                    focuses on the security linked to components and technology you deal with during the
+                                    architectural design of your software. Secure Architecture Design looks at the
+                                    selection and composition of components that form the foundation of your solution,
+                                    focusing on its security properties.”<sup>1</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="955c79e2-76d8-4e93-86c9-e3741bae2bda" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>1</sup> OWASP Foundation; <em>Security Architecture Model;
+                                    </em><a href="https://owaspsamm.org/model/design/security-architecture/"
+                                        target="_blank">https://owaspsamm.org/model/design/security-architecture/</a>;
+                                    retrieved June 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ea4f3f8c-f132-4c16-9b18-1680b768f014" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Zachman Framework<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="bf33765f-cc85-4070-8f49-ee0871d7a729" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">It can be difficult for large organizations to respond to
+                                    changes in shifting markets or, in some cases, adversarial forces. The Zachman
+                                    framework can assist by providing a mechanism for classifying organizational
+                                    architecture. Zachman is used to model preexisting organizational functions and
+                                    processes while controlling business changes. The framework contains 36 categories
+                                    for describing complex systems. These categories consist of six columns and six
+                                    rows, which result in a two-dimensional matrix.</p>
+                                <p class="comment78305">The columns ask enterprise-level questions. </p>
+                                <ul>
+                                    <li><em>What </em>are business data, information, and objects?</li>
+                                    <li><em>How </em>does business define processes?</li>
+                                    <li><em>Where </em>are business operations?</li>
+                                    <li><em>When </em>are business processes performed?</li>
+                                    <li><em>Why </em>is a system or software needed?</li>
+                                    <li><em>What </em>performance implications exist?</li>
+                                </ul>
+                                <p class="comment78305">The six rows of the framework are:</p>
+                                <ul>
+                                    <li><em>Planner View. </em>This describes the business purpose and strategy.</li>
+                                    <li><em>Owner View. </em>This reveals automation candidates.</li>
+                                    <li><em>Designer View. </em>This view outlines organizational system requirements.
+                                    </li>
+                                    <li><em>Implementer View. </em>This defines production constraints and design
+                                        details.</li>
+                                    <li><em>Subconstructor View. </em>This view defines implementation-specific details
+                                    </li>
+                                    <li><em>User View. </em>This is the view of the functioning system within the
+                                        operational environment.</li>
+                                </ul>
+                                <p class="comment78305">Though the framework is largely used for information
+                                    architecture, it can be applied to a business as a whole.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="316e97e9-09d3-41df-b37b-fc9ff91a764a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Sherwood Applied Business Security
+                                Architecture (SABSA)<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4a4f7f59-46b5-4625-94fe-e03a87a6f61b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Sherwood Applied Business Security Architecture (SABSA) was
+                                    developed to inform information security architectures using a risk-based enterprise
+                                    approach and includes guidance for service management. It shares many similarities
+                                    with the Zachman Framework but was independently developed. SABSA provides a means
+                                    to integrate multiple solutions while managing complexity. </p>
+                                <p class="comment78305">SABSA includes four life cycle phases: Strategy and Planning,
+                                    Design, Implementation, and Management and Measurement. The model contains six
+                                    layers: context, concept, logic, physical, component, and operational. Similar to
+                                    each row within Zachman, each SABSA layer has a domain or perspective. This aims to
+                                    ensure that security is considered equitably from many organizational perspectives.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6c150fe9-347f-4ba9-8a42-120848fd11a3" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin vst-draggable comment78305">
+                            <div class="c-x-scroll vst-draggable comment78305" style="width: 100%;">
+                                <div class="js-x-scroll c-x-scroll__scrollbox comment78305" style="">
+                                    <table class="c-table js-x-scroll-component" style="width: 100%;"
+                                        data-orig-width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" style="text-align: left;">Perspective</th>
+                                                <th scope="col" style="text-align: left;">Context</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Business</td>
+                                                <td>Contextual Architecture</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Architect</td>
+                                                <td>Conceptual Architecture</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Designer</td>
+                                                <td>Logical Architecture</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Constructor</td>
+                                                <td>Physical Architecture</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Technician</td>
+                                                <td>Component Architecture</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Manager</td>
+                                                <td>Management Architecture</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="c-x-scroll__gradient c-x-scroll__gradient--left comment78305"></div>
+                                <div class="c-x-scroll__gradient c-x-scroll__gradient--right comment78305"></div>
+                            </div>
+                            <p class="comment78305"><em>Table 1: SABSAZa</em></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0747716f-52c2-4f07-83e9-4fee983d69d0" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Security Control Identification and
+                                Prioritization<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8e19f1a2-557c-4770-a1ac-0a72ef7303ba" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Security controls are safeguards that mitigate risk of
+                                    preexisting systems. Physical, administrative, and technical controls may be
+                                    categorized by the functionality provided. Security controls may help to prevent,
+                                    deter, detect, or delay system disruptions or to correct and recover from security
+                                    incidents.</p>
+                                <p class="comment78305">Security controls may provide more than one function (e.g., CCTV
+                                    may be used for deterring intruders or for detecting intrusions). Controls should be
+                                    prioritized based on a range of criteria such as immediate need, security posture,
+                                    complexity, resource availability, cost, and/or applicable regulations/standards.
+                                    The following are some examples of control classifications by nature of the control.
+                                </p>
+                                <ul>
+                                    <li><em>Physical controls. </em>Fences, doors, locks, and fire extinguishers</li>
+                                    <li><em>Administrative controls. </em>Incident response processes, management
+                                        oversight, and security awareness training</li>
+                                    <li><em>Technical controls. </em>User authentication (login) and logical access
+                                        controls, antivirus software, and firewalls</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="312d47f3-fb55-42d2-8ed2-845ae711dd6b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Distributed Computing<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="96186925-c894-44f0-8a5e-fe66a6506cd7" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Distributed systems are composed of components that can run on
+                                    different systems and communicate over the network or even the internet (but appear
+                                    as one system or pool of resources to the end user) to solve a problem. Enhanced
+                                    efficiency and performance due to additional computational power could be presented
+                                    as one advantage of distributed computing.</p>
+                                <p class="comment78305">Over the years, technologies from various vendors have been
+                                    introduced that provide support for distributed objects. Distributed Component
+                                    Object Model (DCOM), Enterprise JavaBeans (EJB), and Common Object Request Broker
+                                    Architecture (CORBA) are among the technologies that were introduced for this
+                                    purpose.</p>
+                                <p class="comment78305">A few examples of distributed computing systems include the
+                                    World Wide Web, Hadoop Distributed File System (HDFS), and Google File System (GFS
+                                    or GoogleFS).</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="43121e69-57bf-42fd-bbe8-95add57404d3" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Benefits of Distributed Computing
+                                Systems<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d80faeb5-3702-4487-9ac5-c1ae8f387244" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">When compared to a centralized computing environment,
+                                    distributed computing can offer the following benefits:</p>
+                                <ul>
+                                    <li>Better price/performance ratio</li>
+                                    <li>More computation power</li>
+                                    <li>The ability to add computation power in increments as demanded by the business
+                                        to achieve growth</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0721684e-c831-450e-a1e4-875589bbb067" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Distributed Computing
+                                Architectures<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ea0c990b-2894-4109-a03a-81f4dee9a1d1" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Examples of distributed computing architectures include
+                                    Client-Server, 3-Tier, N-Tier, and Peer-to-Peer (P2P).</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7f672af2-50d3-425e-9991-15b7bde58816" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Client-Server Architecture<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0a68a28a-85d0-4e89-be61-97bdec9ab9ac" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">As implied by the name, this architecture consists of a client
+                                    and a server. The client component requests and consumes the service(s) that are
+                                    provided by the server component. From a security perspective, this would represent
+                                    an expanded attack surface as compared to centralized computing environment.
+                                    Adversaries can now go after the client, after the server, or after the
+                                    communication channel between the client and the server.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="88b7e94a-9484-431c-9090-ebf38b05983b" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--75 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_034_01.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_034_01.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 109.469px; left: 476.594px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 1: Client-Server Architecture</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="d49948d6-42a5-441c-eb20-0d9aca76ef9a"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8753158b-02f0-4178-9bbd-1fed9f3e09c7" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Three-Tier Architecture<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d8b16199-260e-40c3-b8d3-e9069eec7b54" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">As shown in the figure below, the three tiers in this
+                                    architecture include the presentation tier, the logic tier, and the data tier.
+                                    Security must be addressed at every tier of the architecture. </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0e2de048-6cee-4d06-a3cc-76464d01eafe" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--75 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_034_02.jpg" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_034_02.jpg" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 216.811px; left: 476.594px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure: 2: Tier Architecture</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="23e35ab0-af40-4072-8f70-fec183d25bfe"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="24f8a6bb-7127-48f0-9a46-72ddd4fcf34d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">N-Tier Architecture<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="595736e9-8700-494f-8c0f-b0c7a87b3e6b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Most enterprise web applications utilize the n-tiered
+                                    architecture that generally includes the web server tier, application server tier
+                                    and persistence (database) tier. There are various application-level threats
+                                    specific to each of the tiers, so security of these applications should be
+                                    considered in the context of the n-tiered architecture.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5d16205a-67ad-4c16-94b6-7178743e3e06" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--75 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_034_03.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./N-page_034_03.png"
+                                    style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 167.689px; left: 476.594px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 3: N-Tier Architecture</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="c9be4810-ff60-42b0-bd0a-92f915803754"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="78f31c0e-f3f2-49eb-aade-735c10e476c3" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">There are various application-level compensating controls that
+                                    must be provided at each tier. Some of those controls are provided by the underlying
+                                    set of technologies used (J2EE and .NET examples are discussed later), while others
+                                    must be provided by the programmers, architects, and designers involved in building
+                                    the enterprise web application.</p>
+                                <p class="comment78305">Threats at the web tier include<sup>2</sup>:</p>
+                                <ul>
+                                    <li>Poor session management</li>
+                                    <li>Parameter manipulation</li>
+                                    <li>Path traversal and path disclosure</li>
+                                    <li>Canonicalization</li>
+                                    <li>URL encoding</li>
+                                </ul>
+                                <p class="comment78305">Threats at the business logic tier include:</p>
+                                <ul>
+                                    <li>Broken access control</li>
+                                    <li>Input validation problems<ul>
+                                            <li>Buffer overflow</li>
+                                            <li>Cross-site scripting (XSS)</li>
+                                            <li>SQL injection</li>
+                                            <li>Command injection</li>
+                                        </ul>
+                                    </li>
+                                    <li>Insecure exception management</li>
+                                    <li>Insecure use of cryptography</li>
+                                    <li>Insecure default configuration</li>
+                                    <li>Insecure auditing/logging</li>
+                                </ul>
+                                <p class="comment78305">Threats at the persistence tier include:</p>
+                                <ul>
+                                    <li>Insecure storage </li>
+                                </ul>
+                                <p class="comment78305"><sup>2 </sup>Eugene Lebanidze; OWASP Foundation; <em>Securing
+                                        Enterprise Web Applications at the Source: An Application Security Application
+                                        Perspective; </em><a
+                                        href="https://owasp.org/www-pdf-archive/Securing_Enterprise_Web_Applications_at_the_Source.pdf"
+                                        target="_blank">https://owasp.org/www-pdf-archive/Securing_Enterprise_Web_Applications_at_the_Source.pdf</a>;
+                                    retrieved June 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c30e382c-65fa-40e4-b3f3-34396b3242fa" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Peer-to-Peer<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e6b1b257-8989-481a-b21f-9ce61a47287d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Peer-to-peer (P2P) computing utilizes an architecture with no
+                                    special machine that provides a service or manages the network resources. Instead,
+                                    all responsibilities are uniformly divided among all machines, known as peers. Peers
+                                    can serve both as clients and servers. When one program controls other programs, as
+                                    is usually the case with client/server architectures, it is said to have a
+                                    master-and-slave configuration. However, in some distributed computing
+                                    architectures, the client and the server programs each have the ability to initiate
+                                    a transaction and act as peers; such a configuration is the defining characteristic
+                                    of P2P architecture. Management of these resources in a P2P network is not
+                                    centralized but spread among the resources on the P2P network uniformly, and each
+                                    resource can function as a client or a server. File sharing programs and instant
+                                    messaging are well-known examples of this type of architecture. P2P file sharing
+                                    networks are a common ground for hackers to implant malware, so when P2P networks
+                                    are designed, it is imperative to include strong access control protection to
+                                    prevent the upload of malicious files from sources that are not trusted.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="999ef063-3287-4cff-8e40-57ff4ebc359f" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--75 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_034_04.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_034_04.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 317.656px; left: 476.594px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 4: Peer to Peer</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="2ccf816a-b6fe-412e-88fb-8c89da25d3a7"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a956794d-b80c-46b7-8446-ad09b0b44a58" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Message Queuing<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="81a6a57c-fd1c-49ea-b399-ac6dcca9f6f1" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Message queues can be used to allow asynchronous communication
+                                    of smaller and independent building blocks within distributed applications. In this
+                                    scenario, the producer and consumers interact with the queue to add or process
+                                    messages. From a security perspective, protection of the messages in the queue
+                                    (i.e., encryption of message body in the queue) and restriction of access to the
+                                    queue are among aspects that must be addressed.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="920e1d10-c898-4a12-b0b2-65b288dbc64d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Service-Oriented Architecture<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0722e999-ba44-47d7-8bfb-514061e5b806" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The evolution of software architecture has proved to be
+                                    inevitable. Service-oriented architecture (SOA) introduced new capabilities and
+                                    options to the architect. SOA offered an approach that helped address the
+                                    interoperability challenge found in typical IT environments. Increased reusability
+                                    was another benefit of SOA.</p>
+                                <p class="comment78305">The paradigm used by SOA is also referred to as the
+                                    “find-bind-execute” paradigm, which is about registering the service in a public
+                                    registry used by the service consumer to find the service and execute.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="81d55f35-9288-4a92-851c-6d3808d223e0" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Enterprise Service Bus (ESB)<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b748f812-116f-49be-b623-e6fd1d7b045e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">An enterprise service bus (ESB) is a software architecture model
+                                    used for designing and implementing the interaction and communication between
+                                    mutually interacting software applications in SOA. As a software architecture model
+                                    for distributed computing, ESB is a specialty variant of the more general
+                                    client-server software architecture model; it promotes strictly asynchronous
+                                    message-oriented design for communication and interaction between applications. Its
+                                    primary use is in enterprise application integration (EAI) of heterogeneous and
+                                    complex landscapes.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d37c1376-d675-42bf-ac1c-fb38608a7c47" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Web Services<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f718ca52-906b-455f-a777-80ab22bdf8fe" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Web services are examples of SOA implementation. They provide
+                                    platform and vendor neutrality. They support interoperability, achieved through
+                                    XML-based open standards. Standards like Web Services Description Language (WSDL),
+                                    Simple Object Access Protocol (SOAP), and Universal Description, Discovery, and
+                                    Integration (UDDI) provide the approach for defining, publishing and using web
+                                    services.</p>
+                                <p class="comment78305">Since their inception in early 2000s and the release of WSDL and
+                                    SOAP, web services have evolved. RESTful web services built on Representational
+                                    State Transfer (REST) architecture were introduced by the web consortium subsequent
+                                    to SOAP. These web services were built to work best on the web and provide the
+                                    opportunity for the construction of fast, simple, and lightweight RESTful
+                                    applications. Unlike SOAP, which is a protocol and relies strictly on XML for
+                                    transport, REST is an architectural style that supports various formats (e.g.,
+                                    JSON).</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c6c95013-e69d-4a7e-81b7-17e87f259127" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Securing Web Services<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="961200d3-68ed-4bfe-a278-93662e310927" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">With respect to securing web services, authentication and
+                                    authorization are of utmost importance. Confidentiality, privacy, integrity, and
+                                    nonrepudiation must also be addressed through controls that have been
+                                    discussed earlier including encryption (transport-level and/or application-level)
+                                    and digital signatures. In fact, the security principles discussed in previous
+                                    chapters are relevant to web services security as well. </p>
+                                <p style="margin-left: 40px;" class="comment78305"><em>A foundational element of
+                                        innovation in today’s app-driven world is the Application Programming Interface
+                                        (API). From banks, retail, and transportation to IoT, autonomous vehicles, and
+                                        smart cities, APIs are a critical part of modern mobile, SaaS, and web
+                                        applications and can be found in customer-facing, partner-facing, and internal
+                                        applications. By nature, APIs expose application logic and sensitive data such
+                                        as Personally Identifiable Information (PII) and because of this, APIs have
+                                        increasingly become a target for attackers. </em></p>
+                                <p style="margin-left: 40px;" class="comment78305">Reference: <a
+                                        href="https://owasp.org/API-Security/editions/2023/en/0x02-foreword/"
+                                        target="_blank">https://owasp.org/API-Security/editions/2023/en/0x02-foreword/</a>
+                                </p>
+                                <p class="comment78305">The APIs’ integrity must be preserved. This is true with respect
+                                    to the APIs that are developed and owned by you and those that are used by your
+                                    applications. API security is paramount. The following table lists the OWASP API
+                                    Security Top 10, which are API-specific security risks.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3c6490f4-8b94-49d7-9c46-7bec9a01da14" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin vst-draggable comment78305">
+                            <div class="c-x-scroll vst-draggable comment78305" style="width: 100%;">
+                                <div class="js-x-scroll c-x-scroll__scrollbox comment78305" style="">
+                                    <table class="c-table js-x-scroll-component" style="width: 100%;"
+                                        data-orig-width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" style="text-align: left;">Risk</th>
+                                                <th scope="col" style="text-align: left;">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span style="color:#007FAD;" class="comment78305">API1:2023 - Broken
+                                                        Object Level Authorization    </span></td>
+                                                <td><span style="color:#556B04;" class="comment78305">APIs tend to
+                                                        expose endpoints that handle object identifiers, creating a wide
+                                                        attack surface of Object Level Access Control issues. Object
+                                                        level authorization checks should be considered in every
+                                                        function that accesses a data source using an ID from the
+                                                        user.</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span style="color:#007FAD;" class="comment78305">API2:2023 - Broken
+                                                        Authentication</span></td>
+                                                <td><span style="color:#556B04;" class="comment78305">Authentication
+                                                        mechanisms are often implemented incorrectly, allowing attackers
+                                                        to compromise authentication tokens or to exploit implementation
+                                                        flaws to assume other user's identities temporarily or
+                                                        permanently. Compromising a system's ability to identify the
+                                                        client/user compromises API security overall.</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span style="color:#007FAD;" class="comment78305">API3:2023 - Broken
+                                                        Object Property Level Authorization</span></td>
+                                                <td><span style="color:#556B04;" class="comment78305">This category
+                                                        combines API3:2019 Excessive Data Exposure and API6:2019 - Mass
+                                                        Assignment, focusing on the root cause: the lack of or improper
+                                                        authorization validation at the object property level. This
+                                                        leads to information exposure or manipulation by unauthorized
+                                                        parties.</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span style="color:#007FAD;" class="comment78305">API4:2023 -
+                                                        Unrestricted Resource Consumption</span></td>
+                                                <td><span style="color:#556B04;" class="comment78305">Satisfying API
+                                                        requests requires resources such as network bandwidth, CPU,
+                                                        memory, and storage. Other resources such as emails/SMS/phone
+                                                        calls or biometrics validation are made available by service
+                                                        providers via API integrations, and paid for per request.
+                                                        Successful attacks can lead to Denial of Service or an increase
+                                                        of operational costs.</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span style="color:#007FAD;" class="comment78305">API5:2023 - Broken
+                                                        Function Level Authorization</span></td>
+                                                <td><span style="color:#556B04;" class="comment78305">Complex access
+                                                        control policies with different hierarchies, groups, and roles
+                                                        and an unclear separation between administrative and regular
+                                                        functions tend to lead to authorization flaws. By exploiting
+                                                        these issues, attackers can gain access to other users’
+                                                        resources and/or administrative functions.</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span style="color:#007FAD;" class="comment78305">API6:2023 -
+                                                        Unrestricted Access to Sensitive Business Flows</span></td>
+                                                <td><span style="color:#556B04;" class="comment78305">APIs vulnerable to
+                                                        this risk expose a business flow - such as buying a ticket, or
+                                                        posting a comment - without compensating for how the
+                                                        functionality could harm the business if used excessively in an
+                                                        automated manner. This doesn't necessarily come from
+                                                        implementation bugs.</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span style="color:#007FAD;" class="comment78305">API7:2023 - Server
+                                                        Side Request Forgery</span></td>
+                                                <td><span style="color:#556B04;" class="comment78305">Server-Side
+                                                        Request Forgery (SSRF) flaws can occur when an API is fetching a
+                                                        remote resource without validating the user-supplied URI. This
+                                                        enables an attacker to coerce the application to send a crafted
+                                                        request to an unexpected destination, even when protected by a
+                                                        firewall or a VPN.</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span style="color:#007FAD;" class="comment78305">API8:2023 -
+                                                        Security Misconfiguration</span></td>
+                                                <td><span style="color:#556B04;" class="comment78305">APIs and the
+                                                        systems supporting them typically contain complex configurations
+                                                        meant to make the APIs more customizable. Software and DevOps
+                                                        engineers can miss these configurations, or don't follow
+                                                        security best practices when it comes to configuration, opening
+                                                        the door for different types of attacks.</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span style="color:#007FAD;" class="comment78305">API9:2023 -
+                                                        Improper Inventory Management</span></td>
+                                                <td><span style="color:#556B04;" class="comment78305">APIs tend to
+                                                        expose more endpoints than traditional web applications, making
+                                                        proper and updated documentation highly important. A proper
+                                                        inventory of hosts and deployed API versions also are important
+                                                        to mitigate issues such as deprecated API versions and exposed
+                                                        debug endpoints.</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span style="color:#007FAD;" class="comment78305">API10:2023 -
+                                                        Unsafe Consumption of APIs</span></td>
+                                                <td><span style="color:#556B04;" class="comment78305">Developers tend to
+                                                        trust data received from third-party APIs more than user input,
+                                                        so they tend to adopt weaker security standards. In order to
+                                                        compromise APIs, attackers go after integrated third-party
+                                                        services instead of trying to compromise the target API
+                                                        directly. </span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="c-x-scroll__gradient c-x-scroll__gradient--left comment78305"></div>
+                                <div class="c-x-scroll__gradient c-x-scroll__gradient--right comment78305"></div>
+                            </div>
+                            <p class="comment78305"><sup><em>Table 2: OWASP API Security Top 10 (2023)<br />Reference:
+                                        <a href="https://owasp.org/API-Security/editions/2023/en/0x11-t10/"
+                                            target="_blank">https://owasp.org/API-Security/editions/2023/en/0x11-t10/</a></em></sup>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="13f7fd30-51ad-4bb3-a485-ffc528db6be9" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Microservices<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="271fee6c-8702-44e5-b1f5-574f6c2395b2" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Microservices, which are best referred to as an architecture,
+                                    are a method of software development based on independent services best suited for
+                                    web and mobile applications. Independence in this context implies that these
+                                    services may even be developed using different programing languages and use
+                                    different storage with no centralized management. Services are meant to be designed
+                                    to serve a single specific function. Examples of functions could include e-commerce
+                                    cart, social media login and user roles, among others. The following example depicts
+                                    a shift to microservice architecture from monolithic application design.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="19a58555-6969-4a47-bbce-1f211c2f1eab" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--75 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_034_05.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_034_05.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 211.516px; left: 476.594px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 5: Microservices</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="3944d9c0-e1cd-4c31-c2bb-396aaf8b3566"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="9a5b7c6c-393b-4a14-8ca4-7b5f158af098" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Secure Operational Architecture<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d33c02d5-6c4b-4fbd-96a6-47f86a43c729" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Depending on the physical components and architecture,
+                                    deployment scenarios may include single server, distributed, and high availability.
+                                    Of these, the simplest configuration is the single server deployment. With all
+                                    modules on a single node, management of security may also be simplified. In a
+                                    distributed deployment scenario, multiple nodes will be involved. This can extend
+                                    reliability and efficiency. High availability, a special type of multinode
+                                    deployment, may require additional nodes and multiple instances of key processes.
+                                    This type of deployment can result in built-in redundancy and automatic failover.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1bd6bb10-ff3f-4cf6-813c-72616a2acce3" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Rich Internet Applications<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="aacab008-d173-4a2a-b2b2-42207be1862f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">A Rich Internet Application (RIA) is a web application with many
+                                    of the characteristics of desktop application software (e.g., visual user interfaces
+                                    with interactive components, drag-and-drop functionality, quick response to
+                                    mouse-clicks, transition effects, animation), typically delivered by way of a
+                                    site-specific browser, a browser plug-in, an independent sandbox, extensive use of
+                                    JavaScript, or a virtual machine.</p>
+                                <p class="comment78305">The list of frameworks/technologies used to build RIAs is long
+                                    and includes HTML 5, AJAX and Angular. Some of the technologies that were initially
+                                    used for building RIAs include Adobe Flash, JavaFX, and Microsoft Silverlight. They
+                                    are examples of common RIA platforms that came with supporting runtime libraries,
+                                    execution engines, and rendering mechanisms. These technologies (some widely used,
+                                    and others as accepted) enabled developers to deliver expressive content (e.g.,
+                                    streaming audio and video, 3D graphics) to users across browsers, desktops, and
+                                    other devices. Various security concerns existed with these technologies.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2e6e88c6-65fa-47d3-b9e2-481d3aef3376" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Benefits of RIAs<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="27b0c071-3cc0-470e-89c1-7efe809bea9f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Benefits of RIAs include reduced server load (since processing
+                                    is offloaded to the client as well), smaller footprint on the desktop, ability to be
+                                    used from any computer with a web browser, applications updates that can be
+                                    transparent to the user, and consistent experience regardless of browser or OS used.
+                                    Other benefits include enhanced user experience, such as information sharing,
+                                    collaboration, and functionality. RIA also gives more power to the end user as in
+                                    the case of Mashups.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6fff5067-375d-4b72-ba30-afa990410309" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Securing RIAs<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c57d79d3-265b-4e14-9633-0a45db0da9b5" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">RIAs may run within a web browser or within a secure sandbox.
+                                    Common web application vulnerabilities (e.g., SQL injection, cross-site scripting)
+                                    apply to RIAs as well (perhaps with a twist); however, since RIAs work differently
+                                    from other types of web applications in certain aspects, there are also new
+                                    opportunities to introduce vulnerabilities. As with other web applications, RIAs
+                                    must be subjected to various security testing techniques and methods, including
+                                    automated code scan/analysis and security code reviews.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="9c6455bf-426d-45c2-8f76-caebc48d6fcc" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Client-Side Exploits<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="53500e29-9c35-4e78-822c-2fb547c292fd" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Developers and architects often build complex logic in their
+                                    browser clients, with complex data validation and security rules, forgetting that
+                                    these rules run in the user domain and can be disabled or bypassed by the user. All
+                                    validation, authorization, and authentication must be done by the server. Data
+                                    validation may be done by the client to help prevent unnecessary round trips to the
+                                    server, but all validation must be backed up at the server as well. Solely trusting
+                                    the client to validate the data and input can be easily circumvented and can
+                                    potentially lead to serious server-side compromise. Never rely solely on the client
+                                    for validation in RIA.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8427b43d-472b-4eaf-8f1e-7d7c4cab8be6" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Remote Code<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="afa9d2f1-d961-4ee9-b9b2-aef35dd701b7" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Java applets (special, small application programs written in
+                                    Java) are good examples of mobile code. Code that is transmitted across the network
+                                    (downloaded from servers) and executed within the client browser also offers
+                                    capabilities for more interactivity. Applets, as examples of mobile code, certainly
+                                    present security concerns, some of which may be addressed through policies around
+                                    what actions the applet may or may not take, or what resources it may or may not
+                                    access.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="26da1c67-80c1-4c60-a2ee-08327a6f369b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Constant Connectivity<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="9e00d6e4-976c-4ce9-b07f-1e8a4a240cb1" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Another issue with RIAs is that their use on any machine with an
+                                    internet connection leads to these applications being executed from potentially
+                                    unsafe machines; for example, in airports and internet cafes. These machines are
+                                    more likely to be infected with key loggers and other malware than corporate
+                                    machines running the more traditional desktop applications.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="9c256d64-6f0f-4430-9c35-88996172a7c5" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Pervasive and Ubiquitous
+                                Computing<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f214e48f-eb7c-4106-9d39-36722c30178c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The essence of the vision for pervasive and ubiquitous computing
+                                    is devices equipped with the capability to store, process, and transmit information,
+                                    creating the possibility of environments saturated with computing and communication
+                                    capabilities that can improve everyday human life.</p>
+                                <p class="comment78305">These capabilities are not limited to laptops, notebooks,
+                                    smartphones, and tablets; they can also enhance wearable devices, appliances, and
+                                    many other things. Applications for pervasive computing can be found in energy,
+                                    military, safety, consumer, logistics, and other areas.</p>
+                                <p class="comment78305">As expected, with new possibilities come new risks and new types
+                                    of threats. This figure shows elements involved in pervasive computing, ubiquitous
+                                    mobility, IoT, and multidevice experience.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ea53c80a-4b8b-4b65-9d3e-42daedae076c" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--75 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_034_06.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_034_06.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 221.75px; left: 476.594px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 6: Pervasive Computing</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="ecccf935-1298-4d38-a587-60c814a5672b"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5e047916-5f03-475b-9d3f-50294f8472af" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Internet of Things (IoT)<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f50614aa-1d94-48f8-aa08-51be54254617" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">With the significant rise in the number and type of smart and
+                                    connected devices, everyday human life is being transformed. In 2019, Dr. Charles H.
+                                    Romine, director of NIST’s Information Technology Laboratory, testified before the
+                                    U.S. Senate Committee on Commerce, Science, and Transportation Subcommittee on
+                                    Security, “Every sector has its own types of IoT devices, such as specialized
+                                    hospital equipment in the healthcare sector and smart road technologies in the
+                                    transportation sector,” and there are many enterprise IoT devices for every sector.
+                                    “Versions of nearly every consumer electronics device, many of which are also
+                                    present in organizations’ facilities, have become connected IoT devices.... Many
+                                    organizations are not necessarily aware that they are using a large number of IoT
+                                    devices. It is important that organizations understand their use of IoT because many
+                                    IoT devices affect cybersecurity and privacy risks differently than conventional IT
+                                    devices do.”<sup>3</sup></p>
+                                <p class="comment78305">With this great potential, new types of vulnerabilities and
+                                    exploits should be expected as the attack surface continues to increase.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="918221ed-756d-4598-91a5-19f320f8b520" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>3</sup> Charles H. Romine; National Institute of Standards
+                                    and Technology; “Strengthening the Cybersecurity of the Internet of Things;” <a
+                                        href="https://www.nist.gov/speech-testimony/strengthening-cybersecurity-internet-things"
+                                        target="_blank">https://www.nist.gov/speech-testimony/strengthening-cybersecurity-internet-things</a>;
+                                    retrieved June 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="dc03060f-8517-4bee-8501-a69982261bb8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">In its publication, <em>Considerations for Managing Internet of
+                                        Things (IoT) Cybersecurity and Privacy Risks, </em>NIST notes, “Cybersecurity
+                                    and privacy risks for IoT devices can be thought of in terms of three high-level
+                                    risk mitigation goals:</p>
+                                <ol>
+                                    <li><em>Protect device security. </em>In other words, prevent a device from being
+                                        used to conduct attacks, including participating in distributed denial of
+                                        service (DDoS) attacks against other organizations, and eavesdropping on network
+                                        traffic or compromising other devices on the same network segment. This goal
+                                        applies to all IoT devices.</li>
+                                    <li><em>Protect data security. </em>Protect the confidentiality, integrity, and/or
+                                        availability of data (including personally identifiable information [PII])
+                                        collected by, stored on, processed by, or transmitted to or from the IoT device.
+                                        This goal applies to each IoT device except those without any data that needs
+                                        protection.</li>
+                                    <li><em>Protect individuals’ privacy. </em>Protect individuals’ privacy impacted by
+                                        PII processing beyond risks managed through device and data security protection.
+                                        This goal applies to all IoT devices that process PII or that directly or
+                                        indirectly impact individuals.”<sup>4</sup></li>
+                                </ol>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="95bece03-0285-4f98-ab0e-0fcf68321b1e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>4 </sup>National Institute of Standards and Technology;
+                                    <em>NISTIR 8228—Considerations for Managing Internet of Things (IoT) Cybersecurity
+                                        and Privacy Risks; </em><a
+                                        href="https://csrc.nist.gov/publications/detail/nistir/8228/final"
+                                        target="_blank">https://csrc.nist.gov/publications/detail/nistir/8228/final</a>;
+                                    retrieved June 2023.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0e712320-a4dd-4540-8cd5-820c30390cd0" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Radio-Frequency Identification<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8969767e-3866-4361-9e6c-4a811315ac85" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Application of radio-frequency identification (RFID)
+                                    technologies can be found in all industries. Objects equipped with RFID tags can be
+                                    identified, and the information stored on tags can be read wirelessly by RFID
+                                    readers. Depending on the RFID technologies used (e.g., passive, active), the read
+                                    range can vary, but is generally limited to short distances. RFID technologies have
+                                    also been used for location identification and tracking/tracing purposes.</p>
+                                <p class="comment78305">From a security perspective, wireless transmission of
+                                    potentially sensitive data is a general concern, and the risk of rogue
+                                    (unauthorized) RFID readers must also be addressed. Faraday cages can be used as a
+                                    mitigation strategy for shielding and prevention of signal penetration. Concerns
+                                    around privacy violation (from a tracking standpoint) could also present challenges
+                                    to adoption of certain RFID applications.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="dd75185a-94d8-44a4-a560-65283a2ece70" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Near-Field Communication<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="acea3a10-1050-41b1-a6d6-222032365b11" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Near-field communication (NFC) also relies on RF signals to
+                                    transfer data between devices in close proximity. Ease of use and close-range data
+                                    transfer capabilities make the technology suitable for numerous applications,
+                                    including location-specific transactions such as cashless/contactless payment using
+                                    mobile devices or for access control purposes.</p>
+                                <p class="comment78305">From a security perspective, flaws in implementation of the
+                                    technology or functionality may present vulnerabilities that could lead to
+                                    compromise. Although data exchange is limited to short distances, where possible,
+                                    encryption should be used for secure data exchange.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e5fa6d8e-33c2-4db0-ba73-7932c36ee981" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Sensor Networks<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7c7726b1-c525-4295-a55c-2d3aaae3655d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Although the primary application of sensor networks was found in
+                                    monitoring weather (e.g., humidity and temperature) and other environmental
+                                    conditions, the technology can extend the usage to many other areas as well.</p>
+                                <p class="comment78305">Small nodes are deployed to make the detection and transmit the
+                                    data for processing to a central location. From a security perspective, the
+                                    reliability and trustworthiness of sensors and data confidentiality are usually
+                                    highlighted as general concerns.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="414be9d3-213b-4a55-864a-48339af72014" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Embedded Software<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="11160d14-92c8-40b9-9da6-db9ae3b6404a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Computing may be embedded into the hardware itself to control
+                                    the limited set of functions on a hardware device. Embedded software does not
+                                    require direct user input or interactions. Typically, embedded systems are
+                                    associated with smaller devices with smaller processors and minimal OS designed for
+                                    a specific purpose.</p>
+                                <p class="comment78305">Embedded software is different from firmware. While the first
+                                    may be the only piece of code that runs on the hardware, that normally will not be
+                                    the case with firmware (i.e., it hands over the control to another software, such as
+                                    the operating system).</p>
+                                <p class="comment78305">Embedded software has less visibility (as compared to
+                                    application software) so far as a user is concerned and is designed to fulfill a
+                                    specific purpose; nevertheless, its security is just as important as that of other
+                                    types of software. </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d4f7abb6-4d20-43f7-809c-57d4f855e5cb" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Secure Update<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3cc5d2f2-98f1-4b77-b48e-d9f1a5bdb436" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Unlike enterprise or desktop computing environments, embedded
+                                    systems are likely cost-sensitive with computational limitations, leaving limited
+                                    room for security considerations (e.g., processing of encryption with large key
+                                    lengths). One implication is that this can create a barrier for the application of
+                                    best practices and implementation of resource intensive safeguards. This may present
+                                    some challenges, but at the same time highlights the need for device makers and
+                                    software developers to make security a high priority and address the patching and
+                                    updating of the software. Examples of embedded systems include computers in
+                                    automobiles, wearables, and appliances.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f26053e9-434f-4004-a4f7-f3048e47bcb8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Field-Programmable Gate Array (FPGA)
+                                Security Features<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="81469e53-8437-4156-9ad6-9c9ebd22fda7" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">As implied by the name, field-programmable gate array (FPGA)
+                                    semiconductor devices are meant to be programmed to desired functionality after
+                                    manufacturing, which contrasts with application-specific integrated circuits that
+                                    are custom manufactured with specific design and for specific tasks.</p>
+                                <p class="comment78305">The programmability of FPGA creates the opportunity for its
+                                    application/usage in various industries and markets including automotive, aerospace
+                                    and defense, consumer electronics, and many others.</p>
+                                <p class="comment78305">Security-relevant aspects of FPGA include concerns around
+                                    copy/theft/clone of intellectual properties of the application and data, tampering
+                                    with the application to disable features or leak information, and introducing
+                                    malware. With the assumption that the FPGA is in the hands of an adversary, usage of
+                                    the FPGA for malicious activities is part of the concern.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="bb35fa4a-0afe-40cf-a8ff-728a7d6e50c0" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Cloud Architectures<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ea47d493-051a-4dae-8cda-3dee192ab3f8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">One definition of cloud computing, provided by NIST, is the
+                                    following: “Cloud computing is a model for enabling ubiquitous, convenient,
+                                    on-demand network access to a shared pool of configurable computing resources (e.g.,
+                                    networks, servers, storage, applications, and services) that can be rapidly
+                                    provisioned and released with minimal management effort or service provider
+                                    interaction. This cloud model is composed of five essential characteristics, three
+                                    service models, and four deployment models.”<sup>5</sup></p>
+                                <p class="comment78305">The benefits of cloud computing for business and IT include
+                                    efficiency, cost reduction, flexibility, and scalability on demand. The most notable
+                                    benefit of the adoption of cloud computing for the organization is touted as the
+                                    ability to transition from capital expenditure (CapEx) to operation expenditure
+                                    (OpEx). Specific benefits of the adoption of cloud computing to the organization
+                                    would be tied to each service model: infrastructure as a service (IaaS), platform as
+                                    a service (PaaS), and software as a service (SaaS). Organizational benefits from
+                                    cloud computing vary by deployment model—private, public, community, or hybrid.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a1935f98-7042-4508-8249-a2616e6b8157" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>5</sup> National Institute of Standards and Technology;
+                                    <em>SP 800-145—The NIST Definition of Cloud Computing; </em><a
+                                        href="https://csrc.nist.gov/publications/detail/sp/800-145/final"
+                                        target="_blank">https://csrc.nist.gov/publications/detail/sp/800-145/final</a>;
+                                    retrieved June 2023.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="24d578c0-7024-47af-8311-ff9c4c57c155" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Cloud Computing Service Models<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5e0b539b-da83-4d87-b080-f1132806db7e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Cloud service models include software as a service (SaaS),
+                                    platform as a service (PaaS), and infrastructure as a service (IaaS). It is
+                                    important to understand that responsibilities in general, and security-relevant
+                                    responsibilities, must be clearly understood for each service model mentioned above.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="298caf4c-53d2-48e0-95bc-f00fae04af99" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Software as a Service<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="dd65ec18-559c-437a-bceb-94b2360c57cf" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Software as a service (SaaS) is a distributed model where
+                                    software applications are hosted by a vendor or cloud service provider and made
+                                    available to customers over network resources. SaaS is currently the most widely
+                                    used and adopted form of cloud computing, with users most often needing nothing more
+                                    than an internet connection and credentials to have full use of the cloud service,
+                                    application, and data housed. Within SaaS, there are two delivery models currently
+                                    used. First is hosted application management (hosted AM), where a cloud provider
+                                    hosts commercially available software for customers and delivers it over the web
+                                    (internet). Second is software on demand, where a cloud provider provides customers
+                                    with network-based access to a single copy of an application created specifically
+                                    for SaaS distribution (typically within the same network segment). Within either
+                                    delivery model, SaaS can be implemented with a custom application, or the customer
+                                    may acquire a vendor-specific application that can be tailored to the customer.</p>
+                                <p class="comment78305">SaaS has several key benefits for organizations. These include,
+                                    but are not limited to:</p>
+                                <ul>
+                                    <li>Ease of use and limited/minimal administration</li>
+                                    <li>Automatic updates and patch management</li>
+                                    <li>Always running the latest version and most up-to-date deployment (no manual
+                                        updates required)</li>
+                                    <li>Standardization and compatibility (all users have the same version of software)
+                                    </li>
+                                    <li>Global accessibility</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d2a55c85-0fa2-4ab3-9825-05a8b98aded6" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Platform as a Service<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6318e7e9-fffd-43c2-85a8-e32abb2fc8d8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Platform as a service (PaaS) is a way for customers to rent
+                                    virtualized servers and associated services for running existing applications or
+                                    developing and testing new ones.</p>
+                                <p class="comment78305">PaaS has several key benefits for developers; these include, but
+                                    are not limited to:</p>
+                                <ul>
+                                    <li>Operating systems can be changed and upgraded frequently.</li>
+                                    <li>The ability to work together on software development projects within the same
+                                        environment when development teams are scattered across various geographic
+                                        locations.</li>
+                                    <li>Services are available and can be obtained from diverse sources that cross
+                                        international boundaries.</li>
+                                    <li>Upfront and recurring or ongoing costs can be significantly reduced by utilizing
+                                        a single vendor, rather than maintaining multiple hardware facilities and
+                                        environments.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="22a92e12-7282-435d-89cd-105ea9ddec5c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Infrastructure as a Service
+                                (IaaS)<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7d155a26-483b-4a80-a178-e1537772e4d6" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Infrastructure as a service (IaaS) is a model where the customer
+                                    can provision equipment as a service to support operations, including storage,
+                                    hardware, servers, and relevant networking components. While the consumer has use of
+                                    the related equipment, the cloud service provider retains ownership and is
+                                    ultimately responsible for hosting, running and maintaining the infrastructure. IaaS
+                                    is also referred to as hardware as a service by some customers and providers.</p>
+                                <p class="comment78305">IaaS has multiple key benefits for organizations; these include,
+                                    but are not limited to:</p>
+                                <ul>
+                                    <li>Usage that is metered and priced based on units (or instances) consumed,
+                                        allowing it to be billed back to specific departments or functions </li>
+                                    <li>Ability to scale infrastructure services up and down based on use, which is
+                                        particularly useful and beneficial where there are significant spikes and dips
+                                        in usage within the infrastructure</li>
+                                    <li>Reduced cost of ownership, meaning no need to buy assets for everyday use, no
+                                        loss of asset value over time, and reduction of other related costs of
+                                        maintenance and support</li>
+                                    <li>Reduced energy and cooling costs, plus a green IT environmental effect, with
+                                        optimum use of IT resources and systems</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="30b70c76-9267-48c1-b62e-2288ed71d788" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Cloud Computing Deployment
+                                Models<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7c77fe23-2a64-40d7-a9c9-be36375cbd2c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">There are different cloud computing deployment models that each
+                                    offer advantages for a particular situation. The pay-as-you-go pricing model is a
+                                    key driver for growth.</p>
+                                <ul>
+                                    <li><em>Public cloud. </em>Delivered over the internet, computing resources (e.g.,
+                                        hardware and software) are owned and managed by the cloud service provider
+                                        (CSP). The public cloud is a multitenant environment where the computing
+                                        infrastructure is shared by tenants. This is the most common type of cloud and
+                                        the least costly as compared to the other types.</li>
+                                    <li><em>Private cloud. </em>Computing infrastructure exclusively used by a single
+                                        organization, which can result in enhanced security and greater control over
+                                        critical operations. As expected, single tenancy also results in higher costs as
+                                        compared to other types of cloud. Private cloud is often used by larger
+                                        organizations (e.g., financial institutions) and government agencies.</li>
+                                    <li><em>Community cloud. </em>A multitenant environment that differs from a public
+                                        cloud in the sense that the tenants (organizations) likely have similar needs
+                                        and concerns. As expected, costs will likely be higher than the public cloud,
+                                        but less than a private cloud. When compliance and regulatory measures are key
+                                        requirements (e.g., in government or healthcare), community cloud could be a
+                                        viable solution.</li>
+                                    <li><em>Hybrid cloud. </em>Not every service or application must be hosted in a
+                                        private cloud, and not every organization is ready or willing to entirely
+                                        dismantle its own data centers and migrate everything into the cloud. A
+                                        combination of on-premises infrastructure or private cloud with the public cloud
+                                        could be advantageous and offer great flexibility. Bursting out of a private
+                                        cloud and into a public cloud during peak demand times (e.g., tax filing season)
+                                        for software services is an example of the flexibility mentioned.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0c5fc47a-9f19-4f18-9541-403a73bbb23a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Overarching Risks and Shared Security
+                                Model<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="353567ca-a2c4-4d5b-94a7-32ab95739c2b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Security in the cloud is affected by various factors. Developers
+                                    must determine security requirements based on the selected cloud deployment and
+                                    service model. At all times, developers must keep in mind two key risks associated
+                                    with applications run in the cloud:</p>
+                                <ul>
+                                    <li>Multitenancy</li>
+                                    <li>Third-party administration</li>
+                                </ul>
+                                <p class="comment78305">To better understand this concept, observe the shared
+                                    responsibility model depicted in the figure below.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="962ffea4-98b0-4475-8e1c-55e314d73d0b" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--75 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_034_07.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_034_07.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 362.531px; left: 476.594px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 7: Shared Security Model</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="d659a481-36e7-4dab-fabd-686ffabaca47"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ee90267c-5a70-468c-b8b1-bdd27ab82322" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Cloud Resource Management<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="87ecc9c2-e2cd-4467-b38d-374fef96e7da" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Cloud assets/resources are controlled through the management
+                                    plane software. Parts of the management plane are exposed to cloud service
+                                    providers’ customers in the form of a management console, through graphical and
+                                    command line interfaces and APIs.</p>
+                                <ul>
+                                    <li>The key functionality of the management plane is to create, start, and stop
+                                        virtual machine instances and provision them with the proper virtual resources
+                                        such as CPU, memory, permanent storage, and network connectivity.</li>
+                                    <li>As the management plane is the most powerful tool in the entire cloud
+                                        infrastructure, it will also integrate authentication, access control, and
+                                        logging and monitoring of resources used.</li>
+                                    <li>The management plane is used by the most privileged users: those who install and
+                                        remove hardware, system software, firmware and the like. The management plane is
+                                        also the pathway for individual tenants who will have limited and controlled
+                                        access to the cloud’s resources.</li>
+                                    <li>The management plane components are at the highest risk concerning software
+                                        vulnerabilities.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6724610c-7f4f-430b-ac84-5198dc591584" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Compute<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ffc49722-7de0-425f-b577-9779ae3579ae" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The compute resources of a cloud service provider are a
+                                    combination of:</p>
+                                <ul>
+                                    <li>Processing threads</li>
+                                    <li>Volatile memory</li>
+                                    <li>Data storage</li>
+                                </ul>
+                                <p class="comment78305">These compute resources are managed and allocated on a per-guest
+                                    OS and/or a per-host basis within a resource cluster. The use of reservations,
+                                    limits, and shares provides the contextual ability for an administrator to allocate
+                                    the compute resources of a host.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2e027f7d-8aa4-4d8a-a80b-b6625f8a19c9" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Cloud Storage<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c0cb08de-767a-48c6-baeb-b6d210c2c287" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">On a technical level, persistent mass storage in cloud computing
+                                    typically consists either of spinning hard disk drives or solid-state drives (SSDs).
+                                    For reliability purposes, disk drives are often grouped to provide redundancy.</p>
+                                <p class="comment78305">Cloud providers also provide object storage, a method for
+                                    storing unstructured data using the concept of units or objects rather than a
+                                    traditional file system. The objects (files) are stored with additional metadata
+                                    (content type, redundancy required, creation date, etc.) that are accessible through
+                                    programming or web interfaces. Volume storage is a virtual hard drive that can be
+                                    attached to a virtual machine instance and be used to host data within a file
+                                    system. Storage is written to committed blocks of data. Volumes attached to IaaS
+                                    instances behave just like a physical drive or an array.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="48b49e2f-aa38-44b0-b866-6cd48a91aed7" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Storage Area Network<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="72070638-2666-4792-9d56-3f028f45af18" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">A <strong><button
+                                            data-definition title="A network that provides access to consolidated, block-level data storage."
+                                            class="rendered">storage area network (SAN)</button> </strong>is a network
+                                    that provides access to consolidated, block-level data storage. SANs are primarily
+                                    used to enhance storage devices, such as disk arrays, tape libraries, and optical
+                                    jukeboxes, accessible to servers so that the devices appear to the operating system
+                                    as locally attached devices. A SAN typically has its own network of storage devices
+                                    that are generally not accessible through the local area network (LAN) by other
+                                    devices. The cost and complexity of SANs dropped in the early 2000s to levels
+                                    allowing wider adoption across both enterprise and small-to-medium-sized business
+                                    environments.</p>
+                                <p class="comment78305">A SAN does not provide file abstraction, only block-level
+                                    operations. However, file systems built on top of SANs do provide file-level access
+                                    and are known as shared-disk file systems.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="9cfac565-7362-448b-a32b-6ddc6ecf0185" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Network-Attached Storage (NAS)<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f6b2aeec-23c6-4304-8a73-3900aa532e77" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><strong><button
+                                            data-definition title="A file-level computer data storage server connected to a computer network providing data access to a heterogeneous group of clients."
+                                            class="rendered">Network-attached storage (NAS)</button> </strong>is a
+                                    file-level computer data storage server connected to a computer network that
+                                    provides data access to a heterogeneous group of clients. NAS is often manufactured
+                                    as a computer appliance, a purpose-built, specialized computer that serves files
+                                    using its hardware, software, or configuration. NAS systems are networked appliances
+                                    that contain one or more storage drives, often arranged into logical, redundant
+                                    storage containers or redundant array of independent disks (RAID). NAS removes the
+                                    responsibility of file serving from other servers on the network. It typically
+                                    provides access to files using network file sharing protocols such as NFS, SMB/CIFS,
+                                    or AFP. From the mid-1990s, NAS devices began gaining popularity as a convenient
+                                    method of sharing files among multiple computers. Potential benefits of dedicated
+                                    NAS compared to general-purpose servers also serving files include faster data
+                                    access, easier administration, and simple configuration.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="cd248604-e83b-4587-92c8-6edbac89b408" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Mobile Applications<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="83fd9278-4142-45a8-8699-9116a7c99018" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Keep in mind that typical 21st-century mobile applications have
+                                    a client-server architecture, so there is a client component and a server component.
+                                    The client component runs on the device, which operates by means of Android, iOS, or
+                                    some other mobile OS. The client app, which is what the user interacts with to pay
+                                    bills or send a secure message, for example, is the mobile application from user’s
+                                    perspective. This is the piece that is downloaded from the app store and installed
+                                    on the device.</p>
+                                <p class="comment78305">The other component, the server, is hosted somewhere on the
+                                    premises or in the cloud and is what the client component interacts with. The server
+                                    component is important, as this is where data is stored and processed. Interaction
+                                    between the client and the server is over the internet using some form of
+                                    application programming interface (API).</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d09756f7-f9ec-4a05-9e2a-b6cb73512cae" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Mobile Security Risks<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="86f14731-6aac-41b7-8e4b-4a1b7b487e28" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Attacks that target software vulnerabilities may attempt to
+                                    exploit vulnerabilities in the client component or the server component, or they may
+                                    target the data transmission between the client and the server components.</p>
+                                <p class="comment78305">There are reports that compare critical vulnerabilities between
+                                    applications written for Android versus iOS, but information can also be gleaned
+                                    from the OWASP Mobile Top 10 list. Included in this Top 10 list by order of
+                                    importance:</p>
+                                <ul>
+                                    <li>M1—Improper platform usage</li>
+                                    <li>M2—Insecure data storage</li>
+                                    <li>M3—Insecure communication</li>
+                                    <li>M4—Insecure authentication</li>
+                                    <li>M500—Insufficient cryptography</li>
+                                    <li>M6—Insecure authorization</li>
+                                    <li>M7—Client code quality</li>
+                                    <li>M8—Code tampering</li>
+                                    <li>M9—Reverse engineering</li>
+                                    <li>M10—Extraneous functionality</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="447f5762-e4e8-49cd-8833-23108af0b186" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Mobile Threat Landscape<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1c632ab7-17ce-483a-9a3c-c0e04c8fbba7" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">As capabilities of mobile devices continue to grow, more
+                                    computer functionality is incorporated. Expanded capabilities have resulted in new
+                                    use cases for the devices, and these use cases open the door for potential misuse,
+                                    as well as new threats, vulnerabilities, and attack vectors.</p>
+                                <p class="comment78305">This figure shows the various communication mechanisms in a
+                                    mobile device, all of which pose security threats.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="851b7623-fc2b-4a5f-81c4-1e2f2dcff3a7" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--100 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_034_08.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_034_08.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 242.311px; left: 550.406px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 8: Mobile Threats<sup>6</sup></em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="00389d72-9450-47f2-8338-079484b5f8b0"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d389fedb-5f6c-49b9-823d-e9a9d0d251b3" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>6</sup> Gema Howell, Joshua M. Franklin, Karen Scarfone,
+                                    Murugiah Souppaya, Vincent Sritapan; <em>NIST SP 800-124r2— Guidelines for Managing
+                                        the Security of Mobile Devices in the Enterprise; </em><a
+                                        href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-124r2.pdf"
+                                        target="_blank">https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-124r2.pdf</a>;
+                                    retrieved June 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7a1426a4-758d-459c-83dc-ef937faa172d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Security of Mobile Devices<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4acc07cf-a557-4eae-9c40-394e464a8555" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Characteristics of mobile devices are highly relevant to the
+                                    discussion of applicable risks, threats and vulnerabilities. As presented by
+                                    <em>NIST Special Publication 800-124—Guidelines for Managing the Security of Mobile
+                                        Devices in the Enterprise, </em>threats at a high level include, among others:
+                                </p>
+                                <ul>
+                                    <li>Mobility and lack of physical security</li>
+                                    <li>Untrusted (hijacked and rooted) devices</li>
+                                    <li>Untrusted networks (insecure channels used to access the internet)</li>
+                                    <li>Untrusted applications</li>
+                                    <li>Untrusted content</li>
+                                    <li>Interaction with other devices</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f5e11844-8d68-4c14-b52b-9a573071acd9" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Mobile User Interface Design<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="acb52210-2060-4afb-81df-74b6358e8719" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The type, size, and granularity of the user interface (UI)
+                                    utilized by mobile applications varies widely. This means that mobile UI design must
+                                    consider constraints and contexts, screen, input, and mobility as outlines for
+                                    design.</p>
+                                <p class="comment78305">The mobile device is sized to fit in the user’s hand, so the
+                                    input capability must allow the users to manipulate a system, and the device’s
+                                    output (usually the screen) should allow the system to indicate the effects of the
+                                    user’s manipulation.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7b0fdc14-e53b-4e1e-8219-42cfe4a75df8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Hardware Platform Concerns<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="61fcfdcb-2263-410b-a42d-d609e67b7081" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The term platform in this context refers to the specific
+                                    structures within which software will run. Various hardware platforms may have their
+                                    own machine languages.</p>
+                                <p class="comment78305">Software may be designed for a specific platform, with specific
+                                    processor and architecture specifications.</p>
+                                <p class="comment78305">Hardware platform capabilities or the lack of certain needed
+                                    capabilities may also have an impact on the design of security features of the
+                                    software. An example of such capabilities is hardware-assisted cryptography.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b73563d6-949a-405c-a3b1-d5feafbed20a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Vulnerabilities and Risk
+                                Mitigation<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e049fdff-b5e7-4e3f-9573-41425f7e675e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Vulnerabilities that arise from the device hardware are a great
+                                    concern. Preventions for Integrated Circuits (IC) hardware exploits are complex and
+                                    difficult to implement. They are typically remediated by upgrading hardware,
+                                    securing supply chains, and manual inspections. Hardware firmware patches are issued
+                                    less frequently than software updates, and patch management systems are not
+                                    streamlined for updating hardware and firmware across a diverse range of
+                                    manufacturers. Finally, the knowledge and skill set required for updating computer
+                                    hardware and firmware, especially network appliances, is different than patching
+                                    endpoint software. As a result, remediation for hardware vulnerabilities may be
+                                    neglected or may not receive the attention we provide to software vulnerabilities.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2ea1a99e-7f7e-4aa3-b7e2-26707786a1f4" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Side-Channel Mitigation<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3127e499-900a-41aa-b903-6c04c3f4bef9" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">A side-channel attack is enabled by information leakage from a
+                                    physical cryptosystem. Characteristics that could be exploited include timing, power
+                                    consumption, and electromagnetic and acoustic emissions.</p>
+                                <p class="comment78305">A side-channel attack does not require the physical hacking of
+                                    the device. Instead, secret information, such as cryptographic keys, will be
+                                    extracted by probing the signatures produced by device electromagnetic radiation,
+                                    voltage spikes, power consumption, and other issues.</p>
+                                <p class="comment78305">The latest security specification introduced by FIPS 140-3
+                                    includes the requirement of security tests for noninvasive attacks, which are
+                                    side‐channel attacks for exploitation of weak channels. Some of the defenses
+                                    implemented by cryptographic modules against side-channel attacks are constant
+                                    execution time and stabilization of characteristic signatures for sensitive
+                                    operations.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a8b4deb1-bf3f-4017-af94-1df786982936" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Speculative Execution Mitigation<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="00ead6a9-f381-495e-92e2-ffa54d62ef94" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Microprocessors use speculative execution to improve
+                                    performance. When speculative execution is utilized, the microprocessor will use
+                                    ideal clock cycles to execute a block of upcoming instructions before its time. For
+                                    example, rather than waiting for the outcome of a condition that determines the flow
+                                    of the execution in one of the two paths, the microprocessor executes based on a
+                                    speculated path. When the result of the condition is determined, the processor
+                                    either abandons the result of the speculated execution or leaps ahead. Since
+                                    speculative execution results in microprocessors executing a set of instructions,
+                                    the executed code may leave a residue of sensitive information in the computer cache
+                                    or memory that could be exploited using side-channel attacks. For mitigation, the
+                                    speculative execution should be disabled.</p>
+                                <p class="comment78305">Both Meltdown and Spectre attacks exploit the vulnerabilities of
+                                    modern high-speed processors that use speculative execution techniques. The
+                                    Cybersecurity and Infrastructure Security Agency Alert TA18-004A provides guidance
+                                    for Meltdown and Spectre Side-Channel Vulnerability.<sup>7</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8dd9606d-6223-4a09-93da-abbff250dd02" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>7 </sup>Cybersecurity and Infrastructure Security Agency;
+                                    “Meltdown and Spectre Side-Channel Vulnerability Guidance;” <a
+                                        href="https://www.us-cert.gov/ncas/alerts/TA18-004A"
+                                        target="_blank">https://www.us-cert.gov/ncas/alerts/TA18-004A</a>; retrieved
+                                    June 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1e3d861a-79ca-4c0b-a3a2-a2ab5c212c21" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Embedded Hardware Security
+                                Modules<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f13c3d06-9bc9-4d92-9007-e29324d12e80" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">In general, a hardware security module (HSM) is a secure
+                                    hardware unit dedicated to the secure management and life cycle of cryptographic
+                                    keys. HSM is used for generation, storage and provisioning of crypto keys and
+                                    hardware Random Number Generator (RNG). Embedded hardware security modules (eHSM)
+                                    are hardware elements that are integrated into digital devices for cryptographic
+                                    functions. eHSMs are designed to be used in IoT devices and for automotive security.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3d4cee59-8839-419b-88c6-ffbdc04d1bb9" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Cognitive Computing<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f3f44c36-218f-431a-b117-6d6bfb2e89ed" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Cognitive computing is an emerging discipline based on computers
+                                    simulating human cognitive capabilities. However, there is much to be discovered
+                                    about the human brain. Humans collect information from the environment through
+                                    senses and learn through the process of trial and error. Humans also can correlate
+                                    perceived information to predict events or establish a pattern for occurrences.</p>
+                                <p class="comment78305">To be practical, cognitive computing systems must learn from
+                                    natural interaction with humans and through communication with other smart systems.
+                                    Natural interaction with humans requires, among other things, Natural Language
+                                    Processing (NLP), Speech Recognition, and Computer Vision.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="343406a0-49a3-4ac6-b477-1ba536cc51ea" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Artificial Intelligence (AI)<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b5adc9dd-97af-4ce0-8af0-5c31b95d355f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Data is everywhere. The digital age has ignited systems learning
+                                    through pattern recognition in data. As a result of recent advancements in AI such
+                                    as Depp Learning, algorithms are becoming more capable. Deep Learning is a proven
+                                    form of cognitive computing. With rapid developments in cloud computing, software
+                                    engineering, and hardware technologies, the proliferation of Deep Learning will lead
+                                    to advancements in industries such as finance, healthcare, education, and gaming.
+                                    Graphics processing hardware manufactures, such as NVIDIA, have started producing AI
+                                    specific processing units.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="06f99821-8c5a-4d70-aa53-8bc8353a544f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Machine Learning<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c4c18e5f-a192-4285-9757-b6424fbd6330" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><strong><button
+                                            data-definition title="The ability of computers to learn from provided data without being explicitly programmed for a particular task."
+                                            class="rendered">Machine learning (ML)</button> </strong>is a field within
+                                    AI where the combination of rule-based algorithms and data teaches the computer
+                                    system to perform tasks by creating a model. Machine learning (ML) is the capacity
+                                    for making computers identify patterns without using explicit instructions. For
+                                    example, a machine learning model may predict what a user may want to type next
+                                    based on the data gathered from previous inputs. A common approach to ML involves
+                                    algorithm categories such as supervised learning, unsupervised learning,
+                                    semisupervised learning, and reinforcement learning.</p>
+                                <ul>
+                                    <li><em>Supervised learning. </em>Labeled data is used to train a predictive model.
+                                    </li>
+                                    <li><em>Unsupervised learning. </em>Unlabeled data is used to detect categories of
+                                        data.</li>
+                                    <li><em>Semisupervised learning. </em>A hybrid between supervised and unsupervised
+                                        learning.</li>
+                                    <li><em>Reinforcement learning. </em>Trial and error to maximize an outcome based on
+                                        rewards.</li>
+                                </ul>
+                                <p class="comment78305">It’s important for a security practitioner to understand how, in
+                                    practice, machine learning works. At a high level, data is selected and structured
+                                    then fed into a machine learning algorithm, that may be supervised or unsupervised,
+                                    and the output is a machine learning model. The model is used to make predictions
+                                    based on future data inputs. The process of using data and algorithms to create a
+                                    model is called training. The data used for training is normally multiparameter.
+                                    Each data attribute selected to train the model is commonly referred to as a
+                                    feature. The diagram below simplifies the model generation process into three steps.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="cdf7314d-849f-457c-9620-da1017e5686f" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--50 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_034_09.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_034_09.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 165.641px; left: 402.797px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 9: Training Model</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="2aab3592-5ed0-479f-adea-ec88bea670ed"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6265ba84-07fd-49a2-a0d7-c5ccb13ec081" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Security practitioners should be aware of <strong><button
+                                            data-definition title="The process of extracting information about the behavior and characteristics of an ML system and/or learning how to manipulate the inputs into an ML system."
+                                            class="rendered">Adversarial Machine Learning (AML)</button>, </strong>which
+                                    is the process of reverse engineering the behavior and characteristics of an ML
+                                    model to manipulate the inputs or outputs of the ML system to obtain. Threat actors
+                                    may manipulate data inputs into an anomaly detection model to avoid network
+                                    detection. It is additionally possible to disrupt the availability of a system that
+                                    leverages ML components by forcing erroneous disruptive predictions. Data inputs for
+                                    training models should be sanitized like interface inputs and for similar security
+                                    reasoning.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ded1e0ed-a6b9-4095-b241-6e1f5e44468f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Control Systems<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1ed395a8-4fc2-4635-8039-36a43397612d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Control systems are hardware and software that are used to
+                                    command and manage other systems. They have embedded software running on them, which
+                                    needs to be secure. Various types of control systems have applications in everyday
+                                    life (e.g., central heating systems) and are also used in industrial processes in
+                                    automotive, medical and biomedical areas among others.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c94c212d-d630-467f-a515-64f4d9ceff35" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Industrial Control Systems (ICS)
+                                Security<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="25e4d4d1-f1c1-468b-99e3-a1835011f65d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">One of the most common types of <strong><button
+                                            data-definition title="Computer-controlled systems that monitor and control industrial processes in the physical world."
+                                            class="rendered">industrial control systems (ICS)</button> </strong>is the
+                                    <strong><button
+                                            data-definition title="Used to control and monitor physical processes, examples of which are transmission of electricity, transportation of gas and oil in pipelines, water distribution, traffic lights, and other systems used as the basis of modern society."
+                                            class="rendered">Supervisory Control and Data Acquisition (SCADA)
+                                            system</button>. </strong>ICS<strong> </strong>are computer-controlled
+                                    systems that monitor and control industrial processes in the physical world. SCADA
+                                    systems are used to control and monitor physical processes, examples of which are
+                                    transmission of electricity, transportation of gas and oil in pipelines, water
+                                    distribution, traffic lights, and other systems used as the basis of modern society.
+                                    It is therefore extremely important to protect these control systems from hacker
+                                    attacks.
+                                </p>
+                                <p class="comment78305">The move from proprietary technologies to more standardized and
+                                    open solutions, together with the increased number of connections between SCADA
+                                    systems and office networks and the internet, has made them more vulnerable to
+                                    attacks. Consequently, the security of some SCADA-based systems has come into
+                                    question, as they are seen as potentially vulnerable to cyberattacks.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="34463ef7-a86c-44fa-9352-8b4bb18f2fae" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Safety and Criticality<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="330daafa-7f13-491b-b135-59c1f003a526" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Due to the time criticality of operations that are typically
+                                    performed by control systems, availability is generally a prime objective. Another
+                                    paramount objective is human safety, depending on the operations involved.</p>
+                                <p class="comment78305">Per <em>NIST SP 800-82—Guide to Industrial Control Systems (ICS)
+                                        Security, </em>“Today, widely available software applications and
+                                    internet-enabled devices have been integrated into most ICS, delivering many
+                                    benefits, but also increasing system vulnerability.</p>
+                                <p class="comment78305">Threats to ICS can come from numerous sources, which can be
+                                    classified as adversarial, accidental, structural, and environmental.</p>
+                                <p class="comment78305">Although this guide provides guidance for securing ICS, other
+                                    types of control systems share similar characteristics and many of the
+                                    recommendations from this guide are applicable and could be used as a reference to
+                                    protect such systems against cybersecurity threats. For example, although many
+                                    building, transportation, medical, security and logistics systems use different
+                                    protocols, ports and services, and are configured and operate in different modes
+                                    than ICS, they share similar characteristics to traditional ICS.”<sup>8</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ddbfb5b4-b1c8-4e4c-869e-415172789a14" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>8</sup> National Institute of Standards and Technology;
+                                    <em>NIST SP 800-82 Rev. 2—Guide to Industrial Control Systems (ICS) Security;
+                                    </em><a
+                                        href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-82r2.pdf"
+                                        target="_blank">https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-82r2.pdf</a>;
+                                    retrieved June 2023.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="screengrid comment78305">
+            <footer class="screen__margin screen__footer u-hide-element vstdonthighlight">
+                <div class="feedback comment78305">
+                    <div class="feedback__content js-feedback-focus comment78305" tabindex="-1"></div>
+                </div>
+                <div class="control-btns comment78305"></div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay-root vstdonthighlight rendered comment78305 u-hidden" style="overflow-y: auto;">
+        <div class="modal-cover-holder comment78305">
+            <div class="modal-cover-outer comment78305">
+                <div class="modal-cover comment78305"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,1675 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"
+    style="padding: 0px; font-size: 100%; --USER__lineHeight: 1; --USER__pageMargins: 1; --USER__view: readium-scroll-on;"
+    class="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Security Test Cases (6.2)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="overflow: hidden auto;">
+    <div xmlns:epub="http://www.idpf.org/2007/ops" epub:type="pagebreak" id="pagebreak_56"
+        class="hidden-pagebreak comment78305" title="56"></div>
+
+    <div xmlns:epub="http://www.idpf.org/2007/ops" id="fd6261da-deb1-4a29-ac1f-33c9cb0c2a7d"
+        class="screen rendered comment78305" aria-hidden="false">
+        <div class="screengrid comment78305">
+            <header class="screen__margin screen__header u-hide-element vstdonthighlight">
+
+                <div class="screen__heading u-float--clearfix comment78305">
+                    <div class="screen__icon u-float--left comment78305"></div>
+                    <h2 class="screen__title comment78305" tabindex="-1"></h2>
+                </div>
+
+
+                <div class="screen__instructions comment78305"></div>
+            </header>
+        </div>
+
+        <div class="screen__content comment78305">
+
+            <div class="block rendered comment78305">
+                <div id="a5ccfdbf-17c5-4a74-a374-4142ffd89dcc" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Security Test Cases (6.2)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="dd8486bd-116e-484e-ac4d-caeab8e86cda" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Testing software involves the development of both functional and
+                                    nonfunctional test scenarios and cases. Functional testing aims to assess the
+                                    functionality of the software in respect to functional specifications. Nonfunctional
+                                    testing aims to assess nonfunctional aspects of software, including its resilience
+                                    to misuse or malicious acts.</p>
+                                <p class="comment78305">Considering that the primary objective of security testing is to
+                                    ensure that software is free of vulnerabilities and that it can withstand attacks,
+                                    the task of creating security <strong><button
+                                            data-definition title="A reference to a procedure that is created and executed by software developers/testers to determine whether the software under the test meets the specified requirement."
+                                            class="rendered">test cases</button> </strong>to achieve that objective is a
+                                    delicate one that requires specific skills and know-how.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2a028689-3bdf-47a5-b9c5-a17668911a51" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Objectives<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="629e2ca8-80b0-4356-8af8-f8ed4e7d8047" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>Identify the guidelines for security testing.</li>
+                                    <li>Identify various security test cases.</li>
+                                    <li>Recognize the importance of creating misuse and abuse cases.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="045479d9-0e88-4994-a954-7fddcea994f2" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Overview<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b5f5ea84-4860-4573-90ca-9e805185c44a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Testing may be functional or nonfunctional. Security testing
+                                    focuses on detecting pre-compilation weaknesses or post-compilation vulnerabilities
+                                    in software systems. The objective of security testing is to identify and remediate
+                                    issues within the SDLC before the organization suffers degradation in capabilities
+                                    and continuity. From a business perspective, security test activities are often
+                                    conducted to reduce overall project costs, protect brand, reduce litigation
+                                    expenses, conform to regulatory requirements, or enhance the confidence of
+                                    receivers.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e5bd64e2-edc0-435a-8d87-c2713edd83a2" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Guidelines for Security Testing<br />
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="646e6f77-d436-457a-b38d-b3be677fb888" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Before delving into different security testing methods and
+                                    techniques, review the following list of practices that can improve security testing
+                                    in general and should be represented in an organizational security testing strategy.
+                                </p>
+                                <ul>
+                                    <li>Test early and often.</li>
+                                    <li>Have a balanced approach.</li>
+                                    <li>Implement proper tools and techniques.</li>
+                                    <li>Develop metrics to measure progress. </li>
+                                </ul>
+                                <p class="comment78305">Further, comprehensive security testing should include testing
+                                    of every component of a software system, not only the web interface components
+                                    (e.g., web portals), but also where applicable, the mobile apps (e.g., iOS and
+                                    Android versions), APIs (e.g., RESTful APIs), database components, and so on.
+                                    Testing goals must identify not only those vulnerabilities that are due to insecure
+                                    coding but also those that are due to flaws in design and architecture. Software
+                                    security testing must ensure that software meets the security objectives of
+                                    confidentiality, integrity, and availability. Third-party frameworks and libraries
+                                    should also be included where applicable.</p>
+                                <p class="comment78305">In the case of web applications in particular, testing should
+                                    include authentication, authorization, session management, data validation, logging,
+                                    configuration, and cryptography, among other functions.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="756d6d89-8d9b-4b10-b9d6-fa20425582a8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Test Environment<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b55473ef-7806-4562-84ba-915421275f8d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">One way to understand the importance of setting up a proper test
+                                    environment is to think of it as a platform that has been specifically built for
+                                    executing test cases.</p>
+                                <p class="comment78305">A test environment should be separate and isolated from the
+                                    development environment; at a minimum, it should involve hardware, software, a
+                                    properly configured network, and test execution tools. Additionally, the test
+                                    environment should simulate the real production environment. Configuration drifts
+                                    between environments can be problematic.</p>
+                                <p class="comment78305">Test execution tools are also known as capture/playback and
+                                    capture/replay tools. The test execution tools offer scripting languages and
+                                    capabilities for repeating actions, and conditional execution paths.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="832a7c23-fe10-413f-b55b-6187183f5f0a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Functional Security Testing<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="41c169a3-5efe-452a-82a2-2b31de23b5b6" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Typically performed by the quality assurance (QA) team,
+                                    functional security testing focuses on activities that will validate that a
+                                    particular security feature indeed works as expected; thus, enabling users to
+                                    perform a certain function as specified by the requirements.</p>
+                                <p class="comment78305">Testing may be performed from different perspectives:</p>
+                                <ul>
+                                    <li>By prioritizing the requirements per risk criteria and executing the tests
+                                        accordingly.</li>
+                                    <li>By relying on scenarios that represent the day-to-day business use and
+                                        constructing them based on knowledge of the business processes.</li>
+                                </ul>
+                                <p class="comment78305">One example in this category (where applicable) would be the
+                                    testing conducted by the QA team to ensure that the password reset function in the
+                                    application works as specified by the requirements.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ab827b6c-b70f-4cdf-970d-905c5e6901ba" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Nonfunctional Security Testing<br />
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d3192536-a192-4be3-9b47-2018b11cf346" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">As the term implies, nonfunctional security testing consists of
+                                    testing the nonfunctional security aspects of the software. One example in this
+                                    category (where applicable) would be the testing that is conducted to ensure that
+                                    software fails in a secure state, and the stack trace is not exposed in the case of
+                                    encountering runtime anomalies.</p>
+                                <p class="comment78305">Besides security testing, nonfunctional testing is also used in
+                                    the industry to imply an umbrella for several test methods. Nonfunctional testing
+                                    typically includes scalability, interoperability, and performance. Each is expounded
+                                    below.</p>
+                                <ul>
+                                    <li><strong><button
+                                            data-definition title="Testing the ability of a system to handle an increasing amount of work correctly."
+                                                class="rendered">Scalability</button> </strong>testing primarily
+                                        measures the ability of the software to scale as necessary and demanded by
+                                        business/users. It is important to understand that scalability of a software
+                                        system must be supported by the scalability of its various components (e.g., the
+                                        database component).</li>
+                                    <li><strong><button
+                                            data-definition title="Measuring the performance associated with the use of standardized biometric data records in a multiple vendor environment. This form of testing involves the production of the templates by N enrollment products and authentication of these against images processed by M others. NIST SP 800-85B"
+                                                class="rendered">Interoperability</button> </strong>testing aims to
+                                        provide assurance of end-to-end functionality between communicating systems, as
+                                        most software systems do not operate in a silo.</li>
+                                    <li>Performance testing may be an umbrella to include other types of testing;
+                                        however, it primarily ensures that acceptable levels of performance can be
+                                        achieved under various conditions.</li>
+                                </ul>
+                                <p class="comment78305">From a general security perspective, security practitioners
+                                    should ensure that testing provides adequate coverage of critical components with
+                                    respect to confidentiality, integrity, and availability. The non-security-centric
+                                    examples above for scalability and performance map to the security goal of
+                                    availability.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2574861d-ddba-46a8-88bc-8e2df592bf75" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Attack Surface Validation<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8642af00-f39d-4677-a912-7477469d3a49" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Security testing can support the validation of the
+                                    <strong><button
+                                            data-definition title="The set of points on the boundary of a system, a system element, or an environment where an attacker can try to enter, cause an effect on, or extract data from. NIST 800-160 vol 2"
+                                            class="rendered">attack surface</button> </strong>of an application. For
+                                    example, open source or commercial dynamic and vulnerability assessment tools can be
+                                    used to enumerate an application structure and identify parts of the application
+                                    that are accessible over the web. Iterative attack surface analysis is important to
+                                    ensure that security testing strategy, policies, and procedures are aligned with
+                                    organizational risk management needs. Security, including testing, must adapt to
+                                    maintain alignment with organizational risk posture.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="386b7ab3-5139-4f31-b87e-46a115e206f5" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Penetration Tests<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="336b8ff3-2a10-4bf7-b2e1-1fb724c103d7" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">NIST defines <strong><button
+                                            data-definition title="Type of security testing that is conducted from the perspective of the attackers and targets the application while it is running in its production or production-like environment. It is used in vulnerability analysis for vulnerability assessment, trying to reveal vulnerabilities of the system based on the information about the system gathered during the relevant evaluation activities. ISO/IEC 19989-3"
+                                            class="rendered">penetration testing</button> </strong>as security testing
+                                    in which evaluators mimic real-world attacks to identify ways to circumvent the
+                                    security features of an application, system, or network. Penetration testing often
+                                    involves issuing real attacks on real systems and data, using the same tools and
+                                    techniques used by actual attackers. Most penetration tests involve looking for
+                                    combinations of vulnerabilities on a single system or multiple systems that can be
+                                    used to gain more access than could be achieved through a single vulnerability. More
+                                    succinctly, OWASP defines software penetration testing as the art of testing a
+                                    running application remotely to find security vulnerabilities without knowledge of
+                                    the application inner workings. Regardless of definition, penetration testing
+                                    involves simulating attacks to uncover vulnerabilities.</p>
+                                <p class="comment78305">Typically, a penetration test team can access an application as
+                                    if they were users. Testers act as though they are attackers and attempt to identify
+                                    and exploit vulnerabilities. In many cases, testers may also receive standard or
+                                    administrator user accounts as well. Penetration tests, like other test methods,
+                                    frequently involve a combination of manual testing techniques and specialized
+                                    automated penetration testing tools.</p>
+                                <p class="comment78305">The objective of penetration testing is to observe whether the
+                                    software resists or tolerates the attacks and how it behaves when it cannot do so.
+                                    Penetration testing pays particular attention to those aspects of software behavior,
+                                    interactions, and vulnerabilities that cannot be observed using other test
+                                    techniques during the software’s development, integration, and staging for
+                                    deployment.</p>
+                                <p class="comment78305">As described in a NIST Special Publication 800-115, Technical
+                                    Guide to Information Security Testing and Assessment, penetration tests should
+                                    answer the following questions:</p>
+                                <ul>
+                                    <li><em>How cyber resilient is the software system? </em></li>
+                                    <li><em>What is the level of sophistication or effort required to execute a
+                                            compromise? </em></li>
+                                    <li><em>Can we identify countermeasures to adequately mitigate software
+                                            vulnerabilities? </em></li>
+                                </ul>
+                                <p class="comment78305">According to this NIST publication, penetration testing involves
+                                    four phases: planning, discovery, attack, and reporting, as shown in this figure.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f768c844-f39a-4867-ae76-667c83d0c1df" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--75 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_056_01.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_056_01.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 147.141px; left: 476.594px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 4: NIST’s Penetration Testing Phases</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="876298b8-35b9-4d97-bbd6-429e3a3dac57"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="57fa4ad5-4b05-40b7-bbe9-314da7eba328" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">In general, penetration testing may have many components and may
+                                    also involve the security assessment of network, application, wireless, and even
+                                    physical security. Whereas NIST has four phases, most other penetration testing
+                                    methodologies have five phases, as shown in this figure.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b90e22da-ade4-4292-88d1-9148d8f3d1af" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--100 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_056_02.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_056_02.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 59.3594px; left: 550.406px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 5: Typical Penetration Testing Phases</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="39ad3901-72eb-427d-ff47-c63a91bb1993"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="19b30d4f-0bdc-407b-b17f-428be6b0ccd5" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ol>
+                                    <li><em>Planning. </em>In the planning phase, the senior management of the
+                                        organization and the penetration testers will identify rules of engagement
+                                        (approval to begin test, test windows) and set testing goals. Then, management
+                                        approval is finalized and documented. The planning phase sets the groundwork for
+                                        a successful penetration test. No actual testing occurs in this phase.</li>
+                                    <li><em>Discovery. </em>The discovery phase is the start of actual testing and
+                                        covers information gathering and scanning. Network port and service
+                                        identification is conducted to identify potential targets. Other techniques are
+                                        used to gather information on host name, IP address, system information, and
+                                        application and service information. In some cases, techniques such as physical
+                                        walk-throughs of facilities and examination of trash bins may be used to collect
+                                        additional information on the targeted network. These efforts may also uncover
+                                        additional information to be used during the penetration tests, such as
+                                        passwords written on paper.</li>
+                                    <li><em>Vulnerability Mapping. </em>Vulnerability mapping involves comparing the
+                                        services, applications, and operating systems of scanned hosts against
+                                        vulnerability databases, as well as the testers’ own knowledge of
+                                        vulnerabilities.</li>
+                                    <li><em>Attack. </em>Executing an attack is at the heart of any penetration test. It
+                                        is the process of verifying previously identified potential vulnerabilities by
+                                        attempting to exploit them. If an attack is successful, the vulnerability is
+                                        verified, and safeguards are identified to mitigate the associated security
+                                        exposure. If an attack is unsuccessful, the tester should attempt to exploit
+                                        another discovered vulnerability. A successful attack equates to verification of
+                                        a vulnerability. An unsuccessful attack does not mean that the vulnerability is
+                                        not exploitable.</li>
+                                    <li><em>Reporting. </em>The reporting phase occurs simultaneously with the other
+                                        phases of the penetration test. In the planning phase, the assessment plan is
+                                        developed, along with rules of engagement. A report has various sections,
+                                        including an executive summary, summary and/or details of identified
+                                        vulnerabilities, attack scenarios and results, and mitigation recommendations.
+                                    </li>
+                                </ol>
+                                <p class="comment78305">In the discovery and attack phases, written logs are usually
+                                    kept, and periodic reports are made to system administrators and/or management. At
+                                    the conclusion of the test, a report is compiled to describe identified
+                                    vulnerabilities, present a risk rating, and give guidance on how to mitigate the
+                                    discovered weaknesses.</p>
+                                <p class="comment78305">Penetration testing often includes nontechnical methods of
+                                    attack as well. For example, a penetration tester could breach physical security
+                                    controls and procedures to connect to a network, steal equipment, capture sensitive
+                                    information (possibly by installing keylogging devices), or disrupt communications.
+                                    Exercise caution when performing physical security testing. Security guards should
+                                    be made aware of how to verify the validity of tester activity, such as via a point
+                                    of contact or documentation. Another nontechnical means of attack is the use of
+                                    social engineering, such as posing as a help desk agent and calling to request a
+                                    user’s passwords, or calling the help desk posing as a user and asking for a
+                                    password to be reset.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c258894a-a2c1-42a3-924d-b5dd547f770b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Fuzzing<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4f1f82ac-0e86-4134-8a7a-959f87674a9d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Fuzzing (also known as <strong><button
+                                            data-definition title="Type of testing that is best suited for uncovering certain types of memory-related issues/vulnerabilities that may be present in software (e.g., memory leaks, buffer overflows) by subjecting the entry points of the software to invalid or random input types, ranges, and input lengths. It is normally conducted using automated testing tools and techniques."
+                                            class="rendered">fuzz testing</button>) </strong>is a black box testing
+                                    technique. It is done through automated means (e.g., using fuzz tools) and is
+                                    intended to find implementation bugs by injecting malformed/semi-malformed data.
+                                    NIST relates fuzz testing to fault injection in that invalid data is input into the
+                                    application via the environment, or input by one process into another process. Fuzz
+                                    testing is implemented by tools commonly referred to as “fuzzers,” which are
+                                    programs or scripts that submit some combination of inputs to the test target to see
+                                    how it responds.</p>
+                                <p class="comment78305">The attack vector is the I/O of the system being fuzzed and may
+                                    include the user interface, command line, import/export capabilities, URLs, forms,
+                                    etc. Fuzzing programs fall into two different categories:</p>
+                                <ul>
+                                    <li><em>Generation-based. </em>In generation-based fuzzing, there is an
+                                        understanding of the file format or protocol. Generation-based fuzzing involves
+                                        “generating” the fuzz inputs from scratch based on the specification or format.
+                                        This type of fuzzing is also known as “smart” or “intelligent” fuzzing.</li>
+                                    <li><em>Mutation-based. </em>In mutation-based fuzzing, injecting the fault values
+                                        is done blindly. Hence, it is also known as “dumb” fuzzing, as in lacking
+                                        understanding of the format or structure of the data. One example can be just
+                                        replacing or appending a random section of data.</li>
+                                </ul>
+                                <p class="comment78305">Various fuzzing tools are designed to be used at different
+                                    points in the software development life cycle. Some should be used in tandem with
+                                    unit testing, others with integration testing, and still others in acceptance
+                                    testing.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="34466c70-2482-48a4-a073-4a30bce5b9d7" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Fuzzing Advantages<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="10a84835-006d-4ed5-8fae-75b36486a2e2" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">When an automated process or tool fuzzes various entry points of
+                                    the software indiscriminately with no assumptions, quickly, repeatedly, and with
+                                    ease, issues such as memory leaks or buffer overflows that otherwise may have gone
+                                    undetected could surface. This makes fuzz testing useful for regression tests.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d1a05ff5-7997-4073-ad38-ab4ee476124b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Fuzzing Challenges<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f3b067b3-fe61-4858-b9ac-300fce798686" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">No single method of testing can uncover all the
+                                    security-relevant issues in software. Each testing method is best suited for
+                                    uncovering types of vulnerability. However, the two main challenges with fuzzing are
+                                    setup and data analysis. Fuzzing tends to require special setup to include a testing
+                                    harness. Fuzz testing is noisy and produces large amounts of data, which often
+                                    include false positive results.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="eb029079-9cc3-4feb-92d5-d82f6e9fd7dc" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Scanning<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="804bd426-b665-4935-aca1-ffbb8445fba3" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Scanning hosts, networks, and applications for vulnerabilities
+                                    is common practice, and in many cases required. PCI-DSS is an example of an industry
+                                    standard that has requirements in this regard.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f83528ac-5184-4d86-90d2-28d62e381713" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Vulnerability Scanning<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="daa6a4dc-5d05-4986-8dd0-d633cf795d5a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Vulnerability scanning can help identify outdated software
+                                    versions, missing patches, and misconfigurations as well as validate compliance with
+                                    or deviations from an organization’s security policy. This is done by identifying
+                                    the operating systems and major software applications running on the hosts and
+                                    matching them with information on known vulnerabilities.</p>
+                                <p class="comment78305">A vulnerability scanner is a relatively fast and easy way to
+                                    quantify an organization's exposure to surface vulnerabilities. A surface
+                                    vulnerability is a weakness that exists in isolation, independent from other
+                                    vulnerabilities. The system’s behaviors and outputs in response to attack patterns
+                                    submitted by the scanner are compared against those that characterize the signatures
+                                    of known vulnerabilities, and the tool reports any matches that are found.</p>
+                                <p class="comment78305">Tools available for automated vulnerability scanning at the
+                                    application-level focus on web applications, web services, and mobile apps. In
+                                    addition, other scanning products are available for assessing vulnerabilities in
+                                    various components of software’s typical execution environment, including scanners
+                                    for popular web servers, database management systems, virtual machines, and
+                                    operating systems.</p>
+                                <p class="comment78305">Many scanners combine simulated actions of a client or browser
+                                    to submit inputs and observe the target’s resulting behavior, scanning for
+                                    configuration errors, dangerous static conditions, and violations such as sensitive
+                                    data leaks or communications over prohibited network ports. Like virus scanners and
+                                    intrusion detection systems, most vulnerability scanners are signature-based and
+                                    need to be continuously updated with new signatures from their vendors.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="fe963739-e1a4-4c15-a954-02f46efcb50f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Application Vulnerability
+                                Scanners<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c6e01c1b-a003-45a3-bdd6-76725e251ea5" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Application vulnerability scanners scan executing software for
+                                    vulnerability patterns. Although vulnerability scanners can detect simple
+                                    vulnerabilities because they are essentially automated pattern-matching tools, they
+                                    cannot pinpoint risks associated with aggregations of vulnerabilities or
+                                    vulnerabilities that emerge from unfamiliar, anomalous combinations of input and
+                                    output patterns.</p>
+                                <p class="comment78305">Some web application vulnerability scanners attempt to overcome
+                                    the limitations of signature-based scanning by performing a combination of simulated
+                                    reconnaissance attacks and fuzz tests to probe the application for additional known
+                                    and common vulnerabilities that typically elude signature-based scans.</p>
+                                <p class="comment78305">Many vulnerabilities detected by signature-based scanners may be
+                                    located in sections of code that are unused, or dead. The removal of dead code
+                                    before compiling the application will often significantly reduce the number of
+                                    vulnerabilities that would otherwise be found through automated vulnerability
+                                    scanning. However, it can be very challenging to locate dead code in third-party
+                                    software, especially when the third-party source code is not available.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="9e1c18ad-ddac-47ad-aabf-3176e5cefe65" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Content Scanning<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4900c951-df9d-446f-b724-6cc0f046567a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Content scanning may be done to achieve different objectives.
+                                    For example, it may be done to inspect traffic for either malicious threats or
+                                    confidential data leakage. What we mean by confidential data leakage is data an
+                                    employee should not be sending out, such as a company’s financial statement.
+                                    Encrypted traffic presents a challenge in this regard.</p>
+                                <p class="comment78305">One of the main concerns regarding using content scanning is
+                                    that of privacy. In those cases, exceptions should be considered to exclude sites
+                                    such as financial sites. Another possibility is to alert users (e.g., through a
+                                    warning page) if their content is being inspected.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5d0049d8-d723-4715-80e6-39346a314478" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Cryptographic Validation<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="87edc1d4-5239-4597-9829-1ad7c235edff" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Cryptographic validation is the testing, evaluation, and
+                                    validation of cryptographic modules in accordance with a set standard. A good
+                                    example is the cryptographic module validation program established by NIST, where
+                                    vendors work with designated security testing laboratories to test their modules
+                                    against applicable standards.</p>
+                                <p class="comment78305">It should also be noted that as part of a comprehensive software
+                                    testing program, an organization should make the effort to ensure it is adhering to
+                                    best practices and standards. Automated static analysis tools and manual security
+                                    code reviews as part of a white box testing effort can help identify risky
+                                    operations (e.g., usage of unsafe randomization functions for generating tokens) or
+                                    deprecated and weak algorithms/APIs.</p>
+                                <p class="comment78305">Validation of cryptographic modules is valuable for compliance
+                                    purposes. FIPS 140-2 is a perfect example of such validation, which may be achieved
+                                    through NIST specified laboratories.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7c7132d5-772f-4663-b666-3c6dcd9a9ce9" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Pseudorandom Number Generator
+                                (PRNG)<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="eb66e025-b831-42b3-80f6-4c1d4a90dea9" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">In the context of cryptography, any weakness in the process of
+                                    generating true random numbers could result in patterns in the cipher. This may
+                                    result in a substantial reduction in the work factor for the adversaries to a point
+                                    where a brute force attack may be economically feasible. Software is far from
+                                    perfect when it comes to randomization, so where and when possible,
+                                    hardware-assisted cryptography is valued.</p>
+                                <p class="comment78305">NIST SP 800-90A, Recommendation for Random Number Generation
+                                    Using Deterministic Random Bit Generators, states that:</p>
+                                <p style="margin-left: 40px;" class="comment78305"><em>There are two fundamentally
+                                        different strategies for generating random bits. One strategy is to produce bits
+                                        non-deterministically, where every bit of output is based on a physical process
+                                        that is unpredictable; this class of random bit generators (RBGs) is commonly
+                                        known as non-deterministic random bit generators (NRBGs). The other strategy is
+                                        to compute bits deterministically using an algorithm; this class of RBGs is
+                                        known as Deterministic Random Bit Generators (DRBGs). <sup>5</sup></em></p>
+                                <p class="comment78305"><strong><button
+                                            data-definition title="A deterministic computational process that has one or more inputs called &amp;quot;seeds&amp;quot; and which outputs a sequence of values that appears to be random according to specified statistical tests.  Reference: csrc.nist.gov/glossary"
+                                            class="rendered">Pseudorandom number generators</button> </strong>(PRNGs)
+                                    are also deterministic random bit generators. A PRNG is an algorithm for generating
+                                    a random sequence of numbers. Due to the static nature of the initial values used in
+                                    software-based random number generators, the use of hardware is recommended for this
+                                    purpose.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="aeea81ad-0fc1-45dc-a8aa-28008515cf17" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>5</sup> Elaine Barker, John Kelsey; National Institute of
+                                    Standards and Technology; NIST SP 800-90A, Revision 1 -Recommendation for Random
+                                    Number Generation Using Deterministic Random Bit Generators; <a
+                                        href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-90Ar1.pdf"
+                                        target="_blank">https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-90Ar1.pdf</a>;
+                                    retrieved July 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="28781382-fe65-42e0-8090-6b975ba9ceee" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Cryptographically Secure Pseudorandom
+                                Number Generator (CSPRNG)<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2978dab8-a6a8-4f9d-a9e7-4b2a55082e0e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">A cryptographically secure pseudorandom number generator
+                                    (CSPRNG) is a PRNG with properties that make it suitable for use in cryptography.
+                                    Many aspects of cryptography require random numbers, such as:</p>
+                                <ul>
+                                    <li>Key generation</li>
+                                    <li>Nonces</li>
+                                    <li>One-time pads</li>
+                                    <li>Salts</li>
+                                </ul>
+                                <p class="comment78305">There are many methods for testing the randomness of binary
+                                    sequences. The NIST Test Suite is a statistical package consisting of 15 tests that
+                                    were developed to test the randomness of (arbitrarily long) binary sequences
+                                    produced by either hardware- or software-based cryptographic random or pseudorandom
+                                    number generators.</p>
+                                <p class="comment78305">One example from this test suite is Frequency (Monobit) Test:
+                                </p>
+                                <p style="margin-left: 40px;" class="comment78305"><em>The focus of the test is the
+                                        proportion of zeroes and ones for the entire sequence. The purpose of this test
+                                        is to determine whether the number of ones and zeroes in a sequence are
+                                        approximately the same as would be expected for a truly random sequence. The
+                                        test assesses the closeness of the fraction of ones to ½, that is, the number of
+                                        ones and zeroes in a sequence should be about the same. All subsequent tests
+                                        depend on the passing of this test.<sup>6</sup></em></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7d8f0664-df18-41f3-bc92-05937280d4c4" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Entropy<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="09ff9430-de4f-4492-8955-8ceb24606400" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">In cryptography, it’s important for secret values to be
+                                    unpredictable. Entropy is the amount of uncertainty that an attacker must face to
+                                    determine the value of a secret. It is difficult to create sources of entropy for
+                                    random bit generators; true randomization is challenging because we generally fall
+                                    into creating patterns even if we try not to.</p>
+                                <p class="comment78305">Testing, or validating, entropy sources is necessary to meet
+                                    requirements. NIST recommends the following to validate an entropy source:</p>
+                                <p style="margin-left: 40px;" class="comment78305"><em>An entropy source may be
+                                        submitted to an accredited lab for validation testing by the developer or any
+                                        entity with an interest in having an entropy source validated. After the entropy
+                                        source is submitted for validation, the lab will examine all documentation and
+                                        theoretical justifications submitted. The lab will evaluate these claims and may
+                                        ask for more evidence or clarification.<sup>7</sup></em></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="87d5827b-e74b-44de-9af5-7cca96e92bb4" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>6</sup> Andrew Rukhin, Juan Soto, James Nechvatal, Miles
+                                    Smid, Elaine Barker, Stefan Leigh, Mark Levenson, Mark Vangel, David Banks, Alan
+                                    Heckert, James Dray, San Vo; National Institute of Standards and Technology; NIST
+                                    Special Publication 800-22 Revision 1a -- A Statistical Test Suite for Random and
+                                    Pseudorandom Number Generators for Cryptographic Applications; <a
+                                        href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-22r1a.pdf"
+                                        target="_blank">https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-22r1a.pdf</a>;
+                                    retrieved July 2023.</p>
+                                <p class="comment78305"><sup>7</sup> National Institute of Standards and Technology;
+                                    NIST Special Publication 800-90B -- Recommendation for the Entropy Sources Used for
+                                    Random Bit Generation; <a
+                                        href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-90B.pdf"
+                                        target="_blank">https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-90B.pdf</a>;
+                                    retrieved July 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="15ded5be-ec11-41bc-b8b2-466c78a01f99" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Entropy-as-a-Service<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b4327232-5715-414a-88af-a25af1e619d1" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Due to the fundamental importance of entropy and cryptography in
+                                    general for securing data at rest and in transit, discussions around the concept of
+                                    Entropy-as-a-Service (EaaS) have also been presented, especially regarding the
+                                    Internet of Things (IoT):</p>
+                                <p style="margin-left: 40px;" class="comment78305"><em>Standard deterministic computers
+                                        have trouble producing good randomness, especially IoT-class devices that have
+                                        little opportunity to build entropy locally before they begin network
+                                        communications. The best sources of true randomness are based on unpredictable
+                                        physical phenomena, such as quantum effects, but they can be impractical to
+                                        include in IoT devices. Finding ways to unlock the full potential of
+                                        cryptography to secure data on the IoT can offer hope for a better
+                                        future.<sup>8</sup></em></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8df07c13-ec46-4f50-9ae8-5fb5bc96803e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>8</sup> National Institute of Standards and Technology;
+                                    Entropy as a Service: Unlocking the full potential of cryptography; <a
+                                        href="https://csrc.nist.gov/CSRC/media/Projects/Entropy-as-a-Service/documents/pres_handout_final.pdf"
+                                        target="_blank">https://csrc.nist.gov/CSRC/media/Projects/Entropy-as-a-Service/documents/pres_handout_final.pdf</a>;
+                                    retrieved July 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="42512bdb-1c55-49ff-aaad-7e228c96f6d4" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Misuse and Abuse Test Cases<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f0efca81-068b-4378-8918-3f4ca8e2578b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Earlier, we discussed the relationship between use cases and
+                                    misuse or abuse cases. We also highlighted the importance of creating misuse and
+                                    abuse cases.</p>
+                                <p class="comment78305">In general, a test case answers the question, “What am I going
+                                    to test?” You develop test cases to define the things that you need to validate to
+                                    ensure that the system is working as expected.</p>
+                                <p class="comment78305">It is common for a test case to have an ID, test scenario, test
+                                    case description, test steps, prerequisite(s), test data, and environment
+                                    information, among other parameters.</p>
+                                <p class="comment78305">Use case testing involves testing common scenarios where actors
+                                    (users or other systems) interact with the system to complete a task and achieve a
+                                    goal. For this reason, use cases can be utilized as the basis for the creation of
+                                    useful test cases that can lead to uncovering defects based on real usage of the
+                                    system.</p>
+                                <p class="comment78305">Misuse and abuse cases can help with the specification of
+                                    appropriate needed functions and controls to block the intended misuse and abuse.
+                                    Controls that were subsequently identified must have been incorporated into the
+                                    design of the software and implemented to provide the intended functions. During the
+                                    testing phase of the life cycle, test cases should be created to verify the
+                                    implementation and effectiveness of those identified controls.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b2707861-6ca1-4e2a-86aa-ff696019ecc7" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Simulation<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ccc42124-b791-402c-8bd9-f74c1414f773" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Simulation is the imitation of the operation of a real-world
+                                    process or system. The act of simulating something first requires that a model be
+                                    developed. This model represents the key characteristics, behaviors, and functions
+                                    of the selected physical or abstract system or process.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="dc96a52c-05bb-40ba-b89c-ef9bb11a36e6" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Simulating Production Environment and
+                                Production Data<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f11844ab-b152-437a-a9c9-96bb78cad599" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Software should be tested in an environment that is configured
+                                    as closely to the target production environment as possible using production-like
+                                    data; otherwise, test results may not be very accurate. This may require the QA
+                                    environment to mirror the production environment or simulate it closely. Production
+                                    data in non-production environments can be a problem.</p>
+                                <p class="comment78305">Software that works well in one environment may experience
+                                    issues when deployed to a hardened production environment. Configuration mismatch
+                                    between environments historically has presented challenges to organizations that
+                                    develop software. However, this problem can be less of an issue in the cloud, as
+                                    infrastructure management services can simplify the process. For example, using
+                                    templates to set up resources consistently and repeatedly to replicate an
+                                    environment is much easier and more efficient than manual and error-prone processes
+                                    to replicate and configure all the resources needed by the application.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="80a17756-5028-4ae1-8033-636389c34dda" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Synthetic Workloads<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6d11ba8b-4254-46e3-9d1d-39d32c2bb9e9" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Effective testing and evaluation of software may require
+                                    workloads with certain characteristics for the purpose of analysis and benchmarking
+                                    the performance of the software. Generation of these workloads for testing purposes
+                                    (e.g., testing the performance of a hypervisor’s scheduling algorithm) may pose a
+                                    challenge to the organization. Synthetic workload generators may be used for this
+                                    purpose.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0c7284f7-8f28-43be-8383-d9a4619d24d2" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Real User and Synthetic
+                                Monitoring<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2ad203a0-9f7f-4baf-8015-97b1a6b2ac1d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Simulation may also be used for the purpose of monitoring. The
+                                    primary objective of monitoring in this context is to have feedback (preferably
+                                    continuous) from production, that is, receive information about the performance and
+                                    usage patterns of an application in production.</p>
+                                <p class="comment78305">This information can then be used for various purposes,
+                                    including achieving high availability or minimizing time to detect or mitigate.
+                                    Monitoring in this sense is a proactive measure. Two common methods of monitoring
+                                    include:</p>
+                                <ul>
+                                    <li><strong>Real User Monitoring (RUM)</strong>
+                                        <ul>
+                                            <li><strong><button
+                                            data-definition title="A monitoring tool/technology that aims to provide deeper insight into the end-user experience, performance, and general health of applications."
+                                                        class="rendered">Real user monitoring</button> </strong>(RUM)
+                                                concerns monitoring user interactions (e.g., with websites or
+                                                applications). Interactions are recorded for the purpose of collecting
+                                                performance data and improving the user experience. An example is
+                                                monitoring by SaaS providers to manage service quality.</li>
+                                            <li>RUM is also used to perform tests before website or application changes
+                                                are rolled out to production. RUM typically does provide repeatable
+                                                measurements over time, which contrasts with synthetic monitoring.</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Synthetic Monitoring</strong>
+                                        <ul>
+                                            <li>With <button
+                                            data-definition title="A monitoring tool/technology that relies on scripting capabilities and consistent sets of transactions to assess performance and availability and aims to minimize the time to detect and mitigate production issues."
+                                                    class="rendered"><strong
+                                                        xmlns="http://www.w3.org/1999/xhtml">synthetic
+                                                        monitoring</strong></button>, scripts are deployed for the
+                                                purpose of simulating the path taken by an end user. Web browser
+                                                emulation capabilities or scripts may be used to capture performance
+                                                data during each run.</li>
+                                            <li>Commercial or open-source tools for synthetic monitoring are available,
+                                                or you may choose to develop your own if appropriate. These tools can be
+                                                set up to perform simple tests or more complex tests involving multiple
+                                                steps to meet specific objectives and needs. For example, tools may
+                                                allow the user to set test frequency, test location, and test retries,
+                                                and may allow for success criteria to be defined for each test.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="034ec9c2-d4c8-4fa6-b70a-3c000e0e1b81" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Synthetic Transactions<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4e6e0c33-935b-401c-a8b0-6b3283ff29d4" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Synthetic transactions refer to transactions that serve no
+                                    business value other than to exercise the system programming and infrastructure.</p>
+                                <p class="comment78305">Synthetic transactions can be passive or active. Passive
+                                    synthetic transactions create no residual impact to the system. In the case of an
+                                    order status application, a synthetic transaction would be a status query on behalf
+                                    of a “dummy” customer, which is maintained by the testing organization.</p>
+                                <p class="comment78305">In active synthetic transactions, the transaction itself is
+                                    processed and stored within the application. An example of this would be a “dummy”
+                                    order placed by a “dummy” customer to test the order-processing attributes of the
+                                    system. In this case, care must be taken to prevent the transaction from being
+                                    processed by later processes (such as picking and shipping), or from creating an
+                                    impact within the financial subsystem. If active synthetic transactions are to be
+                                    used, then special data setup is often required to prevent any impact across the
+                                    production environment.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ddecaded-7b82-4f7c-a94a-7749953ab255" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Failure Testing<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="61d7a751-7324-437c-b8d1-cc2f66121fda" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Under certain conditions, defects in software may be executed
+                                    and result in the software failing to perform its required function(s). Not all
+                                    defects result in failures; some may stay inactive in the code, and we may never
+                                    notice them. For example, defects in dead code will never result in failures.</p>
+                                <p class="comment78305">It is not just defects that give rise to failures. Failures can
+                                    also be attributed to other causes:</p>
+                                <ul>
+                                    <li>The operational environment may cause conditions that might prevent or change
+                                        the execution of software.</li>
+                                    <li>Human error in interacting with the software may result in a wrong input value
+                                        being entered or an output being misinterpreted.</li>
+                                </ul>
+                                <p class="comment78305">These issues cause incidents to be reported. To deal with the
+                                    incidents, the programmer needs to determine whether this incident has occurred
+                                    because of the failure or for some other reason.</p>
+                                <p class="comment78305">During software testing, errors, defects, and vulnerabilities
+                                    may be identified. Errors due to mistakes made by developers may result in flaws or
+                                    defects in software. These flaws may introduce vulnerabilities into the software,
+                                    threatening the security objectives of confidentiality, integrity, or availability.
+                                    Once again, it is important to note that vulnerabilities are not always due to
+                                    coding errors and may be traced back to design flaws, configuration settings, etc.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="34d2eb04-db03-4893-8de3-b2c6cc54dd0a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Source Code Fault Injection<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="444d34d1-7430-4ff3-9ed4-76607766b549" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">As a form of testing, fault injection is about purposely
+                                    introducing errors to assess how the software behaves in the presence of error
+                                    conditions. Fault injection may be done at compile time or run time.</p>
+                                <ul>
+                                    <li><em>Compile-Time Injections. </em>This is a fault injection technique where
+                                        source code is modified to inject simulated faults into a system.</li>
+                                    <li><em>Run-Time Injections. </em>This makes use of software trigger to inject a
+                                        fault into a software system during run time.</li>
+                                </ul>
+                                <p class="comment78305">When the instrumented code is compiled and executed, the tester
+                                    can trace between the executing code and the instrumented source code to observe the
+                                    software’s behavior and state changes when execution reaches each instrumented code
+                                    portion. In this way, the tester can observe and even quantify the secure and
+                                    insecure state changes that result from the instrumented faults, as well as the ways
+                                    in which such faults propagate throughout the program (as traced through its source
+                                    code).</p>
+                                <p class="comment78305">Source code fault injection is particularly useful for detecting
+                                    incorrect use of pointers and arrays, race conditions, and use of dangerous system
+                                    calls. When new attack patterns and intrusion techniques emerge, the source code can
+                                    be re-instrumented with representative faults. Note that while source code fault
+                                    injection achieves greater code coverage and a lower false positive rate than other
+                                    testing methods, it also requires a deeper understanding of the software that is
+                                    being tested.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1b15918e-15be-41d6-b973-ecc7324c7c75" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Stress Testing<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="af0798a0-8579-4d97-8a71-4ac83a0f79a4" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><strong><button
+                                            data-definition title="A type of software testing that remains focused on verifying the stability and reliability of the software under stress conditions (beyond the normal limits of operation). Stress may be expressed in terms of excessive loads/volumes or even unexpected anomalies at run time (e.g., loss of connection to the network or to the database)."
+                                            class="rendered">Stress testing</button> </strong>is a type of nonfunctional
+                                    testing that involves testing beyond normal operational capacity—often to a breaking
+                                    point—and observing the results. Stress testing can help ensure that software
+                                    exhibits correct behavior under stressful conditions. Although it is true that large
+                                    volumes of data or many concurrent users can create stressful conditions for the
+                                    software, stress testing should not be confused with volume testing or load testing.
+                                    The basic differences between these three forms of testing are summarized below:</p>
+                                <ul>
+                                    <li>Volume testing uses a large amount of data.</li>
+                                    <li>Load testing uses a large number of users.</li>
+                                    <li>Stress testing may use too many users and too much data.</li>
+                                </ul>
+                                <p class="comment78305">In the case of a web application, here are some ways in which
+                                    stress can be applied to a system:</p>
+                                <ul>
+                                    <li>Double the baseline number for concurrent users/HTTP connections.</li>
+                                    <li>Randomly shut down and restart ports on the network switches/routers that
+                                        connect the servers (e.g., via SNMP commands).</li>
+                                    <li>Take the database offline, then restart it.</li>
+                                    <li>Run processes that consume resources (CPU, memory, disk, network) on the web and
+                                        database servers.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d9b43776-218e-4959-9ad5-52b98e6984b2" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Break Testing<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="681c1149-9210-40b0-a4df-193ea0f7afed" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Break testing is creating tests that will fail for various
+                                    reasons, such as latency, invalid responses, and incomplete/unacceptable data. The
+                                    list of what break testing should test is long. Break testing examines the response
+                                    of a system in case of hardware or software failures, such as lost connections to a
+                                    database, network failures, and anything else that is unpredictable and breaks the
+                                    normal path of execution.</p>
+                                <p class="comment78305">Break testing confirms the expected system behavior in case of
+                                    any breakage. The restart and recovery part of the overall architecture plays a very
+                                    important role in defining the conditions for break testing. The break testing needs
+                                    to be facilitated by the infrastructure support groups and development team. They
+                                    are needed to create the scenario and analyze the results.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="81a55907-6df8-4e55-a532-ee66585e17a2" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Functional Testing<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="726ad53b-c4ce-461f-b041-2ad6611bb176" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">If one considers functional testing as a form of black box
+                                    testing, then the logical conclusion is that our objective is to confirm that the
+                                    software meets its functional requirements and is behaving as expected.</p>
+                                <p class="comment78305">Test automation through scripts and tools designed for this
+                                    purpose can go a long way toward enhancing the testing process, whether testing web
+                                    applications, mobile applications, web APIs, and so on. Whereas considering
+                                    opportunities for automation is a great idea, abandoning manual testing in favor of
+                                    complete automation may not be the wisest choice. Not all tests are good candidates
+                                    for automation.</p>
+                                <p class="comment78305">Several types of testing are referred to as functional testing.
+                                    Common to all software development initiatives are the functional testing methods
+                                    best known as unit testing, integration testing, and regression testing.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="65a9f697-fe63-4fae-bf59-ce33120d36cc" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Unit Testing and Code Coverage<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f0010090-e43d-43c8-bf2f-053c086bfc99" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><strong><button
+                                            data-definition title="A type of software testing that focuses on testing units of code in isolation and is conducted by software developers during the implementation (coding) phase of the life cycle. Dependencies of the code being tested in isolation are addressed through creation of drivers and stubs."
+                                            class="rendered">Unit testing</button> </strong>is about developers testing
+                                    small units of code (i.e., often functions and methods) in isolation using stubs and
+                                    drivers to address dependencies of the unit of code being tested. Unit testing
+                                    focuses on the input, processing, and output of a software unit which typically
+                                    references function or method testing.</p>
+                                <p class="comment78305">Unit tests ensure that individual pieces or objects are
+                                    functioning correctly by supplying a specific set of inputs and known outputs which
+                                    are measured against the actual values returned. Unit testing ensures that new
+                                    development performs required functions and prevents regressions during sustainment.
+                                    Since unit testing detects issues before being committed to a repository, the cost
+                                    of fixes is typically reduced, and debugging is simplified.</p>
+                                <p class="comment78305">Test cases must be created to provide adequate code coverage –
+                                    that is, the percentage of the code covered by tests. Even with complete code
+                                    coverage, there is no guarantee that the code is free of defects, as there may be
+                                    bugs that are not identified by the existing test cases. There is also the concept
+                                    of positive and negative unit testing code. Positive cases test for functional
+                                    correctness. Negative cases expect failure and ensure that functions fail and handle
+                                    errors correctly.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="899ff06e-f542-4224-92a2-9ff483598da9" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--50 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_056_03.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_056_03.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 130.953px; left: 414.281px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 6: Example Unit Test in C#</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="f9398c5a-1cf9-49b3-883f-4477775d5214"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="62fc3f59-b7ad-4174-9367-fb2653e8ea0c" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--50 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_056_04.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_056_04.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 199.297px; left: 414.281px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom"></figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="ba23bbca-c1d6-4bf1-f361-f76bbfce918a"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="43c1eb5a-7aae-469f-a8d5-2212e61d857b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Integration Testing<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5d534040-da1b-4ffa-bab7-e3de5ac7a5a4" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Once units of code have been tested in isolation, the next
+                                    logical step is to test the interfaces between these units. Integration testing is
+                                    done following unit testing. Different approaches to integration testing have been
+                                    proposed, each with its own pros and cons.</p>
+                                <p class="comment78305">Systems seldom run in silos without dependencies on other
+                                    software systems and processes, both upstream and downstream. Another form of
+                                    integration testing is system integration testing, which focuses on the verification
+                                    of proper execution and functionality of software components and interfaces between
+                                    modules within the solution.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="874344bc-aca4-4248-a6f0-deb45dff0d03" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Regression Testing<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c0352658-444b-4036-9339-6518bc0d078a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">When software is touched (e.g., adding new features or bug
+                                    fixes), there is always the possibility that things that used to work may experience
+                                    issues after the introduction of the change. This makes <strong><button
+                                            data-definition title="Reference to the type of software testing that remains concerned with the verification that new changes introduced to the software do not adversely affect the existing/old functionality."
+                                            class="rendered">regression testing</button> </strong>necessary to ensure
+                                    that the existing functionality remains intact.</p>
+                                <p class="comment78305">Automation of regression testing is widely adopted to minimize
+                                    the tedious and repetitive steps and tasks of testing. Automation may rely on sets
+                                    (libraries) of unit test cases that are automatically executed during each
+                                    regression.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="91c5c139-37ed-42e8-a48d-05949d592025" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Continuous Testing<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="af719911-9a0d-4eac-b0cf-2758dbaf558b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Continuous delivery in DevOps environments requires the concept
+                                    of testing that hovers around the process of testing early, often, and wherever
+                                    possible. Continuous testing methodology typically requires a great degree of
+                                    automation and contrasts with the traditional testing model of handoff from one team
+                                    to another (e.g., development team to QA team). </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="screengrid comment78305">
+            <footer class="screen__margin screen__footer u-hide-element vstdonthighlight">
+                <div class="feedback comment78305">
+                    <div class="feedback__content js-feedback-focus comment78305" tabindex="-1"></div>
+                </div>
+                <div class="control-btns comment78305"></div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay-root vstdonthighlight rendered u-hidden comment78305" style="overflow-y: auto;">
+        <div class="modal-cover-holder comment78305">
+            <div class="modal-cover-outer comment78305">
+                <div class="modal-cover comment78305"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

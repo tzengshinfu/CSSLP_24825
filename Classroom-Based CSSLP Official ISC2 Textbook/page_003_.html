@@ -1,0 +1,2163 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"
+    style="padding: 0px; font-size: 100%; --USER__lineHeight: 1; --USER__pageMargins: 1; --USER__view: readium-scroll-on;"
+    class="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Core Concepts (1.1)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="overflow: hidden auto;">
+    <div xmlns:epub="http://www.idpf.org/2007/ops" epub:type="pagebreak" id="pagebreak_3"
+        class="hidden-pagebreak comment78305" title="3"></div>
+
+    <div xmlns:epub="http://www.idpf.org/2007/ops" id="302991ea-97c6-4bfa-ab66-26ddd52b058e"
+        class="screen rendered comment78305" aria-hidden="false">
+        <div class="screengrid comment78305">
+            <header class="screen__margin screen__header u-hide-element vstdonthighlight">
+
+                <div class="screen__heading u-float--clearfix comment78305">
+                    <div class="screen__icon u-float--left comment78305"></div>
+                    <h2 class="screen__title comment78305" tabindex="-1"></h2>
+                </div>
+
+
+                <div class="screen__instructions comment78305"></div>
+            </header>
+        </div>
+
+        <div class="screen__content comment78305">
+
+            <div class="block rendered comment78305">
+                <div id="0b99996d-9374-4c89-b844-8cc4c901584f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Core Concepts (1.1)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3c89dd06-57d9-48dc-b546-a1ac045c4247" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">In this section, we will discuss the foundations of security
+                                    objectives—confidentiality, integrity, and availability (CIA). CIA and a recent
+                                    enhanced focus on privacy drive underlying requirements for security in software.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="9ffc23a1-1eac-4186-95ff-317e737d32b3" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Objectives<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8a981d93-7044-4d09-b979-ac0d15f24423" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>Define core security objectives for software development. </li>
+                                    <li>Describe the information security triad and explain the main mechanisms of
+                                        confidentiality, integrity, and availability of information.</li>
+                                    <li>Characterize the relationship between information security and data privacy. 
+                                    </li>
+                                    <li>Identify regulatory considerations that impact software security.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="dbcdc464-b7d3-4548-9b3c-f570a519ffed" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Overview<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="9cae30b2-2c88-4e21-b5e8-6acad43c8a70" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The CIA triad provides a framework for security policies,
+                                    procedures, and security objectives for all software security activities and efforts
+                                    throughout the software development life cycle (SDLC). Security practitioners should
+                                    understand the relationship between security and data privacy while acknowledging
+                                    key differences.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4fe5783f-24ea-4680-aa1d-1b02585110a3" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">The Three Rs of Software<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="31c09d60-7980-4cb2-aa5e-f32c66064de8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">One simple way to describe the secure software objectives is to
+                                    build or acquire software that satisfies three Rs: Software must be reliable,
+                                    resilient, and recoverable.</p>
+                                <ul>
+                                    <li>Reliability means that software should function as expected.</li>
+                                    <li>Resiliency means that software should withstand misuse and attack.</li>
+                                    <li>Recoverability means having the ability for normal business operations
+                                        restoration with minimal disruption.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c254c2ef-a0b5-4fb2-98ea-cb9158f3137e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">The CIA Triad<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="15b93cba-a461-4ba5-8308-b021107175bd" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The information security triad of <strong>confidentiality,
+                                        integrity, and availability (CIA) </strong>provides a framework for information
+                                    security policies and the objectives for all software security activities and
+                                    efforts throughout the <strong><button
+                                            data-definition title="A formal or informal methodology for designing, creating, and maintaining software (including code built in hardware). NIST SP 800-128"
+                                            class="rendered">software development life cycle (SDLC)</button>.
+                                    </strong>The opposite of Disclosure-Alteration-Destruction (DAD):</p>
+                                <ul>
+                                    <li>Destruction is the opposite of availability.</li>
+                                    <li>Alteration is the opposite of integrity.</li>
+                                    <li>Disclosure is the opposite of confidentiality.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7d41ae67-b61a-4933-b1c7-012c88b9cb2a" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--50 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_003_01.webp" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_003_01.webp" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 296.656px; left: 402.797px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 1: CIA Triad</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="37bb40cc-e46d-4bc6-fee9-be429dd4f592"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4cdd7af0-49cd-44ad-906d-71fe6ec798b1" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Confidentiality<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4d102845-891a-48a2-843b-804d3b2922aa" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Confidentiality is one core security objective related to
+                                    software security. One definition of confidentiality, can be extracted from
+                                    <em>NIST’s FIPS 199—Standards for Security Categorization of Federal Information and
+                                        Information Systems </em>dedicated to information security, “Preserving
+                                    authorized restrictions on information access and disclosure, including means for
+                                    protecting personal privacy and proprietary information.”
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5121f3f6-74f7-43a9-b119-de0bebf7258b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Goals of Confidentiality<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="26b8864b-7252-4395-985f-9bb8140aa33f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Sensitive data and information must be protected at all times
+                                    whether in transit across a network, at rest on storage media, or while being
+                                    leveraged by an application. Security practitioners rely on various mechanisms to
+                                    mitigate risks involving unauthorized disclosure. Below are a few security controls
+                                    related to safeguarding software and sensitive information.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ee26ea82-d67e-4f9c-82a8-fcdfea853427" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Security Controls for
+                                Confidentiality<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5a7235ab-48e8-4f17-8e91-37bc128c5f2b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Protecting confidentiality based on organizationally defined
+                                    criteria may require support from several kinds of security controls, including
+                                    encryption and access controls.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6ec99aff-c92c-4884-8dce-d085878d0e30" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Encryption<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d91f0f69-1e0e-46da-b6f1-3ff2052b1fe5" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Encryption is an example of a security control mechanism. Think
+                                    about the encryption of data in transit and technologies that might be used for this
+                                    purpose (e.g., TLS 1.3), or encryption of data at rest, in the database using AES
+                                    256 through Transparent Data Encryption (TDE). Examples are nearly infinite.</p>
+                                <p class="comment78305">Transport Layer Security (TLS) is in common use. According to
+                                    <em>NIST Special Publication 800-52—Guidelines for the Selection, Configuration, and
+                                        Use of Transport Layer Security Implementations, </em>“TLS protocols are used to
+                                    secure communications in a wide variety of online transactions, such as financial
+                                    transactions (e.g., banking, trading stocks, e-commerce), healthcare transactions
+                                    (e.g., viewing medical records or scheduling medical appointments), and social
+                                    transactions (e.g., email or social networking). Any network service that handles
+                                    sensitive or valuable data, whether it is personally identifiable information (PII),
+                                    financial data, or login information, needs to adequately protect that data.” These
+                                    examples represent overt methods of ensuring the confidentiality of sensitive data.
+                                    The primary objective of encryption is to limit data comprehension to authorized
+                                    parties while deterring adversaries by creating a high <button
+                                            data-definition title="The amount of effort necessary to break a cryptographic system, usually measured in total elapsed time."
+                                        class="rendered"><strong xmlns="http://www.w3.org/1999/xhtml">work
+                                            factor</strong></button>—the<strong> </strong>effort or time required to
+                                    overcome a protective measure.
+                                </p>
+                                <p class="comment78305">Security practitioners understand that encryption is not a
+                                    solution to all problems, and other confidentiality methods including anonymization,
+                                    tokenization, and masking may offer acceptable alternatives depending on the goals
+                                    and objectives. Each of these confidentiality methods will be presented in
+                                    subsequent domains. </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a5a1dec2-cc27-45bc-a1c8-0fe987ddb908" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Access Controls<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ee849826-1e0b-4000-8335-bb8881d3876a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Confidentiality supports the principle of “least privilege” by
+                                    allowing access only to authorized individuals, processes, or systems, and only on a
+                                    need-to-know basis. Think about which systems employees of your organization are
+                                    authorized to access. What information is available in these systems? Is there
+                                    protected personal information accessed through these systems?</p>
+                                <p class="comment78305">As a principle, anything that needs to be trusted has an
+                                    identity. Identities can have identifiers such as email addresses, IP addresses or a
+                                    public key. Identity and access management (IAM) includes people, processes and
+                                    systems that are used to manage access to enterprise resources by assuring that the
+                                    identity of an entity is verified and then granting the correct level of access
+                                    based on the protected resource, which assures identity and other contextual
+                                    information.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f1d97a23-c997-4944-9fdc-505c5a3045a9" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Federated Identities<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e31f1912-fb1e-40a1-803a-0b26d4c07e48" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Federated identity management provides the policies, processes
+                                    and mechanisms to manage identity and trusted access to systems across
+                                    organizations.</p>
+                                <p class="comment78305">The technology of federation is much like that of Kerberos
+                                    within an Active Directory domain, where a user logs on once to a domain controller,
+                                    is ultimately granted an access token, and uses that token to gain access to systems
+                                    for which the user has authorization. The difference is that while Kerberos works
+                                    well in a single domain, federated identities allow for the generation of tokens
+                                    (authentication) in one domain and the consumption of these tokens (authorization)
+                                    in another domain.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a4e4f275-2a3b-4776-b58f-82a19aff521b" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--75 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_003_02.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_003_02.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 202px; left: 476.594px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 2: Federated Identity Management Options</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="990d59b1-ff0b-4ebe-c043-479289d77451"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="041bd7fd-fd5c-4bb5-91bd-47779ed8b868" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Identity Provider/Relying Party<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ce304bca-0751-4f78-ac0d-21d78ddf0cd9" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">In a federated environment, there is an identity provider and a
+                                    relying party. The identity provider holds the identities and generates a token for
+                                    known users. The relying party is the service provider and consumes these tokens. In
+                                    a cloud environment, it is desirable for the organization itself to maintain all
+                                    identities and act as the identity provider.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2ba672fc-f93d-4e63-b8f2-5e2f8c7fe988" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Identification<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="89766856-a8b4-42bd-a5b8-9a3b41793ed9" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">In the public cloud, identity providers increasingly adopt
+                                    OpenID, Security Assertion Markup Language (SAML), and OAuth as standard protocols.
+                                    This includes big-name social media services. Microsoft’s Active Directory is a
+                                    prevalent example. Relevant standard protocols include SAML and WS-Federation.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3b9c16f5-f482-4c6f-8563-836fc75aab20" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Authentication<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8a23ae02-2d54-4075-8807-77d3a2924636" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Authentication, the process of establishing with adequate
+                                    certainty the identity of an entity, is a function of the identity provider. This is
+                                    done through factors such as passwords, key generators, and biometrics. Multifactor
+                                    authentication is often advised for high-risk roles such as administrative
+                                    functions.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ba08c660-544f-4372-8cc9-89851d170ec0" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Authorization<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="13e08f98-228e-4a39-b4b0-4828de1d39af" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Authorization is the process of granting access to resources.
+                                    This can be based on identities, attributes of identities such as role, and
+                                    contextual information such as location and time of day. Authorization is enforced
+                                    near the relevant resource, at the policy enforcement point. In a federated identity
+                                    model, this is typically at the relying party.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="288b0f1f-4516-44f1-9e57-7150dc70b797" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Access Decisions<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="fb450a37-fac0-40d3-90e4-f2598d2562d9" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Examples of access decisions questions include:</p>
+                                <ul>
+                                    <li>Can a device be allowed to receive an IP address on the local network? </li>
+                                    <li>Can a web server communicate with a particular database server? </li>
+                                    <li>Can a user access a certain application, a function within an application or
+                                        data within an application? </li>
+                                    <li>Can an application access data from another application?</li>
+                                </ul>
+                                <p class="comment78305">These access rights might be detailed down to the individual row
+                                    of a database. What is clear from these examples is that access decisions can be
+                                    enforced at various policy enforcement points with various technologies. Individual
+                                    policies are controlled at the policy decision point. Communicating these policies
+                                    can be done through standard protocols such as Extensible Access Control Markup
+                                    Language (XACML).</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="eed2bdce-0260-4584-9e62-aa883d41357e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Federation Standards<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6dfdd916-934b-4d7f-b8e3-e81d1dfabec5" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Standards that support the federation space include:</p>
+                                <ul>
+                                    <li>Security Assertion Markup Language 2.0 (SAML 2.0)</li>
+                                    <li>Open Authorization (OAuth) 2.0 Authorization Framework</li>
+                                    <li>OpenID Connect</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7d5012aa-cd5d-4994-8739-98eadc07211d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><em>Security Assertion Markup Language 2.0 (SAML
+                                        2.0).</em><strong> </strong>SAML defines an XML-based framework for describing
+                                    and exchanging security information between online business relationships. This
+                                    security information is maintained in SAML assertions that work between trusted
+                                    security domain boundaries. The SAML standard follows a prescribed set of rules for
+                                    requesting, creating, communicating and using SAML assertions.</p>
+                                <p class="comment78305"><em>Open Authorization (OAuth) 2.0 Authorization Framework.
+                                    </em>RFC 6749 defines OAuth Authorization Framework to enable a third-party
+                                    application for obtaining limited access to an HTTP service, either on behalf of a
+                                    resource owner by orchestrating an approval interaction between the resource owner
+                                    and the HTTP service, or by allowing the third-party application to obtain access on
+                                    its own behalf.</p>
+                                <p class="comment78305"><em>OpenID Connect. </em>OpenID Connect is an interoperable
+                                    authentication protocol based on the OAuth 2.0 standard. It makes use of JSON/REST
+                                    to send and receive messages with the intent of simplification and uncomplication.
+                                    The focus of OpenID Connect is to confirm the identity of the person consuming
+                                    service from a browser or native application, thus allowing developers to
+                                    authenticate users across different websites and applications. It represents the
+                                    third iteration of OpenID. The first iteration was OpenID, which did not experience
+                                    substantive commercial use. The next iteration was OpenID 2.0, which offered better
+                                    security but was dependent upon XML. OpenID 2.0 also dictated that relying parties
+                                    could be web pages but not native applications.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b7139194-9c90-460f-92cd-1eb97d73b1f6" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Biometrics<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a2cb472e-3cd1-4934-aab7-cca7db936dd2" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The oldest biometric is, arguably, a human’s recognition of
+                                    another human by face or by voice. Computer systems have been capable of using
+                                    biometrics (e.g., touch ID, face ID) for the purposes of identification or
+                                    authentication for some years, but the perception of biometrics as being less
+                                    acceptable compared to the traditional password approach may no longer be true.
+                                    Perhaps more frequently observed in the mobile world, usage of biometrics has gained
+                                    momentum.</p>
+                                <p class="comment78305">Access authentication via biometrics starts by making baseline
+                                    measurements of the required characteristics and storing them as part of the profile
+                                    associated with that user’s identity in the system. In most digital ID systems,
+                                    these readings are then cryptographically hashed so they can then be placed onto a
+                                    smart card or other physical security token.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2c212912-c5a6-4227-88da-6672b21ed853" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Steganography<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d5ee11f8-8767-4e7f-bae4-4c1b8473d588" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Steganographic techniques used for the protection of
+                                    confidentiality are considered covert mechanisms, as they are generally designed to
+                                    conceal the presence of information. An example would be hiding a message inside an
+                                    image by manipulating the RGB values of the pixels or the file header metadata. This
+                                    method is largely based on obscurity. Good security practitioners understand
+                                    steganography conceptually while acknowledging security delivered through obscurity
+                                    is never adequate security.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a34bc76f-3a73-4572-a133-91e283fb680f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Compromising Confidentiality<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="193be308-438b-4f1d-9448-3b5cf95b9620" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Confidentiality can be compromised in numerous ways:</p>
+                                <ul>
+                                    <li><em>Network sniffing. </em>The capturing, decoding, inspecting, and interpreting
+                                        of information inside a network data packet on a Transmission Control
+                                        Protocol/Internet Protocol (TCP/IP) network to steal information such as user
+                                        IDs, passwords, network details, and credit card numbers. Sniffing is considered
+                                        a “passive” attack because the attackers can be silent/invisible on the network,
+                                        making it difficult to detect, thus a dangerous type of attack.</li>
+                                    <li><em>Shoulder surfing. </em>This occurs when an individual looks over another
+                                        individual’s shoulder, watching keystrokes/data as they appear on the screen. A
+                                        common concern with shoulder surfing is at ATMs. Notice that many ATMs warn the
+                                        customer to cover the number pad while entering their PIN.</li>
+                                    <li><em>Social engineering. </em>This is tricking an authorized user into revealing
+                                        confidential information, such as company trade secrets. For example, a person
+                                        using social engineering to break into a computer network would gain the
+                                        confidence of an authorized user and leverage that person to compromise network
+                                        security.</li>
+                                    <li><em>Hacking. </em>This is bypassing a system’s access controls by taking
+                                        advantage of security weaknesses in the system. Hackers are often able to
+                                        discover the passwords of authorized users, create copies of inadequately
+                                        protected files, and place them in areas of the system where unauthorized
+                                        persons can access them.</li>
+                                    <li><em>Masquerading. </em>This is an (authorized or unauthorized) system user
+                                        posing as another authorized user. By obtaining and using the authorized user’s
+                                        password, the masquerader gains access to the authorized user’s confidential
+                                        files to read and/or copy them.</li>
+                                    <li><em>Unprotected downloaded files. </em>This can compromise confidential
+                                        information if, in the process, files are moved from the secure environment of a
+                                        host computer to an unprotected microcomputer for local processing.</li>
+                                    <li><em>Trojan. </em>Typically, this is a malicious clickable attachment that is
+                                        disguised as some other file. Once executed, the system resources are
+                                        compromised in numerous ways.</li>
+                                    <li><em>Unencrypted (cleartext) data. </em>Sometimes due to misconfiguration or
+                                        other failures, information such as passwords or sensitive information such as
+                                        personal health information (PHI) or personal identity information (PII) could
+                                        be stored or transmitted in a way that is easily intercepted and viewed by
+                                        authorized parties.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c95b4e0d-b437-431f-8050-e719e0dad488" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Safeguarding Confidentiality<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="664c7e78-e4f8-4868-a239-c9a5d297de67" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Safeguarding confidentiality within applications typically
+                                    involves multiple layers of defense. Not all defensive controls involve technical
+                                    safeguards such as encryption. A few nontechnical examples include:</p>
+                                <ul>
+                                    <li>Additional security awareness and prevention training for individuals with
+                                        access to sensitive information</li>
+                                    <li>Minimizing the retention of sensitive information to reduce risk and attack
+                                        surface</li>
+                                    <li>Limiting physical access to infrastructure such as datacenter resources</li>
+                                    <li>Establishing policies and procedures such as secure disposal processes for
+                                        servers and media</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a10b4b92-79ad-44b1-8fd3-0e175b4925d7" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Integrity<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="72954e9b-324e-46a4-9f5a-383359773974" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Integrity is another core security objective within software
+                                    security. The primary objective is to prevent unauthorized (intentional or
+                                    unintentional) modification of organizational data and information. NIST defines
+                                    data integrity as, “A property whereby data has not been altered in an unauthorized
+                                    manner since it was created, transmitted, or stored.<sup>1</sup>”</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d2630720-f1bf-485c-91cc-7b0ba08e2970" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>1</sup> National Institute of Standards and Technology; <a
+                                        href="https://csrc.nist.gov/glossary/term/data_integrity#:~:text=Definition(s)%3A,processing%2C%20and%20while%20in%20transit"
+                                        target="_blank">https://csrc.nist.gov/glossary/term/data_integrity#:~:text=Definition(s)%3A,processing%2C%20and%20while%20in%20transit</a>.;
+                                    retrieved May 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="079f233e-0363-4702-9b31-dc7dfad14375" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Goals of Integrity<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3e7de79a-10dd-408f-b349-ea945353f494" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Data integrity can be summarized in three principles:</p>
+                                <ol>
+                                    <li>Modifications are not made to data by unauthorized subjects (personnel or
+                                        processes).</li>
+                                    <li>Unauthorized modifications are not made to data by authorized subjects.</li>
+                                    <li>The data is internally and externally consistent.</li>
+                                </ol>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8609d732-8c9e-40f6-b078-bfae5f6ead1c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Technical Controls for Integrity<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6d5b4d22-f2c7-4ffd-a197-71f2123dd451" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Various mechanisms are relied on to mitigate the risk of
+                                    unauthorized alteration. Among these are hashing, digital signatures, and code
+                                    signing.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ff3d3721-e132-4646-a765-6bd37f7fa01b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Hashing<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1c471405-bd58-4ec3-86a6-f1e15f8e90a7" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><strong><button
+                                            data-definition title="A form of one-way encryption that uses a mathematical function to create a fixed length binary output from a variable length binary input."
+                                            class="rendered">Hashing</button> </strong>works by using cryptographic hash
+                                    functions to create a fixed-size digest from variable length message (input). Good
+                                    cryptographic hash functions are deterministic and always produce the same digest
+                                    from the same input. One property of good cryptographic hash functions is that any
+                                    change to the message, no matter how small, would result in a significant change in
+                                    the produced digest. Hashing provides an opportunity to detect undesired alterations
+                                    including tampering. The table below highlights two properties of hashing. Firstly,
+                                    taking the hash of the same data multiple times should produce the same hash.
+                                    Secondly, a slight change in the message results in a significant change in the SHA
+                                    256 digest.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d03336f5-54d2-4c3f-af4a-63b2e6453059" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin vst-draggable comment78305">
+                            <div class="c-x-scroll vst-draggable comment78305" style="width: 100%;">
+                                <div class="js-x-scroll c-x-scroll__scrollbox comment78305" style="">
+                                    <table class="c-table js-x-scroll-component" style="width: 100%;"
+                                        data-orig-width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" style="text-align: left;"><span style="color:#556B04;"
+                                                        class="comment78305">Message</span></th>
+                                                <th scope="col" style="text-align: left;"><span style="color:#556B04;"
+                                                        class="comment78305">SHA256 Digest</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Hello World</td>
+                                                <td>a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hello World</td>
+                                                <td>a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hello World!</td>
+                                                <td>7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="c-x-scroll__gradient c-x-scroll__gradient--left comment78305"></div>
+                                <div class="c-x-scroll__gradient c-x-scroll__gradient--right comment78305"></div>
+                            </div>
+                            <p class="comment78305"><sup><em>Table 1: Cryptographic Hash Function Output</em></sup></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ee3f90cf-7037-4482-9816-dc8c46d2472b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Digital Signatures<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="37a845f3-fc6a-4eb1-8eda-3066e6e2f685" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The ability to bind a signature to an identity is a valuable
+                                    technical control for integrity. According to the Cybersecurity and Infrastructure
+                                    Security Agency, a <button
+                                            data-definition title="A cryptographic operation which, when implemented correctly, can provide assurance for data integrity, origin, and nonrepudiation. This normally requires the use of a Digital Certificate."
+                                        class="rendered"><strong xmlns="http://www.w3.org/1999/xhtml">digital
+                                            signature</strong></button>—a<strong> </strong>type of electronic
+                                    signature—is a mathematical algorithm that validates the authenticity and integrity
+                                    of emails, credit card transactions, and digital documents through a unique virtual
+                                    fingerprint that identifies users and protects information. In emails, the email
+                                    content itself becomes part of the digital signature. Digital signatures are
+                                    significantly more secure than other forms of electronic signatures.” Binding a
+                                    signature to an identity provides assurance of integrity.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ef9be374-e810-4858-9b9e-a9adab6fabad" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Code Signing<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8fe690e6-616f-4856-95ea-2877575779fa" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Application of a digital signature to the code is a common
+                                    mechanism of protecting software primarily during the distribution and maintenance
+                                    phases. This mechanism can provide assurance that the code has not been tampered
+                                    with (integrity assurance) and identify the entity that was in control of the code
+                                    at the time of signing (authenticity assurance). This is an important consideration
+                                    in the software supply chain.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e658dbb8-02ea-4bb8-a034-67399ea6f689" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Integrity in the Life Cycle<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8c1fea8d-f207-4928-8999-8ed336045479" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Integrity involves maintaining the consistency, accuracy, and
+                                    trustworthiness of data over the entire life cycle. To preserve integrity in its
+                                    most basic form, practices are introduced to minimize the opportunity for
+                                    unauthorized alterations and to prevent erroneous changes by authorized subjects.
+                                </p>
+                                <p class="comment78305">One example of such a practice is integrity in source code
+                                    version control. Although version control may apply to all sorts of collections of
+                                    information, software professionals can certainly relate to the need to subject
+                                    their source code to version control practices and tools designed for that purpose.
+                                    Changes are identified and tracked through revision indicators using letter codes,
+                                    numbers, and other symbols. The changes are time stamped and the subjects who make
+                                    those changes are tracked. Revisions are compared and revisions are restored or
+                                    merged. There are various proprietary and open-source tools available for this
+                                    purpose, such as CVS, Subversion, GIT, and others.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2c76c9f2-cb63-4564-abaa-97878f9e6901" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Integrity and Access Control<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="78f55166-9e34-4c12-9b9b-cada9d27a09f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Integrity compromises include unauthorized access and actions
+                                    taken by unauthorized individuals (e.g., hackers) or authorized individuals such as
+                                    staff (whether with malicious intentions or unintentionally). When discussing access
+                                    control, we often refer to the requester of resources “individuals or services” as
+                                    the “subject” and the resources being requested as an object. Access control
+                                    mechanisms, intrusion detection and prevention, digital signatures, and code signing
+                                    are among the mechanisms used to combat corruption or modification to data.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="43f01e50-ad6d-4f91-b65b-53a1812c038d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Integrity of the Trusted Computing
+                                Base (TCB)<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3cd26fc1-6df2-4b1d-b05e-72a9f2c35345" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Many definitions have been provided for the Trusted Computing
+                                    Base (TCB). For our discussion and purposes, it would represent the collective of
+                                    all the hardware, software, firmware, processes and resources that are critical to
+                                    security and allow for the information security policy to be enforced on a system.
+                                    In other words, TCB is responsible for maintaining the confidentiality and integrity
+                                    of data. With that broad definition, if the TCB integrity is compromised (i.e., if
+                                    malware is running), it can be assumed that security policy can no longer be
+                                    enforced. A dedicated microcontroller called Trusted Platform Module (TPM) is an
+                                    example of a cryptographic key that can be used to attest to the integrity of a boot
+                                    process. Microsoft BitLocker would be an example that takes advantage of the TPM
+                                    chip.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="620f0c1d-a67b-4487-b374-3f912aa21838" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Compromising Integrity<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0809f4d4-0710-48eb-9f9f-79721e334e59" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">As with confidentiality, integrity can be compromised by
+                                    hackers, unauthorized users, and malware (e.g., Trojans and Malware). Each of these
+                                    threats can lead to unauthorized changes to systems, software, and data. For
+                                    example, authorized users can corrupt data and programs accidentally provided
+                                    activities are not managed and controlled properly.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="79e6f7bf-62d1-4181-ab0c-6cbd60d9d339" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Safeguarding Integrity<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="925cbada-7e61-4670-a76b-cd877837b794" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The following three basic principles are relevant to
+                                    establishing integrity controls:</p>
+                                <ol>
+                                    <li>Access is based on need-to-know</li>
+                                    <li>Separation of duties</li>
+                                    <li>Rotation of duties</li>
+                                </ol>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="cdcfe0bb-2429-40fc-a98d-937daffcbe06" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Need-to-know<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="95684c65-b0f7-470a-8c70-9b9976d0b03c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Subjects should be granted access only to those files and
+                                    programs that they absolutely need to perform their assigned job functions. NIST
+                                    defines <strong><button
+                                            data-definition title="Primarily associated with organizations that assign clearance levels to all users and classification levels to all assets; restricts users with the same clearance level from sharing information unless they are working on the same effort."
+                                            class="rendered">need-to-know</button> </strong>as a decision made by an
+                                    authorized holder of official information that a prospective recipient requires
+                                    access to specific official information to carry out official duties.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d34693ed-2a39-463a-91bf-1e6a6370a6ee" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Separation of Duties<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="dd18d392-693d-4057-896b-da5f1bd62359" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">To achieve separation of duties, the objective is to ensure that
+                                    no single subject has control of a transaction from beginning to end; two or more
+                                    subjects should be responsible for performing it. According to NIST, separation of
+                                    duties refers to the principle that no user should be given enough privileges to
+                                    misuse the system on their own. Separation of duties can be enforced statically
+                                    through access control rules or dynamically using considerations like time of day.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="68f690e1-6b9d-449c-a776-23a95723d766" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Rotation of Duties<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ceccb038-999a-4be1-96f1-5865c900f3ae" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The <strong><button
+                                            data-definition title="The periodical rotation of employees in critical or financial roles to prevent nefarious activities from taking place across time without collusion."
+                                            class="rendered">rotation of duties</button> </strong>for job assignments
+                                    allows for the detection of fraudulent activities. Employees in critical or
+                                    financial roles should be alternated periodically so that nefarious activities
+                                    cannot be conducted across time without collusion. Rotation of duties includes other
+                                    advantages to the organization, including succession planning (i.e., minimizing loss
+                                    of knowledge after losing a key employee) and availability of backup personnel.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4f8bde24-a727-4b69-a9f8-b8d6a7fb1b42" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Availability<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c783f41d-048b-4292-9eae-bd1527c6437e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><strong><button
+                                            data-definition title="Ensuring timely and reliable access to and use of information by authorized users."
+                                            class="rendered">Availability</button> </strong>is another core security
+                                    objective within software security. Security practitioners must ensure reliable and
+                                    timely access to the data and computing resources must be ensured. Availability
+                                    concepts apply to many aspects of an organization's infrastructure including
+                                    hardware, software, network resources (including bandwidth), data, and utilities
+                                    such as power, for example.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="50a0dc57-d3bd-4a8a-8ddb-fe438c10a02c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Goals of Availability<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="184240c9-6ddf-480d-ad48-7e64268ee2ac" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">To meet availability goals, it is essential to have adequate
+                                    infrastructure and planning for achieving timely, reliable access to information for
+                                    intended entities. Resources availability is organizationally defined based on
+                                    business needs. Security practitioners must ensure the correct resources are
+                                    available within the correct amount of time for the correct subjects.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="cff54f08-2a18-4e49-8927-d01d6db46780" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Security Controls for
+                                Availability<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0a58ef39-3e03-48ce-9901-2cda671c8bd4" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">A system or software should be designed and implemented to
+                                    recover from disruptions in a secure and quick manner to avoid negative impacts to
+                                    productivity and business continuity. There are several concepts that can be used to
+                                    achieve availability.</p>
+                                <ul>
+                                    <li><em>Redundancy. </em>Mainly continuing the running of an organization even with
+                                        the absence/failure of one important component. Redundancy in DBMS means copying
+                                        data within a database or using a separate data storage technology in two
+                                        separate places.</li>
+                                    <li><em>Failover. </em>Switching to a redundant or standby computer server, system,
+                                        hardware component, or network upon the failure or abnormal termination of the
+                                        previously active application, server, system, hardware component, or network.
+                                    </li>
+                                    <li><em>Fault tolerance. </em>The system remains working as expected even when some
+                                        of its components are failing.</li>
+                                    <li><em>RAID. </em>A redundant array of independent disks (RAID) is a data storage
+                                        virtualization technology that combines multiple physical disk-drive components
+                                        into a single logical unit for the purposes of data redundancy, performance
+                                        improvement, or both.</li>
+                                    <li><em>High-availability clusters (failover clusters). </em>These are groups of
+                                        computers that support server applications that can be reliably utilized with a
+                                        minimum of downtime. They operate by using high-availability software to harness
+                                        redundant computers in groups or clusters that provide continued service when
+                                        system components fail.</li>
+                                    <li><em>Replication. </em>This is the process of storing data in more than one site
+                                        or node. As an example, directory services replication is often used to prevent
+                                        the loss of a single server which would otherwise cause the directory service to
+                                        become unavailable.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8d2a6bf9-2712-428c-918f-7fbc9fbc7f28" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Compromising Availability<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="06b5f047-1619-4229-b5c4-c4d7bf2f9346" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">One threat to availability includes <button
+                                            data-definition title="The prevention of authorized access to resources or the delaying of time-critical operations."
+                                        class="rendered"><strong xmlns="http://www.w3.org/1999/xhtml">Denial-of-service
+                                        </strong>(DoS)</button> attacks that prevent authorized access to resources or
+                                    the delaying of time-critical operations. Another term that describes this is a
+                                    <strong><button
+                                            data-definition title="A type of DoS attack that uses many sources of attack traffic. A DoS attack uses a single source of attack traffic. Attackers often use botnets to carry out DDoS attacks."
+                                            class="rendered">distributed denial of service
+                                            (DDoS)</button>, </strong>which, as the name suggests, is a
+                                    denial-of-service technique that leverages multiple nodes to launch an attack. Often
+                                    natural disasters based on geography are more common disruptors to availability
+                                    (e.g., hurricanes, tornados, flooding).
+                                </p>
+                                <p class="comment78305">Losses of availability are countered by contingency planning,
+                                    which helps minimize the time that business capabilities, including software
+                                    systems, remain unavailable.</p>
+                                <p class="comment78305">Physical controls can assist with maintaining availability.
+                                    Physical controls prevent unauthorized persons from entering a facility and
+                                    accessing computing resources. Various fire and water suppression mechanisms, hot
+                                    and cold sites for use in alternative-site processing, and off-site backup storage
+                                    facilities. Physical controls should be leveraged in conjunction with continuity
+                                    policies and procedures. Organizations should include availability considerations
+                                    early within the design phase for systems and software. Many organizations are
+                                    adopting cloud and hybrid infrastructure approaches. Some cloud services offer
+                                    mitigation capabilities to protect against threats to availability.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5ec99cf9-6cc2-411a-8bb3-4f93ae30063c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Safeguarding Availability<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ca2f86ff-262e-432a-89db-9d193a58d60e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Software services often represent mission-critical components
+                                    within organizational infrastructure. For this reason, organizational business
+                                    continuity and disaster recovery efforts must include considerations for
+                                    mission-critical application recovery or reconstitution including systems, software,
+                                    and data.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="dd3f08e1-f8ec-4547-8870-cd9f779f76b2" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Disaster Recovery<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="48357f33-701f-4a72-9e39-c8f20fac41cf" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Each organization has unique business requirements, operating
+                                    constraints, and risk tolerance. Organizational risk tolerance for interruption of
+                                    mission-critical services and data loss will ultimately drive the disaster recovery
+                                    strategy for the organization. Think about why determining this level of tolerance
+                                    for interruption and/or loss is a business/mission decision instead of an
+                                    IT/security decision. Effective disaster recovery is interdependent on internal
+                                    policies and external mandates. For example, <strong><button
+                                            data-definition title="The target time set for recovering from any interruption."
+                                            class="rendered">Recovery Time Objective (RTO)</button> </strong>and
+                                    <strong><button
+                                            data-definition title="A measure of how much data the organization can lose before the organization is no longer viable."
+                                            class="rendered">Recovery Point Objective (RPO)</button>
+                                    </strong>requirements would dictate disaster recovery requirements and strategies.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="be38d408-e3bb-4e7a-baf7-702a1f13b5c1" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h5 class="heading heading--subheadingc comment78305">Cloud Disaster Recovery<br /></h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3162bd37-e1d3-4cbd-8fd8-782421c7c002" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The use of cloud services for disaster recovery purposes is
+                                    becoming commonplace. Depending on a company’s requirements and obligations, and its
+                                    appetite for service outage or data loss, solutions offered by cloud service
+                                    providers (CSPs) should be taken into serious consideration. Global CSPs provide
+                                    physical data centers across the globe. They likely offer availability zones made up
+                                    of one or more data centers equipped with independent power, cooling, and
+                                    networking. These availability zones could allow customers to run their
+                                    mission-critical applications with high availability and low-latency replication.
+                                    Taking this further, CSPs may also offer regions that typically consist of two or
+                                    more availability zones intended to ensure operational redundancy. For example, it
+                                    would be common for an organization to have its production environment in one region
+                                    and its <strong><button
+                                            data-definition title="In information systems terms, the activities necessary to restore IT and communications services to an organization during and after an outage, disruption, or disturbance of any kind or scale."
+                                            class="rendered">disaster recovery (DR)</button> </strong>in a different
+                                    region. Global CSPs may have tens of these regions in various countries throughout
+                                    the globe and can cater to various requirements.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e2ae97fd-a6a0-4f2c-a458-13b8091f3a76" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Contingency Planning<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1545bf57-4629-4010-b85a-e6ca9f1b6b76" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Contingency planning is another topic of focus in most security
+                                    frameworks and standards. Contingency planning may involve business resumption
+                                    planning, alternative site processing, or simply disaster recovery planning.
+                                    Contingency planning provides an alternative means of processing, thereby ensuring
+                                    availability. Physical, technical, and administrative controls (safeguards and
+                                    countermeasures) are important aspects of security initiatives that address
+                                    availability.</p>
+                                <p class="comment78305">Think about why contingency plans may be ineffective. Factors
+                                    could include incomplete strategy, outdated information, and untested procedures. In
+                                    the context of continuity and contingency planning, the risk associated with a
+                                    single point of failure or compromise should be considered. In every realm of
+                                    security—software security included—the need for identifying and addressing such
+                                    points is critical. Keep in mind that many times these single points of failure are
+                                    introduced by the architectural and design decisions that we make. In many cases,
+                                    elimination of failure points could involve a significant level of effort.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="14ea61d8-5560-4ed3-8faa-3c0ac0c51872" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Privacy<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="989d2323-ef79-4971-92a2-e080b5f4cae0" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Information security and data privacy are closely related.
+                                    However, there are distinct differences that security practitioners should
+                                    understand. Think about a scenario where an organization’s layers of defense (e.g.,
+                                    restricted access control, encryption of data at rest, and data retention policies)
+                                    have successfully secured data, but have simultaneously violated privacy law by
+                                    collecting user data without explicit consent.</p>
+                                <p class="comment78305">Globally, there are numerous laws, regulations, and other legal
+                                    requirements for organizations and entities to protect the security and privacy of
+                                    digital and other information assets. Across multiple territories and geographic
+                                    locations, privacy laws and regulations require the implementation of measures to
+                                    adequately protect personal and personally identifiable information (PII). This
+                                    includes protection from unauthorized access, modification, loss, amendment, or
+                                    alteration. Furthermore, failure to protect PII potentially results in legal
+                                    challenges, fines, and imposed actions (including restrictions around the processing
+                                    and collection of personal information). When these consequences are added to the
+                                    possibility of nonlegal impacts such as reputational damage, loss of consumer and
+                                    customer confidence, and competitive disadvantages, they exert significant pressure
+                                    on entities to display compliance and due care.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="bb1e55e4-b7dd-4b08-befd-219898545736" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Elements of Security Design<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a2fba9fe-2b94-421f-962c-37144e0ffe53" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Accountability, auditing, and logging are critical aspects of
+                                    security in software. Logs should avoid recording sensitive data where and when such
+                                    avoidance is possible. Logs must be collected from various sources, normalized, and
+                                    correlated. Digital signatures can help with the assurance of integrity and
+                                    authenticity. Blockchain enables global visibility of a shared transaction
+                                    accounting ledger and has applications in many areas.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3aed62b5-2669-4b35-ba74-427b7a982840" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Accountability<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="39a25bd7-fae7-4045-91b4-08f07c126ec4" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Accountability is the ability to determine the actions and
+                                    behaviors of a subject within a system and to identify that particular subject. It
+                                    is related to the concept of nonrepudiation, wherein a subject cannot successfully
+                                    deny the performance of an action. Auditing and logging are important activities
+                                    that contribute to accountability.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2b2e3a4e-a3c3-4c1d-b1f3-2c79270180eb" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Auditing<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3d07ac4a-c80f-4348-a180-e70f9153758c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Auditing answers the question, “Who (subject) did what (action)
+                                    when (timestamp) and where (object)?” Auditing can be in terms of a one-time or
+                                    periodic event to evaluate security, or an ongoing activity that continuously
+                                    examines the system/users. Audit trails are sets of records that collectively
+                                    provide documentary evidence of processing. They are used to aid in tracing from
+                                    original transactions forward to related records and reports and/or backward from
+                                    records and reports to their component source transactions.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="df336186-584f-4908-a7b3-66e3c28a56cf" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Logging<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="9b7334c4-12c7-422c-ba11-6de22dd35291" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The main function of logging is to provide documentary evidence
+                                    regarding the sequence of events, and as such, auditing may rely on it. In fact,
+                                    many security-relevant activities within the enterprise rely on proper logging of
+                                    events of interest. Logs also enable a vast number of stakeholders to perform their
+                                    job duties. Stakeholders include administrators, developers, support staff, and
+                                    certainly security, privacy, and compliance personnel, among many others—each with
+                                    their own set of needs and expectations from these logs. Acknowledging this broad
+                                    range of subjects interested in logs underscores the need to identify these
+                                    stakeholders and capture their requirements during the early stages of the software
+                                    development life cycle. This crucial input is frequently overlooked, much to the
+                                    detriment of decisions made without it.</p>
+                                <p class="comment78305">This discussion also provides an opportunity to make a
+                                    distinction between application trace logs, which are primarily intended for
+                                    software developers’ debugging and troubleshooting purposes, and other types of logs
+                                    that serve various other purposes. Further, it is important to understand that logs
+                                    in general may, and likely will, contain sensitive information captured
+                                    intentionally or accidentally. This can result in serious issues if the logs are
+                                    exposed.</p>
+                                <p class="comment78305">For example, consider an Android text messaging app that
+                                    transmits diagnostic information captured from the device in the logs for the
+                                    purpose of troubleshooting by the support and engineering teams. Now imagine that
+                                    the information captured in the logs also included the physical location of the
+                                    device and/or the body of the text message that was transmitted by the app. This
+                                    hypothetical scenario is certainly possible in real life, as developers tend to
+                                    think the more information they can include in these logs, the better the logs will
+                                    serve the purpose of troubleshooting.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="246ce39f-fe11-4fad-953b-8dc870ac44c9" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Security Information and Event
+                                Management (SIEM)<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c124b2b7-a8fe-49e7-b0a6-9f17d1d8ea13" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">There are various system components that may generate logs,
+                                    including error logs, event logs, and systems logs among other categories. A
+                                    challenge has always been the fact that logs come from diverse sources and increase
+                                    in size rapidly. Reviewing the logs for the purpose of identifying anomalies (i.e.,
+                                    signs of compromise) without specialized solutions and technologies would be no easy
+                                    task, and that is where SIEMs come into the picture. Use cases include security
+                                    monitoring, incident investigation and response, and advanced threat detection among
+                                    others.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="53e872e5-9769-4eb0-aad1-813f74341358" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Nonrepudiation<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="00708334-542f-4d10-8d3e-bf941345cb64" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">According to NIST, <strong><button
+                                            data-definition title="Protects against an individual falsely denying having performed a particular action, including the capability to determine whether a given individual took a particular action such as creating information, sending a message, approving information, and receiving a message."
+                                            class="rendered">nonrepudiation</button> </strong>protects against an
+                                    individual falsely denying having performed a particular action, including the
+                                    capability to determine whether a given individual took a particular action such as
+                                    creating information, sending a message, approving information, and receiving a
+                                    message. Simply put, it ensures that actions taken (intentional or unintentional)
+                                    cannot be denied. Mechanisms relevant to this objective include digital signatures
+                                    and blockchain technology among others.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4731c16d-94f0-44df-9c54-5470744c293a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Digital Signatures<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="239e48f4-77a1-4e6f-a32e-a33da7be070f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Digital signatures were introduced in the discussion on
+                                    Integrity. We revisit that topic here to explain how they work—and that requires an
+                                    understanding of the basics of hashing and asymmetric algorithms. For now, keep in
+                                    mind that creating a digital signature includes the following steps:</p>
+                                <ol>
+                                    <li>Using a one-way cryptographic hash function to create a digest from the input.
+                                    </li>
+                                    <li>Encrypting the digest (using an asymmetric algorithm) that was created from the
+                                        previous step, using the private key of the signer.</li>
+                                </ol>
+                                <p class="comment78305">See the figure below to observe the digital signing process.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b0286169-9296-45ce-b9c4-d48aab2316fe" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--75 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_003_03.webp" alt="" /><img
+                                    class="image-zoom-proxy" src="./page_003_03.webp" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 48.1561px; left: 476.594px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 3: Creating a Digital Signature</em></p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5ebc62dc-8846-4885-8af1-f3383ad84a9a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Blockchain<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="51ed93ea-dbe8-48d2-9ac5-904c3680896c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Blockchain enables global visibility of a shared transaction
+                                    accounting ledger. Initially used to establish and manage cryptocurrencies,
+                                    important business value can be delivered by its inherent capabilities. In brief, it
+                                    involves storing a time-stamped sequence of immutable records (blocks) in public
+                                    databases connected as peers in a network (chains).</p>
+                                <p class="comment78305">Among features of blockchain that have led to the expansion of
+                                    the possibilities and the applications of this technology are:</p>
+                                <ul>
+                                    <li>Protection against unauthorized changes, as new blocks may only be added to the
+                                        end of the chain, and once added they can’t be removed.</li>
+                                    <li>Redundancy and elimination of single point of failure, as independent and
+                                        autonomous nodes store redundant copies of a blockchain.</li>
+                                    <li>Transparency, as blockchains are publicly available for viewing and secure audit
+                                        trails.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7d3715dc-416e-4a2e-bb61-9804b0b4b978" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Governance, Risk, and Compliance
+                                (GRC)<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="fadcd607-f8f9-42c2-8d25-242d438e7e73" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Governance, Risk, and Compliance (GRC) is a discipline method to
+                                    correlate business objectives and IT infrastructure while controlling risks by
+                                    addressing regulations. GRC has software-centered considerations since facilitation
+                                    often includes software tools and processes to centralize organizational activities.
+                                    Each aspect—governance, risk management, and compliance are defined briefly below:
+                                </p>
+                                <ul>
+                                    <li>Governance establishes policies and procedures for achieving business goals.
+                                    </li>
+                                    <li>Risk management identifies and then reduces risk to an acceptable level.</li>
+                                    <li>Compliance is ensuring that the organization identifies and satisfies any
+                                        applicable laws and regulations.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="dab5e448-ddb5-41b6-b8ec-a01e082da682" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Software Regulatory
+                                Considerations<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a5abb00f-c135-4cd0-87be-654d3d80ce63" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Regulatory considerations are changing constantly, and an entire
+                                    body of knowledge and specialization would be required to adequately cover
+                                    international regulatory considerations. Below are a few cybersecurity and software
+                                    tangential laws to understand as a software security practitioner.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ddafc640-c57e-4899-a87c-c31c0ea74f15" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h5 class="heading heading--subheadingc comment78305">U.S. Considerations<br /></h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6ef68a0c-b4b4-4189-8b44-881bc531a972" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>IoT Cybersecurity Improvement Act of 2020 </li>
+                                    <li>California Consumer Privacy Act (CCPA) of 2018 </li>
+                                    <li>Consumer Privacy Protection Act (CPPA) of 2017 </li>
+                                    <li>Federal Cybersecurity Laws of 2014 </li>
+                                    <li>Health Insurance Technology for Economic and Clinical Health Act (HITECH) of
+                                        2009 </li>
+                                    <li>Sarbanes-Oxley Act (SOX) of 2002 </li>
+                                    <li>Federal Information Security Management Act (FISMA) of 2002 </li>
+                                    <li>Children’s Online Privacy Protection Act (COPPA) of 1998 </li>
+                                    <li>National Information Infrastructure Protection Act of 1996 </li>
+                                    <li>Health Insurance Portability and Accountability Act (HIPAA) of 1996 </li>
+                                    <li>Payment Card Industry Data Security Standard (PCI DSS) of 1996 </li>
+                                    <li>Communications Assistance for Law Enforcement Act (CALEA) of 1994</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="067d2182-2514-4f8b-975d-4d82e0aed7df" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h5 class="heading heading--subheadingc comment78305">Non-U.S. Considerations<br /></h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="cd73e6d4-1c64-4f9a-ae52-818b35f73a7f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>EU Cyber Solidarity Act proposed 2023 </li>
+                                    <li>EU Cyber Resilience Act (CRA) proposed 2022 </li>
+                                    <li>EU Cybersecurity Act of 2019 </li>
+                                    <li>EU General Data Protection Regulation (GDPR) of 2018 </li>
+                                    <li>India Information Technology (IT) Act of 2000</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="714149ba-e4d4-481d-aead-3d887b4fff51" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h5 class="heading heading--subheadingc comment78305">Jurisdiction Considerations<br /></h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e07020b9-fc21-4d33-b409-fe91a0fbae82" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Jurisdiction, power of court to adjudicate legal issues or
+                                    execute legal orders, has important implications for GRC. Organizational software is
+                                    either hosted within cloud infrastructure or interacts with various entities via the
+                                    internet. Communications may transverse multiple countries while involving the
+                                    interaction of citizens from many different legal systems.</p>
+                                <p class="comment78305">Security practitioners must understand and advise that laws
+                                    apply within internet infrastructure and cloud. In some extreme cases, laws may
+                                    conflict between jurisdictions. Although the Internet lacks physically defined
+                                    boundaries, applications are still bound to geographical and jurisdictional
+                                    boundaries in which they operate. Some considerations which make jurisdiction
+                                    complex for internet enabled applications include:</p>
+                                <ul>
+                                    <li>National, regional, or state laws for users</li>
+                                    <li>National, regional, or state laws for transactional data</li>
+                                    <li>National, regional, or state laws for hosting environments</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3d284f63-15d3-4d84-a629-ebf52e08d1c6" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Software-Facilitated Compliance<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d42708d9-b39d-4905-9dd5-9b9a2c6aba35" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Security practitioners need to safeguard the operational
+                                    security of development environments while ensuring that software developed is
+                                    secure to an acceptable level. Security practitioners leverage software tools to aid
+                                    with these objectives, which may include GRC. Further, organizations must leverage
+                                    automation and software tools to centralize and streamline processes. There are
+                                    several commercially viable GRC products that can automate and reduce documentation.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="screengrid comment78305">
+            <footer class="screen__margin screen__footer u-hide-element vstdonthighlight">
+                <div class="feedback comment78305">
+                    <div class="feedback__content js-feedback-focus comment78305" tabindex="-1"></div>
+                </div>
+                <div class="control-btns comment78305"></div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay-root vstdonthighlight rendered comment78305 u-hidden" style="overflow-y: auto;">
+        <div class="modal-cover-holder comment78305">
+            <div class="modal-cover-outer comment78305">
+                <div class="modal-cover comment78305"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+</html>

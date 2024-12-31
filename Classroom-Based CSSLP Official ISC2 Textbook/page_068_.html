@@ -1,0 +1,346 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"
+    style="padding: 0px; font-size: 100%; --USER__lineHeight: 1; --USER__pageMargins: 1; --USER__view: readium-scroll-on;"
+    class="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Secure Configuration and Version Control (7.2)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="overflow: hidden auto;">
+    <div xmlns:epub="http://www.idpf.org/2007/ops" epub:type="pagebreak" id="pagebreak_68"
+        class="hidden-pagebreak comment78305" title="68"></div>
+
+    <div xmlns:epub="http://www.idpf.org/2007/ops" id="9b7e3988-4a30-4f37-8d8f-5a6ed693e253"
+        class="screen rendered comment78305" aria-hidden="false">
+        <div class="screengrid comment78305">
+            <header class="screen__margin screen__header u-hide-element vstdonthighlight">
+
+                <div class="screen__heading u-float--clearfix comment78305">
+                    <div class="screen__icon u-float--left comment78305"></div>
+                    <h2 class="screen__title comment78305" tabindex="-1"></h2>
+                </div>
+
+
+                <div class="screen__instructions comment78305"></div>
+            </header>
+        </div>
+
+        <div class="screen__content comment78305">
+
+            <div class="block rendered comment78305">
+                <div id="1f5e8a17-0e98-4503-ab97-1c0192d80be1" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Secure Configuration and Version
+                                Control (7.2)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d681608c-1006-475c-919c-33eb5f2d9683" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Controlled configurations and versioning assist in the secure
+                                    deployment, execution, and maintenance of software systems using a structured change
+                                    management process. This process is sometimes generally referred to as Security
+                                    Configuration Management (SecCM) or the management and control of configurations for
+                                    an information system to enable security and facilitate risk management. A software
+                                    system is typically composed of multiple components, which are updated and
+                                    reconfigured at differing rates in response to business needs for enhancements or
+                                    sustainment.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c2f58622-79ae-4cdb-bbf5-6e6db26ed525" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Learning Objectives<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a3d687fc-e5fc-4627-93a1-b20200d4e7ff" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>Describe Security Configuration Management (SecCM).</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1c5247b8-e273-45dd-89a4-8d34ef8cdd9b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Overview<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6855010a-2639-489c-8d9c-d1610e3bf354" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><em>NIST 800-128—Guide for Security-Focused Configuration
+                                        Management of Information Systems </em>describes the need for configuration
+                                    management to protect software and systems. The need for changes may arise based on
+                                    hardware updates, defect amelioration, new security hardening needs, or changing
+                                    business functions. Software updates that require configuration changes on the host
+                                    system or within the software configuration are common. The combination of system
+                                    changes at multiple levels (e.g., OS configuration, application, and application
+                                    configuration) increases complexity and the likelihood of unintentionally
+                                    introducing production issues. To safeguard against such an occurrence,
+                                    configuration management should be a well-defined, controlled process.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="eb93f3a4-3216-45c7-a158-0ced0855bc5a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Configuration Management<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f3f1fb74-d63a-4f81-94b6-5e797cb648a8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Configuration Management (CM) encompasses establishing and
+                                    maintaining the integrity of software products and systems by controlling processes
+                                    for adding, modifying, and monitoring configurations. Each item under change control
+                                    is essentially a configuration item. A Configuration Item (CI) such as software,
+                                    firmware, hardware, or documentation is a discrete unit of the organization’s
+                                    configuration control processes. A CM Plan describes roles, policies, and procedures
+                                    required to effectively execute CM for CI updates. CM Plans typically include:</p>
+                                <ul>
+                                    <li><em>Change Control Board (CCB). </em>This is composed of parties responsible for
+                                        controlling and approving changes throughout the life cycle software systems. 
+                                    </li>
+                                    <li><em>Configuration Item Identification. </em>This covers selection and the naming
+                                        method for CI.</li>
+                                    <li><em>Configuration Change Control. </em>This is the process for managing baseline
+                                        configuration changes.</li>
+                                    <li><em>Configuration Monitoring. </em>This is the process for assessing baseline
+                                        compliance that includes reporting.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="67cc6762-bb6b-4589-b69b-1a9e2970f7fe" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Baseline Configuration<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6e0a7859-cae6-44f0-9a34-db3bd5abfa6d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">A baseline configuration is a set of reviewed and accepted
+                                    configuration items for a system that becomes the basis for builds, releases, and
+                                    production conformance. Baselines are formally reviewed and accepted before being
+                                    adopted. Any new changes to the baseline must undergo change control procedures.
+                                    Baselines and corresponding CIs can change based on time and the system-development
+                                    life cycle (SDLC) phase.</p>
+                                <p class="comment78305">Early in the SDLC system, baselines may be functional
+                                    requirements. As the system matures, the baseline will likely include software
+                                    design artifacts and component system configurations. Baselines may be
+                                    organizationally established for various computing environments that are
+                                    distinguished by classification level (e.g., Secret vs. Unclassified) or life cycle
+                                    phase (e.g., test vs. production). When a new baseline for a computing environment
+                                    or system is established, the old baseline is deprecated but archived. The CCB may
+                                    reverse an approval decision if quality or security issues are discovered. If this
+                                    occurs, a previous baseline would be used to rollback as needed. NIST SP 800-53
+                                    security control <em>CM-2 Baseline Configuration</em> describes the SecCM phase for
+                                    identifying and implementing secure configurations.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="400492fd-d166-4d2f-92b7-88ae27d19e7c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Information Systems and Hardware
+                                Configuration<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="55d244d1-abb8-447f-a699-e2baa53b9b04" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Secure configurations are implemented to reduce operational
+                                    system risk. Configuration may enforce trusted software installation, patch
+                                    maintenance, or security-minded configuration values. Secure configurations for
+                                    software systems commonly reference integrated supplier software products. The
+                                    concept of secure configuration is also relevant to hardware. An organization must
+                                    track and label assets. Within the context of a traditional on-premises server room,
+                                    a rack of servers might have a particular configuration. The baseline configuration
+                                    of the server rack might enforce equipment redundancy and support effective cable
+                                    management and other organizationally defined requirements. NIST SP 800-53 security
+                                    controls <em>CM-6 Configuration Settings</em> and <em>CM-7 Least Functionality</em>
+                                    also support identifying and implementing secure configurations within SecCM.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="847e9952-9655-4f3d-8151-81fbef65b601" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Configuration Change Control<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="322edb81-48b3-4152-8ab2-85646f951b75" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Configuration change control is the formally documented process
+                                    for controlling additions, modifications, and removal of system configurations or
+                                    associated CIs. Configuration change control for software and systems typically
+                                    includes:</p>
+                                <ol>
+                                    <li>Proposal</li>
+                                    <li>Justification</li>
+                                    <li>Implementation</li>
+                                    <li>Test/Evaluation/Review</li>
+                                    <li>Change Disposition</li>
+                                </ol>
+                                <p class="comment78305">Configuration change control should apply to all change
+                                    scenarios—whether an emergency or unscheduled business need or routine updates.
+                                    Changes should be managed from proposal through all steps including change
+                                    disposition. Each step should be clearly defined and documented. NIST SP 800-53's
+                                    security control <em>CM-3 Configuration Change Control</em> and <em>CM-5 Access
+                                        Restrictions for Change</em> both support the concept of controlling
+                                    configuration changes within SecCM.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="055d5be7-7095-4363-a07c-bc9c9f1ce3dd" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Configuration Documentation<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="577c57fd-9c41-460c-a2e3-f9691c99c42c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">SecCM policies should establish expectations for the
+                                    organization using specific, measurable, and testable objectives. In general,
+                                    configuration management policies explicitly define configuration management
+                                    organizational goals and requirements. SecCM policy documents describe
+                                    organizational objectives informing the creation of the steps required to execute
+                                    change management policy goals. SecCM procedures specifically focus on the
+                                    methodology to propose, justify, implement, and test changes utilizing the concepts
+                                    of a CCB, baseline, and CI.</p>
+                                <p class="comment78305">The CM Plan is operational and describes how SecCM policy (i.e.,
+                                    strategy) should be implemented. The SecCM Plan might be incorporated into the CM
+                                    Plan or be kept separate. The SecCM Plan may be enterprise-wide or apply to a
+                                    specific group (e.g., software development, DevSecOps, infrastructure) within the
+                                    organization. Bottom line, organizations should tailor configuration document
+                                    implementation to integrate with and support business processes. The SecCM Plan and
+                                    other documents are initiated during SecCM planning and support the implementation
+                                    of both NIST SP 800-53's security controls <em>CM-1 Configuration Management
+                                        Policy</em> and Procedures and <em>CM-9 Configuration Management Plan.</em></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="screengrid comment78305">
+            <footer class="screen__margin screen__footer u-hide-element vstdonthighlight">
+                <div class="feedback comment78305">
+                    <div class="feedback__content js-feedback-focus comment78305" tabindex="-1"></div>
+                </div>
+                <div class="control-btns comment78305"></div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay-root vstdonthighlight rendered comment78305 u-hidden" style="overflow-y: auto;">
+        <div class="modal-cover-holder comment78305">
+            <div class="modal-cover-outer comment78305">
+                <div class="modal-cover comment78305"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

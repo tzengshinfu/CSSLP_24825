@@ -1,0 +1,811 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"
+    style="padding: 0px; font-size: 100%; --USER__lineHeight: 1; --USER__pageMargins: 1; --USER__view: readium-scroll-on;"
+    class="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Security within a Software Development Methodology (2.1)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="overflow: hidden auto;">
+    <div xmlns:epub="http://www.idpf.org/2007/ops" epub:type="pagebreak" id="pagebreak_9"
+        class="hidden-pagebreak comment78305" title="9"></div>
+
+    <div xmlns:epub="http://www.idpf.org/2007/ops" id="80802d0c-5191-4c7b-bcba-5e4eab48ef67"
+        class="screen rendered comment78305" aria-hidden="false">
+        <div class="screengrid comment78305">
+            <header class="screen__margin screen__header u-hide-element vstdonthighlight">
+
+                <div class="screen__heading u-float--clearfix comment78305">
+                    <div class="screen__icon u-float--left comment78305"></div>
+                    <h2 class="screen__title comment78305" tabindex="-1"></h2>
+                </div>
+
+
+                <div class="screen__instructions comment78305"></div>
+            </header>
+        </div>
+
+        <div class="screen__content comment78305">
+
+            <div class="block rendered comment78305">
+                <div id="6c8e1333-f471-4c41-885e-b362a5dbaad0" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Security within a Software Development
+                                Methodology (2.1)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="252fe361-016d-4071-b604-f651e4a40d82" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Various development methodologies and frameworks have been
+                                    introduced to aid organizations with engineering software solutions. Some focus on
+                                    increasing coding output to bolster return on investment, some focus on embracing
+                                    change when requirements are not well established at the project’s initiation, and
+                                    some focus on security. This section will focus on the security considerations for
+                                    various methodologies. Independent of methodology, software security practices must
+                                    be incorporated and managed within the SDLC processes.</p>
+                                <p class="comment78305">This domain will explore a number of commonly used noniterative
+                                    and iterative software methodologies.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="04f556ea-cca6-4090-8c44-562dcf9ac0fe" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Objectives<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="dab2df7d-ee60-4cf6-9496-ac01e825edef" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>Explore security in predictive and adaptive methodologies for software
+                                        development.</li>
+                                    <li>Describe the incorporation of software security practices into the SDLC
+                                        processes.</li>
+                                    <li>Identify the DevOps and DevSecOps.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5a711732-482f-479c-9812-0f3fe47fbd93" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Overview<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2088c1bf-bf52-4923-94d1-534cfcb4b1ea" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Addressing security in software development requires a different
+                                    approach in predictive planning versus adaptive planning. Security considerations
+                                    within various SDLC methodologies will differ based on core business requirements.
+                                    Some considerations include:</p>
+                                <ul>
+                                    <li>Governance for the evaluation and management of risk (e.g., risk in architecture
+                                        and design).</li>
+                                    <li>Identification of software security requirements.</li>
+                                    <li>Inclusion of security verification in software reviews, assessments, analyses,
+                                        tests, and evaluations.</li>
+                                    <li>Leveraging software configuration management/version control and change control
+                                        processes.</li>
+                                    <li>Implementation of adequate physical and logical security controls in various
+                                        environments including development, testing, staging, and preproduction.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="dc140d17-d52a-4f58-8e59-aec5e6d49597" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Security in Predictive
+                                Methodologies<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3b8ef508-1667-4985-8a02-bd84d76de5ac" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">A predictive approach to software development relies on known
+                                    objectives, paths, and flows from one phase of development (software maturation) to
+                                    the next. Phases are sequential and planning is based on known expected outcomes
+                                    such as specific project milestones for controlling the process. A good example of a
+                                    predictive methodology would be Waterfall—a classic example of a noniterative
+                                    approach to software development where the requirements are established before
+                                    project initiation.</p>
+                                <p class="comment78305">A project approach where software activities are completed in
+                                    sequence, <strong><button
+                                            data-definition title="Evolution of a system, product, service, project or other human-made entity from conception through retirement."
+                                            class="rendered">life cycle</button> </strong>phases are longer in duration,
+                                    and clear gates exist (i.e., formal exit criteria and signoffs at the end of each
+                                    phase) provide adequate opportunity for the incorporation of relevant security
+                                    activities in each life cycle phase.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="bd878dab-59cd-4efb-8542-a59feb5b0028" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Waterfall Model<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="62434e12-864b-4a41-8178-1952458fed42" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The Waterfall model is a sequential (noniterative) approach used
+                                    in software development processes (see figure). In this model, progress towards
+                                    software project completion flows steadily downwards (like a waterfall) through
+                                    various phases of the life cycle, including requirements, design, implementation,
+                                    testing, deployment, and maintenance. Typical Waterfall tasks may include:</p>
+                                <ul>
+                                    <li>Scoping and planning</li>
+                                    <li>Gathering and documenting requirements</li>
+                                    <li>Designing the application</li>
+                                    <li>Implementing the design</li>
+                                    <li>Coding the application</li>
+                                    <li>Performing quality assurance activities</li>
+                                    <li>Performing user acceptance testing (UAT)</li>
+                                    <li>Deploying the application</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0e8f7b3f-f62a-46f8-b734-3ed5b7854729" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--100 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_009_01.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_009_01.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 376.234px; left: 550.406px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 1: The Waterfall Model</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="47968ea5-cb86-47db-f62c-82cf244038d9"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="58a1424e-9659-4c0a-92fe-bff46e29429d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">A key assumption with Waterfall is that requirements are
+                                    completed early in the project; this would provide the opportunity to define project
+                                    scope and lay out a complete schedule for the design and subsequent implementation
+                                    of the overall application. In theory, all activities in a precursor phase must be
+                                    completed before proceeding to the next phase. Generally, this implies infrequent
+                                    release cycles with lengthy phases. Decades ago, Waterfall was used to successfully
+                                    develop software projects, but it is not best suited for rapid development where
+                                    requirement changes occur frequently. Today, Waterfall has largely been replaced
+                                    with <strong><button
+                                            data-definition title="Development that uses small team environments and focuses on collaborative, iterative learning, building, testing, and deployment of capabilities to operational use. Addresses the need for rapid software development and deployment cycles, following patterns of activities such as “scrum,” “sprint,” or “safe” to manage change and develop and deploy working, reliable, and verifiable function."
+                                            class="rendered">Agile development</button> </strong>methodologies that will
+                                    be covered later. However, Waterfall is still embraced within some organizations due
+                                    to contractual constraints or organizational culture, so it is important for
+                                    security-focused individuals to understand Waterfall.</p>
+                                <p class="comment78305">For the security practitioner, Waterfall offers a
+                                    straightforward methodology with well-defined project phases to integrate security
+                                    considerations. Since the software project will be well defined at the beginning it
+                                    is important that security is considered at project initiation. For an internal
+                                    software project within an organization, this might be as simple as including
+                                    cybersecurity professionals as stakeholders when drafting the project charter and
+                                    requirements. For external software projects, clear and testable security
+                                    requirements should be incorporated into contractual language. Further, security
+                                    considerations can also be integrated into each gate or phase of the software
+                                    project beyond the Requirements phase.</p>
+                                <p class="comment78305">The <strong><button
+                                            data-definition title="The NIST is part of the U.S. Department of Commerce and addresses the measurement infrastructure within science and technology efforts within the U.S. federal government. NIST sets standards in a number of areas, including information security within the Computer Security Resource Center of the Computer Security Divisions."
+                                            class="rendered">National Institute of Standards and Technology
+                                            (NIST)</button>, </strong>a well-established organization that seeks to
+                                    become the international leader in critical measurements and equitable standards
+                                    offers, offers many special publications (SP) that provide quantifiable guidance on
+                                    the management of software security within the <strong>SDLC. </strong>For example,
+                                    <em>NIST SP 800-160 Volume 1—Engineering Trustworthy Secure Systems </em>and
+                                    <em>NIST SP 800-160 Volume 2—Developing Cyber-Resilient Systems </em>provides
+                                    security considerations that can inform cyber considerations for the Design phase of
+                                    Waterfall within an organization. <em>NIST SP 800-160 Volume 2, Table D6: Strategic
+                                        Cyber Resiliency Design Principles </em>defines five strategic cyber-resilient
+                                    design principles and maps them to design principles for other disciplines. A
+                                    security practitioner could tailor the guidance from D-6 for the organization’s
+                                    software project and include a mechanism to test for compliance at the end of the
+                                    Design phase.
+                                </p>
+                                <p class="comment78305">One principle from D-6 is “Focus on Common Critical Assets.”
+                                    Suppose the software project includes an <strong><button
+                                            data-definition title="A set of routines, standards, protocols, and tools for building software applications to access a web-based software application or web tool."
+                                            class="rendered">Application Programming Interface (API)</button>
+                                    </strong>that is considered critical. The security practitioner may help the
+                                    organization develop design guidance for the API that includes fail-safe
+                                    communication redundancy and layered defense mechanisms, to name a few possible
+                                    examples, which bolster the cyber resiliency of the software project. In another
+                                    phase of Waterfall such as Testing, the organization could leverage best practices
+                                    for <strong><button
+                                            data-definition title="A framework developed by OWASP to ensure that development projects include security features and practices in the software development life cycle."
+                                            class="rendered">software assurance</button> </strong>(SwA) from <em>NIST SP
+                                        800-218—Secure Software Development Framework (SSDF) </em>to describe the gated
+                                    criteria to move to the Deployment phase.</p>
+                                <p class="comment78305">NIST guidance is one of many sources of standards, practices,
+                                    and frameworks. Some software security methodologies that have been levied with
+                                    Waterfall include but are not limited to:</p>
+                                <ul>
+                                    <li>The Microsoft Security Development Lifecycle (SDL)</li>
+                                    <li>The Seven Touchpoints of Secure Software (not necessarily a methodology)</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="77c4b406-15bd-481a-af3e-7c5bfa725fc5" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Microsoft Security Development
+                                Lifecycle (SDL)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c64aae24-4c09-462a-8308-f96da8aba2f9" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The Security Development Lifecycle (SDL) was developed by
+                                    Microsoft as a set of 12 processes that follow the product life cycle from early
+                                    stages (e.g., training) to advanced stages (e.g., incident response). Intended to
+                                    help development teams with the construction of secure software, SDL introduces
+                                    security and privacy considerations in every phase of the development process.</p>
+                                <p class="comment78305">To reduce the number of security-related defects and the
+                                    severity of the impact of any residual defects, SDL highlights the need for the
+                                    integration of tasks and checkpoints in the development process.</p>
+                                <p class="comment78305">SDL Practices can be summarized as:</p>
+                                <ul>
+                                    <li>Providing training</li>
+                                    <li>Defining security requirements</li>
+                                    <li>Defining metrics and compliance reporting</li>
+                                    <li>Performing threat modeling</li>
+                                    <li>Establishing design requirements</li>
+                                    <li>Defining and using cryptography standards</li>
+                                    <li>Managing the security risk of using a third-party</li>
+                                    <li>Using approved tools</li>
+                                    <li>Performing statis analysis testing (SAST)</li>
+                                    <li>Performing dynamic analysis security testing (DAST)</li>
+                                    <li>Performing penetration testing</li>
+                                    <li>Establishing a standard incident response process</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="096a70af-7fd3-467f-bb17-969063e2229e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">The Seven Touchpoints of Secure
+                                Software<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8047cf45-6658-49cf-aed2-b21c3d816f1c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The Seven Touchpoints of Secure Software is simply a set of
+                                    security-related best practices that can be integrated into an existing SDLC process
+                                    to provide a way of adding security content and considerations to development
+                                    artifacts already being produced. These best practices were first introduced in the
+                                    early to mid-2000s.</p>
+                                <p class="comment78305">An SDLC may choose to adopt all, or only some, of the
+                                    touchpoints; in either case they can still yield beneficial results.</p>
+                                <p class="comment78305">The methodology has prioritized the touchpoints in order of
+                                    greatest (code review) to least (security operations) impact in improving software
+                                    security:</p>
+                                <ol>
+                                    <li>Code review</li>
+                                    <li>Architectural <strong><button
+                                            data-definition title="A measure of the extent to which an entity is vulnerable to a potential circumstance or event, and typically a function of: • The adverse impacts that would arise if the circumstance or event occurs. • The likelihood of occurrence."
+                                                class="rendered">risk</button> </strong>analysis</li>
+                                    <li>Penetration testing</li>
+                                    <li>Risk-based security tests</li>
+                                    <li>Abuse cases</li>
+                                    <li>Security requirements</li>
+                                    <li>Security operations</li>
+                                </ol>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="404f164d-0295-40bd-b4e9-3a58de0746cb" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--75 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_009_02.jpg" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_009_02.jpg" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 191.172px; left: 476.594px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 2: The Seven Touchpoints of Secure Software</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="f72177d9-532d-4ba1-f3f6-d2b7095a6a89"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d2a8e47e-fa19-4956-929b-287c67a79272" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The ordering of the Seven Touchpoints reflects the application
+                                    of best practices across many software projects spanning many years. Numbering is
+                                    meant to rank the tasks by value rather than imposing a chronological process. As an
+                                    example, the architectural risk analysis (2) may need to occur before code reviews
+                                    (1). Given such considerations, organizations need to analyze their needs and decide
+                                    how to integrate the Seven Touchpoints into the phases of the organization’s
+                                    Waterfall model.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f885e7da-a08c-46af-b5d5-fb7300cd8bee" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Security in Adaptive/Iterative
+                                Methodologies<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8e7686ee-6f99-4aff-b703-548e0c5f7925" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">In contrast to Waterfall, an adaptive software development
+                                    approach relies on short iterations where the project is deconstructed into small
+                                    components that may be started and completed during short development iterations.
+                                    The incremental nature of adaptive planning and execution provides the ability to
+                                    remain flexible as project requirements and scope evolve throughout the SDLC.</p>
+                                <p class="comment78305">Addressing security in fast-paced, dynamic software environments
+                                    that are typically characterized by unfamiliar territories, uncertain outcomes, and
+                                    short time-boxed iterations (e.g., one or two weeks) may present challenges to
+                                    incorporating security activities into the SDLC. This is especially true when an
+                                    organization or security practitioner is transitioning from a predictive environment
+                                    to adaptive. However, implementing good security within adaptive SDLC is achievable.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3fb52ebd-2738-4897-ac26-87e2afdaf539" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Agile Methods<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="094c418b-0622-4202-b833-2f107b9efd1c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Focusing on minimizing upfront planning, quickly generating
+                                    working code, making design decisions, and adjusting code as the system is being
+                                    implemented and tested are key characteristics of Agile methods. Often requirements
+                                    for one software feature may be drafted based on the outcomes of a recently
+                                    completed iteration rather than creating all project requirements at a software
+                                    project initiation. Typically, each Agile iteration is referred to as a sprint.</p>
+                                <p class="comment78305">Agile methods may not allow sufficient time for traditional
+                                    detailed security planning or analysis. Examples of Agile implementations include
+                                    <strong><button
+                                            data-definition title="A framework to facilitate a team’s development process through collaboration and by breaking down the work into increments, allowing for experimentation and feedback that informs continuous learning and improvement."
+                                            class="rendered">Scrum</button> </strong>and Extreme Programming (XP).
+                                    Adaptive methods are covered below before discussing security considerations.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="918ee5dd-92c9-41e8-b3ec-76eb37deaa17" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Scrum<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e8fa10a5-ecce-4741-bcb1-7c8852042fa3" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The Scrum concept originated with the sport of rugby, where
+                                    players engage in a scrummage, or scrum, to gain control of the ball. Scrum as an
+                                    Agile method involves a small team, usually with a team leader called a Scrum
+                                    Master. The team’s main purpose is to clear away obstacles, also called impediments
+                                    or blockers, so that a task can be completed quickly (see figure).</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="57034dca-a24c-4582-8052-c4ead02e90ce" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--100 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_009_03.jpg" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_009_03.jpg" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 282.219px; left: 550.406px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 3: Example of Agile Method Implementation
+                                        (Scrum)</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="3bb5f7b0-78fc-46c1-9999-4828da14d81f"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2b98e0fb-8dd3-4500-9fa2-d6bd335e0cf1" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Extreme Programming (XP)<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="764a2377-689f-4aa4-9eb9-006138d631ef" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Extreme Programming (XP) is a lightweight methodology best
+                                    suited for developing software when the requirements are vague or change frequently.
+                                    XP methodology relies on one or more roles with associated responsibilities assigned
+                                    to each member of the team, including programmer, customer, tester, and coach roles,
+                                    among all possible roles.</p>
+                                <p class="comment78305">There are dozens of practices in XP, with a few mentioned below:
+                                </p>
+                                <ul>
+                                    <li><em>Pair Programming. </em>Relies on two programmers at one machine for all
+                                        production code. One programmer attends to coding and the other evaluates and
+                                        improves the code.</li>
+                                    <li><em>Refactoring. </em>Entails simplifying the program when implementing the
+                                        feature.</li>
+                                    <li><em>Collective Ownership. </em>Places the responsibility for the whole of the
+                                        system on the team, as opposed to individuals. Any team member can change code
+                                        anywhere, at any time.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4828783b-f25c-4376-a0e7-f0fc019488a3" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Security in Agile
+                                Implementations<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b8acecf3-3ba8-46cc-9e96-af439b21c46a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Ensuring software security is implemented into iterative Agile
+                                    applications requires the tight integration of security discipline into
+                                    organizational Agile development processes. Integration ensures that security is
+                                    considered in every sprint, whether tasking consists of building new software or
+                                    updating existing functionality. When a sprint ends, any tasks marked done are
+                                    considered complete shippable code. If we want security, quality, or safety
+                                    considered part of done code—those processes must fit within the context of a
+                                    sprint.</p>
+                                <p class="comment78305">For the software process to remain Agile, secure software design
+                                    and assurance activities and controls need to minimize additional cost or time on
+                                    software projects. To fit within sprints, costly and timeconsuming security
+                                    activities, such as code reviews, static analysis, and penetration testing, need to
+                                    become less expensive, tightly scoped, and often automated so that they can be
+                                    performed earlier and more frequently.</p>
+                                <p class="comment78305">The following are a few attempts to integrate Agile
+                                    <strong><button
+                                            data-definition title="A formal or informal methodology for designing, creating, and maintaining software (including code built in hardware). Source: NIST SP 800-128"
+                                            class="rendered">SDLC</button> </strong>methods with security:
+                                </p>
+                                <ul>
+                                    <li><em>Secure Scrum. </em>Encourages identification of security concerns during
+                                        initial backlog planning, later refinements, and sprint planning. User stories
+                                        related to security concerns are clearly marked to ensure that security concerns
+                                        will be addressed in the sprint that addresses the user story. Risk analysis of
+                                        each user story is performed to quantify potential losses resulting from
+                                        software compromises in monetary terms. Secure Scrum permits third-party
+                                        security experts to be involved in planning (for training of the Scrum team and
+                                        identifying security concerns), and during sprints (to provide turnkey solutions
+                                        to security issues). Scrum Masters object to the inclusion of outsiders on a
+                                        Scrum team, insisting that security must be addressed by the Scrum team itself
+                                        as a part of normal unit testing, continuous integration, continuous delivery,
+                                        and the SDLC’s other compact, continuous feedback loops. They also insist that
+                                        any security tools must be understandable by developers and must support how
+                                        they already work and think.</li>
+                                    <li><em>Microsoft SDL/Agile. </em>Decomposes the set of security practices from
+                                        Microsoft SDL into smaller steps that can be levied by Agile development teams
+                                        within the context of a sprint iteration.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="236d6f87-3166-4fff-9157-cda634a6d1a4" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">DevOps + Security = DevSecOps<br />
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0eee21d3-8b98-49d9-81f5-5518754a9b4f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Development Operations (DevOps) is often described as a logical
+                                    extension of Agile, pioneered by lean-thinking organizations seeking solutions for
+                                    rapid and frequent delivery of software. Many modern organizations have adopted
+                                    DevOps for a variety of reasons—most notably because businesses need to build, test,
+                                    and release software faster and more reliably to stay competitive. Much like Agile
+                                    implements’ shorter development iterations, DevOps has the goal of shortening the
+                                    SDLC while improving the reliability of incremental source changes such as feature
+                                    enhancements, bug fixes, and updates.</p>
+                                <p class="comment78305">Technological aspects of DevOps are primarily about continuous
+                                    integration/continuous delivery (CI/CD) practices, relying on the automation of much
+                                    of the routine work of transforming code changes into verified production software.
+                                    Several tools and technologies have been introduced for this specific purpose, but
+                                    successful implementation of DevOps requires special attention to—and organizational
+                                    investment in—people and processes in addition to technology.</p>
+                                <p class="comment78305">Development, Security, and Operations <strong>(<button
+                                            data-definition title="A paradigm covering development, security, and operations throughout the software development life cycle (SDLC) to ensure security, safety, and resilience in the final system."
+                                            class="rendered">DevSecOps)</button></strong> is everything that DevOps is
+                                    but adds an additional focus on software assurance. DevSecOps bridges the gap
+                                    between security and DevOps. Security should ultimately remain focused on minimizing
+                                    enterprise risk, and at the same time allow development to deliver more secure code
+                                    at the rate dictated by business needs. This implies that traditional
+                                    resource-intensive and heavyweight security activities throughout the
+                                    software-development life cycle must also change from being prescribed by nature to
+                                    adaptive. As depicted in the figure, security must be injected into the existing
+                                    development workflow in DevOps life cycle.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4ef5046d-ec55-42ff-a0e7-56db546ec0d6" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--75 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_009_04.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_009_04.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 159.781px; left: 476.594px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 4: DevSecOps</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="835513cb-6736-4f04-fdc9-76ebffea6c86"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1a0f9eb2-9a3a-47f0-90b2-0d2f5c6d3efd" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Security Operations vs. Secure
+                                Software<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="32f966a1-b063-43e4-8d24-00e13f90c706" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">We should be well acquainted with the foundations of security
+                                    Confidentiality, Integrity, and Availability (CIA). Secure practitioners need to
+                                    understand the difference between security operations for software development teams
+                                    and producing security-hardened software and the CIA considerations for both when
+                                    managing software security. One way to illustrate the difference, is to discuss each
+                                    within the context of DevSecOps.</p>
+                                <p class="comment78305">Operational security considerations exist for development teams
+                                    producing software using the DevSecOps CI/CD pipeline. The source code repository
+                                    and integrated development environment (IDE) used should ensure that the software
+                                    source is available during the sprint, only accessible by development when being
+                                    stored in the repository (confidential), and that no developer can deploy production
+                                    changes without leveraging the quality and security checks built into the pipeline
+                                    (integrity). This is an oversimplified example that illustrates Security Operations
+                                    within the SDLC. Note that all the mentioned operational security does not directly
+                                    relate to the end software product being more secure.</p>
+                                <p class="comment78305">In addition to Security Operations, we also need to conduct
+                                    software hardening through software assurance processes to make organizational
+                                    software secure and resilient. Software hardening focuses on producing software
+                                    capable of satisfying the organizations defined levels of CIA for the end software
+                                    product. These efforts might include static analysis—analysing uncompiled source
+                                    code to find CWEs. It might also include dynamic analysis—analysing the compiled
+                                    source within a runtime environment to find vulnerabilities such as buffer
+                                    overflows.</p>
+                                <p class="comment78305">As security practitioners, independent of methodology, we must
+                                    ensure that the process for developing software is secure from an operational
+                                    perspective while delivering software that functions as intended and is free of
+                                    vulnerabilities, either intentionally or unintentionally designed or inserted as
+                                    part of the software throughout the life cycle (CNSSI 4009-2015).</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="screengrid comment78305">
+            <footer class="screen__margin screen__footer u-hide-element vstdonthighlight">
+                <div class="feedback comment78305">
+                    <div class="feedback__content js-feedback-focus comment78305" tabindex="-1"></div>
+                </div>
+                <div class="control-btns comment78305"></div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay-root vstdonthighlight rendered comment78305 u-hidden" style="overflow-y: auto;">
+        <div class="modal-cover-holder comment78305">
+            <div class="modal-cover-outer comment78305">
+                <div class="modal-cover comment78305"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

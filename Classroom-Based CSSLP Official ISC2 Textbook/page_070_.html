@@ -1,0 +1,406 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"
+    style="padding: 0px; font-size: 100%; --USER__lineHeight: 1; --USER__pageMargins: 1; --USER__view: readium-scroll-on;"
+    class="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Storage and Management of Security Data (7.4)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="overflow: hidden auto;">
+    <div xmlns:epub="http://www.idpf.org/2007/ops" epub:type="pagebreak" id="pagebreak_70"
+        class="hidden-pagebreak comment78305" title="70"></div>
+
+    <div xmlns:epub="http://www.idpf.org/2007/ops" id="af339def-8b07-416f-b84d-ce546a655500"
+        class="screen rendered comment78305" aria-hidden="false">
+        <div class="screengrid comment78305">
+            <header class="screen__margin screen__header u-hide-element vstdonthighlight">
+
+                <div class="screen__heading u-float--clearfix comment78305">
+                    <div class="screen__icon u-float--left comment78305"></div>
+                    <h2 class="screen__title comment78305" tabindex="-1"></h2>
+                </div>
+
+
+                <div class="screen__instructions comment78305"></div>
+            </header>
+        </div>
+
+        <div class="screen__content comment78305">
+
+            <div class="block rendered comment78305">
+                <div id="5ef626d7-684d-4737-8451-f389ee74abb8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Storage and Management of Security
+                                Data (7.4)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ef7692e7-11d5-4f20-af5c-14eb150cfb71" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Credentials, secrets and keys, certificates and configuration
+                                    data are among extremely valuable and sensitive software assets that always require
+                                    protection in all places. These highly sensitive assets may be stored in key
+                                    management solutions or software-based vaults, or backed by tamper-resistant
+                                    hardware. </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c7672006-0ff3-42a7-b518-224797407ee5" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Learning Objectives<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6ecaf605-dc45-4163-ac8d-9299d8dfb60a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>Compare and distinguish the common methods to store and manage security data.
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="bb6d874b-6122-47f9-adcd-4f4cf0a8cafa" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Overview<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d9621113-ea05-40c7-8048-23a5dd21997b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The security data that comes with the application will generally
+                                    be related to accessing or protecting the application in some way, so care must be
+                                    exercised to protect the security data from potential attackers.</p>
+                                <p class="comment78305">The security data can take the form of credentials, secrets,
+                                    keys/certificates, and configuration files. Key vaults and secret managers offer
+                                    reasonable protection for the secrets.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2cf92e3d-4d0f-4e5f-b853-3b92f7e51fc5" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Credentials<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="926e640a-5043-474d-9e54-f2ed866608b4" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Credentials bound in some way to subjects are used to provide a
+                                    proof of identity during an authentication transaction and as part of access
+                                    control. Electronic credentials can come in the form of PINs, passwords, biometric
+                                    data, and more. In general, credentials used for authentication that can be easily
+                                    spoofed are a source of concern.</p>
+                                <p class="comment78305">The special case of anonymous credentials (not associated with a
+                                    known personal identity) must be approached with caution.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4925227e-8591-42bd-94d6-b4089a23572b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Secrets<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d2b25159-bacd-4378-987c-b5c97b2dcc1a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Secure deployment of software also needs to address protection
+                                    of secrets (e.g., passwords and tokens) required for applications to operate in
+                                    production environments.</p>
+                                <p class="comment78305">Depending on the maturity of organizational processes, you may
+                                    need to:</p>
+                                <ul>
+                                    <li>Introduce protection measures to limit access to production secrets.</li>
+                                    <li>Inject secrets dynamically during the deployment process from hardened storages
+                                        and auditing all human access to them.</li>
+                                    <li>Improve the life cycle of application secrets by regularly generating them and
+                                        by ensuring proper use.</li>
+                                </ul>
+                                <p class="comment78305">In its simplest form, suitable production secrets are moved from
+                                    repositories and configuration files into adequately managed digital vaults. In more
+                                    advanced forms, secrets are dynamically generated at deployment time and routine
+                                    processes detect and mitigate the presence of any unprotected secrets in the
+                                    environment.<sup>8</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a3a2f1ef-3c1c-4723-aa7b-170785668647" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>8</sup>OWASP Foundation Software Assurance Security Model;
+                                    <a href="https://owaspsamm.org/model/implementation/secure-deployment/"
+                                        target="_blank">https://owaspsamm.org/model/implementation/secure-deployment/</a>;
+                                    retrieved June 2023.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="67fd0a21-a862-4ea8-9fef-08670ad7fa37" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Secrets Injection<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="885ad15e-38c4-4459-b08d-4235b8abcf67" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">When building applications using constrainers (e.g., Docker),
+                                    the management of secrets (e.g., passwords, OAuth tokens, and SSH keys) must be
+                                    addressed. One possibility is to store the secrets in the source code itself;
+                                    another is to store the secrets in the container image (e.g., Docker file). There
+                                    are several issues with this approach, as access to the source code should not yield
+                                    access to the secret or changes in code. For example, a password should not require
+                                    rebuilding and redeploying the code. </p>
+                                <p class="comment78305">There are alternatives to the approach previously mentioned, if
+                                    supported by the container management tool and technology. One alternative is to
+                                    inject (pass) the secrets into the container using environment variables or files
+                                    and make the secrets available to the containerized code at runtime. This, in turn,
+                                    may incur other risks such as logging the entire environment, which could
+                                    potentially expose the secrets to those with access to logs.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b190c574-f2ad-4d78-a045-3566c01b38da" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Keys and Certificates<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="63d4154d-9c45-48b7-b3cf-41e17edceb70" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Both keys and certificates need the same type of protection,
+                                    since they mostly perform the same type of functions.</p>
+                                <p class="comment78305">Public key cryptography (also known as asymmetric encryption
+                                    algorithms) involves a pair of keys: one public, one private. Anyone can know the
+                                    public key, but the private key can be known only by authorized subjects. If the
+                                    private key is compromised, the associated public key should be revoked.</p>
+                                <p class="comment78305">Any lapses, flaws, or weaknesses in the key management process
+                                    could be detrimental to the encryption process and security of the data encrypted
+                                    with that key. Adversaries may exploit vulnerabilities in software (e.g., buffer
+                                    overflow and memory dump) to obtain the encryption key.</p>
+                                <p class="comment78305">Hardware security modules (HSMs) can offer additional security
+                                    for key protection, so it’s best to use hardware-assisted cryptography rather than
+                                    encrypting with software alone. Encryption also requires robust physical and network
+                                    security for any device used to generate or store private keys.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="39836f53-0684-4ea7-aa4f-6666fc32d41b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Configurations<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="268e8e35-68c5-4c29-8fcd-c49b2bbad8d6" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Configuration files can be used to configure the parameters and
+                                    initial settings for all kinds of software, including operating systems, web server
+                                    software, and user applications. Tools to create, modify, and verify the syntax of
+                                    the configuration files may be provided with the applications, and may either be
+                                    command-line driven or use a graphical user interface. Some computer programs only
+                                    read their configuration files at startup, whereas others periodically check the
+                                    configuration files for changes.</p>
+                                <p class="comment78305">A potential risk with configuration files is that users can
+                                    instruct some programs to reread the configuration files and apply the changes to
+                                    the current process, or indeed to read arbitrary files as a configuration file.</p>
+                                <p class="comment78305">Further, configuration files generally contain various types of
+                                    sensitive information, so they must be protected.<em> CWE-260 Password in
+                                        Configuration File </em>provides an example: “The software stores a password in
+                                    a configuration file that might be accessible to actors who do not know the
+                                    password. This can result in compromise of the system for which the password is
+                                    used. An attacker could gain access to this file and learn the stored password or
+                                    worse yet, change the password to one of their choosing.”<sup>9</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="000f7710-b74a-4c3e-b6bc-788e36ce957c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>9</sup> Common Weakness Enumeration (CWE): A
+                                    Community-Developed List of Software and Hardware Weakness Types; CWE-260: Password
+                                    in Configuration File; <a href="https://cwe.mitre.org/data/definitions/260.html"
+                                        target="_blank">https://cwe.mitre.org/data/definitions/260.html</a>; retrieved
+                                    June 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f27be03b-7e9f-44c7-9911-8efd5987b1fc" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Key Vault<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="46190c52-f590-4d5b-9066-d9500fea6be5" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Deploying encryption and other security solutions across the
+                                    enterprise requires managing secrets. Vaults are services that securely manage
+                                    secrets for applications. They store, retrieve, and optionally rotate secrets such
+                                    as encryption keys, certificates and API keys, among others.</p>
+                                <p class="comment78305">As an example, consider the encryption key used by Transparent
+                                    Data Encryption (TDE) to encrypt the data in the database. The encryption key used
+                                    by TDE would be stored in the key vault for secure access, and the applications’
+                                    interaction with the key vault would be managed through application programming
+                                    interfaces (APIs).</p>
+                                <p class="comment78305">Key vaults may be implemented on premises or in the cloud
+                                    infrastructure. In addition to security, fault tolerance and scalability are
+                                    necessary for any such service. For stronger security and/or compliance, key vaults
+                                    may use FIPS 140-2 validated HSM.</p>
+                                <p class="comment78305">Examples of solutions used to store and manage secrets include
+                                    Azure Key Vault, AWS Secret Manager, and HashiCorp Vault. There are many
+                                    considerations when choosing solutions for this purpose. A few are listed here:</p>
+                                <ul>
+                                    <li>Are secrets safeguarded using industry standard algorithms?</li>
+                                    <li>Does the service provider have access to the keys?</li>
+                                    <li>Are key access and usage logged?</li>
+                                    <li>Can secrets be updated without disrupting applications?</li>
+                                    <li>Are keys stored in the same data center as the application?</li>
+                                    <li>Can customers manage their own keys?</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="screengrid comment78305">
+            <footer class="screen__margin screen__footer u-hide-element vstdonthighlight">
+                <div class="feedback comment78305">
+                    <div class="feedback__content js-feedback-focus comment78305" tabindex="-1"></div>
+                </div>
+                <div class="control-btns comment78305"></div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay-root vstdonthighlight rendered comment78305 u-hidden" style="overflow-y: auto;">
+        <div class="modal-cover-holder comment78305">
+            <div class="modal-cover-outer comment78305">
+                <div class="modal-cover comment78305"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

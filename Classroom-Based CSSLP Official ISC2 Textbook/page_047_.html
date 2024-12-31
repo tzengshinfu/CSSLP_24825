@@ -1,0 +1,1093 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"
+    style="padding: 0px; font-size: 100%; --USER__lineHeight: 1; --USER__pageMargins: 1; --USER__view: readium-scroll-on;"
+    class="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Security Controls (5.3)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="overflow: hidden auto;">
+    <div xmlns:epub="http://www.idpf.org/2007/ops" epub:type="pagebreak" id="pagebreak_47"
+        class="hidden-pagebreak comment78305" title="47"></div>
+
+    <div xmlns:epub="http://www.idpf.org/2007/ops" id="7289df63-0d99-4e19-8671-14c19e94f342"
+        class="screen rendered comment78305" aria-hidden="false">
+        <div class="screengrid comment78305">
+            <header class="screen__margin screen__header u-hide-element vstdonthighlight">
+
+                <div class="screen__heading u-float--clearfix comment78305">
+                    <div class="screen__icon u-float--left comment78305"></div>
+                    <h2 class="screen__title comment78305" tabindex="-1"></h2>
+                </div>
+
+
+                <div class="screen__instructions comment78305"></div>
+            </header>
+        </div>
+
+        <div class="screen__content comment78305">
+
+            <div class="block rendered comment78305">
+                <div id="d21594fc-5998-43eb-a56e-0b0a05c75f38" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Security Controls (5.3)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a5b3bdf5-830c-4927-bfe2-7e09f175119e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Prevention, detection, and correction of vulnerabilities require
+                                    implementation of various mitigation measures. OWASP Proactive Controls represent a
+                                    starting point for software developers and offer concrete guidance around software
+                                    security.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="98a3a1a6-e574-4b5e-a251-d2b56dd6ba85" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Objectives<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="33ebebc7-09a9-4686-aa28-1875063244e5" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>Describe categorization of controls by type and by functionality.</li>
+                                    <li>Identify controls to prevent common web application vulnerabilities.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e86e235d-d49d-423f-9bfa-598294dc7551" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Overview<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d9b1b73c-434b-446e-852e-346d7120d46d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Controls, safeguards, and countermeasures—proactive or
+                                    reactive—are used to mitigate risks to assets. Controls can be defined by category
+                                    as technical, administrative, or physical, or defined by functionality (e.g.,
+                                    preventive, detective, corrective, compensating).</p>
+                                <p class="comment78305">OWASP Proactive Controls can help developers build secure
+                                    software. Security in every tier of the architecture must be addressed. Security in
+                                    languages and frameworks used by developers must also be addressed.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a9b2806d-1af3-4235-9d8d-19e75b8ac6d5" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Technical Software Security
+                                Controls<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f0c53797-2f2e-415e-9d6e-1c22d4575d7c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Technical safeguards and countermeasures must be designed and
+                                    implemented in software in terms of various layers of defense to address software
+                                    vulnerabilities. No single safeguard or countermeasure is enough to address common
+                                    software security vulnerabilities. A software security vulnerability is a flaw,
+                                    glitch, or weakness found in software that can lead to security compromise. In this
+                                    section, we present mitigation strategies for each of the OWASP Top 10 risks that
+                                    were presented in the previous module.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4524b072-ceb5-4787-8804-0e4bbdca35f0" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Controls to Prevent Common Web
+                                Application Vulnerabilities<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b833046e-164a-478e-895b-a43b2d73a814" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Preventing Injection<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="fbaf385b-3068-48c4-96c2-0d4f4d755c9c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">When implementing controls, consider the following partial list
+                                    of recommendations from OWASP<sup>27</sup>:</p>
+                                <ul>
+                                    <li>Preventing injection requires keeping data separate from commands and queries.
+                                        The preferred option is to use a safe API, which avoids the use of the
+                                        interpreter entirely or provides a parameterized interface or migrate to the use
+                                        of Object Relational Mapping Tools (ORMs). Note that even when parameterized,
+                                        stored procedures can still introduce SQL injection if PL/SQL or T-SQL
+                                        concatenates queries and data or executes hostile data with EXECUTE IMMEDIATE or
+                                        exec().</li>
+                                    <li>Use approved lists or server-side input validation. This is not a complete
+                                        defense as many applications require special characters, such as text areas or
+                                        APIs for mobile applications.</li>
+                                    <li>For any residual dynamic queries, escape special characters using the specific
+                                        escape syntax for that interpreter. Note that SQL structure such as table names
+                                        and column names cannot be escaped, and thus user-supplied structure names are
+                                        dangerous. This is a common issue in report-writing software.</li>
+                                    <li>Use LIMIT and other SQL controls within queries to prevent mass disclosure of
+                                        records in case of SQL injection.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0af01887-6cb1-4576-962a-0fe2dfc4f3ac" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>26</sup> OWASP Foundation; Application Security
+                                    Verification Standard 4.0; <a
+                                        href="https://owasp.org/www-pdf-archive/OWASP_Application_Security_Verification_Standard_4.0-en.pdf"
+                                        target="_blank">https://owasp.org/www-pdf-archive/OWASP_Application_Security_Verification_Standard_4.0-en.pdf</a>;
+                                    retrieved July 2023.</p>
+                                <p class="comment78305"><sup>27</sup> OWASP; <em>A1:2017-Injection; </em><a
+                                        href="https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A1-Injection"
+                                        target="_blank">https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A1-Injection</a>;
+                                    retrieved July 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0acab510-07f5-42cb-9d59-fbe873ac2332" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Preventing Broken Authentication<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="9b0d2131-a2b6-4537-b090-6eb57f6097e6" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">When implementing controls, consider the following partial list
+                                    of recommendations from OWASP<sup>28</sup>:</p>
+                                <ul>
+                                    <li>Where possible, implement multifactor authentication.</li>
+                                    <li>Do not ship or deploy with any default credentials, particularly for admin
+                                        users.</li>
+                                    <li>Implement weak-password checks.</li>
+                                    <li>Align password length, complexity, and rotation policies with reputable
+                                        standards.</li>
+                                    <li>Limit or increasingly delay failed login attempts.</li>
+                                    <li>Use a server-side, secure, built-in session manager that generates a new random
+                                        session ID with high entropy after login.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6b45e506-1a78-4fe8-875d-8441a3f764d2" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Preventing Sensitive Data
+                                Exposure<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="90f9ba13-dd8f-4fe6-bd05-274c96d466c1" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">When implementing controls, consider the following partial list
+                                    of recommendations from OWASP<sup>29</sup>:</p>
+                                <ul>
+                                    <li>Classify data processed, stored, or transmitted by an application.</li>
+                                    <li>Apply controls as per the classification.</li>
+                                    <li>Don’t store sensitive data unnecessarily. Discard it as soon as possible. </li>
+                                    <li>Encrypt all sensitive data at rest.</li>
+                                    <li>Ensure up-to-date and strong standard algorithms, protocols, and keys are in
+                                        place; use proper key management.</li>
+                                    <li>Encrypt all data in transit with secure protocols such as TLS.</li>
+                                    <li>Disable caching for responses that contain sensitive data.</li>
+                                    <li>Store passwords using strong adaptive and salted hashing functions.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5d604efc-fb23-478a-b755-6d526af6aaee" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Preventing XML External Entities
+                                (XXE)<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="91e0e8c9-637e-4366-86c5-983274b5582c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">When implementing controls, consider the following partial list
+                                    of recommendations from OWASP<sup>30</sup>:</p>
+                                <ul>
+                                    <li>Use fewer complex data formats such as JSON and avoid serialization of sensitive
+                                        data.</li>
+                                    <li>Patch or upgrade all XML processors and libraries in use by the application or
+                                        on the underlying operating system.</li>
+                                    <li>Disable XML external entity and DTD processing in all XML parsers in the
+                                        application. </li>
+                                    <li>Implement server-side input validation, filtering, or sanitization to prevent
+                                        hostile data within XML documents, headers, or nodes.</li>
+                                    <li>Verify that XML or XSL file upload functionality validates incoming XML using
+                                        XSD validation or similar.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="56468c63-fdff-4c33-9ed5-bc6008576fa5" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>28</sup> OWASP; <em>A2:2017-Broken Authentication; </em><a
+                                        href="https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A2-Broken_Authentication"
+                                        target="_blank">https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A2-Broken_Authentication</a>;
+                                    retrieved July 2023.</p>
+                                <p class="comment78305"><sup>29</sup> OWASP; <em>A3:2017-Sensitive Data Exposure;
+                                    </em><a
+                                        href="https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A3-Sensitive_Data_Exposure"
+                                        target="_blank">https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A3-Sensitive_Data_Exposure</a>;
+                                    retrieved July 2023.</p>
+                                <p class="comment78305"><sup>30</sup> OWAP; <em>A4:2017:XML External Entities (XXE);
+                                    </em><a
+                                        href="https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A4-XML_External_Entities_(XXE)"
+                                        target="_blank">https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A4-XML_External_Entities_(XXE)</a>;
+                                    retrieved July 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="910d8138-0fea-426a-bc10-dd7c7e5eca96" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Preventing Broken Access Control<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7930cf8d-a7b7-410f-a3a3-2c8d9c655a90" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">When implementing controls, consider the following partial list
+                                    of recommendations from OWASP<sup>31</sup>:</p>
+                                <ul>
+                                    <li>Except for public resources, deny by default.</li>
+                                    <li>Implement access control mechanisms once and reuse them throughout the
+                                        application.</li>
+                                    <li>Model access controls should enforce record ownership, rather than accepting
+                                        that the user can create, read, update, or delete any record.</li>
+                                    <li>Unique application business limit requirements should be enforced by domain
+                                        models.</li>
+                                    <li>Disable web server directory listing and ensure file metadata (e.g., git) and
+                                        backup files are not present within web roots.</li>
+                                    <li>Log access control failures, alert admins when appropriate (e.g., repeated
+                                        failures).</li>
+                                    <li>Rate limit API and controller access to minimize the harm from automated attack
+                                        tooling.</li>
+                                    <li>JWT tokens should be invalidated on the server after logout.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3d5d80a1-03b4-4f79-b789-b38ae3e47502" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Preventing Security
+                                Misconfiguration<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8c87a2f1-1f8a-4c3a-92c5-4495e0f36401" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">When implementing controls, consider the following partial list
+                                    of recommendations from OWASP.<sup>32</sup></p>
+                                <p class="comment78305">Implement secure installation processes, including:</p>
+                                <ul>
+                                    <li>A repeatable hardening process that makes it fast and easy to deploy another
+                                        environment that is properly locked down. The development, QA, and production
+                                        environments should all be configured identically, with different credentials
+                                        used in each environment. This process should be automated to minimize the
+                                        effort required to set up a new secure environment.</li>
+                                    <li>A minimal platform without any unnecessary features, components, documentation,
+                                        and samples. Remove or do not install unused features and frameworks.</li>
+                                    <li>A task to review and update the configurations appropriate to all security
+                                        notes, updates, and patches as part of the patch management process.</li>
+                                    <li>A segmented application architecture that provides effective, secure separation
+                                        between components or tenants, with segmentation, containerization, or cloud
+                                        security groups (ACLs). </li>
+                                    <li>The sending of security directives to clients (e.g., Security Headers).</li>
+                                    <li>An automated process to verify the effectiveness of the configurations and
+                                        settings in all environments.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="fbc1c379-020d-42b6-80b6-11dd0dc4cd0f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>31</sup> OWASP; <em>A5:2017: Broken Access Control; </em><a
+                                        href="https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A5-Broken_Access_Control"
+                                        target="_blank">https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A5-Broken_Access_Control</a>;
+                                    retrieved July 2023.</p>
+                                <p class="comment78305"><sup>32</sup> OWASP; <em>A6:2017: Security Misconfiguration;
+                                    </em><a
+                                        href="https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A6-Security_Misconfiguration"
+                                        target="_blank">https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A6-Security_Misconfiguration</a>;
+                                    retrieved July 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="49144e51-d08e-4cf6-8592-836a821a4d5a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Preventing Cross-Site Scripting
+                                XSS<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="297b4873-698b-4b57-8631-b931e4d553dd" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">When implementing controls, consider the following partial list
+                                    of recommendations from OWASP.<sup>33</sup></p>
+                                <p class="comment78305">Preventing XSS requires separation of untrusted data from active
+                                    browser content. This can be achieved by:</p>
+                                <ul>
+                                    <li>Using frameworks that automatically escape XSS by design, such as the latest
+                                        Ruby on Rails, React JS. Learn the limitations of each framework’s XSS
+                                        protection and appropriately handle the use cases which are not covered.</li>
+                                    <li>Escaping untrusted HTTP request data based on the context in the HTML output
+                                        (e.g., body, attribute, JavaScript, CSS, URL) will resolve Reflected and Stored
+                                        XSS vulnerabilities.</li>
+                                    <li>Applying context-sensitive encoding when modifying the browser document on the
+                                        client side acts against DOM XSS. When this cannot be avoided, similar context
+                                        sensitive escaping techniques can be applied to browser APIs.</li>
+                                    <li>Enabling a Content Security Policy (CSP) as a defense-in-depth mitigating
+                                        control against XSS.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4e23e88a-040c-4bd9-9e90-cda1f3d58faf" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Preventing Insecure
+                                Deserialization<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e3f0a310-55d1-4601-a7cc-c3fd0788374f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">When implementing controls, consider the following partial list
+                                    of recommendations from OWASP.<sup>34</sup></p>
+                                <p class="comment78305">The only safe architectural pattern is not to accept serialized
+                                    objects from untrusted sources or to use serialization mediums that only permit
+                                    primitive data types. If that is not possible, consider one of more of the
+                                    following:</p>
+                                <ul>
+                                    <li>Implementing integrity checks such as digital signatures on any serialized
+                                        objects to prevent hostile object creation or data tampering.</li>
+                                    <li>Enforcing strict type constraints during deserialization before object creation,
+                                        as the code typically expects a definable set of classes. Bypasses to this
+                                        technique have been demonstrated, so reliance solely on this is not advisable. 
+                                    </li>
+                                    <li>Isolating and running code that deserializes in low privilege environments when
+                                        possible.</li>
+                                    <li>Log deserialization exceptions and failures, such as where the incoming type is
+                                        not the expected type, or the deserialization throws exceptions.</li>
+                                    <li>Restricting or monitoring incoming and outgoing network connectivity from
+                                        containers or servers that deserialize.</li>
+                                    <li>Monitoring deserialization, alerting if a user deserializes constantly.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="363d3200-7558-494d-9305-2f2774f1306a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>33</sup> OWASP; <em>A7:2017: Cross-Site Scripting (XSS);
+                                    </em><a
+                                        href="https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A7-Cross-Site_Scripting_(XSS)"
+                                        target="_blank">https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A7-Cross-Site_Scripting_(XSS)</a>;
+                                    retrieved 2023.</p>
+                                <p class="comment78305"><sup>34</sup> OWASP; <em>A8:2017:Insecure Deserialization;
+                                    </em><a
+                                        href="https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A8-Insecure_Deserialization"
+                                        target="_blank">https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A8-Insecure_Deserialization</a>;
+                                    retrieved July 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e368d734-6e83-4b37-8873-4b17518c71ac" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Preventing Use of Components with
+                                Known Vulnerabilities <br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="cd9515f7-e352-414e-b497-969215b5d4b1" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">When implementing controls, consider the following partial list
+                                    of recommendations from OWASP.<sup>35</sup></p>
+                                <p class="comment78305">There should be a patch management process in place to:</p>
+                                <ul>
+                                    <li>Remove unused dependencies, unnecessary features, components, files, and
+                                        documentation.</li>
+                                    <li>Continuously inventory the versions of both client-side and server-side
+                                        components (e.g., frameworks, libraries) and their dependencies using tools such
+                                        as versions, DependencyCheck, and retire.js.</li>
+                                    <li>Continuously monitor sources like CVE and NVD for vulnerabilities in the
+                                        components.</li>
+                                    <li>Use software composition analysis tools to automate the process. Subscribe to
+                                        email alerts for security vulnerabilities related to components used.</li>
+                                    <li>Only obtain components from official sources over secure links. Prefer signed
+                                        packages to reduce the chance of including a modified, malicious component.</li>
+                                    <li>Monitor for libraries and components that are unmaintained or do not create
+                                        security patches for older versions. If patching is not possible, consider
+                                        deploying a virtual patch to monitor, detect, or protect against the discovered
+                                        issue.</li>
+                                    <li>Every organization must ensure that there is an ongoing plan for monitoring,
+                                        triaging, and applying updates or configuration changes for the lifetime of the
+                                        application or portfolio.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6adfcf4d-583b-4723-aee7-6ad5a96f9803" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Preventing Insufficient Logging and
+                                Monitoring<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d6b96cb8-2447-4a99-b52f-38e8fcceb452" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">When implementing controls, consider the following partial list
+                                    of recommendations from OWASP.<sup>36</sup></p>
+                                <p class="comment78305">As per the risk of the data stored or processed by the
+                                    application:</p>
+                                <ul>
+                                    <li>Ensure all login, access control failures, and server-side input validation
+                                        failures can be logged with enough user context to identify suspicious or
+                                        malicious accounts and held for enough time to allow delayed forensic analysis.
+                                    </li>
+                                    <li>Ensure that logs are generated in a format that can be easily consumed by a
+                                        centralized log management solution.</li>
+                                    <li>Ensure high-value transactions have an audit trail with integrity controls to
+                                        prevent tampering or deletion, such as append-only database tables or similar.
+                                    </li>
+                                    <li>Establish effective monitoring and alerting such that suspicious activities are
+                                        detected and responded to in a timely fashion.</li>
+                                    <li>Establish or adopt an incident response and recovery plan, such as NIST 800-61
+                                        rev. 2 or later.</li>
+                                    <li>Use commercial and open-source application protection frameworks and web
+                                        application firewalls with custom dashboards and alerting.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a0685c48-4c03-45fe-b64a-af65dd642eab" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>35</sup> OWASP; <em>A9:2017: Using Components with Known
+                                        Vulnerabilities; </em><a
+                                        href="https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A9-Using_Components_with_Known_Vulnerabilities"
+                                        target="_blank">https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A9-Using_Components_with_Known_Vulnerabilities</a>;
+                                    retrieved July 2023.</p>
+                                <p class="comment78305"><sup>36</sup> OWASP; <em>A10:2017:Insufficient Logging &amp;
+                                        Monitoring; </em><a
+                                        href="https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A10-Insufficient_Logging%252526Monitoring"
+                                        target="_blank">https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A10-Insufficient_Logging%252526Monitoring</a>;
+                                    retrieved July 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d55de3f9-bcd3-42c8-bd69-b2e6d0459651" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Common Controls<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="073fb7c9-042c-40f0-b4e2-e2fa1b191de0" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Each category and type of vulnerability requires a specific set
+                                    of safeguards and countermeasures. Nonetheless, frequently used controls from a
+                                    software security perspective also include:</p>
+                                <ul>
+                                    <li>Access controls</li>
+                                    <li>Change management controls</li>
+                                    <li>Administrative controls, such as segregation of duties</li>
+                                    <li>Audit and logging controls</li>
+                                    <li>Malware detection/prevention controls</li>
+                                </ul>
+                                <p class="comment78305">Discussions around access control, change management,
+                                    segregation of duties, audit, and logging were presented in previous sections. A
+                                    discussion on malware detection/prevention follows.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a397a3e6-feba-445c-addf-b263cdad945d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Malware Detection and Prevention
+                                Controls<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c247f9e4-d724-4e5c-ab1c-368168f3614a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Malware remains a significant threat. Controls discussed in this
+                                    area include file integrity monitoring (FIM) and antimalware. </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6bab0271-9e42-4256-bd63-946bb0aa4a14" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">File Integrity Monitoring (FIM)<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="9e641fc2-d8ab-4d2e-bbc9-5687b707b032" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The objective of file integrity monitoring (FIM) can be related
+                                    to the need for the implementation of specific safeguards to detect, alert, and
+                                    report illicit or suspicious activities and unauthorized modifications to critical
+                                    security files, including those of the operating system, database and applications.
+                                    Various regulations and standards (e.g., GLBA, HIPAA, PCI DSS) have mandates and
+                                    compliance requirements in this regard.</p>
+                                <p class="comment78305">Various aspects of files including creation, modification, size,
+                                    permissions, security settings and other attributes may be monitored.</p>
+                                <p class="comment78305">FIM solutions and tools are commonly used to detect the presence
+                                    of malware.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="09c5c751-1ef7-43ab-96fc-2bdbea86e5d5" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Antimalware <br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="39bd052c-1dcf-4bb4-b74b-1657c550dc81" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">A NIST publication dedicated to the discussion of malware
+                                    incident prevention and handling (NIST SP 800-83) highlights the prevalence of
+                                    current blended attacks and usage of multiple infection or transmission methods. It
+                                    also points out the heavy reliance on social engineering methods for the spread of
+                                    malware.</p>
+                                <p class="comment78305">Malware customization causes significant problems for malware
+                                    detection, because it greatly increases the variety of malware that antivirus
+                                    software and other security controls need to detect and block. When attackers are
+                                    capable of sending a unique attack to each potential victim, it should not be
+                                    surprising that largely signaturebased security controls, such as antivirus
+                                    software, cannot keep up with them. Mitigation involves a defense in depth approach,
+                                    using several different detection techniques to increase the odds that at least one
+                                    of them can detect the malicious behavior of the customized malware. In addition to
+                                    customization, another important characteristic of today’s malware is its stealthy
+                                    nature. Unlike most malware several years ago, which tended to be easy to notice,
+                                    much of today’s malware is specifically designed to quietly, slowly spread to other
+                                    hosts, gathering information over extended periods of time and eventually leading to
+                                    exfiltration of sensitive data and other negative impacts. The term advanced
+                                    persistent threats (APTs) is generally used to refer to such types of
+                                    malwares.<sup>37</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7e8d53a8-caf6-42d7-b2ce-ee6ff42bb557" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>37</sup> National Institute of Standards and Technology;
+                                    <em>NIST Special Publication 800-83 Revision 1—Guide to Malware Incident Prevention
+                                        and Handling for Desktops and Laptops; </em><a
+                                        href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-83r1.pdf"
+                                        target="_blank">https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-83r1.pdf</a>;
+                                    retrieved July 2023.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7478372f-9d3d-424d-ba09-828f5f2a8399" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">OWASP Proactive Controls<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3702fd8f-ba77-428b-9505-d99dc5a9e33c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">OWASP maintains a list of security activities and techniques
+                                    titled the OWASP Top Ten Proactive Controls that is intended to be used as a
+                                    starting point for software developers. The objective of this list is to highlight
+                                    the critical focus areas and provide concrete practical guidance for developers
+                                    around building secure software. The top 10 proactive controls are listed below.</p>
+                                <p class="comment78305">The list is ordered by importance with list item number 1 being
+                                    the most important:</p>
+                                <ul>
+                                    <li>C1: Define Security Requirements</li>
+                                    <li>C2: Leverage Security Frameworks and Libraries</li>
+                                    <li>C3: Secure Database Access</li>
+                                    <li>C4: Encode and Escape Data</li>
+                                    <li>C5: Validate All Inputs</li>
+                                    <li>C6: Implement Digital Identity</li>
+                                    <li>C7: Enforce Access Controls</li>
+                                    <li>C8: Protect Data Everywhere</li>
+                                    <li>C9: Implement Security Logging and Monitoring</li>
+                                    <li>C10: Handle All Errors and Exceptions</li>
+                                </ul>
+                                <p class="comment78305">The OWASP Top 10 Proactive Controls is like the OWASP Top 10 but
+                                    is focused on defensive techniques and controls as opposed to risks. Each technique
+                                    or control in this document will map to one or more items in the risk based OWASP
+                                    Top 10.<sup>38</sup></p>
+                                <p class="comment78305">The following is a brief description of each of the five most
+                                    important Proactive Controls from OWASP. For descriptions of all 10 controls, use
+                                    the link provided in the footnote.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="aefe65f8-3c5e-4f06-92a6-41cef1a30b0f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>38</sup> OWASP; OWASP Proactive Controls for Developers; <a
+                                        href="https://owasp.org/www-pdf-archive/OWASP_Top_10_Proactive_Controls_V3.pdf"
+                                        target="_blank">https://owasp.org/www-pdf-archive/OWASP_Top_10_Proactive_Controls_V3.pdf</a>;
+                                    retrieved July 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="33560ff6-44af-4f36-a695-88f8ae140f7c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">C1: Define Security Requirements<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1cf801f7-4bdc-482f-ba1f-40982b0b875c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Security requirements provide a foundation of vetted security
+                                    functionality for an application. Instead of creating a custom approach to security
+                                    for every application, standard security requirements allow developers to reuse the
+                                    definition of security controls and best practices. Those same vetted security
+                                    requirements provide solutions for security issues that have occurred in the past.
+                                    Requirements exist to prevent the repeat of past security failures.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6c9a4452-bf58-484b-a3c7-85f0847bbe2c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">C2: Leverage Security Frameworks and
+                                Libraries<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="fd162600-a69a-4f1a-960a-9f54cd5548bb" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Secure coding libraries and software frameworks with embedded
+                                    security help software developers guard against security-related design and
+                                    implementation flaws. A developer writing an application from scratch may not have
+                                    enough knowledge, time, or budget to properly implement or maintain security
+                                    features. Leveraging security frameworks helps accomplish security goals more
+                                    efficiently and accurately.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0cc7b026-7114-43d2-b9bc-d0d25d8103b2" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">C3: Secure Database Access<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="85b3129a-465a-4cee-9d44-f703e9ff46d0" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">This section describes secure access to all data stores,
+                                    including both relational databases and NoSQL databases. Some areas to consider: 1)
+                                    Secure queries, 2) Secure configuration, 3) Secure authentication, 4) Secure
+                                    communication.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3752cbd6-4bb4-46a3-8ab2-bfbdb6985b31" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">C4: Encode and Escape Data<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5c8031c7-16d6-4de8-9d8f-6fbe9b5131c6" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Encoding and escaping are defensive techniques meant to stop
+                                    injection attacks. Encoding (commonly called Output Encoding) involves translating
+                                    special characters into some different but equivalent form that is no longer
+                                    dangerous in the target interpreter. Escaping involves adding a special character
+                                    before the character/string to avoid it being misinterpreted.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0301f3ef-9fde-4acc-bf19-69208bcb6305" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">C5: Validate All Inputs<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2ad68096-0c3d-4e04-a8c1-a6fec856cbc0" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Input validation is a programming technique that ensures only
+                                    properly formatted data may enter a software system component. An application should
+                                    check that data is both syntactically and semantically valid (in that order) before
+                                    using it in any way (including displaying it back to the user).<sup>39</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2b761e97-5bfe-4878-bb09-845fb2a11474" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>39</sup> Ibid.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="screengrid comment78305">
+            <footer class="screen__margin screen__footer u-hide-element vstdonthighlight">
+                <div class="feedback comment78305">
+                    <div class="feedback__content js-feedback-focus comment78305" tabindex="-1"></div>
+                </div>
+                <div class="control-btns comment78305"></div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay-root vstdonthighlight rendered comment78305 u-hidden" style="overflow-y: auto;">
+        <div class="modal-cover-holder comment78305">
+            <div class="modal-cover-outer comment78305">
+                <div class="modal-cover comment78305"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

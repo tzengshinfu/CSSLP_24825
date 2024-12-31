@@ -1,0 +1,605 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"
+    style="padding: 0px; font-size: 100%; --USER__lineHeight: 1; --USER__pageMargins: 1; --USER__view: readium-scroll-on;"
+    class="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Evaluation and Integration of Components (5.5)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="overflow: hidden auto;">
+    <div xmlns:epub="http://www.idpf.org/2007/ops" epub:type="pagebreak" id="pagebreak_49"
+        class="hidden-pagebreak comment78305" title="49"></div>
+
+    <div xmlns:epub="http://www.idpf.org/2007/ops" id="56f99bac-aa72-4e2c-b0cc-a0e733520f52"
+        class="screen rendered comment78305" aria-hidden="false">
+        <div class="screengrid comment78305">
+            <header class="screen__margin screen__header u-hide-element vstdonthighlight">
+
+                <div class="screen__heading u-float--clearfix comment78305">
+                    <div class="screen__icon u-float--left comment78305"></div>
+                    <h2 class="screen__title comment78305" tabindex="-1"></h2>
+                </div>
+
+
+                <div class="screen__instructions comment78305"></div>
+            </header>
+        </div>
+
+        <div class="screen__content comment78305">
+
+            <div class="block rendered comment78305">
+                <div id="05782e8c-d864-41b9-8680-39358a01e45c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Evaluation and Integration of
+                                Components (5.5)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e12d4bd8-b202-4ab9-84f0-bfa9c073edec" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Modern applications are typically built with dependance on
+                                    third-party components and libraries. Software security practitioners must
+                                    understand the great and real risk of using these libraries with known
+                                    vulnerabilities. The sole task of identifying these commercial or open-source
+                                    components could present a great challenge. Further, these libraries may be updated
+                                    and patched over time, and this highlights the need for the continuity of the risk
+                                    assessment processes using automated and manual processes.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="896c3060-7f8a-4caf-a6a3-21aaf15ca372" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Objectives<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7ca264f3-0c0d-4c7e-9573-89c4a95983b1" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>Identify the risks associated with using third-party and open-source components
+                                        and libraries.</li>
+                                    <li>Describe the various integration categories and their relevance to software
+                                        security.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="09e7509d-4332-45cc-9016-7b163239fcb3" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Overview<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="81b36d33-534a-46ca-92ae-7ae2a887bb89" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Development teams frequently rely on third-party components and
+                                    APIs for specific functions within their overall software products. These components
+                                    provide a plug-and-play opportunity for development teams and eliminate the need to
+                                    reinvent and develop the capabilities from scratch. For all the benefits of
+                                    third-party components, there are also concerns and drawbacks. These include
+                                    relinquishing control over the development processes of the code and relying on
+                                    third parties to update and maintain the security of their components.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="df68ebf5-04a9-46c2-8cd3-d6093800a923" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Securely Reuse Third-Party Code or
+                                Libraries<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="77f925ae-81f2-481e-96a2-d0f4465a1d76" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Third-party code or libraries fall in the category of software
+                                    whose security risk must be managed. Using components with known vulnerabilities is
+                                    one part of the problem. Obtaining software components from unverified sources,
+                                    acquiring components over insecure links, or even using older versions of components
+                                    that are not maintained (unpatched) are a few other issues among a much longer list
+                                    of issues pertaining to the use of third-party code or libraries. Static analysis
+                                    tools that are traditionally used with software developed in-house, may also be used
+                                    with third-party components.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1c80bd08-d4b9-459f-b7ea-e5e5f00318b8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Third-Party Code<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e6af705f-87be-443b-a9d1-273cebc318fa" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The increased standardization of software functions, protocols,
+                                    and interfaces has enabled a large amount of code that would have been custom
+                                    developed in the past to instead be written once by someone and reused by many.
+                                    Frequently, the code is not written by the developers of the system or application
+                                    in which the code will be used, or even by developers in the same organization.</p>
+                                <p class="comment78305">The practice of software reuse, which began as a means of
+                                    helping developers leverage their own well-engineered custom code and that of other
+                                    developers in their organization, has long since evolved into use of third-party and
+                                    open-source libraries of interfaces, protocols, and functions; software development
+                                    kits (SDKs); wrappers; application frameworks; and a variety of other third-party
+                                    software components—the pedigree and provenance of which is often obscure and
+                                    sometimes unknowable.</p>
+                                <p class="comment78305">A library or SDK that is commercially sold or extremely popular
+                                    may still contain vulnerabilities. The original developers could have been careless
+                                    or malicious, or it could have been dangerously tampered with at some point between
+                                    its original release and its acquisition by the development team that plans to reuse
+                                    it.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="88097250-483a-46fb-b0aa-4b5917bf466c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Third-Party and Open-Source
+                                Components—Risk Factors<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d5be7ac9-8f17-4a1b-89e3-67101f299654" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">While it is certainly important to consider the possibility and
+                                    the risk of malicious code being inserted in software at some point (particularly
+                                    when software is developed in a geographically distributed supply chain), security
+                                    flaws and vulnerabilities introduced in software inadvertently due to insecure
+                                    design and coding practices or errors and mistakes represent a higher risk. Risk
+                                    factors associated with third-party and open-source components include:</p>
+                                <ul>
+                                    <li>The absence of an accurate inventory of all third-party/open-source components
+                                    </li>
+                                    <li>Outdated technology</li>
+                                    <li>Unsupported components (component age)</li>
+                                    <li>Repository trust</li>
+                                    <li>License</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3bd0d1e1-3119-4d76-96ca-7dadd2d84841" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Open-Source Policy<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="beab2cbc-9a7f-44c7-848d-ed03b0ee4c13" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">According to OWASP<sup>40</sup>, open-source policies provide
+                                    guidance and governance to organizations looking to reduce third-party and
+                                    open-source risk. Policies typically include:</p>
+                                <ul>
+                                    <li>Restrictions on component age</li>
+                                    <li>Restrictions on outdated and EOL/EOS components</li>
+                                    <li>Prohibition of components with known vulnerabilities</li>
+                                    <li>Restrictions on public repository usage</li>
+                                    <li>Restrictions on acceptable licenses</li>
+                                    <li>Component update requirements</li>
+                                    <li>Block list of prohibited components and versions</li>
+                                    <li>Acceptable community contribution guidelines</li>
+                                </ul>
+                                <p class="comment78305">While the open-source policy is usually filled with
+                                    restrictions, it provides an organization’s security, development, and legal teams
+                                    an opportunity to create solutions for healthy open-source usage.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="124fbabf-90a7-4eab-b3d2-7e2e244f2151" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>40</sup> OWASP; <em>Component Analysis; </em><a
+                                        href="https://owasp.org/www-community/Component_Analysis"
+                                        target="_blank">https://owasp.org/www-community/Component_Analysis</a>;
+                                    retrieved July 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="773a1318-8680-4926-b05f-1ab8959ce60e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Software Composition Analysis
+                                (SCA)<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d2fbc23d-faaf-4c90-b013-cf349461c048" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Third-party/open-source components are an essential part of
+                                    contemporary software development. Critical vulnerabilities identified in
+                                    third-party/open-source components, libraries, and frameworks highlight the need for
+                                    Software Composition Analysis (SCA). At the time of this writing, the primary
+                                    objective of using SCA tools is to gain visibility into the open-source inventory
+                                    (open-source components used in a software product) and help automate the process
+                                    for open-source management. SCA tools can help with both security as well as license
+                                    management.</p>
+                                <p class="comment78305">Software component integration has been an aspect of system
+                                    designs from the early days of software to the present day. Applications may be
+                                    constructed using a combination of components developed in-house and components that
+                                    are developed by third parties. Components may be designed and developed by
+                                    different groups using different specifications and assumptions, but for the system
+                                    to function properly, these components all must interoperate properly and securely.
+                                </p>
+                                <p class="comment78305">Web-based APIs have been around since the 2000s but seem to have
+                                    gained widespread acceptance and usage over the past decade.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b0099254-4e02-44aa-b779-b90644235f8b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">API Integration<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2949a13a-2c4a-4c64-8b75-95bd6a2441e8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">It is common for organizations to build applications that
+                                    integrate with third-party APIs. Developers now rely on Software Development Kits
+                                    (SDKs) and APIs to add capabilities to their applications that otherwise would have
+                                    been difficult or impossible to achieve.<br />Among the capabilities that have been
+                                    made possible through integration with third parties are the following:</p>
+                                <ul>
+                                    <li>Maps</li>
+                                    <li>Machine learning</li>
+                                    <li>Email delivery</li>
+                                    <li>Messaging (e.g., SMS)</li>
+                                </ul>
+                                <p class="comment78305">API integration has brought an unprecedented opportunity for
+                                    application developers to build intelligent and powerful applications quickly. To
+                                    make this integration possible, API developers frequently provide libraries to
+                                    support various programming environments including Java, C#, PHP, and Python, among
+                                    others.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b57c7c9c-25a1-4b6c-974d-d5dd927d8998" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">API Comparison<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="59be0811-08a7-497a-8ef5-d3fe22bb3af7" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">SOAP, REST, and GraphQL may be used to create APIs, but there
+                                    are some major differences among them.</p>
+                                <p class="comment78305">Briefly, two basic functions, GET and POST, are used to
+                                    retrieve, modify, and add data from or to the server with SOAP. With REST, the state
+                                    of sources is changed by making requests to Uniform Resource Identifiers (URI). With
+                                    GraphQL, two types of requests are leveraged to query and mutate data.</p>
+                                <p class="comment78305">SOAP involves a large amount of data transfer with request and
+                                    the response side, resulting in slowdown of communication and demand for more
+                                    resources. In comparison, REST is more efficient than SOAP. GraphQL addressed the
+                                    problem of over/under fetching associated with other approaches by allowing the
+                                    specification of exactly what needs to be fetched.</p>
+                                <p class="comment78305">Here, a basic distinction between different APIs has been made,
+                                    and there is much more beyond what has been covered. But essentially, when selecting
+                                    an API, developers need to understand and address security requirements.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="cd0fe555-7b93-48ad-bec5-6af8a2f53df8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">API Management<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f1715d56-105d-418a-b008-57ea5201c11b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">APIs may be created for internal use only (private), or they may
+                                    be intended to be used by specific partners; as a third option they may be meant to
+                                    allow third-party application developers to interact with them (public). HTTP-based
+                                    APIs are used frequently. APIs must be designed, published, and documented in a
+                                    secure manner or environment. Organizations that develop APIs should consider API
+                                    management solutions or platforms for this purpose.</p>
+                                <p class="comment78305">API management refers to the processes for distributing,
+                                    controlling, and analyzing the APIs that connect applications and data across the
+                                    enterprise and across clouds. The goal of API management is to allow organizations
+                                    that create APIs or use others’ APIs to monitor activity and ensure the needs of the
+                                    developers and applications using the API are being met.<sup>41</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="686f4f6d-2e0d-4f9d-ac37-4560dba02ac8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>41</sup> Red hat; <em>What is API Management?; </em><a
+                                        href="https://www.redhat.com/en/topics/api/what-is-api-management"
+                                        target="_blank">https://www.redhat.com/en/topics/api/what-is-api-management</a>;
+                                    retrieved July 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e6c145ae-5b74-491c-83c3-7396710fe535" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">API Security<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2211e068-481e-4575-b072-8179204254e4" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Security of APIs was discussed in previous domains and OWASP API
+                                    Security Top 10 was pointed out. Given the prevalence of Representational State
+                                    Transfer (REST), a few key topics with respect to security are highlighted below.
+                                </p>
+                                <ul>
+                                    <li>Secure REST services must only provide HTTPS endpoints.</li>
+                                    <li>Nonpublic REST services must perform access control at each API endpoint.</li>
+                                    <li>If using JSON Web Tokens (JWT), integrity of the JWT must be protected.</li>
+                                    <li>HTTP methods must be restricted.</li>
+                                    <li>Request content types must be validated.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="fac0dc8d-645b-4e86-9136-c267bcc40d71" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Continuous Integration<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="00c7e7f0-f517-4ae2-ab38-ff8739b29787" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Given the current industry attention to Continuous Integration
+                                    (CI), and the relevance of integration to this module, a brief overview of
+                                    continuous integration is presented below.</p>
+                                <p class="comment78305">When software developers work in isolation, the task of
+                                    integrating their code with other team members’ code may present a challenge that
+                                    can lead to merge conflicts, hard-to-find bugs, duplicated efforts, and other
+                                    challenges. This issue may subsequently slow down the processes of software release.
+                                </p>
+                                <p class="comment78305">Continuous integration can offer advantages over a traditional
+                                    end-of-life-cycle approach, including:</p>
+                                <ul>
+                                    <li>More agility to respond to business requirements as the tempo of software change
+                                        and release increases</li>
+                                    <li>Early detection of issues</li>
+                                    <li>Reduction of the integration risks due to a decreased complexity</li>
+                                    <li>Continuous feedback from software users to software development teams due to
+                                        increased and incremental releases of the software</li>
+                                </ul>
+                                <p class="comment78305">Continuous integration may rely on the integration of code that
+                                    is checked into shared code repositories on a frequent basis. By automating the
+                                    build processes, various security checks and tests can be orchestrated using
+                                    commercial and open-source tools and technologies that have been introduced for this
+                                    purpose.</p>
+                                <p class="comment78305">Various tools and technologies for orchestrating the chain of
+                                    actions needed for continuous integration have been introduced. Jenkins is a good
+                                    example of open-source CI server used for this purpose. Regardless of the tools or
+                                    technologies utilized, best practices for securing the CI/CD pipelines must be
+                                    followed.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7c1dab97-0e9b-4626-aea4-8193ff438607" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Systems-of-Systems Integration<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="406ec87c-42a2-450c-abe5-71be34636ac0" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Organizations in military, civilian government, and commercial
+                                    domains need to engineer systems of systems rather than stand-alone systems to meet
+                                    challenges such as:</p>
+                                <ul>
+                                    <li>Collaboration across independently funded and managed organizations</li>
+                                    <li>Migration to a service-oriented environment</li>
+                                    <li>Testing and compliance verification processes for systems of systems</li>
+                                    <li>Interface particulars of systems to be integrated</li>
+                                    <li>The degree of uncertainty</li>
+                                    <li>Change in constituent systems and interfaces</li>
+                                    <li>Assurance and dependability/supportability requirements</li>
+                                </ul>
+                                <p class="comment78305">Ensure enough robustness and regression testing and analysis
+                                    activities are incorporated into the development phase, including those that
+                                    exercise quality related scenarios. Require a risk-based verification plan that
+                                    focuses on robustness of critical system services in the face of uncertainty,
+                                    complexity, and change.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="screengrid comment78305">
+            <footer class="screen__margin screen__footer u-hide-element vstdonthighlight">
+                <div class="feedback comment78305">
+                    <div class="feedback__content js-feedback-focus comment78305" tabindex="-1"></div>
+                </div>
+                <div class="control-btns comment78305"></div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay-root vstdonthighlight rendered comment78305 u-hidden" style="overflow-y: auto;">
+        <div class="modal-cover-holder comment78305">
+            <div class="modal-cover-outer comment78305">
+                <div class="modal-cover comment78305"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

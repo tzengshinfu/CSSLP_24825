@@ -1,0 +1,1890 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"
+    style="padding: 0px; font-size: 100%; --USER__lineHeight: 1; --USER__pageMargins: 1; --USER__view: readium-scroll-on;"
+    class="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Threat Modeling (4.4)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="overflow: hidden auto;">
+    <div xmlns:epub="http://www.idpf.org/2007/ops" epub:type="pagebreak" id="pagebreak_37"
+        class="hidden-pagebreak comment78305" title="37"></div>
+
+    <div xmlns:epub="http://www.idpf.org/2007/ops" id="64dba0b9-a412-48d5-9e89-c75a6d79d671"
+        class="screen rendered comment78305" aria-hidden="false">
+        <div class="screengrid comment78305">
+            <header class="screen__margin screen__header u-hide-element vstdonthighlight">
+
+                <div class="screen__heading u-float--clearfix comment78305">
+                    <div class="screen__icon u-float--left comment78305"></div>
+                    <h2 class="screen__title comment78305" tabindex="-1"></h2>
+                </div>
+
+
+                <div class="screen__instructions comment78305"></div>
+            </header>
+        </div>
+
+        <div class="screen__content comment78305">
+
+            <div class="block rendered comment78305">
+                <div id="91a8be92-e50f-4765-a912-cc9f9809c54e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Threat Modeling (4.4)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="19e6d47d-fa58-4e0e-b79e-00e8917dd02e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">In essence, the process of threat modeling entails raising and
+                                    answering questions about protecting assets. Threat modeling’s application to
+                                    software design has been gaining widespread adoption in recent years. During threat
+                                    modeling exercises, security practitioners systematically identify and rate the
+                                    threats that are most likely to affect business critical systems. Threats are
+                                    prioritized by impact and component criticality and addressed accordingly.</p>
+                                <p class="comment78305">A <strong><button
+                                            data-definition title="A form of risk assessment that models aspects of the attack and defense sides of a logical entity, such as a piece of data, an application, a host, a system, or an environment. NIST SP 800-53 Rev.5"
+                                            class="rendered">threat model</button> </strong>can be created for a new or
+                                    preexisting software or system. Threat modeling activities can become complex and
+                                    resource intensive, so organizations should plan accordingly. Sometimes
+                                    organizations will opt to scope threat modeling efforts to certain components based
+                                    on business mission or constraints.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a84a1706-fbdb-4594-b52e-537107fb7e15" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Objectives<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3b0ac20f-07d8-4f1c-a032-12b0e50cbfa0" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>Identify the threat modeling process, tools, and methodologies.</li>
+                                    <li>Indicate the process of attack surface evaluation and management.</li>
+                                    <li>Discuss threat intelligence and sources for cyberthreat information.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f80a027c-2929-412b-8cb5-cae631adbdce" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Overview<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="459c6381-212b-4e4a-8c60-06b1e7adb334" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Cyberattacks have spared no industry or sector. Organizations of
+                                    all sizes, and in virtually all industries—financial, healthcare, manufacturing,
+                                    energy, retail, etc.—recognize cyberthreats as a key area of concern. Malware and
+                                    insider threats remain among the biggest threat sources.</p>
+                                <p class="comment78305">Threat modeling is one of the most important security-relevant
+                                    activities. The threat modeling process identifies threats that can do harm to the
+                                    system; provides an estimate of potential harm; and identifies the need for security
+                                    features, careful code review, and security testing. To do this, the CSSLP needs to
+                                    understand common and third-party threats as well as to perform an attack surface
+                                    analysis.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ea4b9ed7-2d47-4a09-bfb7-65b39642765d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Common Threats<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b64cf5d3-bd04-4303-b4f4-486cc1a4dea5" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">In this section we will discuss threats in the context of
+                                    software security risks, including spoofing or tampering by malicious actors such as
+                                    hackers and criminals, misuse by nonmalicious actors such as insiders, and various
+                                    types of malicious software such as ransomware. In addition, there are many other
+                                    factors that could also have an adverse impact on the security objectives of
+                                    confidentiality, integrity, and availability. Just a few examples are:</p>
+                                <ul>
+                                    <li>Software reliability issues, such as a mobile messaging application that
+                                        delivers a message to the wrong recipient</li>
+                                    <li>Natural disasters, such as earthquakes, that adversely impact availability</li>
+                                    <li>Circumstantial spikes on load and volume, such as the increase in the use of
+                                        virtual communication services and infrastructure due to a pandemic that
+                                        requires social distancing</li>
+                                </ul>
+                                <p class="comment78305">While it is impossible to anticipate all possible threats,
+                                    organizations need to understand the threats that are most relevant to them and
+                                    recognize that threats may be at any of various levels: the organization level,
+                                    mission/business process level, or information system level.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7fd53e6e-9cc8-4716-9b8b-ffe5fce29586" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">MITRE ATT&amp;CK Framework<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="85b8640d-e81a-4df4-a6aa-0d379ebbcaef" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">In a previous domain, MITRE’s Adversarial Tactics, Techniques,
+                                    and Common Knowledge (ATT&amp;CK) was introduced. It was pointed out that ATT&amp;CK
+                                    was created out of a need to document adversary behaviors.</p>
+                                <p class="comment78305">ATT&amp;CK is largely a knowledge base of adversarial
+                                    techniques—a breakdown and classification of offensively oriented actions that can
+                                    be used against platforms such as Windows. Unlike prior work in this area, the focus
+                                    isn’t on the tools and malware that adversaries use but on how they interact with
+                                    systems during an operation.</p>
+                                <p class="comment78305">ATT&amp;CK organizes these techniques into a set of tactics to
+                                    provide context for the technique. Each technique includes information that’s
+                                    relevant to both a red team or penetration tester to understand how a technique
+                                    works, and to a defender to understand the context surrounding events or artifacts
+                                    generated by a technique in use.<sup>16</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="12631af1-c49b-40a3-bd98-b5b480de497b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>16</sup> MITRE ATT&amp;CK; <a
+                                        href="https://attack.mitre.org/" target="_blank">https://attack.mitre.org/</a>;
+                                    retrieved June 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f9d9088a-e64a-40ff-b447-290902db9461" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Use Cases<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="37177f47-a77b-4317-aee4-fcac9b3d1ed3" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The ATT&amp;CK Framework can help organizations mature their
+                                    security programs and enhance their strategies to prevent, detect, and respond to
+                                    threats. Various use cases for ATT&amp;CK include:</p>
+                                <ul>
+                                    <li>Adversary Emulation</li>
+                                    <li>Red Teaming</li>
+                                    <li>Behavioral Analytics Development</li>
+                                    <li>Defensive Gap Assessment</li>
+                                    <li>SOC Maturity Assessment</li>
+                                    <li>Cyber Threat Intelligence Enrichment</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="98419ab6-ad31-482b-afd8-7f8df16c73af" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Example: Using ATT&amp;CK for
+                                Adversary Emulation<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="dd724379-6979-464c-aeb0-4b44c40fab72" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">In Red Teaming, adversary emulators construct a scenario to test
+                                    certain aspects of an adversary’s tactics, techniques, and procedures (TTPs). The
+                                    red team then follows the scenario while operating on a target network to test how
+                                    defenses might fare against the emulated adversary.</p>
+                                <p class="comment78305">Frameworks such as CALDERA, which uses the ATT&amp;CK model and
+                                    consists of a core system and plugins that provide additional functionality, may be
+                                    used to build and launch adversary profiles to identify susceptible areas, test
+                                    defenses, and train blue teams.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="bc69dbf1-9459-4da7-97f6-dde28cb2f007" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Advanced Persistent Threat<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="aab689ff-ab38-40a9-90ac-25e599e5d278" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">A definition for Advanced Persistent Threat (APT) is presented
+                                    by NIST as “an adversary with sophisticated levels of expertise and significant
+                                    resources, allowing it through the use of multiple different attack vectors (e.g.,
+                                    cyber, physical, and deception), to generate opportunities to achieve its
+                                    objectives.” These are typically “to establish and extend its presence within the
+                                    information technology infrastructure of organizations [to] continually exfiltrat[e]
+                                    information and/or to undermine or impede critical aspects of a mission, program, or
+                                    organization, or place itself in a position to do so in the future....” Moreover,
+                                    NIST adds, “[T]he advanced persistent threat pursues its objectives repeatedly over
+                                    an extended period...adapting to a defender’s efforts to resist it, and with
+                                    determination to maintain the level of interaction needed to execute its
+                                    objectives.”<sup>17</sup></p>
+                                <p class="comment78305">Adversaries include nation states, activist groups, and criminal
+                                    groups. Published industry reports have identified technology, energy, financial,
+                                    and healthcare among sectors frequently targeted by adversaries. Tactics deployed by
+                                    the threat actors constantly change and evolve.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="fe5e7bb0-5e01-48e1-8b10-f863194cd04b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>17</sup>National Institute of Standards and Technology;
+                                    Computer Security Resource Center Glossary; <a
+                                        href="https://csrc.nist.gov/glossary/term/APT"
+                                        target="_blank">https://csrc.nist.gov/glossary/term/APT</a>; retrieved 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="9bf91f8f-ffce-4364-943a-d046d0552e56" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Insider Threat<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6501024c-1d75-4268-a6e6-c0ea26489c04" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The term insider threat should not be strictly interpreted as
+                                    employees who intend to directly harm the organization through theft, sabotage, or
+                                    other means. Statistics and reports from industry indicate that ignorance and
+                                    negligence (and not necessarily malicious intentions) are also a major cause of
+                                    security breaches and incidents. With this point established, a reference to insider
+                                    threat could include employees or former employees, contractors or business
+                                    associates, and those with inside information on organizations’ processes,
+                                    practices, or data, among other things. Simply put, these insiders are generally
+                                    more aware of potential abuse vectors.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a3bcc52f-613c-4bc7-b174-0580c19285bc" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Common Malware<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4b5263b7-c774-4cb6-a023-fcc348a56449" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Malicious software (malware) remains a significant threat, and
+                                    malware incidents are common. NIST SP 800-83 provides guidance for the prevention
+                                    and handling of malware incidents.</p>
+                                <p class="comment78305">Malware comes in many forms (e.g., viruses, worms, Trojans,
+                                    rootkits) and the symptoms of a malware infection vary. Common symptoms include
+                                    increased CPU usage, slow operation of the computer, and modified or deleted files.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="82664ccc-c3ee-4b92-917f-345e5e1ba80a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Combating the Malware Threat<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7a3fd0a0-eb57-4de4-bd77-d69ca84ba6c2" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Scanning files on end points for patterns that are indicative of
+                                    known malware (e.g., unique code sequences for a particular virus) is common among
+                                    endpoint protection technologies, but more is needed. Also included in best
+                                    practices for addressing the malware problem are creating awareness for the user
+                                    base and keeping up with security patches.</p>
+                                <p class="comment78305">As malware attacks gain in sophistication, so do the
+                                    technologies and methods for combating the threat. Many scanners have been
+                                    introduced over the years, and URL/domain blocking services are being used to combat
+                                    malware. </p>
+                                <p class="comment78305">Websites, online services, and APIs have also been created to
+                                    aggregate many scan engines (e.g., VirusTotal). These utilities increase the chances
+                                    of detecting malware that may have been missed by one engine working alone.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0792197a-df1d-4680-a14b-ad6012ef4024" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Common Malware Types<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="004cc023-0b74-45a6-9a47-02a2bd86f053" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li><em>Viruses. </em>As conventionally defined, a virus has the ability to
+                                        replicate itself (infect other files) and target binary executable files.
+                                        Viruses may spread via the network or through infected removable media, among
+                                        other possibilities. When the infected host file is executed, the virus is
+                                        executed as well. An event (e.g., user interaction) will trigger the delivery of
+                                        the payload. Some viruses are metamorphic—that is, they can evolve into variants
+                                        by modifying themselves. Viruses come in many varieties. Depending on the
+                                        particular virus, they may infect files, boot records, or other parts of the
+                                        computer.</li>
+                                    <li><em>Worms. </em>Also considered self-replicating, worms spread throughout a
+                                        network. Unlike viruses, they do not need the support of a file and event to
+                                        trigger the delivery of the payload.</li>
+                                    <li><em>Trojan. </em>This is a program designed for malicious activities that runs
+                                        under the disguise of a legitimate/benign program. Trojans do not reproduce (in
+                                        contrast to viruses and worms). The creation of backdoors is common with
+                                        Trojans.</li>
+                                    <li><em>Ransomware. </em>This is a type of malware that typically attempts to block
+                                        access to files (e.g., through cryptographic means) for the purpose of extortion
+                                        and ransom payment.</li>
+                                    <li><em>Spyware and adware. </em>Designed to gather sensitive information or support
+                                        advertising as part of their activities respectively.</li>
+                                    <li><em>Bots. </em>A shortened form of the word robot, bots are processes that
+                                        normally automate tasks and services. Bots may not be created for malicious
+                                        activities, but malicious bots can become part of a remote command and control
+                                        center for launching flooding (DoS) attacks. Botnets are an entire network of
+                                        compromised systems.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7111df30-8c6d-4d10-a60c-a2675e3aab0e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Third-Party Software Threats<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3d80183d-ee09-4457-9cf1-9d06253407d7" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The risk associated with third-party software components and
+                                    libraries will be discussed in later chapters. For now, recognize that third-party
+                                    software always carries a security risk. When software is developed outside the
+                                    organization’s control and without sufficient visibility into the development life
+                                    cycle processes, there are risks that need to be addressed. This is true of
+                                    purchased off-the-shelf software as well as custom software that has been developed
+                                    through outsourcing/offshoring arrangements.</p>
+                                <p class="comment78305">To reduce the threat of third-party software, organizations
+                                    should:</p>
+                                <ul>
+                                    <li>Remove all software that is not used/needed. This includes removing or disabling
+                                        all software features that are unlikely to be used, ultimately reducing the
+                                        attack surface. There are tools that can help with this task, but most
+                                        organizations do not follow this path.</li>
+                                    <li>Work with vendors that have proper and defined patch management release cycles
+                                        and inform customers of discovered vulnerabilities and availability of updates
+                                        to address them. Further, a third-party patch management solution should be
+                                        implemented. This solution should provide assurance that third-party patches are
+                                        frequently identified, tested, and applied subject to patch management cycles.
+                                    </li>
+                                    <li>Develop a clear understanding of all libraries and components that make up the
+                                        software developed by third-party vendors. This may partially be achieved by
+                                        reviewing the licensing arrangement of the vendor. For assurance, a
+                                        comprehensive list of libraries and components must be obtained from the vendor.
+                                    </li>
+                                    <li>Maintain an inventory and list of authorized software in the organization and
+                                        restrict the usage of unauthorized third-party software on corporate IT assets.
+                                    </li>
+                                    <li>Reduce the attack surface by blocking ports and restricting connections and
+                                        communications on the network and between hosts. This can be done by using web
+                                        application firewall (WAF) functionality where appropriate in layered defenses.
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="99433c64-4812-492e-b12d-2571db96deb0" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Threat Modeling Concepts and
+                                Terminology<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="9f8cb17c-9081-439f-a1c2-aa87a9affb4e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">According to the Homeland Security Systems Engineering and
+                                    Development Institute (HSSEDI)™ Operated by The MITRE Corporation, “a model is an
+                                    abstract representation of some domain of human experience, used (1) to structure
+                                    knowledge, (2) to provide a common language for discussing that knowledge, and (3)
+                                    to perform analyses in that domain.”</p>
+                                <p class="comment78305">HSSEDI continues, “A variety of terms are used in threat
+                                    modeling, including threat, threat actor, threat event, threat vector, threat
+                                    scenario, campaign, attacker, attack, attack vector, attack activity, malicious
+                                    cyber activity, and intrusion. Different threat modeling approaches define these
+                                    terms differently, due to assumptions about the contexts and purposes for which they
+                                    will be used. Terminology related to threat is embedded in a larger setting of
+                                    terminology about risk.”<sup>18</sup></p>
+                                <p class="comment78305">Threat modeling works to identify, communicate, and understand
+                                    threats and mitigations within the context of protecting something of value.</p>
+                                <p class="comment78305">Threat modeling can be applied to a wide range of entities,
+                                    including software, applications, systems, networks, distributed systems, the
+                                    Internet of Things, business processes, and more. There are few technical products
+                                    that cannot be threat modeled. Threat modeling can happen at any stage of
+                                    development, but it is preferably done early so that the findings can inform the
+                                    design.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4e031a2a-b253-40af-93a3-e7f47cb4cfc9" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>18</sup>Deborah J. Bodeau, David B. Fox, Catherine D.
+                                    McCollum; Homeland Security Systems Engineering and Development Institute (HSSEDI)™
+                                    Operated by The MITRE Corporation; <a
+                                        href="https://www.mitre.org/sites/default/files/publications/pr_18-1174-ngci-cyber-threat-modeling.pdf"
+                                        target="_blank">https://www.mitre.org/sites/default/files/publications/pr_18-1174-ngci-cyber-threat-modeling.pdf</a>;
+                                    retrieved June 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="03f20a0d-2150-495a-a79d-bc1b68ae195b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Software Threat Modeling Tools,
+                                Methodologies and Process<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3f4da46e-cf22-4ad1-9a83-88888452d91b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Most software systems face various types of threats, and the
+                                    number of threats continues to grow. This being the case, threat modeling is a
+                                    critical step in securing software against attacks. The process of threat modeling
+                                    involves first identifying potential threats to the application, then ranking these
+                                    threats by risk, and finally selecting appropriate countermeasures or mitigations
+                                    for the threats.</p>
+                                <p class="comment78305">Here are some guidelines for software threat modeling.</p>
+                                <ul>
+                                    <li><em>Select the threat modeling participants. </em>There are no preset rules as
+                                        to who may or may not participate in a threat modeling exercise. Participating
+                                        members may be security engineers, architects, developers, or other software
+                                        stakeholders—even customers may be involved—as deemed appropriate by the
+                                        organization and the project.</li>
+                                    <li><em>Threat model early in the life cycle. </em>Although threat modeling can
+                                        theoretically be performed during any stage of development, for its findings to
+                                        inform and influence the design of the software, it would be best to conduct it
+                                        as early as possible. As such, threat modeling may be considered a design phase
+                                        security activity, ideally taking place as soon as the architecture is
+                                        established. Keep in mind that identifying and remediating potential issues at
+                                        later stages can be much more costly, if doing so is even possible at all.</li>
+                                    <li><em>Determine what to threat model. </em>Organizations may threat model new
+                                        applications or existing applications. They may choose to threat model an entire
+                                        application or just specific components/modules of the application (e.g., the
+                                        authentication module). It would be wise to start small, gain experience and do
+                                        it successfully, and then increase the scope of the threat model.</li>
+                                    <li><em>Document the threat model. </em>As part of creating a threat model,
+                                        documentation is also produced. This documentation can be useful for those who
+                                        perform code reviews, for those who create security test cases, and others.
+                                        Simply put, the work that is accomplished and the documents produced as part of
+                                        a threat modeling exercise will benefit activities in other phases of the data
+                                        life cycle as well.</li>
+                                    <li><em>Update the threat model. </em>The threat model should be reviewed and
+                                        updated as required to reflect the changes in application design and
+                                        functionality. As potential threats are discovered and the implementation
+                                        details of the application become known, the threat model should also be
+                                        updated.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="11e6a09d-fae5-4294-8d79-14f968277a8b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Threat Modeling Tools<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5f06f86e-ff2d-4ee6-8452-295c420e6eb1" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The industry has a variety of threat modeling tools available to
+                                    the software community. The following are three of the most widely used ones.</p>
+                                <ul>
+                                    <li><em>Microsoft threat modeling tool. </em>Introduced in the late 2000s, the
+                                        Microsoft Threat Modeling Tool makes threat modeling easier for all developers
+                                        through a standard notation for visualizing system components, data flows, and
+                                        security boundaries. It also helps threat modelers identify classes of threats
+                                        they should consider based on the structure of their software design. We
+                                        designed the tool with nonsecurity experts in mind, making threat modeling
+                                        easier for all developers by providing clear guidance on creating and analyzing
+                                        threat models.<sup>19</sup></li>
+                                    <li><em>OWASP Threat Dragon. </em>Introduced in the late 2010s, it is a tool used to
+                                        create threat model diagrams and to record possible threats and decide on their
+                                        mitigations.<sup>20</sup></li>
+                                </ul>
+                                <p class="comment78305">A screen from the OWASP Threat Dragon is shown in this figure.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5152f922-8ba1-46f3-9341-3dca17857611" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>19</sup> Microsoft Security Development Lifecycle; “Threat
+                                    Modeling”; <a
+                                        href="https://www.microsoft.com/en-us/securityengineering/sdl/threatmodeling"
+                                        target="_blank">https://www.microsoft.com/en-us/securityengineering/sdl/threatmodeling</a>;
+                                    retrieved June 2023.</p>
+                                <p class="comment78305"><sup>20</sup> OWASP Foundation; “OWASP Threat Dragon”; <a
+                                        href="https://owasp.org/www-project-threat-dragon/"
+                                        target="_blank">https://owasp.org/www-project-threat-dragon/</a>; retrieved June
+                                    2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="04484aa5-286b-40b2-b3d8-c11ff1d61f7c" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--100 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_037_01.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_037_01.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 381.797px; left: 550.406px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 12: OWASP Threat Dragon</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="45522496-d243-4adb-da65-ccb60a9a8880"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="db8b5237-40e6-470c-a4a2-ee4317521173" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li><em>Threatspec. </em>Threatspec is open source. Its main value can be attributed
+                                        to helping to close the gap between development and security by bringing the
+                                        threat modelling process further into the development process. This is achieved
+                                        by having developers and security engineers write threat specifications
+                                        alongside code, then dynamically generating reports and data-flow diagrams from
+                                        the code. This allows engineers to capture the security context of the code they
+                                        write, as they write it.<sup>21</sup></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7488192e-8695-4b89-862f-365385421dd6" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>21</sup> Threatspec; <a
+                                        href="https://github.com/threatspec/threatspec"
+                                        target="_blank">https://github.com/threatspec/threatspec</a>; retrieved June
+                                    2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ae4c811c-9d0f-4976-b5a1-82bd10a3bf2c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Threat Modeling Methodologies<br />
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="eb2b535f-718c-48d6-83c4-4cf1f4c7db74" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Threat modeling methodologies are useful in several ways. They
+                                    help create abstractions of the system being threat modeled, identify potential
+                                    attackers and their goals and objectives, and promote an understanding of potential
+                                    threats that may rise. Threat modeling methods and techniques vary in popularity and
+                                    comprehensiveness, and each has its strengths and weaknesses. Different
+                                    methodologies are better suited for certain purposes or types of systems. Sometimes,
+                                    multiple methodologies can be used at once. A few methodologies follow.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="90dd2836-5084-4e4b-8855-9f17275c1b6c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">STRIDE<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0afaddc0-6bf2-461c-839b-682436db9694" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Considered a mature methodology, <strong><button
+                                            data-definition title="A threat modeling and categorization methodology that classifies known threats according to the kinds of exploit that are used (or motivation of the attacker). The acronym stands for spoofing, tampering, repudiation, information disclosure, denial of service, and elevation of privileges."
+                                            class="rendered">STRIDE</button> </strong>(spoofing, tampering, repudiation,
+                                    information disclosure, denial of service, and elevation of privileges) was
+                                    introduced in late 1990s and adopted by Microsoft in early 2000s. It applies a
+                                    general set of known threats based on its name, which is a mnemonic. The STRIDE
+                                    threat modeling framework ensures secure application design. These threats and the
+                                    properties they violate are listed in this table.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a1dc6728-bba7-4b7f-9b38-9ac183504bae" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin vst-draggable comment78305">
+                            <div class="c-x-scroll vst-draggable comment78305" style="width: 100%;">
+                                <div class="js-x-scroll c-x-scroll__scrollbox comment78305" style="">
+                                    <table class="c-table js-x-scroll-component" style="width: 100%;"
+                                        data-orig-width="100%">
+                                        <thead>
+                                            <tr>
+                                                <td> </td>
+                                                <th scope="col">Threat</th>
+                                                <th scope="col">Property Violated</th>
+                                                <th scope="col">Threat Definition</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">S</th>
+                                                <td>Spoofing identify</td>
+                                                <td>Authentication</td>
+                                                <td>Pretending to be something or someone other than yourself</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">T</th>
+                                                <td>Tampering with data</td>
+                                                <td>Integrity</td>
+                                                <td>Modifying something on disk, network, memory, or elsewhere</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">R</th>
+                                                <td>Repudiation</td>
+                                                <td>Non-repudiation</td>
+                                                <td>Claiming that you didn't do something or were not responsible; can
+                                                    be honest or false</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">I</th>
+                                                <td>Information Disclosure</td>
+                                                <td>Confidentiality</td>
+                                                <td>Providing information to someone not authorized to access it</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">D</th>
+                                                <td>Denial of service</td>
+                                                <td>Availability</td>
+                                                <td>Exhausting resources needed to provide service</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">E</th>
+                                                <td>Elevation of privilege</td>
+                                                <td>Authorization</td>
+                                                <td>Allowing someone to do something they are not authorized to do</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="c-x-scroll__gradient c-x-scroll__gradient--left comment78305"></div>
+                                <div class="c-x-scroll__gradient c-x-scroll__gradient--right comment78305"></div>
+                            </div>
+                            <p class="comment78305"><sup><em>Table 3: STRIDE</em></sup></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f69c9ba5-68f1-48c5-b0f7-6cb0ca796e08" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">DREAD<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d38a8062-431b-41f0-ae29-be271a814a13" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">An older methodology that is no longer commonly used,
+                                    <strong><button
+                                            data-definition title="A risk ranking (rating) methodology. Frequently used with STRIDE, the acronym stands for damage potential, reproducibility, exploitability, affected users, and discoverability."
+                                            class="rendered">DREAD</button> </strong>was developed by Microsoft and used
+                                    in conjunction with STRIDE to suggest ranking threats on a scale of 1 to 10 based on
+                                    predefined assessment criteria. This required estimating the negative impact that
+                                    could result from an attack, attack frequency, effort to exploit, and expertise
+                                    required to successfully execute the attack, which would produce a likelihood of
+                                    exploitation. The DREAD criteria, score, and comments are listed here.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1a89cfa2-2027-433f-b662-e01a5a182b05" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin vst-draggable comment78305">
+                            <div class="c-x-scroll vst-draggable comment78305" style="width: 100%;">
+                                <div class="js-x-scroll c-x-scroll__scrollbox comment78305" style="">
+                                    <table class="c-table js-x-scroll-component" style="width: 100%;"
+                                        data-orig-width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" style="text-align: left;">DREAD Criterion</th>
+                                                <th scope="col" style="text-align: left;">Score</th>
+                                                <th scope="col" style="text-align: left;">Comments</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Damage</td>
+                                                <td>8</td>
+                                                <td>Work disruption but no data loss</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Reproducibility</td>
+                                                <td>10</td>
+                                                <td>Failure every time...</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Exploitability</td>
+                                                <td>7</td>
+                                                <td>Not very easily conducted as it requires...</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Affected Users</td>
+                                                <td>10</td>
+                                                <td>Everyone will be affected</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Discoverability</td>
+                                                <td>10</td>
+                                                <td>Every threat will be...</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="c-x-scroll__gradient c-x-scroll__gradient--left comment78305"></div>
+                                <div class="c-x-scroll__gradient c-x-scroll__gradient--right comment78305"></div>
+                            </div>
+                            <p class="comment78305"><sup><em>Table 4: Sample Assessment Per DREAD</em></sup></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="cc814cf2-7ba0-4b45-b673-962bb0dc1f83" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Process for Attack Simulation and
+                                Threat Analysis<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f4db5128-cf69-421f-b6f7-6ca4a172a4a4" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The Process for Attack Simulation and Threat Analysis (PASTA) is
+                                    a risk-centric threat modeling framework developed in 2012 by Tony UcedaVélez. It
+                                    contains seven steps, each with multiple activities aligned to business objectives
+                                    and technical requirements. PASTA can also assist security practitioners with
+                                    business analysis for identifying compliance gaps. The stages and activities of
+                                    PASTA are listed in this table.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="78cb74d0-cf1d-406c-8a76-2f48accf6bd1" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--100 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_037_02.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_037_02.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 513.688px; left: 550.406px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 13: PASTA Stages and Activities<sup>22</sup></em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="a15c26d2-7f70-42c6-f8ab-b02c910b9722"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ba64058a-a4c8-4496-9115-72638e794f89" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>22</sup> Timothy A. Chick, Paige O’Riordan, Thomas Patrick
+                                    Scanlon, Ph.D., Nataliya Shevchenko, Carol Woody, Ph.D.; Carnagie Mellon University
+                                    Software Engineering Institute; <em>Threat Modeling: A Summary of Available Methods;
+                                    </em>July 2018; <a
+                                        href="https://resources.sei.cmu.edu/asset_files/WhitePaper/2018_019_001_524597.pdf"
+                                        target="_blank">https://resources.sei.cmu.edu/asset_files/WhitePaper/2018_019_001_524597.pdf</a>;
+                                    retrieved June 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="eaebc9d7-2257-4a85-b682-e631301e59fb" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Attack Trees<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="de9174e2-a14a-405c-bba8-7c018ee22ea7" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Attack trees provide tree diagrams that depict potential attacks
+                                    on a system. Attack trees should be simple and easily understood, but often
+                                    construction requires a thorough understanding of system details and the security
+                                    objectives, which may not be completely understood during diagramming. If attack
+                                    trees can be constructed, the tree root is the goal for the attack, and the leaves
+                                    are ways to achieve that goal. Each goal is represented as a separate tree. Thus,
+                                    the system threat analysis produces a set of attack trees. When attack trees are
+                                    built, they can be used to make security decisions, see if the systems are
+                                    vulnerable to an attack, and evaluate a specific type of attack.<sup>23</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="93a05cdf-2fb3-4215-87dd-9f5627989763" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--100 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_037_03.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_037_03.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 189.531px; left: 565.719px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 14: Attack Tree Example<sup>24</sup></em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="cb993f4e-96a7-47c2-d787-768d1b9da4ad"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c183e97b-f49a-4de2-98fb-e9e857e79011" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>23</sup> Ibid.</p>
+                                <p class="comment78305"><sup>24</sup> Ibid.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="137f8168-4b70-47e1-a81d-43b76045c957" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Other Methodologies<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1000fcf4-9788-4e4f-8d55-4bfbe1f05f04" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Other methodologies include:</p>
+                                <ul>
+                                    <li><em>Trike. </em>A methodology used to perform threat modeling. It focuses on a
+                                        requirements model that ensures that each asset’s level of assigned risk is
+                                        classified as acceptable by the system’s stakeholders.</li>
+                                    <li><em>ATASM. </em>Architecture, Threats, Attack Surfaces, and Mitigations (ATASM)
+                                        is a threat-modeling approach that highlights the importance of structural
+                                        understanding of a system for the purpose of threat modeling (architecture).
+                                    </li>
+                                    <li><em>Threat Library/List Approach. </em>Using a predefined set of common and
+                                        prevalent threats, a team can identify instances in the product by tracking the
+                                        triggers. For example, cross-site scripting might be present if a product offers
+                                        a web interface and no input validation and output sanitization. The team is
+                                        free to evolve the threat library as technologies and frameworks change.</li>
+                                    <li><em>Lightweight/Rapid Threat Modeling. </em>There are a range of processes that
+                                        use lighter-weight variations of other methodologies, and additional approaches
+                                        that use quick classifications and other ways to achieve a similar result in
+                                        less time for less critical systems.<sup>25</sup></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a9c12492-68aa-41de-b308-a8d7089345e2" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Threat Modeling Process<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="43e5334d-b0ab-4e01-aac8-98311dc94f44" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Software threat modeling processes are expected to mature, and
+                                    tools and technologies are expected to evolve and improve over time. As described by
+                                    OWASP:</p>
+                                <p class="comment78305">“The technical steps in threat modeling involve answering
+                                    questions:</p>
+                                <ul>
+                                    <li>What are we working on?</li>
+                                    <li>What can go wrong?</li>
+                                    <li>What will we do with the findings?</li>
+                                    <li>Did we do a good job?</li>
+                                </ul>
+                                <p class="comment78305">“The work to answer these questions is embedded in some sort of
+                                    process, ranging from incredibly informal Kanban with Post-its on the wall to
+                                    strictly structured waterfalls.</p>
+                                <p class="comment78305">“The effort, work, and timeframes spent on threat modeling
+                                    relate to the process in which engineering is happening and products/services are
+                                    delivered. The idea that threat modeling is waterfall or ‘heavyweight’ is based on
+                                    threat modeling approaches from the early 2000s. Modern threat modeling building
+                                    blocks fit well into agile and are in wide use.”<sup>26</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8bb3ef6c-57c8-45a5-99ee-13e30ebe8800" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>25</sup> Software Assurance Forum for Excellence in Code;
+                                    <em>Tactical Threat Modeling; </em><a
+                                        href="https://safecode.org/wp-content/uploads/2017/05/SAFECode_TM_Whitepaper.pdf"
+                                        target="_blank">https://safecode.org/wp-content/uploads/2017/05/SAFECode_TM_Whitepaper.pdf</a>;
+                                    retrieved June 2023.
+                                </p>
+                                <p class="comment78305"><sup>26</sup> Victoria Drake; OWASP Foundation; Threat Modeling;
+                                    <a href="https://owasp.org/www-community/Application_Threat_Modeling"
+                                        target="_blank">https://owasp.org/www-community/Application_Threat_Modeling</a>;
+                                    Retrieved June 2023.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="258fbb79-4195-4425-9f0f-f2f29243c6ac" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Threat Modeling in Agile
+                                Environments<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8c201100-ce4c-4028-8335-ce2a743364e7" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Threat modeling in Agile environments may have its own
+                                    challenges and require the adoption of methods and processes that are better suited
+                                    for such environments. For one thing, consider that threat modeling is an activity
+                                    that primarily belongs to the design stage, and that in Agile implementations the
+                                    design stage may not be as clearly defined as it normally would be with
+                                    waterfall-like methodologies. This challenge has been clearly pointed out by
+                                    SAFECode: “A pitfall may lie in trying to create threat models for each sprint and
+                                    then trying to merge them to threat-model the entire system. At the beginning of a
+                                    set of sprints, not enough is known to threat-model the whole system, because every
+                                    sprint may affect the threat model.</p>
+                                <p class="comment78305">SAFECode also offers guidelines to this effect, which are
+                                    summarized here.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b6a59cab-9dda-42a4-a7c9-bfaf1fac3d8f" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--100 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_037_04.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_037_04.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 91.0164px; left: 565.719px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 15: Guideline Summary for Threat Modeling in Agile
+                                        Environments<sup>27</sup></em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="6014e65a-5526-4984-b4bf-36166441e0b2"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ebf3079c-fa1e-4fdd-806d-4c2e6e58f22c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Threat Modeling in DevOps
+                                Environments<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1d90f07e-e3d8-4b42-87a9-e0f250458c88" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Challenges for threat modeling in DevOps environments stem from
+                                    frequency of software changes and absence of traditional change review/management
+                                    processes, among other development characteristics.</p>
+                                <p class="comment78305">SAFECode notes, “As DevOps blurs the line between software
+                                    changes and infrastructure changes, there are additional triggers for threat
+                                    modeling that historically would have been covered by the infrastructure change
+                                    management process. The two most prevalent additional triggers in DevOps are:</p>
+                                <ol>
+                                    <li>Alteration of the software deployment process. Most DevOps environments include
+                                        tools that automatically build components based on activity in a source code
+                                        repository, and then deploy those components to production. Compromising any
+                                        portion of this process can lead to a full compromise of the service, so any
+                                        change to the authentication/authorization, data flow and elements involved in
+                                        the deployment automation warrants a threat model review.</li>
+                                    <li>Changes to the executing environment of the services, including new
+                                        ports/protocols, alterations to the application server or OS configuration,
+                                        account and permissions alterations, etc. There are numerous resources
+                                        describing what events should trigger a review during a change management
+                                        process, and those triggers map equally well to threat modeling.”<sup>28</sup>
+                                    </li>
+                                </ol>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="176896ac-3b88-4fc6-8ca4-2c5b2a108c0f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>27</sup> Software Assurance Forum for Excellence in Code
+                                    (SAFECode); Tactical Threat Modeling; <a
+                                        href="https://safecode.org/wp-content/uploads/2017/05/SAFECode_TM_Whitepaper.pdf"
+                                        target="_blank">https://safecode.org/wp-content/uploads/2017/05/SAFECode_TM_Whitepaper.pdf</a>;
+                                    retrieved June 2023.</p>
+                                <p class="comment78305"><sup>28</sup> Ibid.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f29c6b96-e90e-4e40-82d3-50334834c3d0" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Attack Surface Evaluation<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="dd322e03-50cd-49ab-a372-c4227536f534" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Related to the threat modeling activity, the attack surface
+                                    analysis exercise is ultimately about reducing the attack surface of the software
+                                    and hence the opportunity for software compromise, resulting in reduction of the
+                                    risk. This objective requires a clear understanding of the attack surface of the
+                                    software through proper analysis.</p>
+                                <p class="comment78305">Attack surface analysis is often conducted by security
+                                    architects and penetration testers. Development teams need to understand and monitor
+                                    the attack surface while designing, building and changing the system.</p>
+                                <p class="comment78305">Rationales for this activity include the benefits gained
+                                    through:</p>
+                                <ul>
+                                    <li>Identification of functions and parts of the system that require review/testing
+                                        for security vulnerabilities</li>
+                                    <li>Identification of high-risk areas of code needing protection through various
+                                        defense layers</li>
+                                    <li>Identification of changes to the attack surface, triggering the need for some
+                                        kind of threat assessment.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ba24a334-d92c-470f-8eef-d78e5bb8514d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">The Attack Surface Analysis
+                                Process<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="dfee2541-e511-43cd-882d-868f284ba2aa" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Attack surface analysis is about mapping the parts of a system
+                                    to be reviewed and tested for security vulnerabilities. The point of attack surface
+                                    analysis is to understand the risk areas in an application, to make developers and
+                                    security specialists aware of what parts of the application are open to attack, to
+                                    find ways of minimizing this, and to notice when and how the attack surface changes
+                                    and what this means from a risk perspective.</p>
+                                <p class="comment78305">The attack surface analysis process consists of:</p>
+                                <ol>
+                                    <li>Defining the attack surface of an application.</li>
+                                    <li>Identifying and mapping the attack surface.</li>
+                                    <li>Measuring and assessing the attack surface.</li>
+                                    <li>Managing the attack surface.</li>
+                                </ol>
+                                <p class="comment78305">Each step will be detailed below.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7d959297-1711-44db-aed5-8c497e89d41e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Defining the Attack Surface of an
+                                Application<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="16a0ccb3-8c21-4215-aa55-0a8e89bedcd5" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">As presented by OWASP, the attack surface describes all the
+                                    different points where an attacker can breach a system and where in that system data
+                                    can be pilfered.</p>
+                                <p class="comment78305">The following constitutes the attack surface of an application:
+                                </p>
+                                <ul>
+                                    <li>The sum of all paths for data/commands into and out of the application</li>
+                                    <li>The code that protects these paths, including resource connection and
+                                        authentication, authorization, activity logging, data validation, and encoding
+                                    </li>
+                                    <li>All valuable data used in the application, including secrets and keys,
+                                        intellectual property, critical business data, personal data and PII</li>
+                                    <li>The code that protects this data, including encryption and checksums, access
+                                        auditing, and data integrity and operational security controls</li>
+                                </ul>
+                                <p class="comment78305">This model is then overlaid with the types of users, roles, and
+                                    privilege levels that can access the system. Bearing in mind that complexity can
+                                    increase as the types of users increase, focus should remain especially on the two
+                                    extremes: unauthenticated, anonymous users and highly privileged admin users (e.g.,
+                                    database administrators and system administrators).</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="42f3d27e-2a7a-406c-aee5-6785c263af50" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Identifying and Mapping the Attack
+                                Surface<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4cbbeed0-797a-4584-90ff-089d63b425cc" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Building a baseline description of the attack surface can be
+                                    accomplished in pictures and notes by reviewing design and architecture documents
+                                    from an attacker’s perspective, reading the source code, and identifying points of
+                                    entry/exit using scan tools. Although there may be many entry points, all need to be
+                                    identified. A few such entry points are:</p>
+                                <ul>
+                                    <li>User interface forms and fields</li>
+                                    <li>HTTP headers and cookies</li>
+                                    <li>APIs</li>
+                                    <li>Databases, files and local storage</li>
+                                    <li>Run-time arguments</li>
+                                </ul>
+                                <p class="comment78305">Since the total number of attack points can add up quickly, it
+                                    may make the task more manageable if the model is broken into types based on
+                                    function, design, and technology. Examples of such types include
+                                    login/authentication entry points, admin interfaces, and APIs, among others.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e3d9ebdb-80cc-4e98-960c-537c683c6ac0" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Measuring and Assessing the Attack
+                                Surface<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="31b5e765-cc3c-4177-9bfc-0d8b9dd8c124" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The work that has been done up to this point and the map of the
+                                    attack surface that has been created enables the identification of high-risk areas.
+                                    Measuring the attack surface of the application and tracking changes to the attack
+                                    surface over time is another part of the attack-surface analysis process mentioned
+                                    earlier. Measurement of the attack surface over time may be accomplished through
+                                    Relative Attack Surface Quotient (RASQ). Using this method, an overall attack
+                                    surface score can be calculated. As changes are made to the system, this score
+                                    should be remeasured. Clearly, it is desirable for the attack surface to shrink over
+                                    time, but adding new code (i.e., providing additional functionality) will likely
+                                    increase the attack surface.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="051172a7-e333-4788-bddf-c2e862d88f2d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Managing the Attack Surface<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="64ac1416-753a-4337-be19-bc39b18c1a26" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Once there is a baseline understanding of the attack surface, it
+                                    can be used to incrementally identify and manage risks as changes are made to the
+                                    application. Ask yourself the following questions: What has changed? What are you
+                                    doing differently? What holes might you have opened?</p>
+                                <p class="comment78305">Typically, an application’s attack surface will increase over
+                                    time as more interfaces are added, components age, users and roles are expanded, and
+                                    unintended system integrations occur. The attack surface can be reduced by
+                                    simplifying the model (reducing the number of user levels, for example, or not
+                                    storing any unnecessary confidential data), turning off unused features and
+                                    interfaces, and introducing operational controls, such as a software-based web
+                                    application firewall (WAF) and real-time application-specific attack detection.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="9e815816-0716-40f1-9240-9882f1c1040e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Attack Surface Tools<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="9000ca1e-8330-4855-a477-d481a02fb1cb" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">While vulnerability scanning tools can help with the attack
+                                    surface evaluation process (e.g., identifying the entry points into the software),
+                                    specialized tools that can be used for this purpose include the following.</p>
+                                <ul>
+                                    <li><em>Microsoft Attack Surface Analyzer. </em>According to Microsoft, it “aids
+                                        with the identification of potential security risks introduced by changes to an
+                                        operating system’s security configuration by identifying changes in key areas,
+                                        including file system, user accounts, system services, Network Ports
+                                        (listeners), System Certificate Stores, and Windows Registry.”<sup>29</sup></li>
+                                    <li><em>OWASP Attack Surface Detector. </em>“The Attack Surface Detector tool
+                                        uncovers the endpoints of a web application, the parameters these endpoints
+                                        accept, and the data type of those parameters. This includes the unlinked
+                                        endpoints a spider won’t find in client-side code, or optional parameters
+                                        totally unused in client-side code. It also has the capability to calculate the
+                                        changes in attack surface between two versions of an application.”<sup>30</sup>
+                                    </li>
+                                    <li><em>Sandbox Attack Surface Analysis Tools. </em>The Sandbox Attack Surface
+                                        Analysis Tools is a set of tools to analyze Windows sandboxes for exposed attack
+                                        surface. This suite of tools allows a user to perform this analysis, extracting
+                                        accessible resources and services and providing low-level inspection of the
+                                        OS.<sup>31</sup></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0c85c503-84fe-4a4e-9c6c-359537fc9359" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Threat Intelligence<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2fd1f90b-14f6-44da-b771-b9a2d367c9a9" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Organizations utilize threat information to enhance their
+                                    security posture. According to NIST, “Threat Intelligence is threat information that
+                                    has been aggregated, transformed, analyzed, interpreted, or enriched to provide the
+                                    necessary context for decision-making processes.”<sup>32</sup></p>
+                                <p class="comment78305"><strong><button
+                                            data-definition title="Threat information that has been aggregated, transformed, analyzed, interpreted, or enriched to provide the necessary context for decision-making processes. NIST SP 800-172"
+                                            class="rendered">Threat intelligence</button> </strong>matures the
+                                    understanding of cyberthreats by teaching us the methods used by malicious actors
+                                    for deploying attacks and indicators that may represent an attack. Additionally,
+                                    threat intelligence is used to identify the threats that are relevant to
+                                    organizations’ assets.</p>
+                                <p class="comment78305">As shown in this figure, threat intelligence starts with
+                                    gathering of the information about existing or upcoming threats. Such information is
+                                    typically obtained through organizations’ internal sources, subscription to security
+                                    alerts from advisories and bulletins, and information sharing with communities.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ec369648-4370-4c95-bb51-bbe96f011a03" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>29</sup> Guy Acosta; Microsoft; “Announcing the All New
+                                    Attack Surface Analyzer 2.0;” May 2019; <a
+                                        href="https://www.microsoft.com/security/blog/2019/05/15/announcing-new-attack-surface-analyzer-2-0/"
+                                        target="_blank">https://www.microsoft.com/security/blog/2019/05/15/announcing-new-attack-surface-analyzer-2-0/</a>;
+                                    retrieved June 2023.</p>
+                                <p class="comment78305"><sup>30</sup> OWASP Foundation; “OWASP Attack Surface Detector”;
+                                    <a href="https://owasp.org/www-project-attack-surface-detector/"
+                                        target="_blank">https://owasp.org/www-project-attack-surface-detector/</a>;
+                                    retrieved June 2023.
+                                </p>
+                                <p class="comment78305"><sup>31</sup> Google Project Zero; <a
+                                        href="https://opensource.google/projects/sandbox-attacksurface-analysis-tools"
+                                        target="_blank">https://opensource.google/projects/sandbox-attacksurface-analysis-tools</a>;
+                                    retrieved June 2023.</p>
+                                <p class="comment78305"><sup>32</sup> Lee Badger, Chris Johnson, Clem Skorupka, Julie
+                                    Snyder; David Waltermire; National Institute of Standards and Technology; <em>NIST
+                                        SP 800-150—Guide to Cyber Threat Information Sharing; </em><a
+                                        href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-150.pdf"
+                                        target="_blank">https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-150.pdf</a>;
+                                    retrieved June 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3f1e094a-6c26-46f2-966f-57be55f36c29" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--50 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_037_05.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_037_05.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 442.469px; left: 414.281px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 16: Cyber Threat Intelligence</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="309bf7ed-920f-4f9e-de1e-b65703e6532a"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3de90e82-e5ed-47a1-bcb4-8628128ff534" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Internal Sources of Cyber Threat
+                                Information<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5f7d889b-c728-4701-91db-37f53a51418f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Organizations capture security information that can be
+                                    catalogued to produce threat intelligence. For example, firewall logs may be used to
+                                    identify IP addresses for malicious actors, or email systems may be used to
+                                    determine attributes of phishing attacks. One main challenge with using
+                                    organizations’ internal data for studying threats is the protection of sensitive
+                                    information. Threat information should be gathered in accordance with regulatory,
+                                    privacy, legal and security requirements. Special consideration may apply to threat
+                                    information that is shared with other organizations.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="32c76c52-1230-455e-945a-65dd34fdff94" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Security Alerts for Cyber Threat
+                                Information<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="aa4770d1-5d09-4635-892f-53e86016bb34" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Risk advisories such as the United States Computer Emergency
+                                    Readiness Team (U.S.CERT) send their subscribers notifications about upcoming or
+                                    ongoing cyberthreats and provide repositories for advisories on existing threats.
+                                    Organizations typically subscribe to multiple sources to cover a range of
+                                    vulnerabilities. For example, vendor security bulletins may include more detailed
+                                    information regarding a vendor’s provided platform.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="21cc7710-557a-45e6-93b2-2cb7468f1d39" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Joining a Community for Sharing Cyber
+                                Threat Information<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="fce2aecf-a658-4729-bad4-af21e2f6da53" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Organizations join a sharing community to complement their
+                                    knowledge of threat intelligence. Typically, organizations join a community based on
+                                    their characteristics or common interests. For example, selecting a community based
+                                    on geographical region may facilitate joining the regular meetings. Similarly,
+                                    selecting a community based on an industrial sector, such as the energy sector, may
+                                    be more closely focused on threats that are common in that industry. One important
+                                    consideration for joining a sharing community is trust. An organizations’
+                                    information-sharing rules should take into consideration the trustworthiness of the
+                                    community members. </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d259a311-d685-4058-b95f-274899af31e4" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Cyber Threat Intelligence
+                                Program<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6176780f-4567-42e9-bfab-41e46dc658c3" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Organizations should have a comprehensive cyberthreat
+                                    intelligence program consistent with organizations’ security policies. Typically,
+                                    such programs define the goals and objectives for information sharing as well as
+                                    criteria for selecting and joining communities. NIST Special Publication 800-150 is
+                                    a guide to cyberthreat information sharing.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="screengrid comment78305">
+            <footer class="screen__margin screen__footer u-hide-element vstdonthighlight">
+                <div class="feedback comment78305">
+                    <div class="feedback__content js-feedback-focus comment78305" tabindex="-1"></div>
+                </div>
+                <div class="control-btns comment78305"></div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay-root vstdonthighlight rendered u-hidden comment78305" style="overflow-y: auto;">
+        <div class="modal-cover-holder comment78305">
+            <div class="modal-cover-outer comment78305">
+                <div class="modal-cover comment78305"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

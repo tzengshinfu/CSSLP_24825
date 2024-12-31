@@ -1,0 +1,203 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"
+    style="padding: 0px; font-size: 100%; --USER__lineHeight: 1; --USER__pageMargins: 1; --USER__view: readium-scroll-on;"
+    class="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Nonfunctional Security Properties and Constraints (4.6)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="overflow: hidden auto;">
+    <div xmlns:epub="http://www.idpf.org/2007/ops" epub:type="pagebreak" id="pagebreak_39"
+        class="hidden-pagebreak comment78305" title="39"></div>
+
+    <div xmlns:epub="http://www.idpf.org/2007/ops" id="499ab637-7880-4ab0-8aca-76da3bfa7e38"
+        class="screen rendered comment78305" aria-hidden="false">
+        <div class="screengrid comment78305">
+            <header class="screen__margin screen__header u-hide-element vstdonthighlight">
+
+                <div class="screen__heading u-float--clearfix comment78305">
+                    <div class="screen__icon u-float--left comment78305"></div>
+                    <h2 class="screen__title comment78305" tabindex="-1"></h2>
+                </div>
+
+
+                <div class="screen__instructions comment78305"></div>
+            </header>
+        </div>
+
+        <div class="screen__content comment78305">
+
+            <div class="block rendered comment78305">
+                <div id="d69f83db-eefd-4509-9ecc-8bf9be9cd85c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Nonfunctional Security Properties and
+                                Constraints (4.6)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="dfa5591b-acf9-4678-8121-38daa3c387ee" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Understanding business-derived security properties and
+                                    constraints for software design is essential to ensuring software models will
+                                    satisfy objectives when implemented and integrated later in the development life
+                                    cycle. Security practitioners must be interdisciplinary. Basic knowledge of systems
+                                    engineering is required for modeling effective security properties and constraints.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2b3c3470-1e3d-4cd3-a832-0a3f9c758dea" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Objectives<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="363d3433-af3f-4db8-85d0-81b50cca1d64" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>Recognize nonfunctional security properties and constraints.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="802c41fc-f9be-4ae2-80fe-5bd2e65f5165" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Overview<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c2e621c2-22aa-49b0-a96f-46a9e5337660" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">To understand nonfunctional security properties and constraints,
+                                    security practitioners must first understand the difference between functional and
+                                    nonfunctional requirements from a system engineering perspective. When you think of
+                                    typical software requirements, you likely think about functional requirements, such
+                                    as what a product does or what features exist. Nonfunctional requirements describe
+                                    system characteristics, or properties, and are often referred to as quality
+                                    attributes. Nonfunctional requirements define how the system should perform.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="714ad0ed-5f0a-4cca-8884-8e5141fe0930" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Nonfunctional Security Properties and
+                                Constraints<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3584eaea-174c-4181-b653-09db89bdd59f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Every software system will have a set of <button
+                                            data-definition title="In system engineering: system quality and software quality requirements. ISO/IEC 25000"
+                                        class="rendered"><strong
+                                            xmlns="http://www.w3.org/1999/xhtml">properties</strong></button>—perhaps
+                                    more than a dozen, including specialty engineering items such as safety,
+                                    reliability, and security. The term property is often used interchangeably with
+                                    quality attributes, nonfunctional requirements, and specialties. ISO/IEC 25000
+                                    series defines nonfunctional requirements as system quality and software quality
+                                    requirements. Standard independent, nonfunctional requirements establish constraints
+                                    for a software system’s functionality. These requirements describe expected system
+                                    operations, including security-related concerns for performance, confidentiality,
+                                    and integrity of data.</p>
+                                <p class="comment78305">Software security properties are interrelated. Building a more
+                                    secure authentication system may increase the difficulty for users to log in, but
+                                    the result is higher confidence in user sessions and a safer system. Increasing
+                                    software system resiliency may require increased costs for hardware, including a
+                                    load balancer and the inclusion of redundant components. Therefore, a correlation
+                                    (another property) exists between resiliency and software system costs. On a
+                                    positive note, resiliency might be inversely related to emergency maintenance costs,
+                                    which would constitute another property. Security practitioners should integrate
+                                    with systems engineers to inform design properties related to specialties. Consider
+                                    the following functional and nonfunctional requirement pair:</p>
+                                <ul>
+                                    <li>Functional software requirement → The software system’s data in transit protocol
+                                        or mechanism must be able to correct errors for dropped units of data.</li>
+                                    <li>Nonfunctional software requirement → The software systems data transport will
+                                        reattempt failed transmissions up to five times within 0.3 seconds for critical
+                                        data.</li>
+                                </ul>
+                                <p class="comment78305">This requirement example describes the security and reliability
+                                    quality attributes. A property exists between retransmissions, time to resend, and
+                                    failed data unit delivery. The software system has the <strong><button
+                                            data-definition title="In system engineering: a restriction, limit, or regulation imposed on a product, project, or process. ANSI/EIA 1998"
+                                            class="rendered">constraint</button> </strong>of either a successful
+                                    retransmission or five additional attempts within 0.3 seconds for critical data. The
+                                    0.3 seconds is a threshold.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="screengrid comment78305">
+            <footer class="screen__margin screen__footer u-hide-element vstdonthighlight">
+                <div class="feedback comment78305">
+                    <div class="feedback__content js-feedback-focus comment78305" tabindex="-1"></div>
+                </div>
+                <div class="control-btns comment78305"></div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay-root vstdonthighlight rendered comment78305 u-hidden" style="overflow-y: auto;">
+        <div class="modal-cover-holder comment78305">
+            <div class="modal-cover-outer comment78305">
+                <div class="modal-cover comment78305"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

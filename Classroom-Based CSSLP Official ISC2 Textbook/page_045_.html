@@ -1,0 +1,2380 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"
+    style="padding: 0px; font-size: 100%; --USER__lineHeight: 1; --USER__pageMargins: 1; --USER__view: readium-scroll-on;"
+    class="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Secure Coding Best Practices (5.1)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="overflow: hidden auto;">
+    <div xmlns:epub="http://www.idpf.org/2007/ops" epub:type="pagebreak" id="pagebreak_45"
+        class="hidden-pagebreak comment78305" title="45"></div>
+
+    <div xmlns:epub="http://www.idpf.org/2007/ops" id="65adb68d-2dd3-4a04-a3dd-a55a4a270a4a"
+        class="screen rendered comment78305" aria-hidden="false">
+        <div class="screengrid comment78305">
+            <header class="screen__margin screen__header u-hide-element vstdonthighlight">
+
+                <div class="screen__heading u-float--clearfix comment78305">
+                    <div class="screen__icon u-float--left comment78305"></div>
+                    <h2 class="screen__title comment78305" tabindex="-1"></h2>
+                </div>
+
+
+                <div class="screen__instructions comment78305"></div>
+            </header>
+        </div>
+
+        <div class="screen__content comment78305">
+
+            <div class="block rendered comment78305">
+                <div id="a16dddd5-6d85-42a0-b18b-e5a7d49a8e0c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Secure Coding Best Practices
+                                (5.1)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b9a4e52b-0d2d-4ff7-b10e-0f4311214486" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Software producing organizations should establish and enforce
+                                    secure coding standards. Various guidelines and checklists for secure coding
+                                    practices have been developed and published. In addition to security considerations,
+                                    coding standards ensure code uniformity and maintainability, which also supports
+                                    security throughout a software system's life cycle.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="cf2f92fc-5693-49cf-b832-d2c42a857429" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Objectives<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="64f65fa4-3fff-4b80-bb2d-ae55b7b29eaa" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>Identify the features of secure coding standards.</li>
+                                    <li>Describe different approaches for implementing security in managed applications.
+                                    </li>
+                                    <li>Identify common flaws in software and corresponding mitigation strategies.</li>
+                                    <li>Explain common secure coding practices.</li>
+                                    <li>Identify methods of data protection in transit and at rest.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="05b5105c-ccaa-4a5b-bd8c-9fd6536c3f57" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Overview<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="756862d9-c48d-464c-b05f-d922a68a3829" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Secure coding practices when adopted and enforced result in the
+                                    construction of more cyber-resilient software. These considerations are often
+                                    incorporated into various stages of software development to ensure early and
+                                    frequent verification of security, implementation of proper input validation and
+                                    encoding, robust authentication and access controls, error and exception management,
+                                    protection of data in transit and at rest, logging, and managing third-party code
+                                    and libraries.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4e30f562-d8c4-4cd2-9b10-66ab0c8c645f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Secure Coding Standards and
+                                Practices<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1619b9de-49bb-4ab4-a07b-ae94ae10ca71" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Well-documented and enforceable coding standards are essential
+                                    to secure software development. Coding standards encourage programmers to follow a
+                                    uniform set of rules and guidelines determined by the requirements of the project
+                                    and organization, not by the programmer’s familiarity or preference. Once
+                                    established, these standards can be used as a metric to evaluate source code (using
+                                    manual or automated processes) for compliance with the standard.<sup>1</sup></p>
+                                <p class="comment78305">Today there are a plethora of secure coding standards and
+                                    practices originating from many organizations including industry giants,
+                                    international standards groups, and nonprofits. One example is the Carnegie Mellon
+                                    University (CMU) Software Engineering Institute (SEI) Computer Emergency Response
+                                    Team (CERT), which publishes guidance for secure coding best practices. SEI CERT
+                                    also publishes generic Top 10 Secure Coding Practices guidance, enumerated below.
+                                </p>
+                                <ol>
+                                    <li>Validate input.</li>
+                                    <li>Heed compiler warnings.</li>
+                                    <li>Architect and design for security policies.</li>
+                                    <li>Keep it simple.</li>
+                                    <li>Default deny.</li>
+                                    <li>Adhere to the principle of least privilege.</li>
+                                    <li>Sanitize data sent to other systems.</li>
+                                    <li>Practice defense in depth.</li>
+                                    <li>Use effective quality assurance techniques.</li>
+                                    <li>Adopt a secure coding standard.<sup>2</sup></li>
+                                </ol>
+                                <p class="comment78305">Additionally, secure coding standards can be more specific and
+                                    focused on a particular programming language. For example, SEI CERT produces the
+                                    following coding standards for specific languages:</p>
+                                <ul>
+                                    <li>SEI CERT C Coding Standard</li>
+                                    <li>SEI CERT C++ Coding Standard</li>
+                                    <li>SEI CERT Perl Coding Standard</li>
+                                    <li>SEI CERT Oracle Coding Standard for Java</li>
+                                    <li>Android Secure Coding Standard</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3533e0b6-aaf2-4e87-9d6d-8d0fc26bb029" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Secure Coding Standards in
+                                Action<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e241cc22-b93d-48d6-8644-1d67ffad371e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">One programming rule from SEI CERT C++ Coding Standard is
+                                    FIO51-CPP (i.e., close when no longer needed). If files are not properly closed
+                                    after usage, adversaries may be able to exhaust the hosting system’s underlining
+                                    resources which may result in data confidentiality issues pending memory handling
+                                    during an application abnormal termination. The SEI standard informs noncompliant
+                                    and compliant solutions.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e78810bd-f589-47de-a439-8af7c4328c21" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>1 </sup>Robert A. Martin, Robert C. Seacord; Carnegie
+                                    Mellon University Software Engineering Institute; <em>MITRE, CWE, and CERT Secure
+                                        Coding Standards; </em><a
+                                        href="https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=50399"
+                                        target="_blank">https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=50399</a>;
+                                    retrieved July 2023.</p>
+                                <p class="comment78305"><sup>2</sup> Robert C. Seacord; Carnegie Mellon University
+                                    Software Engineering Institute; <em>Top 10 Secure Coding Practices; </em><a
+                                        href="https://wiki.sei.cmu.edu/confluence/display/seccode/Top+10+Secure+Coding+Practices?focusedCommentId=88044413"
+                                        target="_blank">https://wiki.sei.cmu.edu/confluence/display/seccode/Top+10+Secure+Coding+Practices?focusedCommentId=88044413</a>;
+                                    retrieved July 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f4bb09de-0ad6-4453-967c-209a9071b3c7" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Noncompliant C++ Source Code<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="99280db7-9a31-4934-8486-e911332e6bf1" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">In this example, the standard handler <em>std::abort() </em>is
+                                    called, which results in <em>std::basic_filebuf&lt;T&gt; </em>object persisting
+                                    because a destructor was not called.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e6b9d052-0666-4f79-9ba9-049a2f32d34f" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--50 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_045_01.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_045_01.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 151.078px; left: 402.797px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 1: Noncompliant C++ Source Code</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="c77f0cbe-5d78-49ba-cd83-783ac1910e1d"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b4f8c71a-6a24-46f3-a86c-908cccd2d306" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Compliant C++ Source Code<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="9bf25b45-8344-454b-9656-28616290bc09" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The solution below is improved because <em>std::fstream::close()
+                                    </em>is executed prior to <em>std::terminate(), </em>which ensures proper resource
+                                    management. Not pictured the stream could also be closed implicitly using Resource
+                                    acquisition is initialization (RAII), which would have the same effect.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4213413a-7a51-442c-8a32-33554d90a31d" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--50 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_045_02.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_045_02.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 197.078px; left: 402.797px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 2: Compliant C++ Source Code</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="3e913f6d-5b5c-4eaa-f11a-ac860d8b34a2"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="01547f4a-7d4c-489f-bb36-673016c2109b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Declarative vs. Imperative
+                                (Programmatic) Security<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="eba27640-5bb9-4be8-95b1-e9cfb6224efb" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Most programming languages and development environments support
+                                    both declarative and imperative security (e.g., .NET, J2EE). Declarative security
+                                    specifies application security using configuration or annotation. An example of
+                                    declarative, or “external,” includes J2EE security descriptors that include
+                                    considerations for access control and authentication. Changes to declarative
+                                    security do not require software development efforts. The hosted instance of the
+                                    application server typically handles security enforcement.</p>
+                                <p class="comment78305">Alternatively, programmatic security refers to security
+                                    integrated into application code. Programmatic security may supplement when
+                                    declarative mechanisms alone are not adequate for application business needs.
+                                    Programmatic security is more difficult to change since it is embedded in an
+                                    application. This level of integration and inflexibility also bolsters security
+                                    configuration integrity.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c3b2d344-72e1-4030-8dfb-e7d100624c0a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Concurrency<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7e9d066c-ce28-4db3-ac08-8bd352da0e16" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Concurrency-related issues exhibited in software led to quality
+                                    issues and vulnerabilities whose exploitations resulted in elevation of privileges
+                                    and denial of service, among other possibilities. Synchronization that is incorrect,
+                                    or missing altogether, can lead to a weakness in software that utilizes a shared
+                                    resource in a concurrent manner but fails to synchronize access to the resource.</p>
+                                <p class="comment78305">CWE-557—Concurrency Issues is a CWE category that includes
+                                    weaknesses related to shared resources and concurrent usage. Included in this
+                                    category are:</p>
+                                <ul>
+                                    <li>CWE-364—Signal Handler Race Condition</li>
+                                    <li>CWE-366—Race Condition within a Thread</li>
+                                    <li>CWE-367—Time-of-check Time-of-use (TOCTOU) Race Condition</li>
+                                    <li>CWE-368—Context Switching Race Condition</li>
+                                    <li>CWE-386—Symbolic Name not Mapping to Correct Object</li>
+                                    <li>CWE-421—Race Condition During Access to Alternate Channel</li>
+                                    <li>CWE-663—Use of a Non-reentrant Function in a Concurrent Context</li>
+                                    <li>CWE-820—Missing Synchronization</li>
+                                    <li>CWE-821—Incorrect Synchronization</li>
+                                    <li>CWE-1058—Invokable Control Element in Multi-Thread Context with non-Final Static
+                                        Storable or Member Element</li>
+                                    <li>CWE-1322—Use of Blocking Code in Single-threaded, Nonblocking Context</li>
+                                </ul>
+                                <p class="comment78305">One example of CWE-821—Incorrect Synchronization includes
+                                    variant CWE-572—Call to Thread run() instead of start(). Typically, a call to a
+                                    thread object run() method is a programming error. The developer that erroneously
+                                    executes this most certainly intended to start a new thread but instead caused a
+                                    defect calling run() instead of start(). When this occurs, run() will execute in the
+                                    caller's context. This is illustrated in the following Java excerpt that produces an
+                                    incorrect synchronization defect.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7caa6aa9-9c4b-4d38-bab3-2465139aec86" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--50 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_045_03.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_045_03.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 119.547px; left: 414.281px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 3: CWE-821—Incorrect Synchronization</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="d1c5eea7-1775-40ef-c985-31443c8ad287"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e5422fcd-20a7-44cf-9cae-455cfcf39445" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Race Conditions<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="17905b11-dd5d-4386-89b2-ac47f1a0f23d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">According to CWE-362, concurrent executions using shared
+                                    resources with improper synchronization are known as “race conditions.”</p>
+                                <p class="comment78305">The program contains a code sequence that can run concurrently
+                                    with other code, and the code sequence requires temporary, exclusive access to a
+                                    shared resource, but a timing window exists in which the shared resource can be
+                                    modified by another code sequence that is operating concurrently. This architecture
+                                    can have security implications when the expected synchronization is in
+                                    security-critical code, such as recording whether a user is authenticated or
+                                    modifying important state information that should not be influenced by an outsider.
+                                    A race condition violates the following closely related properties:</p>
+                                <ul>
+                                    <li><em>Exclusivity. </em>The code sequence is given exclusive access to the shared
+                                        resource, i.e., no other code sequence can modify properties of the shared
+                                        resource before the original sequence has completed execution.</li>
+                                    <li><em>Atomicity. </em>The code sequence is behaviorally atomic, i.e., no other
+                                        thread or process can concurrently execute the same sequence of instructions (or
+                                        a subset) against the same resource.<sup>3</sup></li>
+                                </ul>
+                                <p class="comment78305">Sequencing and timing issues in the software can cause what is
+                                    commonly known as Time-of-Check/Time-of-Use (TOC/TOU) or race condition attacks.</p>
+                                <p class="comment78305">A TOCTOU (time-of-check, time-of-use) race condition is possible
+                                    when two or more concurrent processes are operating on a shared file system.
+                                    Typically, the first access is a check to verify some attribute of the file,
+                                    followed by a call to use the file. An attacker can alter the file between the two
+                                    accesses or replace the file with a symbolic or hard link to a different file. These
+                                    TOCTOU conditions can be exploited when a program performs two or more file
+                                    operations on the same file name or path name. A program that performs two or more
+                                    file operations on a single file name or path name creates a race window between the
+                                    two file operations. This race window comes from the assumption that the file name
+                                    or path name refers to the same resource both times. If an attacker can modify the
+                                    file, remove it, or replace it with a different file, then this assumption will not
+                                    hold.<sup>4</sup></p>
+                                <p class="comment78305">Many Unix/Linux-based products (e.g., operating systems, web
+                                    servers) have exhibited race condition vulnerabilities.</p>
+                                <p class="comment78305">At a high-level, all software security practitioners should
+                                    understand that three conditions must be satisfied for a race condition to exist:
+                                </p>
+                                <ul>
+                                    <li><em>Concurrency property. </em>Two or more control flows execute concurrently.
+                                    </li>
+                                    <li><em>Shared object property. </em>The concurrent flows must access the shared
+                                        race object.</li>
+                                    <li><em>Change state property. </em>One or more control flows must alter the race
+                                        object state</li>
+                                </ul>
+                                <p class="comment78305">Potential solutions for race conditions include:</p>
+                                <ul>
+                                    <li><em>Race windows. </em>Elimination of race conditions begins with identifying
+                                        race windows. A race window is a code segment that accesses the race object in a
+                                        way that opens a window of opportunity during which other concurrent flows could
+                                        “race in” and alter the race object.</li>
+                                    <li><em>Mutual exclusion (Mutex). </em>Race conditions are eliminated by making
+                                        conflicting race windows mutually exclusive. Once a potential race window begins
+                                        execution, no conflicting race window can be allowed to execute until the first
+                                        race window has completed. Race windows are referred to as critical sections
+                                        because it is critical that the two conflicting race windows don’t overlap
+                                        execution. Treating each critical section as an atomic unit with respect to
+                                        conflicting race windows is called mutual exclusion.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="85b55f85-80eb-4322-be9f-940094070069" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>3 </sup>Common Weakness Enumeration (CWE): A
+                                    Community-Developed List of Software and Hardware Weakness Types; <em>CWE-362:
+                                        Concurrent Execution using Shared Resource with Improper Synchronization (‘Race
+                                        Condition’); </em><a href="https://cwe.mitre.org/data/definitions/362.html"
+                                        target="_blank">https://cwe.mitre.org/data/definitions/362.html</a>; retrieved
+                                    July 2023.</p>
+                                <p class="comment78305"><sup>4</sup> Carnegie Mellon University Software Engineering
+                                    Institute; <em>FIO45-C. Avoid TOCTOU race conditions while accessing files; </em><a
+                                        href="https://wiki.sei.cmu.edu/confluence/display/c/FIO45-C.+Avoid+TOCTOU+race+conditions+while+accessing+files"
+                                        target="_blank">https://wiki.sei.cmu.edu/confluence/display/c/FIO45-C.+Avoid+TOCTOU+race+conditions+while+accessing+files</a>;
+                                    retrieved July 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="54732d04-2e23-4173-8909-9c460ec31c9d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Thread Safety<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e9f4fc6f-2a39-4874-a654-eb9dfa19da10" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">In multithreaded environments, implementations must assre that
+                                    accessing the same resource by various threads does not expose erroneous behavior or
+                                    produce unpredictable results. This concept is referred to as thread safety. This is
+                                    important when the code depends on a certain order of execution for correct
+                                    behavior.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="36db6abe-204e-49ba-ac2c-75dbbbaa15a8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Thread Safety in Action<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1cfe8805-7d27-4c64-ab3f-8ccf6c604e4d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Multithreading, processing using multiple threads concurrently,
+                                    is handled differently within different programming languages and frameworks. Using
+                                    Java as an example, there are at least four ways to support thread safety while
+                                    performing concurrent execution. Examples include Synchronization, invoking the
+                                    volatile keyword, utilizing the final keyword, and the atomic variable. Java final
+                                    variables are thread safe because reassignment of a reference object is not
+                                    possible.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0914d366-4379-4994-b7cf-d3fb4df19631" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--75 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_045_04.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_045_04.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 107px; left: 490px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 4: Thread Safety</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="f0f94594-f9db-46c0-dec6-e2c1429a9e10"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4735fad2-0bf8-448b-a4fd-6f9ee032768d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Database Concurrency Controls<br />
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5e9688b1-60e2-40dc-a97b-ae68f4c072b9" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Simultaneous execution of transactions in a multiuser database
+                                    requires concurrency controls; without them data integrity and consistency problems
+                                    such as lost updates can arise. In other words, database concurrency controls are
+                                    used to coordinate simultaneous transactions on the database while preserving the
+                                    integrity of data. Various concurrency control algorithms (e.g., lock-based) are
+                                    used for this purpose.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="dc47910c-9fbb-4978-b92e-89454cf798dd" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Input Validation<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5fba6b66-73ef-4d36-9489-2df80a1aa1c8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Input validation is one of the most fundamental and most
+                                    critical mitigation strategies relevant to most common web application
+                                    vulnerabilities (e.g., injection vulnerability, buffer overflow vulnerability).
+                                    Input validation represents protection at the perimeters of an application and
+                                    should be considered a key layer of defense in a defense-in-depth strategy. Often
+                                    input validation is associated with user interfaces but software security
+                                    practitioners understand that integration points between software systems where data
+                                    flows between systems should also be restricted and validated.</p>
+                                <p class="comment78305">An important question to answer when developing secure code is
+                                    to determine where to perform input validation. It is recommended that input
+                                    validation be performed both on the server side (backend) as well as on the client
+                                    side (frontend). At a bare minimum, input validation must be performed on the
+                                    backend. It should never be performed only on the client side (frontend).
+                                    Client-side validation should be used only from a user experience standpoint and
+                                    never for implementing security in your software. Client-side validation can be
+                                    easily bypassed; for this reason, it must never be trusted to provide adequate
+                                    levels of security.</p>
+                                <p class="comment78305">Software, especially internet-centric, adheres to Postel’s Law:
+                                    “Be conservative in what you do, be liberal in what you accept from others.” Liberal
+                                    acceptance of inputs increases user and technology interoperability at the expense
+                                    of increased cyber-attack surfaces. This architectural idea has resulted in the
+                                    interconnectivity of the internet today. Security practitioners should take a
+                                    slightly different stance than Postel to ensure business continuity is maintained
+                                    and software risks are managed. A simple stance for defensively architecting
+                                    applications might include:</p>
+                                <ul>
+                                    <li>All input data is evil and must be sanitized.</li>
+                                    <li>Data must be accepted for interoperability but there is no trust without
+                                        verification.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="59da27d9-ac73-4076-969b-89dd267cc27b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Filtering<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ce5a0c50-40a6-4321-9c83-20230364ae10" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Filtering is a form of validation. There are often known good
+                                    inputs (i.e., inputs the developer is completely certain are safe). There are also
+                                    known bad characters (i.e., inputs the developer is certain are unsafe). Based on
+                                    this, there are two approaches to managing input:</p>
+                                <ul>
+                                    <li><em>Allow list. </em>An allow list, formerly called a whitelist, is a list of
+                                        “known good inputs.” It is basically a list that says, “A, B, and C are good
+                                        (and everything else is bad).” This is a good practice to prevent malicious
+                                        input into the application.</li>
+                                    <li><em>Block list. </em>A block list, formerly called a blacklist, is a list of
+                                        “known bad inputs.” It is basically a list that says, “A, B, and C are bad (and
+                                        everything else is good).” </li>
+                                </ul>
+                                <p class="comment78305">Deny-list validation should be avoided in most cases, as it
+                                    could be relatively trivial for an attacker to bypass such filters. For input fields
+                                    provided by a user, allow-list validation is appropriate.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="54f666e6-06f6-40f7-bc05-7595b32a87f8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Canonicalization<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b436b8c5-7916-42ab-8914-74845cef63d5" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Canonicalization refers to multiple (alternate) representations
+                                    of a name. Equivalent forms of a name resolve to a same standard name (canonical
+                                    name). When determining requirements for secure software code, it is important to
+                                    identify the alternate representations and design the software so that the
+                                    validation decisions are not based upon any one method of a file or device name.
+                                    Regardless of the development platform, always transform the file name or Uniform
+                                    Resource Locator (URL) into a canonical version to ensure that the different
+                                    variations of a file name or URLs equate properly.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="fe7a17a7-c3fe-4edf-9268-2a8159898546" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Output Sanitization<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e3bf22ff-5bec-4e8e-b09e-92618826f343" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Improper encoding or escaping can allow attackers to change the
+                                    commands sent to another component, inserting malicious commands instead. Output
+                                    sanitization means sanitizing the data you may already have and securing it prior to
+                                    rendering it for the end user. This is done by converting untrusted input into a
+                                    safe form where the input is displayed as data to the user without executing as
+                                    code. Output sanitization is also known as output encoding.</p>
+                                <p class="comment78305">One way of performing output encoding is to use an Extensible
+                                    Stylesheet Language (XSL) engine, which can convert the output to a different
+                                    encoding. When the document is loaded into memory, XML applications such as XSL
+                                    Transformation (XSLT) engines convert it to Unicode. The XSL engine then uses the
+                                    stylesheet templates to create a transformed version of the content in memory
+                                    structures. When it is done, it serializes the internal content into a stream of
+                                    bytes that it feeds to the outside world. During the serialization process, it can
+                                    convert the internal Unicode to some other encoding for the output.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="df6fcb17-99ee-482b-9d20-372ec7050f9a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Output Sanitization Issues in
+                                Action<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2ab5aec1-b889-45fe-8811-9e70e5bafd3a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Output sanitization issues may arise when downstream software
+                                    uses an encoded input, but the data does not match what was intended. For example,
+                                    HTML supports entity encoding for HTML body elements on a website. A programmer may
+                                    encode output as an attribute that contains functional JavaScript. The following
+                                    HTML example focuses on the web-based software, but this weakness applies to any
+                                    software data flows that support multiple encodings.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3e274a9d-618d-455c-8da9-3a36d4d8e115" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--75 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_045_05.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_045_05.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 93.2336px; left: 490px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 5: Output sanitization</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="31a62508-6fee-4eb5-c368-f61c4e567436"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3aabaaaa-e83d-4bb3-bae8-01692ccc10dc" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The programmer attempts to obfuscate output streams by encoding
+                                    HTTP POST values so HTML will not translate but <em>htmlentities() </em>encoding
+                                    will not be sufficient when the data being encoded is HTML because more attributes
+                                    may be inserted. <em>picText </em>could be altered as shown below:</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5363cf0e-bafc-48db-9adb-8737eb0d7af5" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--50 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_045_06.png" alt="" /><img
+                                    class="image-zoom-proxy" src="./page_045_06.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: -22.7344px; left: 414.281px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom"></figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d20b3a4a-61bc-4fbf-9343-033ec392d624" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">This could result in an adversary injecting malicious JavaScript
+                                    into an attribute due to inadequate encoding. As shown below, we can see the
+                                    rendered image object contains the added onload scripting.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="cfabc4b0-94a9-4987-9150-684b79c02966" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--75 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_045_07.png" alt="" /><img
+                                    class="image-zoom-proxy" src="./page_045_07.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 38.6875px; left: 490px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom"></figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4fab3c80-4030-464f-82fc-67154b2ded92" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Error and Exception Handling<br />
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a0b7832c-0b50-44df-a71d-877f6393ecfb" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Exceptions are run-time anomalies. Here are a few possible
+                                    examples:</p>
+                                <ul>
+                                    <li>Attempted to establish connection, but the server does not respond.</li>
+                                    <li>Tried to connect to the database, but connections cannot be established.</li>
+                                    <li>Attempted to open a file for reading, but the file does not exist.</li>
+                                </ul>
+                                <p class="comment78305">Error and exception handling are a part of the overall security
+                                    of software. Proper error and exception handling must resolve anomalies, faults, and
+                                    errors in ways that do not leave the software, its resources, data, or environment
+                                    in a vulnerable state. All exceptions must be explicitly handled. Best practices
+                                    have been developed for various programming environments. A few examples of commonly
+                                    agreed-upon best practices in this regard include:</p>
+                                <ul>
+                                    <li>Not ignoring exceptions</li>
+                                    <li>Leaning toward catching specific exceptions</li>
+                                    <li>Having a catch-all exception block</li>
+                                    <li>Cleaning up resources in a final block</li>
+                                </ul>
+                                <p class="comment78305">It is important to understand that verbose exception/error
+                                    messages are one source of information leakage about the software, including the
+                                    logic of the code or schema of the database. Leaked information may be used for
+                                    launching focused attacks (e.g., SQL Injection). Verbose error messages should be
+                                    avoided, and generic responses must be returned.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3ba103ef-9953-49ae-bb31-cef8c54219de" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Secure Logging and Auditing<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7c459936-9a4a-4163-b1b2-9066f7d81ffe" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Logging and auditing are distinct but interrelated topics. NIST
+                                    defines a <strong><button
+                                            data-definition title="A record of actions and events that have taken place on a computer system."
+                                            class="rendered">log</button> </strong>as a record of the events occurring
+                                    within an organization’s systems and networks. NIST defines an <strong><button
+                                            data-definition title="1) The process of reviewing a system for compliance against a standard or baseline. Examples include audits of security controls, configuration baselines, and financial records. 2) Independent review and examination of records and activities to assess the adequacy of system controls, to ensure compliance with established policies and operational procedures. Source: NIST SP 1800-15B"
+                                            class="rendered">audit</button> </strong>as the independent review and
+                                    examination of records and activities to assess the adequacy of system controls and
+                                    ensure compliance with established policies and operational procedures. Logging
+                                    describes who, what, when, where, and how to capture information to be reviewed at a
+                                    later date. Auditing describes who, what, when, where, and how to review the
+                                    captured log data.</p>
+                                <p class="comment78305">Log files in general can show discrete events within an
+                                    application or system, such as those that pertain to failure, error, or state
+                                    transformation. It is important to recognize that logs are not meant to solely serve
+                                    the purpose of troubleshooting software by developers and that there may be many
+                                    stakeholders interested in events and logs, including security personnel and
+                                    auditors.</p>
+                                <p class="comment78305">The types of information contained in each log will depend on
+                                    the nature of the log in question. Establishing audit trails requires, at minimum,
+                                    the capture of “who,” “what,” “when,” and “where” in logs. When capturing the time
+                                    (“when”), use a consistent timestamp.</p>
+                                <p class="comment78305">Audit trails need to capture enough evidence to help in an
+                                    investigative process. Among the factors should be when the event took place, who
+                                    caused the event (e.g., user ID), what triggered the event (e.g., program, command),
+                                    and date and time, which will help determine whether the user was who they should
+                                    have been or a masquerading intruder.</p>
+                                <p class="comment78305">Security practitioners must also be concerned with maintaining
+                                    logs while considering confidentiality and integrity concerns. To maintain
+                                    integrity, logs hashes may be implemented, or logs may be stored on write once, read
+                                    many (WORM) drives where, as the name suggests, data written to the medium cannot be
+                                    erased or modified. From a confidentiality perspective, log access should be limited
+                                    based on need-to-know. Sometimes logs may contain sensitive data to which an auditor
+                                    should not have undue access. In this case, user data could be sanitized or masked
+                                    before storage for compliance considerations.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6f97c1d8-d61e-4bec-aebc-9dd3c887c468" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Session Management<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7fdb14c6-82e6-4b49-9824-1b8a16dcd1c4" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Given the stateless nature of HTTP protocol, and the fact that
+                                    each request/response pair is independent of other web interactions, web
+                                    applications require the implementation of session management capabilities to retain
+                                    information about application users for the duration of their sessions.</p>
+                                <p class="comment78305">Session management practices are especially important in the
+                                    context of authenticated sessions, when the session ID is used by the web
+                                    application for the purpose of enforcing access control.</p>
+                                <p class="comment78305">Improper session management that leads to disclosure,
+                                    prediction, capture or brute forcing the session IDs presents an opportunity for the
+                                    exploitation of vulnerabilities by adversaries. Hijacking a session and
+                                    impersonating a victim in the web application can have severe consequences.</p>
+                                <p class="comment78305">In general, technology-specific web development frameworks such
+                                    as .NET, PHP, and Java (among others) offer built-in session management
+                                    capabilities. The built-in approach is preferred over custom (developed in-house)
+                                    session management implementations, but even these frameworks may not be free of
+                                    vulnerabilities.</p>
+                                <p class="comment78305">If using cookies for session management, always follow the best
+                                    practices and ensure the protection of the cookies with cryptographic mechanisms or
+                                    other appropriate safeguards. For example, enforce that cookies can only be
+                                    transmitted over a secure HTTPS connection.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b50c91f3-cf5c-4313-b0b6-b2096c440c31" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Safe Application Programming
+                                Interfaces (APIs)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b3578e2a-692e-44bb-87d2-cafadf32405d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Services of software can be made available through a set of
+                                    application programming interfaces (APIs). Think of them as a set of interfaces
+                                    where software services can be requested. Examples of APIs include:</p>
+                                <ul>
+                                    <li>APIs from the standard library of a programming language</li>
+                                    <li>APIs from third-party libraries to perform cryptographic operations</li>
+                                    <li>APIs to access and process data in a database</li>
+                                    <li>APIs available through the operating system for kernel services</li>
+                                    <li>Web APIs to receive real-time traffic information from some provider</li>
+                                    <li>APIs to send a message or receive a message securely</li>
+                                </ul>
+                                <p class="comment78305">In summary, APIs are used to communicate with other software
+                                    layers, products, and services.</p>
+                                <p class="comment78305">Libraries provide the implementations in terms of functions and
+                                    procedures, and for the API users, they are a set of specifications for invocation
+                                    without the knowledge of how the APIs are implemented. Of special importance to the
+                                    CSSLP is the safety and security of these APIs.</p>
+                                <p class="comment78305">Software developers must make efforts to avoid using unsafe
+                                    APIs. One example of unsafe APIs is the various string manipulation functions from
+                                    the standard library of C/C++, where the improper usage of these functions could
+                                    result in buffer overflows. Most static analyzers can detect the usage of unsafe
+                                    APIs.</p>
+                                <p class="comment78305">Security of APIs in general, and web APIs specifically, must be
+                                    assured, whether you own them or you use them. A discussion of the security of web
+                                    APIs is outside the scope of this domain; however, note that the same security
+                                    principles that have been discussed so far (e.g., least privilege, separation of
+                                    concerns, defense in depth) are relevant to the security of web services.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="de1878ee-2bdc-4330-b7f3-0fe721a378a5" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Type Safety<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="358ebcc7-0cc4-41e6-ba0f-20702159fd81" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Type safety refers to the ability of a programming language to
+                                    prevent type errors. A type error is incorrect or undesirable program behavior
+                                    caused by a discrepancy between different data types and includes considerations for
+                                    constants, variables, methods, and functions. Type enforcement can be static,
+                                    catching potential errors at compile time; dynamic, associating type information
+                                    with values at runtime, and consulting them as needed to detect imminent errors, or
+                                    a combination of both.</p>
+                                <p class="comment78305">The behaviors classified as type errors by a given programming
+                                    language are usually those that result from attempts to perform operations on values
+                                    that are not of the appropriate data type.</p>
+                                <p class="comment78305">From a security perspective, type safety is desirable. C and C++
+                                    are type unsafe, whereas other languages, such as .NET, Ada, and Java, are
+                                    considered type safe. There are also special-purpose programming languages like Ada,
+                                    designed to be type and memory safe to support the development of critical software
+                                    systems such as embedded systems on aircraft. Software security practitioners should
+                                    understand the tradeoffs between commonly adopted languages and special case
+                                    languages. For instance, Ada is more compliant with the requirements for critical
+                                    infrastructure than C++ by default but where will you find competent Ada
+                                    programmers? At the time of this writing there are millions of C++ developers
+                                    compared to a much smaller unknown quantity utilizing Ada.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7b54f6bf-e4eb-4418-b6d2-c1a9e35f6742" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Memory Management<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b0cbfc57-0604-4e88-93be-97db05976ab6" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Memory represents one of the most critical resources of a
+                                    computer system. Improper memory management practices can lead to serious stability
+                                    and security-relevant issues. Memory leaks associated mostly with unmanaged
+                                    programming environments (e.g., C/C++) are common, yet not easy to trace back to the
+                                    source of the problem to fix.</p>
+                                <p class="comment78305">Depending on the nature of the problem, memory leaks may be
+                                    negligible with little (if any) noticeable effect, or significant enough that they
+                                    lead to an eventual exhaustion of the resource and abnormal system behavior. Leaks
+                                    associated with kernel processes can be particularly problematic and may result in
+                                    significant stability issues and deterioration of system performance.</p>
+                                <p class="comment78305">This issue in more general terms is covered by Common Weakness
+                                    Enumeration (CWE), as Uncontrolled Resource Consumption: “The software does not
+                                    properly control the allocation and maintenance of a limited resource thereby
+                                    enabling an actor to influence the amount of resources consumed, eventually leading
+                                    to the exhaustion of available resources.”<sup>5</sup></p>
+                                <p class="comment78305">Rust programming language has been presented as an alternative
+                                    to C++. It uses a similar syntax and may offer increased memory safety and other
+                                    advantages.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ed6a3275-d990-488f-90b2-56d5c869cf90" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Automatic Memory Management and
+                                Destruction of Unneeded Objects<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e90cf3d1-d7d6-4e8d-a704-df835faec28b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Code written for managed programming languages, such as .NET and
+                                    Java, can benefit from garbage collection facilities. These languages provide a
+                                    generalized way to handle the details of memory management and garbage collection.
+                                    Garbage collection facilitates the destruction of instantiated dangling objects in
+                                    memory that have gone out of scope but are not explicitly destroyed (closed), at the
+                                    cost of a small amount of overhead. This tradeoff frees developers from various
+                                    error-prone memory management tasks.</p>
+                                <p class="comment78305">The main benefit of garbage collection is that it frees the
+                                    programmer from some memory management tasks. However, garbage collection has
+                                    potential disadvantages, including:</p>
+                                <ul>
+                                    <li>Consumption of additional resources</li>
+                                    <li>Potential adverse impact on performance</li>
+                                    <li>Incompatibility with manual resource management</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="95898fc4-9751-4caa-89be-9f3bab6cea16" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>5</sup> CWE; <em>CWE-400: Uncontrolled Resource
+                                        Consumption; </em><a href="https://cwe.mitre.org/data/definitions/400.html"
+                                        target="_blank">https://cwe.mitre.org/data/definitions/400.html</a>; retrieved
+                                    July 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e59fb0b5-4481-4ef7-b321-cc552dbf5fe2" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Tokenization<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2c7b5597-4aca-4c68-b2bf-31de6555b6b2" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Tokenization replaces sensitive data with a unique nonsensitive
+                                    substitute (i.e., token) that retains data without compromising its security.
+                                    Tokenization focuses on minimizing data storage for essential information that
+                                    positively impacts data security, especially for credit card transactions.
+                                    Tokenization also aids in compliance with PCI-DSS and other applicable government
+                                    considerations. The figure below demonstrates how tokenization might abstract credit
+                                    card information during a transaction.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="69575923-c235-4ddc-a65a-66e76dc97adb" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--75 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_045_08.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_045_08.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 277.031px; left: 490px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 6: Tokenization</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="02733831-4f91-4ff1-b5f0-751699223c2a"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f09e6547-ce30-42f2-ac36-e7a3256e65cc" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The PCI Security Standards Council produced <em>Tokenization
+                                        Product Security Guidelines </em>that define standards for reversible and
+                                    irreversible tokens within the payment card industry. Irreversible tokens cannot be
+                                    converted back to the original payment information. Reversible tokens afford the
+                                    ability to convert the token back into payment information. Continuing the example
+                                    of tokens in the payment card industry, PCI describes four security domains that
+                                    include token generation, token mapping, card data vaulting, and key management. The
+                                    following table aids the selection of tokens based on the PCI-defined security
+                                    domains.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="983d86db-9c2c-462d-bc65-bfcd7f1c6eae" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--75 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_045_09.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_045_09.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 143.75px; left: 490px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 7: Tokenization Product Security Guidelines</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="2ebb38b9-5ef2-4ab9-9a99-5c796fa262eb"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d0919a7a-f823-417f-ac10-83384fe352ca" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Isolation<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7bb7f71f-4ab5-47ff-84a5-cf0597ebdeb3" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Isolation, as presented earlier in the course, is the idea of
+                                    keeping a virtual machine separate from its physical host system and from other
+                                    virtual machines. Both virtualization and containers are different types of
+                                    isolation discussed in previous domains. Below, we discuss sandboxing, another form
+                                    of isolation.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4eec7883-fe01-453d-a3d9-a5bd42f9ae00" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Sandboxing<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="9aa3012a-68d0-4d7a-91e4-5be2f9eae9f8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Sandboxed environments are primarily about isolation and the
+                                    security benefits that come with it. Technologies may be used to create an isolated
+                                    and safe execution environment, and to contain the possible damage and impact of
+                                    misbehaving code.</p>
+                                <p class="comment78305">A sandbox typically provides a tightly controlled set of
+                                    resources for guest programs to run in, such as scratch space on disk and memory.
+                                    Network access and the ability to inspect the host system or read from input devices
+                                    are usually disallowed or heavily restricted. A Java applet run in a browser is an
+                                    example of a sandbox. An applet like this is a representation of mobile code—code
+                                    downloaded from a remote server, executing on the client. This applet may not be
+                                    allowed to perform some operations or to have access to certain resources.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8eb08873-2f40-4d40-aecf-020f202d6167" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Separation Kernel Protection
+                                Profile<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="37a190a2-c8ec-4737-af7c-afc4ca4c46d5" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">A Separation Kernel Protection Profile (SKPP) basically provides
+                                    the specification of security requirements for the purpose of evaluating “separation
+                                    kernels.” To understand this concept better and recognize its relation to the
+                                    security concept of isolation, both Separation Kernels and Protection Profiles must
+                                    be understood.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f97b59f9-932c-4314-8d04-49849bdb0ff3" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Understanding Separation Kernel<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="19460313-0e5d-410a-a13b-034a0c19c1d8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The concept of separation kernel was first introduced by John
+                                    Rushby in his paper titled “Design and Verification of Secure Systems.”</p>
+                                <p class="comment78305">Rushby’s central idea was that from a security perspective,
+                                    separation (e.g., the function implemented by a hypervisor to separate virtual
+                                    machines) is such a critical operation that it should not be handled by a
+                                    large/complex operating system that has a multiplicity of responsibilities.</p>
+                                <p class="comment78305">A separation kernel, solely focused on the separation task, is
+                                    created by factoring out the separation function from the operating system,
+                                    resulting in a kernel that can be verified for correctness due to its simplicity.
+                                </p>
+                                <p class="comment78305">Initial use case for separation kernel was its application to
+                                    high-security systems responsible for the separation of Department of Defense and
+                                    government top-secret, secret, and confidential information classifications.</p>
+                                <p class="comment78305">A separation kernel is a special type of bare metal hypervisor
+                                    that only does separation. More specifically, it is a tiny piece of carefully
+                                    crafted code (as small as 15KB) that utilizes modern hardware virtualization
+                                    features to 1) define fixed virtual machines (VMs) and 2) control information
+                                    flows.<sup>6</sup></p>
+                                <p class="comment78305">A minimal implementation of a separation kernel involves
+                                    eliminating as many things as possible (e.g., device drivers, user model, shell
+                                    access). Any such kernel architecture, although not best suited for desktop use, may
+                                    be appropriate for embedded real-time or safety-critical systems.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1812038f-46b0-4fc3-94c7-fa8ecf33afe8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>6</sup> Tom Loveless; Lynx Software Technologies; <em>What
+                                        is a Separation Kernel?; </em><a
+                                        href="https://www.lynx.com/embedded-systems-learning-center/what-is-a-separation-kernel"
+                                        target="_blank">https://www.lynx.com/embedded-systems-learning-center/what-is-a-separation-kernel</a>;
+                                    retrieved July 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="00058e3a-16f8-4d51-aefe-ccdc9a07adf3" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Common Criteria and Protection
+                                Profiles<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="df6458ac-ab4a-42c5-a4a4-d15c2221f91f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The Common Criteria (CC), also known as ISO/IEC 15408, were
+                                    developed through a combined effort of six countries: the United States, Canada,
+                                    France, Germany, The Netherlands, and the United Kingdom. This effort built on
+                                    earlier standards, including Europe’s Information Technology Security Evaluation
+                                    Criteria (ITSEC), the United States’ Trusted Computer System Evaluation Criteria
+                                    (TCSEC), and the Canadian Trusted Computer Product Evaluation Criteria (CTCPEC).
+                                    This international standard for computer security allows an objective evaluation to
+                                    validate that a product satisfies a defined set of security requirements.</p>
+                                <p class="comment78305">Product evaluation per CC involves the selection of a Protection
+                                    Profile (PP), an implementation-independent set of security requirements.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="50542e39-ca7a-4e4f-b06c-41123ed80914" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Cryptography<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6972d2c3-5e79-48b2-8c2f-8aa97ceaee79" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">As discussed earlier, cryptography is a method of storing and
+                                    transmitting data in a form so that only those for whom it is intended can read and
+                                    process it. Cryptography is most often associated with scrambling plaintext into
+                                    cipher text through the process of encryption and the reverse: unscrambling from
+                                    cipher text back to plaintext through the process of decryption.</p>
+                                <p class="comment78305">Modern cryptography concerns itself with the following
+                                    objectives:</p>
+                                <ul>
+                                    <li>Confidentiality (the information cannot be understood by anyone for whom it was
+                                        not intended)</li>
+                                    <li>Integrity (the information cannot be altered in storage or transit between
+                                        sender and intended receiver without the alteration being detected)</li>
+                                    <li>Nonrepudiation (the creator/sender of the information cannot deny at a later
+                                        stage their intentions in the creation or transmission of the information)</li>
+                                </ul>
+                                <p class="comment78305">Understand that symmetric algorithms may only be used to address
+                                    the confidentiality requirement, whereas asymmetric algorithms have other use cases
+                                    as well. Further, application developers must ensure that they are using the latest
+                                    standards (e.g., TLS 1.2 and AES 256 are current as of this writing), as they are
+                                    subject to change. The word standard implies the usage of vetted solutions and
+                                    avoidance of custom cryptography where and when possible. Note that encryption may
+                                    be considered a dual-use good (having both commercial and military applications),
+                                    and that it may be subject to export restrictions, depending upon certain criteria.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b0ddedc3-f5b8-497e-8660-00286e7a3f3a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Cryptography vs. Encryption<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2b1e1ea0-2922-43f3-808a-decc33734213" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The terms encryption and cryptography are often used
+                                    interchangeably, but a distinction must be made between them. If cryptography is a
+                                    science, then encryption refers to one component of that science. Remember the
+                                    basics of how symmetric and asymmetric algorithms work. Below is a refresher
+                                    summary:</p>
+                                <ul>
+                                    <li>Symmetric algorithms are relatively fast (as compared to asymmetric ones) and
+                                        require a smaller resource investment, but present key management challenges, as
+                                        the same key that is used to encrypt a message will also be needed to decrypt
+                                        it. This key must remain private and in possession <em>only </em>of the parties
+                                        involved. Good examples of symmetric algorithms include DES (which is considered
+                                        broken) and AES (standard at the time of this writing).</li>
+                                    <li>Asymmetric algorithms rely on a pair of keys: one that is private (known only to
+                                        the owner) and one that is public (assumed that everyone could have knowledge of
+                                        it). To achieve confidentiality, a message is encrypted using the public key of
+                                        the recipient, so that only the recipient can decrypt the message. Good examples
+                                        of asymmetric algorithms include Diffie-Hellman (for historical reasons) and RSA
+                                        (current). Public key cryptography relies on the Public Key Infrastructure
+                                        (PKI), which consists of several components including Certificate Authority
+                                        (CA), Registration Authority (RA) and digital certificates.</li>
+                                </ul>
+                                <p class="comment78305">A more practical usage would involve a hybrid of symmetric and
+                                    asymmetric algorithms. In such a hybrid usage, a symmetric algorithm is used to
+                                    encrypt the message, and the key used to perform the encryption is asymmetrically
+                                    exchanged with the other party.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0ee8f560-549f-41b9-b91b-6556f1fa8f0c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Payload Encryption<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="622bfdba-ddc5-4eeb-bfe5-02f4aa929d67" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Performing end-to-end payload encryption goes beyond the
+                                    protection afforded by technologies such as TLS. Protection against unauthorized
+                                    disclosure during the transmission of sensitive data between endpoints may require
+                                    the encryption/decryption of the message at both ends of the communication. When
+                                    used correctly, end-to-end encryption offers protection of message content (e.g.,
+                                    text messages, voice calls, video calls) in transit.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="10367efc-8dc4-4260-a6d0-ae9168ae5a37" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Field-Level Encryption<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="fe9adc8a-d77f-4112-a7c6-a29ec6ee68ba" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">While encryption of the entire database can help achieve certain
+                                    objectives, field-level encryption also has its use cases. When supported, it can be
+                                    used to provide an additional layer of security for specific data throughout
+                                    processing by enabling encryption on fields/columns that contain sensitive data. 
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="742151f4-a81c-4f68-b375-5375099d044c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Storage Encryption<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="be37dfc8-f7be-4583-8d24-b5058978455d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">For data at rest, encryption requirements of a typical
+                                    enterprise can be met through a combination of approaches utilizing various tools
+                                    and technologies for full disk, virtual disk, volume, database, file and folder,
+                                    application, and other types of encryption—each with its own benefits and
+                                    limitations. In this context, encryption represents a primary technical control for
+                                    protection of the information assets, so it must be used when and where it is
+                                    required (i.e., by laws and regulations) or justified (i.e., from a business
+                                    perspective).</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2b845ee6-64dd-4367-8f3a-fd10054598cb" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Full Disk Encryption<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d52eeff4-df31-4992-b9d8-da1d80923cf6" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Full disk encryption (FDE), also known as whole disk encryption,
+                                    is the process of encrypting all the data on the hard drive used to boot a computer,
+                                    including the computer’s OS, and permitting access to the data only after successful
+                                    authentication to the FDE product.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2f2d38d9-43e8-4980-a47a-49dd40af29ea" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Virtual Disk Encryption and Volume
+                                Encryption<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="70d04ee2-a94f-4c23-8020-2ce6f71656ae" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Virtual disk encryption is the process of encrypting a file
+                                    called a container, which can hold many files and folders, and permitting access to
+                                    the data within the container only after proper authentication is provided, at which
+                                    point the container is typically mounted as a virtual disk. Virtual disk encryption
+                                    is used on all types of end-user device storage. The container is a single file that
+                                    resides within a logical volume. Examples of volumes are boot, system, and data
+                                    volumes on a personal computer, and a USB flash drive formatted with a single file
+                                    system. Volume encryption is the process of encrypting an entire logical volume and
+                                    permitting access to the data on the volume only after proper authentication is
+                                    provided. Volume encryption is most often performed on hard drive data volumes and
+                                    volume-based removable media, such as USB flash drives and external hard
+                                    drives.<sup>7</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="efa86d11-62e9-406b-9d1d-8de7197b942a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>7</sup> Karen Scarfone, Matt Sexton, Murugiah Souppaya;
+                                    National Institute of Standards and Technology; <em>NIST 800-111—Guide to Storage
+                                        Encryption Technologies for End User Devices; </em><a
+                                        href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-111.pdf"
+                                        target="_blank">https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-111.pdf</a>;
+                                    retrieved July 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="612763a7-2cd1-4b01-813c-11792e66afea" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Cryptographic Agility<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="edb3b9b6-f509-477c-b82a-dbbabc03e1d1" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Cryptographic agility is the capacity for a software system to
+                                    easily evolve and adopt alternatives to the cryptographic primitives it was
+                                    originally designed to use. The X.509 certificate format is an example of
+                                    cryptographic agility, supporting various hash algorithms, signature algorithms, key
+                                    sizes to address future needs. Cryptographic agility is a common theme during the
+                                    architecture and design of cryptographic libraries, APIs, and frameworks, including
+                                    those found in .NET and Java. When new vulnerabilities are found or algorithms are
+                                    broken, switching to new crypto providers should not put a significant burden on the
+                                    software development team. Cryptographic agility could lead to complexities and
+                                    potential vulnerabilities if not implemented correctly. This may be considered a
+                                    disadvantage.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="33463890-c850-4711-a395-4f92ab9698a4" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Algorithm Selection<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c4559bb3-ff8b-42c4-809f-510e05871d24" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Software developers are encouraged to use vetted standards and
+                                    avoid custom cryptography. Avoid weak algorithms when possible, as they may provide
+                                    a false sense of security. Understand that the field is rapidly changing, and when
+                                    evaluating algorithm choices, both the algorithm and the key size should be
+                                    considered. Remember that Data Encryption Standard (DES), which was once considered
+                                    government standard, was broken much more quickly than anticipated due to inadequate
+                                    key length, which made a brute force attempt possible. Follow the best practices,
+                                    adopting symmetric algorithms, asymmetric algorithms, hash functions, etc. For
+                                    example, best practices may recommend the use of SHA 256 or better, which implies
+                                    that the use of the MD series of hash functions should be avoided.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1e39b1de-ca92-4964-b707-9ae88b580f29" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Cryptographic Libraries<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="03b7064c-ce1d-4bdd-818f-941596172872" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Software developers frequently rely on cryptographic libraries
+                                    and APIs for cryptographic services and functions. Examples of this include
+                                    symmetric block ciphers, Microsoft Cryptography API (CryptoAPI), which is now
+                                    replaced by Cryptography API Next Generation (CNG), and Java cryptography libraries
+                                    and packages.</p>
+                                <p class="comment78305">Software developers must make sure to use the right
+                                    cryptographic libraries and services to achieve the intended security objectives.
+                                </p>
+                                <p class="comment78305">This table shows a partial list of cryptographic providers
+                                    available to developers.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4a1722a9-4a4a-4a98-8059-046f3f638d50" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--100 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_045_10.png" alt="" /><img
+                                    class="image-zoom-proxy" src="./page_045_10.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 35px; left: 565.719px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Table 8: Examples of Microsoft Cryptographic Service
+                                        Providers</em></p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f4a2ab6e-5112-4177-ae10-8487263e427e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Cryptography as Dual-Use
+                                Technology<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="608550a0-e05c-4ace-a332-6b0b9917f3bd" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Cryptography is considered a dual-use good. As such, the export
+                                    of cryptographic technologies may be subject to restrictions.</p>
+                                <p class="comment78305">The Bureau of Industry and Security (BIS) of the U.S. Department
+                                    of Commerce is responsible for regulating the export of most commercial items, often
+                                    referred to as “dual-use” items—those having both commercial and military or
+                                    proliferation applications.<sup>8</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d237a552-95bf-4189-8cce-365703b8aae5" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Access Control<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0fd145bd-78a1-4afb-979e-8327cc812c5c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">A key component of security is access control. Various access
+                                    control models were discussed in previous domains, and role-based access control
+                                    (RBAC) was described as a valuable approach. Also relevant to access control are the
+                                    topics of trust zones and permissions.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e0f589b7-5dcc-422d-9b9c-c78fc25b715b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Trust Zones<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a5efa86b-d360-4a6e-854b-8b06bd592d51" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The concept of trust zones has existed in various realms of
+                                    security, including network security, physical security, and software security where
+                                    each zone is associated with a certain security and trust level.</p>
+                                <p class="comment78305">Examples:</p>
+                                <ul>
+                                    <li>By controlling the flow of traffic between networks and hosts, firewalls enable
+                                        organizations to create various security zones supporting various security
+                                        postures in each zone.</li>
+                                    <li>As part of software threat modeling, developers identify the boundary where the
+                                        level of trust in code or data in a system or between subsystems changes.</li>
+                                </ul>
+                                <p class="comment78305">Applying the concept of zones of trust requires the
+                                    understanding of the value of the assets that are to be protected in each zone.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="409f0bbd-5f26-4b6c-9253-d462c152c7e6" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Zero Trust Architecture<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1ad28918-72a1-4599-98f8-73ced1337611" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The modern zero-trust model deviates from the traditional focus
+                                    on perimeter defenses.</p>
+                                <p class="comment78305">According to NIST, Zero-Trust Architecture (ZTA) provides a
+                                    collection of concepts, ideas, and component relationships (architectures) designed
+                                    to eliminate the uncertainty in enforcing accurate access decisions in information
+                                    systems and services.<sup>9</sup></p>
+                                <p class="comment78305">To lessen uncertainties (as they cannot be eliminated), the
+                                    focus is on authentication, authorization, and shrinking implied trust zones while
+                                    minimizing temporal delays in network authentication mechanisms. Access rules are
+                                    restricted to least privilege and made as granular as possible.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="60fffdde-e6e3-4044-bc16-ec7d7b27b8dc" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>8 </sup>U.S. Department of Commerce Bureau of Industry and
+                                    Security; <em>Dual Use Export Licenses; </em><a
+                                        href="https://www.bis.doc.gov/index.php/licensing/forms-documents/doc_download/91-cbc-overview"
+                                        target="_blank">https://www.bis.doc.gov/index.php/licensing/forms-documents/doc_download/91-cbc-overview</a>;
+                                    retrieved 2023.</p>
+                                <p class="comment78305"><sup>9 </sup>Oliver Borchert, Sean Connelly, Stu Mitchell, Scott
+                                    Rose; National Institute of Standards and Technology; <em>NIST SP 800-207—Zero Trust
+                                        Architecture; </em><a
+                                        href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf"
+                                        target="_blank">https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf</a>;
+                                    retrieved July 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="dd1f2e7e-cc4f-495b-bdbc-d51d6d17e393" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Access Modifiers<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1410010e-b14e-4cba-8491-c4e761d6ef2e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The concept of least privilege where each entity is granted the
+                                    minimum system resources and authorizations that the entity needs to perform its
+                                    function is often applied to user roles and job functions—essentially at the
+                                    network, node, or application level. However, least privilege should also be applied
+                                    to software design and implementation. Many object-oriented software development
+                                    frameworks and languages support accessibility levels on most objects including
+                                    classes, functions, methods, and variables. Security practitioners should be aware
+                                    that sometimes access modifiers are erroneously simplified to the phrasing “function
+                                    permissions.”</p>
+                                <p class="comment78305">For an example of access modifiers, Microsoft C# supports
+                                    accessibility concepts for all types and all type members. Similar capabilities
+                                    exist with most database technologies when dealing with procedures and tables. The
+                                    C# scheme shown below is representative of a typical object access modifier
+                                    structure ordered from most to least permissive.</p>
+                                <ul>
+                                    <li><em>Public.</em> Can be accessed by any other code in the same DLL or by
+                                        reference in another DLL.</li>
+                                    <li><em>Private.</em> Can be accessed only by code in the same class or structure. 
+                                    </li>
+                                    <li><em>Protected.</em> Can be accessed only by code in the same or derived class.
+                                    </li>
+                                    <li><em>Internal</em>. Can be accessed by any code in the same DLL.</li>
+                                    <li><em>Protected Internal.</em> Can be accessed by any code in the declaration DLL
+                                        or from a derived class in another DLL.</li>
+                                    <li><em>Private Protected</em>. Can be accessed by types derived from the class that
+                                        are declared within its containing DLL. </li>
+                                </ul>
+                                <p class="comment78305">The following snippet shows various access modifiers within a C#
+                                    application in a CSSLP class. </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="32d7dd24-614e-4abf-8412-6151058c96b0" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--50 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_045_11.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_045_11.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 210.609px; left: 414.281px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 8: Access Modifiers in C#</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="d032b831-1563-49c0-a01c-4cf8ad9041f3"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d76ec8c3-4933-41fc-bd2c-c75c3d2f0786" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Processor Microarchitecture Security
+                                Extensions<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="cade6413-86f2-4ec7-98ce-551ce3c975c3" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">As hardware and software have evolved over the decades since
+                                    computers were invented, the discovery of many new vulnerabilities has been
+                                    witnessed. Although software seems to possess the lion’s share of
+                                    identified/researched vulnerabilities, as evidenced by the frequency and number of
+                                    released patches, hardware vulnerabilities should not be forgotten or
+                                    underestimated.</p>
+                                <p class="comment78305">Vulnerabilities in hardware may also be exploited to gain access
+                                    to sensitive data. Ultimately, all operations on a computer are dependent on
+                                    hardware at the lowest levels. Attacks targeting hardware can be divided into two
+                                    broad categories: those that intend to exploit hardware features to bypass security
+                                    checks of the operating system, and those that attempt to directly exploit the
+                                    hardware architecture itself. To understand the gravity of the situation, imagine a
+                                    scenario where a process executes itself at ring 0 (most privileged), independent of
+                                    the operating system, with no checks and balances, exploiting the architecture to
+                                    allocate memory and deploying payloads, all with no supervision or interference of
+                                    the OS.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d9bc02a2-8069-45fb-89b9-e04153a365e0" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Spectre and Meltdown<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6bc15395-5790-48d7-83de-c943211919c4" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">In 2017, multiple teams of security researchers independently
+                                    discovered a new class of hardware vulnerabilities in a broad set of microprocessors
+                                    found in personal computers, servers, tablets, and phones. These vulnerabilities,
+                                    which became known as Spectre and Meltdown, took advantage of a performance
+                                    optimization technique found in these microprocessors to allow an attacker to bypass
+                                    security mechanisms protecting data stored in computer systems. The implications of
+                                    this vulnerability were severe: it could allow theft of credentials and
+                                    cryptographic keys, or exfiltration of sensitive data. Mitigating the risk of these
+                                    vulnerabilities required efforts at multiple levels, including patches in firmware
+                                    and microcode, updates to operating systems, and modifications in
+                                    applications.<sup>10</sup></p>
+                                <p class="comment78305">Different approaches to hardware-assisted Trusted Execution
+                                    Environment (TEE) include Intel’s Software Guard Extensions (SGX) and AMD’s Secure
+                                    Memory Encryption (SME).</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="42893f01-8705-4d82-8d0c-280b37b5026d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Software Guard Extensions (SGX)<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="cdf9989e-4f31-475a-8558-5ead432f996d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Intel Software Guard Extensions (SGX) is a set of instructions
+                                    that increases the security of application code and data. Developers can partition
+                                    security-sensitive code and data into an SGX enclave, which is executed in a CPU
+                                    protected region. The developer creates and runs SGX enclaves on server platforms
+                                    where only the CPU is trusted to provide attestations and protected execution
+                                    environments for enclave code and data.<sup>11</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a7e3980f-edea-47d3-a17a-08d2a06f641c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>10</sup> National Institute of Standards and Technology;
+                                    <em>Complex Cybersecurity Vulnerabilities: Lessons Learned from Spectre and
+                                        Meltdown; </em><a
+                                        href="https://www.nist.gov/speech-testimony/complex-cybersecurity-vulnerabilities-lessons-learned-spectre-and-meltdown"
+                                        target="_blank">https://www.nist.gov/speech-testimony/complex-cybersecurity-vulnerabilities-lessons-learned-spectre-and-meltdown</a>;
+                                    retrieved July 2023.
+                                </p>
+                                <p class="comment78305"><sup>11</sup> Michael Bartock, Ryan Savino, Murugiah Souppaya,
+                                    et. al; National Institute of Standards and Technology; <em>NIST IR 8320—
+                                        Hardware-Enabled Security: Enabling a Layered Approach to Platform Security for
+                                        Cloud and Edge Computing Use Cases; </em><a
+                                        href="https://nvlpubs.nist.gov/nistpubs/ir/2022/NIST.IR.8320.pdf"
+                                        target="_blank">https://nvlpubs.nist.gov/nistpubs/ir/2022/NIST.IR.8320.pdf</a>;
+                                    retrieved July 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="acf4d3e2-b438-4006-a7f9-b9059c5bd2cb" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Secure Memory Encryption (SME) and
+                                Secure Encrypted Virtualization (SEV)<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f1006d1e-40f1-4798-a74a-7ddd64cca538" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Security components found in some AMD processors provide
+                                    hardware-accelerated memory encryption for data in use. AMD Secure Memory Encryption
+                                    (SME) uses a single key to encrypt system memory. The key is generated by the AMD
+                                    Secure Processor at boot. Memory encryption is transparent and can be run with any
+                                    operating system.</p>
+                                <p class="comment78305">SME is a general-purpose mechanism that is flexible, integrated
+                                    into the CPU architecture, scalable from embedded to high-end server workloads, and
+                                    requires no application software modifications. Main memory encryption can be
+                                    utilized to protect a system against a variety of attacks. While data is typically
+                                    encrypted today when stored on disk, it is stored in DRAM in the clear. This can
+                                    leave the data vulnerable to snooping by unauthorized administrators or software or
+                                    by hardware probing.</p>
+                                <p class="comment78305">SEV uses one key per virtual machine to isolate guests and the
+                                    hypervisor from one another. The keys are managed by the AMD Secure Processor. SEV
+                                    requires enablement in the guest operating system and hypervisor. The guest changes
+                                    allow the VM to indicate which pages in memory should be encrypted. The hypervisor
+                                    changes use hardware virtualization instructions and communication with the AMD
+                                    Secure processor to manage the appropriate keys in the memory
+                                    controller.<sup>12</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="74163fca-def1-40bb-baa0-2d1272cccd9e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>12</sup> AMD; <em>AMD Secure Encrypted Virtualization
+                                        (SEV); </em><a href="https://developer.amd.com/sev/"
+                                        target="_blank">https://developer.amd.com/sev/</a>; retrieved July 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="screengrid comment78305">
+            <footer class="screen__margin screen__footer u-hide-element vstdonthighlight">
+                <div class="feedback comment78305">
+                    <div class="feedback__content js-feedback-focus comment78305" tabindex="-1"></div>
+                </div>
+                <div class="control-btns comment78305"></div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay-root vstdonthighlight rendered u-hidden comment78305" style="overflow-y: auto;">
+        <div class="modal-cover-holder comment78305">
+            <div class="modal-cover-outer comment78305">
+                <div class="modal-cover comment78305"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

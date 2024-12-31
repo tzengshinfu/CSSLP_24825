@@ -1,0 +1,329 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"
+    style="padding: 0px; font-size: 100%; --USER__lineHeight: 1; --USER__pageMargins: 1; --USER__view: readium-scroll-on;"
+    class="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Security During the Build Process (5.6)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="overflow: hidden auto;">
+    <div xmlns:epub="http://www.idpf.org/2007/ops" epub:type="pagebreak" id="pagebreak_50"
+        class="hidden-pagebreak comment78305" title="50"></div>
+
+    <div xmlns:epub="http://www.idpf.org/2007/ops" id="5ea442d5-4849-4ae2-a7fc-6ddfbd1640c3"
+        class="screen rendered comment78305" aria-hidden="false">
+        <div class="screengrid comment78305">
+            <header class="screen__margin screen__header u-hide-element vstdonthighlight">
+
+                <div class="screen__heading u-float--clearfix comment78305">
+                    <div class="screen__icon u-float--left comment78305"></div>
+                    <h2 class="screen__title comment78305" tabindex="-1"></h2>
+                </div>
+
+
+                <div class="screen__instructions comment78305"></div>
+            </header>
+        </div>
+
+        <div class="screen__content comment78305">
+
+            <div class="block rendered comment78305">
+                <div id="5f8d4d16-e1f2-4c4a-9ab4-673983938edd" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Security During the Build Process
+                                (5.6)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="74dcc0b3-964b-485d-9d01-746de057bbae" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The software build process must be standardized and repeatable
+                                    in a secure manner. Compilation and build utilizing automation within the
+                                    development pipeline can help achieve this objective.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="25efef43-22c9-452a-9c1d-6c90cd98d834" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Objectives<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ec751d77-d137-4bbc-888a-41eab0394458" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>Describe the build automation process.</li>
+                                    <li>Explain the techniques used in software assurance.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="fca66470-f906-46dd-bc6b-e52799baa608" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Overview<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3c06ba5f-9d23-476e-8d49-18427f436af2" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Security controls and checks should be factored into automated
+                                    builds wherever possible. Version control has a direct impact on the state of
+                                    software assurance. Compiler switches may help with the enhancement of security.
+                                    Developers must investigate and address compiler warnings.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d27b1a62-34cd-4ff6-8e0d-51a0279c8070" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Build Automation<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="01fec8a5-c8c0-41e7-bb5c-8611797a1228" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Build automation is about automating tasks and activities that
+                                    software development teams complete regularly, including:</p>
+                                <ul>
+                                    <li>Compiling the code</li>
+                                    <li>Packaging the binaries</li>
+                                    <li>Running tests</li>
+                                    <li>Deploying to production</li>
+                                    <li>Preparing release notes</li>
+                                </ul>
+                                <p class="comment78305">Developers have historically used build automation to call
+                                    compilers and linkers from inside a build script rather than attempting to make the
+                                    compiler calls from the command line. It is simple to use the command line. When
+                                    passing a single source module to a compiler and then to a linker to create the
+                                    final deployable object, developers find it simple enough to use the command line.
+                                    However, this is not effective for more complicated processes, such as when
+                                    developers are attempting to compile and link many source code modules in a
+                                    particular order. A better alternative was required, and this was offered by the
+                                    “make” scripting language. This allowed a build script to call in a series of
+                                    compile and link steps to build a more complex software application. Build
+                                    automation has evolved, and contemporary automation tools now enable automation
+                                    through workflows to address complex build processes.</p>
+                                <p class="comment78305">Security controls and checks should be factored into the
+                                    automated build scripts wherever possible.</p>
+                                <p class="comment78305">Full builds and incremental builds have been common. Builds may
+                                    be triggered from within the Integrated Development Environments (IDEs), from the
+                                    command line, or by continuous integration (CI) tools.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="851af41f-7a92-41fa-bd1e-4e157f529c03" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Secure Version Control<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7413f8f9-679f-44ea-8dea-d7e4264b1dea" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Version control systems (e.g., CVS, SVN, GIT) are used to record
+                                    changes to files over time. If centralized, the server contains the versioned files,
+                                    and clients are used to check files out. If distributed, the repository is mirrored
+                                    including its full history. Regardless of whether version control is centralized or
+                                    distributed, it has a direct impact on the state of software assurance and is
+                                    applicable as part of development as well as deployment.</p>
+                                <p class="comment78305">Changes to software must be planned, purposeful, and documented.
+                                    Versioning, backups, check-in and check-out practices, and management of software
+                                    configuration are all part of software configuration management. </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="79731123-2581-48e1-b95c-3c77a4dedaff" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Antitampering Techniques <br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4899c7e6-84ff-4cf7-84a7-d5b8f08e6ce8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Protection of software code in various formats (i.e., source or
+                                    binary) and protection objectives (e.g., protection against disclosure of source
+                                    code, against tampering with the binaries, or against reverse engineering) involves
+                                    various tools, techniques, and technologies.</p>
+                                <p class="comment78305">There is no shortage of source code obfuscation tools;
+                                    programmers may also choose to write their own. The objective is to introduce
+                                    another layer of defense for protection against disclosure of intellectual
+                                    properties, source code in this case. Obfuscation of code in nonsource format (i.e.,
+                                    binary) is generally about introducing another layer of defense against reverse
+                                    engineering to protect intellectual properties.</p>
+                                <p class="comment78305">Code signing has been discussed in detail in previous domains
+                                    and is a reference to digitally signing the executable code to provide assurance of
+                                    the integrity of the code (i.e., no alteration or tampering) and provide
+                                    confirmation of the software’s author. Object signing certificates may be used for
+                                    this purpose. This requires the entity that signs the code to assure proper
+                                    protection of the code signing key.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a875ecdf-9167-4b86-9eba-b27bc3111802" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Compiler Switches<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="57b3d1fb-0e68-4db3-97b2-8273f3b43e2f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Leveraging compiler switches and techniques can be useful to
+                                    provide memory protection and pointer integrity checking. This limits the chances of
+                                    buffer overflow attacks and increases the overall security of the software. A common
+                                    compiler security switch is the /GS flag and the technique is StackGuard.</p>
+                                <p class="comment78305">Other examples include build flag options available with gcc
+                                    (where applicable), including:</p>
+                                <ul>
+                                    <li><em>-D_FORTIFY_SOURCE. </em>Run-time buffer overflow detection.</li>
+                                    <li><em>-D_GLIBCXX_ASSERTIONS. </em>Run-time bounds checking for C++ strings and
+                                        containers.</li>
+                                    <li><em>-fstack-clash-protection. </em>Increased reliability of stack overflow
+                                        detection.</li>
+                                    <li><em>-fstack-protector. </em>Stack smashing protector.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8f1abdb8-bc3b-4f57-a57a-9937c0186b9e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Address Compiler Warning<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4835b8c1-b320-47a1-91ed-b4220b857621" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Nonetheless, a developer should pay attention to the warnings
+                                    that the compiler generates, and not discount them just because the code compiles.
+                                    These warnings can potentially lead to other problems in the software that may be
+                                    hard to identify. Therefore, developers should take time to understand what the
+                                    underlying issue is when a statement is flagged.</p>
+                                <p class="comment78305">Examples of compiler warnings include:</p>
+                                <ul>
+                                    <li>Warnings that highlight possible usage of deprecated or unsafe functions</li>
+                                    <li>Warnings that indicate potentially unsafe type conversions</li>
+                                    <li>Warnings that indicate potential memory leaks</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="screengrid comment78305">
+            <footer class="screen__margin screen__footer u-hide-element vstdonthighlight">
+                <div class="feedback comment78305">
+                    <div class="feedback__content js-feedback-focus comment78305" tabindex="-1"></div>
+                </div>
+                <div class="control-btns comment78305"></div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay-root vstdonthighlight rendered comment78305 u-hidden" style="overflow-y: auto;">
+        <div class="modal-cover-holder comment78305">
+            <div class="modal-cover-outer comment78305">
+                <div class="modal-cover comment78305"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

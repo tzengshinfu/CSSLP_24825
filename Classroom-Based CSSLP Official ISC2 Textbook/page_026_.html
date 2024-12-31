@@ -1,0 +1,293 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"
+    style="padding: 0px; font-size: 100%; --USER__lineHeight: 1; --USER__pageMargins: 1; --USER__view: readium-scroll-on;"
+    class="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Data Access Provisioning (3.5)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="overflow: hidden auto;">
+    <div xmlns:epub="http://www.idpf.org/2007/ops" epub:type="pagebreak" id="pagebreak_26"
+        class="hidden-pagebreak comment78305" title="26"></div>
+
+    <div xmlns:epub="http://www.idpf.org/2007/ops" id="6eec98d3-504b-421d-b171-77dc48772ac8"
+        class="screen rendered comment78305" aria-hidden="false">
+        <div class="screengrid comment78305">
+            <header class="screen__margin screen__header u-hide-element vstdonthighlight">
+
+                <div class="screen__heading u-float--clearfix comment78305">
+                    <div class="screen__icon u-float--left comment78305"></div>
+                    <h2 class="screen__title comment78305" tabindex="-1"></h2>
+                </div>
+
+
+                <div class="screen__instructions comment78305"></div>
+            </header>
+        </div>
+
+        <div class="screen__content comment78305">
+
+            <div class="block rendered comment78305">
+                <div id="3188e80f-63e5-4b30-a4e7-b7924556e9e5" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Data Access Provisioning (3.5)<br />
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b5fa6ce9-e4da-497b-abf4-038fc6e315b4" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Considerations for the protection of data in each phase of the
+                                    life cycle can vary if data is stored, processed, or archived. Software system
+                                    design and implementation must “account” for user and service roles and
+                                    responsibilities to ensure proper separation of duties. Accounts accessing data
+                                    should support the concept of <button
+                                            data-definition title="The principle that a security architecture is designed so that each entity is granted the minimum system authorizations and resources that the entity needs to perform its function. NIST SP 800-171 Rev. 2"
+                                        class="rendered">least privilege</button><strong>, </strong>the principle that a
+                                    security architecture is designed so that each entity is granted the minimum system
+                                    authorizations and resources that the entity needs to perform its function, to limit
+                                    application attack surface.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="46a81da5-9774-47ae-ae61-cec0f68f3e02" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Objectives<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7f896b7a-c376-4629-8de6-b82e3bda141e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>Describe user and software data access provisions.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e15ad948-e41e-472e-8447-584c9f39568e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Overview<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="696efb6b-4569-4e40-a987-412684be68b8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Users and service accounts have a useful life. <button
+                                            data-definition title="An individual, process, or device that causes information to flow among objects or change to the system state. NIST 800-53rev5"
+                                        class="rendered"><strong
+                                            xmlns="http://www.w3.org/1999/xhtml">Subjects</strong></button>—employees
+                                    and stakeholders—are onboarded and offboarded. Objects—the data and resources they
+                                    require access to—are created, managed through the life cycle, and eventually
+                                    disposed. Application access control considerations must support both life cycles in
+                                    tandem to reach a measure of security and operational efficiency. Access control can
+                                    require complex trust relationships to support business rules. This is especially
+                                    true when the root of trust is derived from many source organizations. The following
+                                    graphic depicts access control trust for a relatively uncomplex, singular scenario.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a308d50d-c7cc-4cf1-b144-16e5caec3b4b" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--100 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_026_01.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_026_01.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 202.188px; left: 550.406px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 7: Access Control Subject Object Relationship</em>
+                                </p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="cb7da241-4ba7-4208-cc97-b8b2706ffa01"
+                            style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(613px, -274px);"
+                            data-popper-placement="top-end"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="968836a5-d91b-40bc-a699-1977ac996723" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">User and Service Data Access and
+                                Provisioning<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c9ce22b5-88a4-492a-ade4-96298ce9ea1f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Service and users have similar considerations as the data
+                                    subject for organizations provisioning accounts. An organization must start by
+                                    defining the attribute “rule” architecture, subject definitions, and object
+                                    definitions. These three considerations provide the foundation for authorization
+                                    rules when provisioning accounts and should be explicitly documented within the
+                                    organization preferably at a higher than the information systems level of the
+                                    business. Consistent rule sets of valid values must be defined and actioned at an
+                                    enterprise level for subjects and objects. Authorized decisions must be based on
+                                    known, consistent values. The life cycle management of rules is always the
+                                    responsibility of the provisioning organization whether access attribution occurs
+                                    inside or outside the organization.</p>
+                                <ul>
+                                    <li><em>Attribute Architecture → Rules. </em>The access control relationship between
+                                        data and accounts is dictated by policy attributes. All mandatory attributes
+                                        should be defined and limited to acceptable values based on policies. These
+                                        attributes and value limitations must be distributed to stakeholders to help
+                                        enable owner organizations with rule and relationship development.</li>
+                                    <li><em>Object Attributes → Data. </em>Data attributes should be assigned upon
+                                        object creation. Object attributes are often dictated by business (non-security)
+                                        processes and requirements. Attributed data should support logical access
+                                        decisions while providing provisions for validation and audit. Subjects should
+                                        not be capable of modifying data attributes to manipulate access control
+                                        decisions.</li>
+                                </ul>
+                                <p style="margin-left: 40px;" class="comment78305">Some additional considerations for
+                                    creating object attributes are:</p>
+                                <ul style="list-style-type: circle; margin-left: 40px;">
+                                    <li>Users will not know the values of an object attribute (e.g., to which sensitive
+                                        compartment a given user is authorized).</li>
+                                    <li>Attributes need to be kept consistent in digital and written policies. Tools and
+                                        software must support business processes.</li>
+                                </ul>
+                                <ul>
+                                    <li><em>Subject Attributes → Account. </em>People subject attributes are provisioned
+                                        upon involvement with an organization and could be provisioned by various
+                                        authorities (e.g., human resources, security). This type of data access approach
+                                        is well matured based on obtaining authoritative data. Account access attributes
+                                        may include physical location or MAC address of a device from the request
+                                        originator. Account attribute provisioning capabilities should be dependable,
+                                        and the decision source should be authoritative. Quality, assurance, privacy,
+                                        and service expectations should all be considered. Attribution for service
+                                        accounts should be similar. Irrespective of machine or human interfacing,
+                                        accounts should be monitored and audited with a level of rigor associated with
+                                        access and object levels.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d1cf5232-ed64-483b-be2b-563a99438a1d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Data Access Monitoring
+                                Architecture<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ec23980e-8114-41f9-b146-6130e5d15e67" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">It is unrealistic to attempt to monitor every data interaction
+                                    within an enterprise. Security practitioners must carefully align monitoring,
+                                    logging, and auditing of accounts and object requests with respect to the
+                                    sensitivity of data and privileges of accounts. An organization could monitor the
+                                    status of authorized and unauthorized subject and object interactions on a network
+                                    to aggregate metrics such as logical asset locations, MAC addresses, and
+                                    policies/procedures for network connectivity. Metrics can be consolidated overtime
+                                    and might be aggregated hourly, daily, or weekly in a progressive manner.</p>
+                                <p class="comment78305">Security practitioners can also consider password policy
+                                    implementations as a mechanism to ensure stale accounts are deactivated. Human users
+                                    who fail to change their password within an organizationally defined time, such as
+                                    90 days, should be deactivated. Likewise, service accounts that do not request
+                                    objects within an organizationally defined time, such as 10 days, should be
+                                    deactivated. Organizations define access metrics and monitoring frequencies in a way
+                                    that supports business operations. In addition to defining access metrics,
+                                    organizations determine how the information will be collected and delivered within
+                                    business tiers as well as external to the organization.</p>
+                                <p class="comment78305">Software architecture requirements should be functional and
+                                    support data collection, storage, and analysis capabilities. The use of automated
+                                    mechanisms and methodologies should be employed to allow for increased efficiencies
+                                    and insight into access events. Data access and audit should be architected in a way
+                                    that maximizes data reuse and limits data calls. Additionally, software developers
+                                    and security personnel should embrace interoperable data specifications such as
+                                    SCAP, XML, or JSON, when possible, to enable data reuse.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="screengrid comment78305">
+            <footer class="screen__margin screen__footer u-hide-element vstdonthighlight">
+                <div class="feedback comment78305">
+                    <div class="feedback__content js-feedback-focus comment78305" tabindex="-1"></div>
+                </div>
+                <div class="control-btns comment78305"></div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay-root vstdonthighlight rendered comment78305 u-hidden" style="overflow-y: auto;">
+        <div class="modal-cover-holder comment78305">
+            <div class="modal-cover-outer comment78305">
+                <div class="modal-cover comment78305"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

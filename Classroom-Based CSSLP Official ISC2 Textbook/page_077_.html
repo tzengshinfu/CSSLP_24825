@@ -1,0 +1,425 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"
+    style="padding: 0px; font-size: 100%; --USER__lineHeight: 1; --USER__pageMargins: 1; --USER__view: readium-scroll-on;"
+    class="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Runtime Protection (7.11)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="overflow: hidden auto;">
+    <div xmlns:epub="http://www.idpf.org/2007/ops" epub:type="pagebreak" id="pagebreak_77"
+        class="hidden-pagebreak comment78305" title="77"></div>
+
+    <div xmlns:epub="http://www.idpf.org/2007/ops" id="567b48c3-4995-49f8-ae1f-ae8dd2e4160f"
+        class="screen rendered comment78305" aria-hidden="false">
+        <div class="screengrid comment78305">
+            <header class="screen__margin screen__header u-hide-element vstdonthighlight">
+
+                <div class="screen__heading u-float--clearfix comment78305">
+                    <div class="screen__icon u-float--left comment78305"></div>
+                    <h2 class="screen__title comment78305" tabindex="-1"></h2>
+                </div>
+
+
+                <div class="screen__instructions comment78305"></div>
+            </header>
+        </div>
+
+        <div class="screen__content comment78305">
+
+            <div class="block rendered comment78305">
+                <div id="0d546b12-c38a-4a75-b13f-64073f3fc698" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Runtime Protection (7.11)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4083981d-cf67-4c85-864a-6cb459e1f656" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Tools and technologies can afford applications protection
+                                    against attacks that exploit common web application vulnerabilities. Operating
+                                    systems offer protection mechanisms for applications at runtime.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="38e787e8-cb7d-4030-bc35-f425fb727ce2" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Learning Objectives<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="dd5b12e3-a517-4068-8d9b-c272993141d9" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>Describe how controls contribute to protecting applications during runtime.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2331ade7-260a-4ac9-bf6a-980b242acd89" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Overview<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d4708a5d-fb87-4848-80ac-36180fb18f9e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Controls are needed to protect applications at runtime. Controls
+                                    include web application firewalls (WAFs), address space layout randomization (ASLR),
+                                    and Data Execution Prevention (DEP). Web application firewalls can protect against
+                                    many common web application attacks. Assigning random addresses to program
+                                    components in the memory can help protect against certain types of attacks. DEP is a
+                                    memory protection feature of the OS that can protect against malicious code.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e0b5cd36-dec9-4b71-b1d7-b7bbbd106001" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Web Application Firewall (WAF)<br />
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="14dd627d-1b19-438e-8ce8-8fdd217a35d5" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The HTTP protocol used in web servers has been exploited by
+                                    attackers in many ways. A web application firewall (WAF) can be an effective control
+                                    in layered defenses. A WAF is an application firewall for HTTP applications. It
+                                    applies a set of rules to an HTTP conversation. Generally, these rules cover common
+                                    attacks such as Cross-site Scripting (XSS) and SQL Injection.<sup>28</sup></p>
+                                <p class="comment78305">WAFs operate based on a set of rules to filter out malicious
+                                    traffic, in effect creating a shield between the web application and the internet by
+                                    making clients pass through the WAF before they reach the server. WAFs can protect
+                                    web applications against common attacks but should not be considered a substitute
+                                    for fixing vulnerabilities in applications.</p>
+                                <p class="comment78305">Whereas proxies generally protect clients, WAFs protect servers.
+                                    A WAF is deployed to protect a specific web application or set of web applications.
+                                    A WAF can be considered a reverse proxy. WAFs may come in the form of an appliance,
+                                    server plugin, or filter, and may be customized to an application. It can take
+                                    effort to perform this customization; this effort must be maintained as the
+                                    application is modified.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="9aad2f19-db46-4a6a-9357-6ed59c8c69b6" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>28</sup> OWASP Foundation; Web Application Firewall; <a
+                                        href="https://owasp.org/www-community/Web_Application_Firewall"
+                                        target="_blank">https://owasp.org/www-community/Web_Application_Firewall</a>;
+                                    retrieved July 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5b2756e9-5a96-4cdf-86e2-60b209132211" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Runtime Application Self-Protection
+                                (RASP)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8190b9f9-6c85-425d-872f-0459c54e2b0f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Runtime Application Self-Protection (RASP) describes
+                                    incorporating application security functionality within the software at runtime to
+                                    reduce susceptibility to malicious events during execution. As the name suggests,
+                                    RASP concentrates on application-level security instead of traditional network
+                                    security controls. The application monitors itself during runtime and dynamically
+                                    prevents exploits in real time.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="55babec9-6009-4e59-9f3f-38dafebe1103" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">RASP Implementation<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c96db1c3-b4fd-4b3d-9060-36c7105319fe" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">WAF and IPS are more traditional security controls that monitor
+                                    network traffic and user behavior to detect nefarious activity. Their scope is the
+                                    network, not the application itself. RASP differs by moving the security mechanisms
+                                    inside the application closer to the object requiring safeguards. RASP is specific
+                                    to each application and achieves a level of accuracy and reduced latency in
+                                    detection that is superior to more traditional solutions. RASP tools should provide
+                                    two key features:</p>
+                                <ul>
+                                    <li><em>Threat intelligence. </em>Not all vulnerabilities are known, as described
+                                        definitionally by zero-day. Threat intelligence via RASP provides code execution
+                                        level insights that assist security practitioners with addressing previously
+                                        unknown security issues.</li>
+                                    <li><em>Application Protection. </em>This provides a powerful medium for detecting
+                                        known vulnerabilities and ameliorating them without disrupting business
+                                        continuity through automatic runtime response.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="df21f320-099c-4de8-b65c-28de1652741e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">RASP vs WAF<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="237937cf-0ff5-4e1e-85b7-a14ac9908050" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">RASP and WAF both protect organizational network infrastructure
+                                    from exploitation but differ in capabilities. A WAF protects infrastructure by
+                                    analyzing and filtering network traffic between the application and the internet
+                                    resource requestor; WAFs serve as a perimeter safeguard that blocks malicious
+                                    traffic before it reaches the application. If the perimeter WAF is circumvented
+                                    (e.g., alternate network path) then the protections will be ineffective.</p>
+                                <p class="comment78305">However, RASP is path independent and instead relies upon
+                                    contextual application data to prevent attacks. RASPs can prevent attacks that
+                                    path-dependent security tools cannot. As infrastructure moves to the cloud and
+                                    becomes more virtualized and containerized, the concept of network perimeter becomes
+                                    harder to accept. One consequence of modern networking topologies includes the
+                                    deteriorated effectiveness of firewalls both application and network specific.
+                                    Security practitioners should consider WAF and RASP together for comprehensive and
+                                    resilient cybersecurity.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a01b3075-aa77-4fd1-9d21-5f8f1b757098" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Locality of Reference<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2a21f03f-0c35-4980-8af4-949dadf03910" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The principle of locality of reference states that programs
+                                    reuse data and instructions. The locality of reference principle has a corollary in
+                                    the 90/10 rule, an empirical observation that a program spends 90% of its time in
+                                    10% of its code. Based on locality of reference, the instructions and data that a
+                                    program has recently accessed will predict with reasonable accuracy what it will
+                                    soon use.</p>
+                                <p class="comment78305">Two different types of localities have been observed: temporal
+                                    locality, which indicates that recently accessed items are likely to be accessed
+                                    soon; and spatial locality, which indicates that items whose addresses are near one
+                                    another tend to be referenced close together in time.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4a8f4604-69af-42ea-990d-2c263d586d2b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Address Space Layout Randomization
+                                (ASLR)<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2bb55c67-6a24-4b4c-8a0b-81eb928680bf" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The address space layout randomization (ASLR) feature makes it
+                                    difficult to create buffer-overflow attacks by randomizing the memory address for
+                                    executables at system boot. This helps defeat a well-understood attack called
+                                    “return-to-libc,” where exploit code attempts to call a system function such as the
+                                    socket() function in wsock32.dll to open a socket, or LoadLibrary in kernel32.dll to
+                                    load wsock32.dll in the first place. The job of ASLR is to move these function entry
+                                    points around in memory, so they are in unpredictable locations. A DLL or EXE could
+                                    be loaded into any of 256 locations, which means an attacker has a 1/256 chance of
+                                    getting the address right. In short, this makes it harder for exploits to work
+                                    correctly.</p>
+                                <p class="comment78305">It should be noted that exploit techniques in the presence of
+                                    ASLR have been introduced (e.g., return 0 programming), hence, ASLR should only be
+                                    considered only as part of layered defenses. </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1957142f-f104-46d9-8f61-f47c5a56bfea" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Data Execution Prevention (DEP)<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4186849e-fa94-496b-b17a-241bebdf1777" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">DEP is a set of hardware and software technologies that perform
+                                    additional checks on memory to prevent malicious code from running on a system. The
+                                    primary benefit of DEP is to prevent code execution from data pages. Typically, code
+                                    is not executed from the default heap and the stack. Hardware-enforced DEP detects
+                                    code that is running from these locations and raises an exception when execution
+                                    occurs. Software-enforced DEP can help prevent malicious code from exploiting
+                                    exception-handling mechanisms.<sup>29</sup></p>
+                                <p class="comment78305">Security practitioners should understand the following concepts
+                                    about DEP:</p>
+                                <ul>
+                                    <li>DEP is enforced by both hardware and software.</li>
+                                    <li>The Unix and Linux equivalent of Windows DEP is Executable Space Protection
+                                        (ESP).</li>
+                                    <li>Exploit techniques for DEP are similar to ASLR.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="77e6cb70-d16f-427a-ac3b-f812a95906f6" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>29</sup> <a
+                                        href="https://docs.oracle.com/cd/E98457_01/opera_5_6_core_help/screen_painter_specifications.htm"
+                                        target="_blank">https://docs.oracle.com/cd/E98457_01/opera_5_6_core_help/screen_painter_specifications.htm</a>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="screengrid comment78305">
+            <footer class="screen__margin screen__footer u-hide-element vstdonthighlight">
+                <div class="feedback comment78305">
+                    <div class="feedback__content js-feedback-focus comment78305" tabindex="-1"></div>
+                </div>
+                <div class="control-btns comment78305"></div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay-root vstdonthighlight rendered comment78305 u-hidden" style="overflow-y: auto;">
+        <div class="modal-cover-holder comment78305">
+            <div class="modal-cover-outer comment78305">
+                <div class="modal-cover comment78305"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

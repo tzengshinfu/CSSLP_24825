@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classroom-Based CSSLP Official ISC2 Textbook 6th Edition</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            /*background-color: #f0f0f0;*/
+            padding: 1rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 1px 0px;
+        }
+
+        .content-container {
+            flex-grow: 1;
+            position: relative;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        footer {
+            /*background-color: #f0f0f0;*/
+            padding: 1rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 1px 0px;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <button onclick="changeFontSize(10)">🗚</button>
+        <button onclick="changeFontSize(-10)">🗛</button>
+        <button onclick="changeLineHeight(10)">📈</button>
+        <button onclick="changeLineHeight(-10)">📉</button>
+    </header>
+
+    <div class="content-container">
+        <iframe id="contentFrame" src="page_001_.html"></iframe>
+    </div>
+
+    <footer>
+        <button onclick="firstPage()">⏮️</button>
+        <button onclick="prevPage()">◀️</button>
+        <div class="page-input-container">
+            <input type="number" class="page-input" id="pageInput" min="1" value="1"
+                onkeypress="handlePageInputKeyPress(event)">
+            <span>頁</span>
+        </div>
+        <button onclick="nextPage()">▶️</button>
+        <button onclick="lastPage()">⏭️</button>
+    </footer>
+
+    <script>
+        let firstPageNo = 1;
+        let lastPageNo = 123;
+        let currentFontSizePercent = 100;
+        let currentLineHeightPercent = 100;
+        let currentPageNo = localStorage.getItem("currentPageNo") || firstPageNo;
+
+        function changeFontSize(delta) {
+            currentFontSizePercent += delta;
+            applyStyles();
+        }
+
+        function changeLineHeight(delta) {
+            currentLineHeightPercent += delta;
+            applyStyles();
+        }
+
+        function applyStyles() {
+            const iframe = document.getElementById('contentFrame');
+            const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+
+            iframeDocument.getElementsByTagName('html')[0].style.fontSize = currentFontSizePercent + '%';
+
+            let styleSheet = iframeDocument.styleSheets[0];
+            let lastCssRule = styleSheet.cssRules[styleSheet.cssRules.length - 1];
+
+            if (lastCssRule.selectorText === '*' && lastCssRule.style.lineHeight) {
+                styleSheet.deleteRule(styleSheet.cssRules.length - 1);
+            }
+
+            styleSheet.insertRule(`* { line-height: ${currentLineHeightPercent / 100};}`, styleSheet.cssRules.length);
+        }
+
+        function firstPage() {
+            document.getElementById('contentFrame').src = `page_${(firstPageNo).toString().padStart(3, '0')}_.html`;
+            document.getElementById('pageInput').value = firstPageNo;
+            localStorage.setItem("currentPageNo", firstPageNo);
+        }
+
+        function prevPage() {
+            let currentPageNo = Number(document.getElementById('contentFrame').getAttribute('src').match(/(\d+)/)[0]);
+
+            if (currentPageNo > firstPageNo) {
+                document.getElementById('contentFrame').src = `page_${(currentPageNo - 1).toString().padStart(3, '0')}_.html`;
+                document.getElementById('pageInput').value = currentPageNo - 1;
+                localStorage.setItem("currentPageNo", currentPageNo - 1);
+            }
+            else {
+                document.getElementById('contentFrame').src = `page_${(lastPageNo).toString().padStart(3, '0')}_.html`;
+                document.getElementById('pageInput').value = lastPageNo;
+                localStorage.setItem("currentPageNo", lastPageNo);
+            }
+        }
+
+        function handlePageInputKeyPress(event) {
+            if (event.key === 'Enter') {
+                const newPageNo = parseInt(event.target.value);
+
+                if (!isNaN(newPageNo)) {
+                    if (newPageNo >= firstPageNo && newPageNo <= lastPageNo) {
+                        document.getElementById('contentFrame').src = `page_${newPageNo.toString().padStart(3, '0')}_.html`;
+                        localStorage.setItem("currentPageNo", newPageNo);
+                    } else {
+                        alert(`請輸入${firstPageNo}到${lastPageNo}之間的頁碼`);
+                    }
+                }
+            }
+        }
+
+        function nextPage() {
+            let currentPageNo = Number(document.getElementById('contentFrame').getAttribute('src').match(/(\d+)/)[0]);
+
+            if (currentPageNo < lastPageNo) {
+                document.getElementById('contentFrame').src = `page_${(currentPageNo + 1).toString().padStart(3, '0')}_.html`;
+                document.getElementById('pageInput').value = currentPageNo + 1;
+                localStorage.setItem("currentPageNo", currentPageNo + 1);
+            }
+            else {
+                document.getElementById('contentFrame').src = `page_${(firstPageNo).toString().padStart(3, '0')}_.html`;
+                document.getElementById('pageInput').value = firstPageNo;
+                localStorage.setItem("currentPageNo", firstPageNo);
+            }
+        }
+
+        function lastPage() {
+            document.getElementById('contentFrame').src = `page_${(lastPageNo).toString().padStart(3, '0')}_.html`;
+            document.getElementById('pageInput').value = lastPageNo;
+            localStorage.setItem("currentPageNo", lastPageNo);
+        }
+
+        document.getElementById('contentFrame').src = `page_${(currentPageNo).toString().padStart(3, '0')}_.html`;
+
+        // 當iframe載入完成時套用樣式
+        document.getElementById('contentFrame').onload = function () {
+            applyStyles();
+        };
+    </script>
+</body>
+
+</html>

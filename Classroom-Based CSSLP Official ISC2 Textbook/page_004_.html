@@ -1,0 +1,1336 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"
+    style="padding: 0px; font-size: 100%; --USER__lineHeight: 1; --USER__pageMargins: 1; --USER__view: readium-scroll-on;"
+    class="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Security Design Principles (1.2)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="overflow: hidden auto;">
+    <div xmlns:epub="http://www.idpf.org/2007/ops" epub:type="pagebreak" id="pagebreak_4"
+        class="hidden-pagebreak comment78305" title="4"></div>
+
+    <div xmlns:epub="http://www.idpf.org/2007/ops" id="45549032-0226-4bbf-a54b-3a9cc9661307"
+        class="screen rendered comment78305" aria-hidden="false">
+        <div class="screengrid comment78305">
+            <header class="screen__margin screen__header u-hide-element vstdonthighlight">
+
+                <div class="screen__heading u-float--clearfix comment78305">
+                    <div class="screen__icon u-float--left comment78305"></div>
+                    <h2 class="screen__title comment78305" tabindex="-1"></h2>
+                </div>
+
+
+                <div class="screen__instructions comment78305"></div>
+            </header>
+        </div>
+
+        <div class="screen__content comment78305">
+
+            <div class="block rendered comment78305">
+                <div id="6eea17d3-462e-443c-8caf-41acd0008a58" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Security Design Principles (1.2)<br />
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c428554d-1ad2-4185-8d03-8633a324caae" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Secure design principles define practices that can guide
+                                    decisions at the system and software architecture level. It is important for
+                                    security practitioners to understand architecture and design principles are
+                                    abstracted away from platform and programming language specifics. These principles
+                                    lay the foundation for building and maintaining secure software.</p>
+                                <p class="comment78305">Decisions are made to establish <em>adequate security,
+                                    </em>which represents intentional trade-offs to reach a state of security that
+                                    supports the business function of the system or software. Sometimes one principle is
+                                    given more consideration than another based on how the organization defines the
+                                    system as reasonably secure. According to NIST, secure systems typically exhibit the
+                                    following characteristics:</p>
+                                <ul>
+                                    <li>It enables delivery of system capability despite all manner of adversity.</li>
+                                    <li>It constrains functions to desired behaviors based on system required
+                                        capabilities.</li>
+                                    <li>Constraints are enforced via predefined rulesets to ensure only authorized
+                                        interactions and operations are allowed.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="eaa4f38e-2812-4e98-ae15-1d466061ed68" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Objectives<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="568acaaf-c465-4133-b338-cfd4a1f894cc" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>Explain how security methods mitigate vulnerabilities through access controls.
+                                    </li>
+                                    <li>Describe the purpose and function of multiple layers of protection in software
+                                        security.</li>
+                                    <li>Describe how security culture and practices impact data privacy and security.
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d9e601da-8870-4f90-894c-e085c2e348cd" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Overview<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0d29d6d2-f9cc-43e5-915d-a97a2ce68968" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Secure design principles define practices that can guide
+                                    decisions at the architecture level regardless of the platform and regardless of the
+                                    programming language. These principles include Least Privilege, Separation of
+                                    Duties, and Defense in Depth, among many more.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="91ae3eba-56cf-4b64-9a21-2a3866fb4d7d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Least Privilege<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6bf3a6a1-83d5-4528-94cd-a4ab9baa6d12" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Least privilege is the concept of providing no more
+                                    authorizations than necessary to perform the required functions. This also implies
+                                    that if an operation requires elevated privileges, such privilege elevation should
+                                    be limited to the shortest time required to complete that operation.</p>
+                                <p class="comment78305">The principle of least privilege states that each component
+                                    should be allocated sufficient privileges to accomplish its specified functions, but
+                                    no more. This limits the scope of the component’s actions, which has two desirable
+                                    effects: the security impact of a failure, corruption, or misuse of the component
+                                    will have a minimized security impact; and the security analysis of the component
+                                    will be simplified. Least privilege is a pervasive principle that is reflected in
+                                    all aspects of the secure system design.</p>
+                                <p class="comment78305">For example, if a middleware server only requires access to the
+                                    network, read access to a database table, and the ability to write to a log, this
+                                    describes all the permissions that should be granted. Under no circumstances should
+                                    the middleware be granted administrative privileges.<sup>2</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="04467ba1-fecc-4d2f-ba98-b0a696d9c62d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>2</sup> OWASP, Security by Design Principles; <a
+                                        href="https://www.owasp.org/index.php/Security_by_Design_Principles"
+                                        target="_blank">https://www.owasp.org/index.php/Security_by_Design_Principles</a>;
+                                    retrieved May 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d2e77bbc-e6a8-4138-a506-94fdd7ee7443" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Run Time Privileges<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b4f4d42f-ea73-4ea0-a040-ec002a9fdc5f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Understand that violation of the least privilege principle at
+                                    run time can lead to the magnification of inflicted harm if a software vulnerability
+                                    is discovered and exploited. A real-life example would be how excessive app
+                                    permissions at run time can cause many different issues related to security and
+                                    privacy.</p>
+                                <p class="comment78305">A classic example would be when the input validation mechanisms
+                                    in software fail to prevent SQL injection attacks (i.e., due to ineffective regular
+                                    expressions) and the vulnerability is successfully exploited. When this occurs,
+                                    elevated privileges may lead to significantly more harmful payloads such as wiping
+                                    out one’s data.</p>
+                                <p class="comment78305">Another example is the early-release flashlight apps that were
+                                    downloaded from app stores for smartphones and other mobile devices. These apps
+                                    require access to one’s location data and the contacts on the mobile device. Of
+                                    course, most security-conscious users were concerned with these required app
+                                    permissions and the contents/resources that were accessed by these types of apps,
+                                    but the apps were nevertheless installed and used. A clear message that should be
+                                    conveyed is that addressing the least privilege principle is critical, but doing so
+                                    may be a complex process and require considerable effort.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="9ff202ed-b882-47b6-a84c-f298921fe2aa" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Zero Trust<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f377b5d3-afde-43cb-8c1e-95f7d0c7d439" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">NIST defines <strong><button
+                                            data-definition title="A collection of concepts and ideas designed to minimize uncertainty in enforcing accurate, least privilege per-request access decisions in information systems and services in the face of a network viewed as compromised"
+                                            class="rendered">Zero Trust (ZT)</button> </strong>within SP 800-207 “Zero
+                                    Trust Architecture” as a collection of concepts and ideas designed to minimize
+                                    uncertainty in enforcing accurate, least privilege per-request access decisions in
+                                    information systems and services in the face of a network viewed as compromised. ZT
+                                    places requirements for continuous validation and authentication on all users
+                                    (subjects) whether inside or outside of the organization, without respect to entry
+                                    points, before authorizing resources such as data. Organizations implementing ZT
+                                    must develop an implementation plan which includes the following technology agnostic
+                                    tenants:</p>
+                                <ol>
+                                    <li>Data sources and computing services are resources</li>
+                                    <li>All Communication is secured</li>
+                                    <li>Access to resources is granted individually on a per-session basis</li>
+                                    <li>Access to resources is determined by dynamic policy</li>
+                                    <li>Continuously monitor and measure the integrity and security posture of assets
+                                    </li>
+                                    <li>Authentication and authorization are dynamic and strictly enforced</li>
+                                    <li>Collects adequate data to improve and maintain security posture</li>
+                                </ol>
+                                <p class="comment78305">Beyond tenants of a ZT implementation plan, the organizational
+                                    implementation typically includes three components: a policy engine, a policy
+                                    administrator, and a policy enforcement point. The policy engine coordinates with
+                                    the policy administrator component to action and log the approve-deny decisions
+                                    originating from the policy administrator. The policy administrator brokers an
+                                    access path from the policy enforcement point. This communication is often referred
+                                    to in the context of a “control plane.” The policy enforcement point is responsible
+                                    for initiating, terminating, and monitoring connections using a client-server access
+                                    model. Simply put, security practitioners should understand that zero trust is a
+                                    high-level strategy that once implemented should enforce the same level of mutual
+                                    rigor for all subjects accessing objects within the organization.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="26532cc0-51cc-416f-9a6f-a247632caa6d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Separation of Duties<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2dbca08c-44df-4036-a66c-020b17f23eca" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Separation of duties is the concept that no subject should be
+                                    given enough privileges to misuse the system on their own. This implies that
+                                    critical functions must be divided among subjects to mitigate the risk of fraud.</p>
+                                <p class="comment78305">For example, an administrator should be able to turn the system
+                                    on or off, and set password policy, but shouldn’t be able to log on to the
+                                    storefront as a super-privileged user, such as being able to ‘buy’ goods on behalf
+                                    of other users.<sup>3</sup></p>
+                                <p class="comment78305">Applying proper separation of duties clearly requires
+                                    subjects/actors performing the separated duties to be different entities, but there
+                                    may be different levels of segregation involved. At the most basic level, the
+                                    segregation may involve two different actors that are performing similar functions
+                                    and duties (e.g., two actors from the same department). Taking this to the next
+                                    level, segregation could involve different actors that perform dissimilar
+                                    functions/duties (e.g., subjects from two different departments).</p>
+                                <p class="comment78305">An example of this principle in the realm of secure software
+                                    would be the considerations for the separation of the encryption process from the
+                                    key management process.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c5509c53-53bc-47a0-aaee-754e6d20c52b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Split Knowledge<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ebdfcc60-9372-4cbb-958e-11f7e672a0f2" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The concept of split-knowledge can be explained by describing a
+                                    process where a cryptographic key is split into n multiple key components,
+                                    individually providing no knowledge of the original key, which can be subsequently
+                                    combined to recreate the original cryptographic key.<sup>4</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4ef1b0f3-8a79-4880-af52-aa61b5ec032c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Secret Sharing<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="10465d95-c4dd-4fd6-a9b2-799b78d5ffe4" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The concept of secret sharing is not new, but some interesting
+                                    technologies and solutions have recently evolved around it. Algorithms have been
+                                    introduced in cryptographic protocols that attempt to segment a secret (e.g.,
+                                    encryption key) and store it in a distributed way among many participants, thus
+                                    making it infeasible for an attacker to recover the secret by compromising a single
+                                    node.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0d9c7ecf-ded2-4a86-8ab2-d4d6213b053b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>3</sup> Ibid.</p>
+                                <p class="comment78305"><sup>4</sup> National Institute of Standards and Technology;
+                                    <em>NIST SP 800-57—Recommendation for Key Management; </em><a
+                                        href="https://csrc.nist.gov/publications/detail/sp/800-57-part-1/rev-5/final"
+                                        target="_blank">https://csrc.nist.gov/publications/detail/sp/800-57-part-1/rev-5/final</a>;
+                                    retrieved May 2023.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="929b949d-2761-4c87-9a7c-d181265cb756" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Defense-in-Depth<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="965805e6-332e-406c-97d7-e5170c1e0f57" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Defense-in-depth involves applying multiple layers of protection
+                                    where a subsequent layer will provide protection if a different layer is breached.
+                                    This implies that controls in one layer could compensate for weaknesses of controls
+                                    in other layers. It also implies that in situations where one control may be
+                                    considered reasonable, addressing risks through multiple controls that approach
+                                    risks in different fashions might be a more reasonable approach. Defense in depth
+                                    describes security architectures constructed through the application of multiple
+                                    mechanisms to create a series of barriers to prevent, delay, or deter an attack by
+                                    an adversary.<sup>5</sup></p>
+                                <p class="comment78305">For example, a flawed administrative interface is unlikely to be
+                                    vulnerable to anonymous attack if it correctly gates access to production management
+                                    networks, checks for administrative user authorization, and logs all
+                                    access.<sup>6</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e7e4396a-0af1-49ea-9228-e497e2281ddd" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Layered Controls<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a602ea84-f9c8-4a35-9fc8-7a4074bfb468" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">To better appreciate the value of a layered approach to the
+                                    positioning of controls, with the objective of creating strength and depth for
+                                    mitigating the effects of a threat, a bit of history from the realm of physical
+                                    security could be useful:</p>
+                                <p class="comment78305">Defense-in-depth as a concept originated in military strategy to
+                                    provide barriers to impede the progress of intruders from attaining their goals
+                                    while monitoring their progress and developing and implementing responses to the
+                                    incident to repel them. In the cybersecurity paradigm, Defense-in-depth correlates
+                                    to detective and protective measures designed to impede the progress of a
+                                    cyberintruder while enabling an organization to detect and respond to the intrusion
+                                    with the goal of reducing and mitigating the consequences of a breach.<sup>7</sup>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6e0ef6fa-397f-4830-8139-2e67877822c1" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Input Validation<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5bbfdf96-dd3b-462e-8ba8-ca40b6606118" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">One way to protect software against externally influenced
+                                    (malicious) input is to prevent its entry. Input validation should be considered one
+                                    of the most important strategies to protect against the most common vulnerabilities
+                                    in Web applications. It will be examined in future domains in greater detail. For
+                                    now, input validation should be recognized as an important part of your overall
+                                    defenses in software.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1c675fd2-fbea-4022-9b5a-64a110902b9a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>5</sup> National Institute of Standards and Technology;
+                                    <em>NIST SP 800-160v1r1—Engineering Trustworthy Secure Systems; </em><a
+                                        href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-160v1.pdf"
+                                        target="_blank">https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-160v1.pdf</a>;
+                                    retrieved May 2023.
+                                </p>
+                                <p class="comment78305"><sup>6</sup> OWASP; Security by Design Principles; <a
+                                        href="https://www.owasp.org/index.php/Security_by_Design_Principles"
+                                        target="_blank">https://www.owasp.org/index.php/Security_by_Design_Principles</a>;
+                                    retrieved May 2023.</p>
+                                <p class="comment78305"><sup>7</sup> U.S. Department of Homeland Security;
+                                    <em>Recommended Practice: Improving Industrial Control System Cybersecurity with
+                                        Defense-in-Depth Strategies; </em><a
+                                        href="https://www.us-cert.gov/sites/default/files/recommended_practices/NCCIC_ICS-CERT_Defense_in_Depth_2016_S508C.pdf"
+                                        target="_blank">https://www.us-cert.gov/sites/default/files/recommended_practices/NCCIC_ICS-CERT_Defense_in_Depth_2016_S508C.pdf</a>;
+                                    retrieved May 2023.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5b071cb8-b90c-4f80-b340-ac7d58e347f6" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Security Zones<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="68063ccc-6bae-4d41-b7c4-59392f49ba43" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The concept of security zones is relevant in many realms of
+                                    security, including physical security, network security, and software security. The
+                                    creation of effective layered defenses in all these realms requires a clear
+                                    understanding of how various controls or pieces of technology can fit together. In
+                                    theory, a system may have any number of security zones, and each zone may have any
+                                    number of controls. How many zones and what controls are needed will depend on
+                                    several factors, including the type of assets in each zone and the level of
+                                    protection that the various assets require.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="94b076fd-d9cd-4d50-87d2-e8ef081b5a89" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Diversity of Defense<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6f5df7cb-200d-4282-9a71-7d368217cf6e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">During the discussion of defense-in-depth principles, we
+                                    highlighted the importance of controls positioned at various layers of defense. Also
+                                    important is the assurance that these controls are diverse in their capabilities, as
+                                    each may play a specific role in the overall defenses of the system. Further,
+                                    diversity also reduces the likelihood that a common flaw or vulnerability would be
+                                    exhibited by all such controls.</p>
+                                <p class="comment78305">Organizations may use diversity in several ways to enhance the
+                                    resiliency of a system. Systems supporting software or contingency could be in
+                                    geographically separate areas, which might insulate them from a natural disaster
+                                    disrupting system operations. If a project is large and critical, an organization
+                                    might ensure that any systems and software being supplied are from multiple vendors
+                                    or leverage multiple technologies.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2d9a5ec7-e3eb-474a-bd2f-cc3c6e469f9b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Resiliency<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a97c13bc-0d09-4a1b-96f6-e57076fa1381" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Software by its nature will fail at some point due to some
+                                    reason. To be resilient, software needs to fail in a safe/secure manner. One
+                                    requirement is that when a system fails, it should fail to a state where the
+                                    security of the system and its data are not compromised.</p>
+                                <p class="comment78305">A security principle that aims to maintaining confidentiality,
+                                    integrity, and availability by defaulting to a secure state, rapid recovery of
+                                    software resiliency upon design or implementation failure. In the context of
+                                    software security, fail secure is commonly used interchangeably with fail safe,
+                                    which comes from physical security terminology.<sup>8</sup></p>
+                                <p class="comment78305">Resiliency may also be undermined when a single point of failure
+                                    or a single point of compromise in a system exists. Clearly, single points of
+                                    failure are undesirable in any system with a goal of availability. Eliminating
+                                    single points of failure is achieved by implementing redundancy and compensating for
+                                    controls.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="097d32d0-7f5b-49ae-b165-a0604fd139a3" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>8</sup> OWASP; Secure Design Principles; <a
+                                        href="https://github.com/OWASP/DevGuide/blob/master/02-Design/01-Principles%20of%20Security%20Engineering.md"
+                                        target="_blank">https://github.com/OWASP/DevGuide/blob/master/02-Design/01-Principles%20of%20Security%20Engineering.md</a>;
+                                    retrieved May 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8b57cbbf-94b6-4ac5-80d7-e4a77a8980e3" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Economy of Mechanism<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f8b8e0a3-e227-4aef-a802-dae8a1491a59" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><strong><button
+                                            data-definition title="Demonstrates the principle that overly complex approaches will not necessarily enhance security as opposed to relatively straightforward and simple approaches."
+                                            class="rendered">Economy of mechanism</button> </strong>demonstrates the
+                                    principle, “keep it simple, stupid.” Overly complex approaches will not necessarily
+                                    enhance security as opposed to relatively straightforward and simple approaches.
+                                    This also implies that the more complex the design of a system/software, the higher
+                                    the likelihood that a given vulnerability may go unnoticed.</p>
+                                <p class="comment78305">This concept of simplicity is echoed by the principle of Build
+                                    Security In (BSI): One factor in evaluating a system's security is its complexity.
+                                    If the design, implementation, or security mechanisms are highly complex, then the
+                                    likelihood of security vulnerabilities increases. Subtle problems in complex systems
+                                    may be difficult to find, especially in copious amounts of code. For instance,
+                                    analyzing the source code that is responsible for the normal execution of a
+                                    functionality can be a difficult task, but checking for alternate behaviors in the
+                                    remaining code that can achieve the same functionality can be even more difficult.
+                                </p>
+                                <p class="comment78305">An example presented by OWASP can help us better relate to this
+                                    principle: “Although it might be fashionable to have a slew of singleton entity
+                                    beans running on a separate middleware server, it is more secure and faster to
+                                    simply use global variables with an appropriate mutex mechanism to protect against
+                                    race conditions.<sup>9</sup>"</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="29aa84a6-9f2f-4859-8612-3074405435ce" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Password Vaults<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="968cb61f-87c6-45f5-803e-48695ab0301d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Encrypted vaults in general aim to offer secure storage for
+                                    secrets such as keys and passwords. For access management, especially privileged
+                                    access, password vaults may be used. These vaults may be used by password managers.
+                                </p>
+                                <p class="comment78305">Greater security is achieved principally through the capability
+                                    of most password manager applications to generate unique, long, complex, easily
+                                    changed passwords for all online accounts and the secure encrypted storage of those
+                                    passwords either through a local or cloud-based vault.<sup>10</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6db9e99b-7aff-46a8-b173-af72c088b494" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>9</sup> OWASP, <em>Keep Security Simple; </em><a
+                                        href="https://www.owasp.org/index.php/Keep_security_simple"
+                                        target="_blank">https://www.owasp.org/index.php/Keep_security_simple</a>;
+                                    retrieved May 2023.</p>
+                                <p class="comment78305"><sup>10</sup> National Institute of Standards and Technology;
+                                    Special Publication (SP) 800-63, Digital Identity Guidelines; <a
+                                        href="https://pages.nist.gov/800-63-FAQ/#q-b12"
+                                        target="_blank">https://pages.nist.gov/800-63-FAQ/#q-b12</a>; retrieved May
+                                    2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="681dd5a5-ea02-479b-a3ee-ac1fb341b4e3" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Resource Efficiency<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5238cbe1-6274-4d7d-9b49-1c1e2050e8a8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Software will not function without dependencies. Software relies
+                                    on underlying hardware resources such as storage mediums, CPUs, and RAM which must
+                                    be allocated appropriately when developing source code. Further, applications must
+                                    efficiently free—that is, deallocate—resources when execution of a task has
+                                    completed. When resources are not managed properly due to poor coding practices, the
+                                    implications extend beyond inefficiently run software. Poorly implemented and
+                                    designed software can deprive other software running on the same resources (e.g.,
+                                    server, hypervisor) of necessary resources, causing a negative impact on operations
+                                    that extends the scope beyond the poorly implemented software.</p>
+                                <p class="comment78305">Weakness in software development practices may lower the cyber
+                                    resiliency of the entire hosting system, resulting in degradation of
+                                    organizationally defined levels of CIA. Examples include CWE-787 “Out-of-bounds
+                                    Write,” CWE-125 “Out-of-bounds Read,” CWE-190 “Integer Overflow or Wraparound,” and
+                                    CWE-476 “NULL Pointer Dereference,” which are all listed as among the 2023 CWE Top
+                                    25 weaknesses. These could result in violations of CIA and vulnerabilities in
+                                    production applications. </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2b16835a-7cda-4764-a73a-dbe5a4d4c4ad" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Complete Mediation<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="9da27a4f-21c5-436a-8bc6-b3d9653b8c91" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Complete mediation is embodied in the assurance that every
+                                    request by a subject for accessing an object (especially for security-critical
+                                    objects) must be vetted. That is, it should undergo a valid and effective
+                                    authorization procedure. A system that relies on checking the permissions of a
+                                    subject to an object only once can potentially invite attackers to exploit that
+                                    system. Caching permissions can increase the performance of a system, but at the
+                                    cost of allowing secured objects to be accessed.</p>
+                                <p class="comment78305">For example, when a UNIX process tries to read a file, the
+                                    operating system determines whether the process is allowed to read the file. If so,
+                                    the process receives a file descriptor encoding the allowed access. Whenever the
+                                    process wants to read the file, it presents the file descriptor to the kernel. The
+                                    kernel then allows access. If the owner of the file disallows the process permission
+                                    to read the file after the file descriptor is issued, the kernel still allows
+                                    access. This scheme violates the principle of complete mediation, because the second
+                                    access is not checked. The cached value is used, resulting in the denial of access
+                                    being ineffective.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="fa00d5a9-8c28-407f-abc8-712f090b052b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Open Design<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="82f2a2d8-d826-4819-b354-b43d46c15a64" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The concept of open design dictates that the security of a
+                                    system should not be dependent on secrecy of its design, its implementation, or its
+                                    components. As an example, publishing an encryption algorithm for review by experts
+                                    can in fact result in the identification of weaknesses in the algorithm which in
+                                    turn results in increased security.</p>
+                                <p class="comment78305">In this regard, noting that security through obscurity alone may
+                                    not be achieved, Kerckhoff's principle suggests that so long as secrecy of the
+                                    encryption key is maintained, the security of a cryptographic system should also be
+                                    maintained, even if everything about the system is public knowledge. Basing security
+                                    on open standards could potentially increase portability and interoperability as
+                                    well.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0c716755-7ad0-42c1-ac6d-d659d5297dc4" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">MOSA<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="316a5be6-4cce-4351-9e70-2ba236726938" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><strong><button
+                                            data-definition title="A technical and business strategy for designing adaptable systems including software. MOSA requires that major interface points within systems are modular and embrace widely supported standards."
+                                            class="rendered">Modular Open Systems Approach (MOSA)</button>,
+                                    </strong>previously known as Open Systems Architecture or Open Systems Approach, is
+                                    a technical and business strategy for designing adaptable systems including
+                                    software. MOSA requires that major interface points within systems are modular and
+                                    embrace widely supported standards. To be MOSA-compliant, standards must support
+                                    interoperability, scalability, and portability. MOSA standards are key to building a
+                                    system capable of information-sharing across domains, with interchangeable hardware
+                                    and software components.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="100be810-87f0-4d7f-bdab-dfd43b2ed819" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Open-Source Software<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="64c89283-497e-4782-ad87-5734a6e8c8ad" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><strong><button
+                                            data-definition title="Software whose source code and other design information is made publicly available for inspection, testing, assessment, and use."
+                                            class="rendered">Open-Source Software (OSS)</button> </strong>libraries and
+                                    other products are not inherently more or less secure just because the source code
+                                    is freely available. Often the security of OSS software depends on the community
+                                    rigor and bandwidth to provide updates throughout the life cycle of the source code.
+                                    How many developers contribute to the project—one or one hundred? If only a limited
+                                    number of maintainers exist is there any guarantee of timely patching or analysis
+                                    for weaknesses? Further, who is allowed to commit changes to the source and what is
+                                    the level of testing involved before commits are incorporated within the main source
+                                    branch? Based on contributors, what is the level of confidence that source will be
+                                    reasonably free of intentional or unintentional defects.</p>
+                                <p class="comment78305">For example, Advanced Encryption Standard (AES) has been open
+                                    source since 2001, and anyone can see with absolute transparency the inner workings
+                                    of this encryption method. However, it is one of the most implemented and secure
+                                    encryption methods still employed today.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8cb161f2-0f76-4924-9437-84002f7b6773" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Collaborative Design<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d69ff22a-a8dc-4f28-80f9-21632340ea0c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">In general, for any type of collaborative effort to be
+                                    successful, its culture must exist, and collaborative software development is no
+                                    different. This type of collaboration is often seen in open-source communities where
+                                    developers contribute to projects with some level of autonomy.</p>
+                                <p class="comment78305">Peer reviews are important in all software development projects
+                                    in general, but in this type of environment these peer reviews would be critical.
+                                </p>
+                                <p class="comment78305">From a security perspective, the ability to tap subjects from
+                                    all over the world with different skills, experiences, knowledge bases, and thoughts
+                                    can be invaluable. This has been evident from a number of well-known software
+                                    products that are the result of crowdsourcing.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e1db700c-f2b5-4afe-adb3-0f5618ae68c3" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Least Common Mechanism<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="96a4ea0c-aaa8-4310-8d3f-2a3678ddc8b0" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The concept of least common mechanisms involves minimizing the
+                                    number of protection mechanisms that are common to multiple subjects. In so doing,
+                                    the shared access paths that can be sources of unauthorized information exchange are
+                                    reduced. For example, <em>NIST Special Publication 800-44—Guidelines on Securing
+                                        Public Web Servers </em>notes that the ability for the web server process to
+                                    access a back-end database, for instance, should not also enable other applications
+                                    on the system to access the back-end database.</p>
+                                <p class="comment78305">The Cybersecurity and Infrastructure Security Agency says to
+                                    avoid having multiple subjects sharing mechanisms to grant access to a resource. For
+                                    example, serving an application on the Internet allows both attackers and users to
+                                    gain access to the application. Sensitive information can potentially be shared
+                                    between the subjects via the mechanism. A different mechanism (or instantiation of a
+                                    mechanism) for each subject or class of subjects can provide flexibility of access
+                                    control among various users and prevent potential security violations that would
+                                    otherwise occur if only one mechanism was implemented.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="75cabf2f-62a5-45c7-a9bb-6a90c372d7b3" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Compartmentalization<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="23242b39-dea0-47ff-8550-4b77f618a659" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">In the context of the least-common mechanism principle,
+                                    restriction of user roles for the purpose of compartmentalization or isolation of
+                                    the code/function is recommended. In other words, execution of different functions
+                                    based on user roles is recommended in contrast to having a single function used by
+                                    all roles.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="928306bf-f8ef-4d1a-a9c2-553a34e4d183" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Allow/Accept Lists<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ca925948-5fcc-4514-89a9-4b98a397dbe8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Allow/accept lists explicitly allows access to a particular
+                                    resource. It is one method to address access control for subjects that may need to
+                                    access an object. With allow/accept lists, a particular object is accessible while
+                                    access to everything else is denied. In this way, attempts to access an object in a
+                                    nonstandard way will be denied.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="12f4ec88-63e3-4d24-9d85-9c15b8472b7b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Psychological Acceptability<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a3fb757a-a271-465c-a9a7-0c4d12ddf20c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">According to US-CERT, the security principle of psychological
+                                    acceptability aims at maximizing the use and adoption of the security functionality
+                                    in the software by ensuring that it is easy to use and transparent to the user. Ease
+                                    of use and transparency are essential requirements for this security principle to be
+                                    effective.</p>
+                                <p class="comment78305">In this context, think about situations where security
+                                    mechanisms inhibit accessibility to resources or reduce usability. Subjects likely
+                                    will turn off such mechanisms or find ways to circumvent them.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8970fcf0-38b9-407f-8d86-f5fad738d9f6" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Password Complexity<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="30df9903-bd5c-4d94-9ff9-58f7fe6e3d4a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Your software password-complexity policy should not be so
+                                    difficult that users must write passwords down, thus defeating the purpose of
+                                    increased security.</p>
+                                <p class="comment78305">Common Weakness Enumerations (CWE), which will be discussed
+                                    later in this course, has a specific entry regarding the principle of psychological
+                                    acceptability that is relevant to this topic. CWE-655: Insufficient Psychological
+                                    Acceptability states that the software has a protection mechanism that is too
+                                    difficult or inconvenient to use, encouraging nonmalicious users to disable or
+                                    bypass the mechanism, whether by accident or on purpose.<sup>11</sup></p>
+                                <p class="comment78305"><strong><button
+                                            data-definition title="A way to describe the complexity of a password mathematically. Password entropy determines how difficult guessing a password can be by calculating a 50-percent chance of guessing a password based on password length and possible characters. "
+                                            class="rendered">Password entropy</button> </strong>is a way to describe the
+                                    complexity of a password mathematically. Password entropy determines how difficult
+                                    guessing a password can be by calculating a 50-percent chance of guessing a password
+                                    based on password length and possible characters.</p>
+                                <p class="comment78305"><strong>Number of Possible Combinations = SL<br />Entropy = log2
+                                        (Number of Possible Combinations)<br />Expected Number of guesses </strong>=
+                                    2<sup>Entropy-1</sup></p>
+                                <ul>
+                                    <li>L = Password Length (number of places in the password)</li>
+                                    <li>S = Size of the pool of unique possible characters</li>
+                                </ul>
+                                <p class="comment78305"><strong>Example Pools (S)</strong></p>
+                                <ul>
+                                    <li>Numbers (0-9): 10</li>
+                                    <li>Lower Case Latin Alphabet (a-z): 26</li>
+                                    <li>Lower Case and Upper-Case Latin Alphabet (a-z, A-Z): 52</li>
+                                    <li>ASCII Printable Character Set (a-z, A-Z, symbols, space): 95 </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="50057dc3-02a1-4a33-a4d2-144455b764e1" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>11</sup> Common Weakness Enumeration—A Community-Developed
+                                    List of Software and Hardware Weakness Types; <a
+                                        href="https://cwe.mitre.org/data/definitions/655.html"
+                                        target="_blank">https://cwe.mitre.org/data/definitions/655.html</a>; retrieved
+                                    May 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="720f5e14-adb3-4775-a59e-01a515ca6d75" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Passwordless Authentication<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="fa17c32c-ea7c-442f-aa01-0678002b43f6" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Today, there are several methods that authenticate users. For
+                                    decades, passwords (something you know) have been the dominant authentication
+                                    method. Over time, new factors of authentication have been developed and leveraged
+                                    in addition to passwords that create multifactor authentication. However, it is
+                                    entirely possible to provide comparable security with more convenience by
+                                    authenticating using one or more factors that do not include passwords. Users can
+                                    authenticate using access to applications such as email, devices such as phones,
+                                    one-time pass codes, or biometrics. Passwordless multifactor is possible by
+                                    implementing combinations of something you have and something you are, for example.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b39d5705-33bf-490e-950e-55d864280619" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">CAPTCHA<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="48b690b2-72a4-406d-90c4-87c7d69ae1e1" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Most users have come across the Completely Automated Public
+                                    Turing Test to Tell Computers and Humans Apart (CAPTCHA) during authentication.
+                                    CAPTCHA tests require the user to type letters or digits from a distorted image, or
+                                    to click on all images in an array that fit a certain description (e.g., all images
+                                    that contain traffic lights). CAPTCHA challenges can take a variety of different
+                                    shapes and forms.</p>
+                                <p class="comment78305">Several published vulnerabilities disclose how this control can
+                                    be overcome. Reasons include:</p>
+                                <ul>
+                                    <li>An audio or visual image lacking sufficient distortion based on the original
+                                        source image </li>
+                                    <li>A question with a format that can be automatically recognized, such as a math
+                                        question </li>
+                                    <li>A question for which the number of possible answers is limited, such as birth
+                                        years or favorite sports teams</li>
+                                    <li>A general-knowledge or trivia question for which the answer can be accessed
+                                        using a data base, such as country capitals or popular actors</li>
+                                    <li>Other data associated with the CAPTCHA may provide hints about its contents,
+                                        such as an image whose filename contains the word that is used in the
+                                        CAPTCHA.<sup>12</sup></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c0e5e89a-28e3-4fef-8606-6bb5fcdf193b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Component Reuse<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a37457c0-b5c7-465e-a7b8-190cfe48da84" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">This concept is about promoting reusability of existing
+                                    components, so that no newer vulnerabilities are introduced, and the attack surface
+                                    is not increased. Software design should consider leveraging existing components.
+                                </p>
+                                <p class="comment78305">One may also argue that centralizing functionality into business
+                                    components that can be leveraged repeatedly is akin to putting all eggs in one
+                                    basket. However, proper defense-in-depth and layered security measures can mitigate
+                                    this.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c512e65c-fba2-4a2a-9580-5a4867092019" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>12</sup> Common Weakness Enumeration—A Community-Developed
+                                    List of Software and Hardware Weakness Types; <a
+                                        href="https://cwe.mitre.org/data/definitions/804.html"
+                                        target="_blank">https://cwe.mitre.org/data/definitions/804.html</a>; retrieved
+                                    May 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d3daddc7-4484-449c-8561-d051c5df9473" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Libraries and Common Controls<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="355cd8de-ca02-4e6d-aafe-9504eeec34ff" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Tested and proven libraries and common programming controls
+                                    should be reused and leveraged. It is better to reuse trusted systems and tools
+                                    rather than implement an entirely new suite of products every time a new system must
+                                    be designed.</p>
+                                <p class="comment78305">One of the most common issues observed in software security code
+                                    review is that development teams try to write their own cryptographic algorithms
+                                    instead of using validated and proven standards such as the Advanced Encryption
+                                    Standard (AES). Implementation of these customized cryptographic algorithms has, in
+                                    most cases, been found to be the weakest link, thus disclosing sensitive
+                                    information.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="screengrid comment78305">
+            <footer class="screen__margin screen__footer u-hide-element vstdonthighlight">
+                <div class="feedback comment78305">
+                    <div class="feedback__content js-feedback-focus comment78305" tabindex="-1"></div>
+                </div>
+                <div class="control-btns comment78305"></div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay-root vstdonthighlight rendered comment78305 u-hidden" style="overflow-y: auto;">
+        <div class="modal-cover-holder comment78305">
+            <div class="modal-cover-outer comment78305">
+                <div class="modal-cover comment78305"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+</html>

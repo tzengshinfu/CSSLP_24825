@@ -1,0 +1,493 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"
+    style="padding: 0px; font-size: 100%; --USER__lineHeight: 1; --USER__pageMargins: 1; --USER__view: readium-scroll-on;"
+    class="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Secure Installation (7.5)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="overflow: hidden auto;">
+    <div xmlns:epub="http://www.idpf.org/2007/ops" epub:type="pagebreak" id="pagebreak_71"
+        class="hidden-pagebreak comment78305" title="71"></div>
+
+    <div xmlns:epub="http://www.idpf.org/2007/ops" id="3908259a-8dc7-4aea-a0da-2c18b23ba9fc"
+        class="screen rendered comment78305" aria-hidden="false">
+        <div class="screengrid comment78305">
+            <header class="screen__margin screen__header u-hide-element vstdonthighlight">
+
+                <div class="screen__heading u-float--clearfix comment78305">
+                    <div class="screen__icon u-float--left comment78305"></div>
+                    <h2 class="screen__title comment78305" tabindex="-1"></h2>
+                </div>
+
+
+                <div class="screen__instructions comment78305"></div>
+            </header>
+        </div>
+
+        <div class="screen__content comment78305">
+
+            <div class="block rendered comment78305">
+                <div id="eabf0cef-460d-4548-a7c2-c58a74d26990" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Secure Installation (7.5)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ffbe577a-b06e-4a31-9e79-aa746fb39240" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Secure installation involves using secure configuration settings
+                                    and adhering to the least-privilege principle. Security-relevant aspects of software
+                                    installation and deployment must be addressed in software security policies and
+                                    processes.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="9131d028-d9c6-444f-83b1-6a38c14a4cd0" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Learning Objectives<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1e1822de-f1af-4728-97ca-8064686976e0" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>Describe secure installation processes and methods.</li>
+                                    <li>Explain secure software activation mechanisms.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="054cc5b3-e93b-498e-934f-815bd2078868" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Overview<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e170e030-b9f5-4ad0-b80a-ac71e36a7059" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Secure installation and secure bootstrapping are essential
+                                    components of secure software deployment activities. The least-privilege principle
+                                    is relevant to deployment and operations of software. When implemented, least
+                                    privilege can help with overall system stability. Hardening is necessary to protect
+                                    the system and its critical components against accidental or intentional misuse and
+                                    attacks. Various software activation mechanisms may be used to verify compliance
+                                    with software license agreements. Software security policy must address the
+                                    security-relevant aspects of software installation and deployment.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a3e20a93-f967-4bce-97a6-5c691a2db755" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Secure Installation<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b53c1ce7-5639-4968-be6f-c9c7eaa5cfa1" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Proper installation processes are necessary for the security and
+                                    functionality of software, as well as the environment in which the software will
+                                    operate. Secure installation can include the following activities:</p>
+                                <ul>
+                                    <li>Appropriate security hardening across all parts of the application stack</li>
+                                    <li>Disabling/removing unnecessary features</li>
+                                    <li>Disabling/changing default accounts and their passwords</li>
+                                    <li>Enabling or configuring latest security features for upgraded systems</li>
+                                    <li>Choosing appropriate security settings in application server, application
+                                        frameworks, libraries, and databases</li>
+                                    <li>Adhering to the principle of least privilege</li>
+                                    <li>Appropriate permissions and access control lists (ACLs)</li>
+                                    <li>Tamper-resistant distribution media</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="94a69d2f-d38c-498e-b703-7b09693b1f96" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Bootstrapping/Secure Boot<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e09730d9-5692-4af2-a630-d3501b3c4364" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">With advancements in hardware and software technologies, there
+                                    are new possibilities for building a trustworthy computing platform.</p>
+                                <p class="comment78305">As discussed previously, the trusted computing base (TCB), the
+                                    collection of hardware, software, firmware, and basic operating system services and
+                                    processes, must provide security guarantees and a computing environment where
+                                    security policies can be enforced. Unfortunately, attacks and compromise of the TCB
+                                    may occur as early as the boot time, and that makes it essential to address the
+                                    security of the bootstrap mechanism. From a technical perspective, security may
+                                    involve an immutable bootstrap process, checking digital signatures, or taking other
+                                    steps.</p>
+                                <p class="comment78305">The bootstrap mechanism typically involves:</p>
+                                <ul>
+                                    <li>Performing self-diagnostics</li>
+                                    <li>Loading the configuration settings</li>
+                                    <li>Loading basic input/output system (BIOS), hypervisor, operating system, etc.
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d36a5de4-c8d2-4889-a6f1-d1372cb5a4d9" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Key Generation<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="9fcc2dc9-0b59-45fd-ab10-2d4ee9b2de88" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The encryption key represents a valuable resource whose
+                                    protection throughout its life cycle is critical to the effectiveness of protective
+                                    measures. Life cycle of the key begins with key generation. A device or program used
+                                    to generate keys is called a key generator and can be an integral part of many
+                                    bootstrapping processes.</p>
+                                <p class="comment78305">With Trusted Platform Module (TPM) available, it is possible to
+                                    encrypt the encryption key (wrapping process) in such a way that decryption would
+                                    require the TPM, providing protection of the encryption key. With that said, it
+                                    should be noted that vulnerabilities with TPM chips have also been discovered and
+                                    publicly discussed.</p>
+                                <p class="comment78305">Hardware-assisted cryptography provides more protection than a
+                                    software-only solution, because hacking hardware is more involved than hacking
+                                    software. There are many reasons for this. Most obviously, hacking hardware
+                                    generally requires physical access, whereas software does not. Additionally, there
+                                    aren’t as many known and publicized vulnerabilities associated with hardware as
+                                    there are with software.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0e46e8b6-15b2-4b7d-bffa-10d2e588ae88" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Least Privilege<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0dc43c44-3aca-4595-aebc-30cebff2b0f6" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The fundamental security principle of least privilege has been
+                                    discussed in previous chapters.</p>
+                                <p class="comment78305">According to NIST AC-6, “Organizations employ least privilege
+                                    for specific duties and information systems. The principle of least privilege is
+                                    also applied to information system processes, ensuring that the processes operate at
+                                    privilege levels no higher than necessary to accomplish required organizational
+                                    missions/business functions. Organizations consider the creation of additional
+                                    processes, roles, and information system accounts as necessary, to achieve least
+                                    privilege. Organizations also apply least privilege to the development,
+                                    implementation, and operation of organizational information systems.”<sup>10</sup>
+                                </p>
+                                <p class="comment78305">This principle is relevant to deployment and operations of
+                                    software. When implemented, least privilege can help with overall system stability
+                                    (e.g., damage that malicious or misbehaving processes can inflict) and enhanced
+                                    security (e.g., limiting access of a process to certain resources).</p>
+                                <p class="comment78305">With that said, implementing least privilege with precision can
+                                    be challenging in practice, particularly with respect to processes and their needed
+                                    privileges for accessing and operating on resources.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="65b3c9f1-6552-4221-bac6-7be601f8de8c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>10</sup> National Institute of Standards and Technology;
+                                    <em>NIST SP 800-53—Control Release Search; </em><a
+                                        href="https://nvd.nist.gov/800-53/Rev4/control/AC-6"
+                                        target="_blank">https://nvd.nist.gov/800-53/Rev4/control/AC-6</a>; retrieved
+                                    July 2023.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="9898a282-52d6-4105-90c4-b30abff4d165" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Environment Hardening<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e6abf582-3fb3-49d6-b73c-36d22017372e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Environment hardening involves implementing controls for the
+                                    operating environment surrounding an organization’s software to bolster the security
+                                    posture of applications deployed. The Environment Hardening (EH) Practice focuses on
+                                    building assurance for the runtime environment that hosts the organization’s
+                                    software. Since secure operation of an application can be deteriorated by problems
+                                    in external components, hardening this underlying infrastructure directly improves
+                                    the overall security posture of the software.<sup>11</sup></p>
+                                <p class="comment78305">Security hardening is an iterative process. Hardening is
+                                    necessary to protect the system and its critical components against accidental or
+                                    intentional misuse and attacks. As discussed earlier, hardening eliminates certain
+                                    attack vectors, reducing the overall attack surface and risk. Where and when
+                                    possible, unnecessary programs, accounts, access, ports, and permissions should be
+                                    removed or disabled.</p>
+                                <p class="comment78305">Hardening to the highest levels possible (at least for critical
+                                    components) is desirable but may not be feasible or practical. When the operating
+                                    environment, operating systems, web servers, and application servers are hardened,
+                                    it is likely that applications will experience problems or not function at all. This
+                                    is why hardening and proper testing should be first attempted in a nonproduction
+                                    environment (one that mirrors the production environment) to avoid business
+                                    disruptions.</p>
+                                <p class="comment78305">Secure installation processes can help address a common
+                                    application vulnerability that was mentioned earlier, namely Security
+                                    Misconfiguration in OWASP Top 10.</p>
+                                <p class="comment78305">Secure installation processes should be implemented, including:
+                                </p>
+                                <ul>
+                                    <li>Use a repeatable hardening process that makes it fast and easy to deploy another
+                                        environment that is properly locked down.<ul>
+                                            <li>Development, QA, and production environments should all be configured
+                                                identically, with different credentials used in each environment.</li>
+                                            <li>This process should be automated to minimize the effort required to
+                                                setup a new secure environment.</li>
+                                        </ul>
+                                    </li>
+                                    <li>A minimal platform should not have any unnecessary features, components,
+                                        documentation, or samples.<ul>
+                                            <li>Remove or do not install unused features and frameworks. </li>
+                                        </ul>
+                                    </li>
+                                    <li>Review and update the configurations appropriate to all security notes, updates,
+                                        and patches as part of the patch management process.</li>
+                                    <li>Where applicable, a segmented application architecture provides effective,
+                                        secure separation between components or tenants, with segmentation,
+                                        containerization, or cloud security groups (ACLs).</li>
+                                    <li>Follow an automated process to verify the effectiveness of the configurations
+                                        and settings in all environments.</li>
+                                </ul>
+                                <p class="comment78305">Note that because of risk analysis and its outcome, in addition
+                                    to environment hardening, application hardening may also be necessary. This could
+                                    mean making changes to the code in a way that prevents vulnerabilities without
+                                    altering the design, using stronger implementations of libraries, reengineering the
+                                    application to integrate security features that were absent or insufficient, and
+                                    other measures.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4a063212-380f-49ab-bef9-6cd676cd1acd" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>11</sup> OWASP Foundation Software Assurance Security
+                                    Model; <a href="https://owasp.org/www-pdf-archive/SAMM_Core_V1-5_FINAL.pdf"
+                                        target="_blank">https://owasp.org/www-pdf-archive/SAMM_Core_V1-5_FINAL.pdf</a>;
+                                    retrieved June 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="cba89c8d-068f-402a-b53e-17c974f8adb7" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Secure Activation<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="edec1a09-c1c9-4cdb-9f40-1c2667d67b18" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">A common requirement for commercial software is generating and
+                                    validating license keys. Software activation is an anti-piracy technology that
+                                    verifies that the product has been legitimately licensed in compliance with the
+                                    software’s end-user license agreement.</p>
+                                <p class="comment78305">Software activation reduces a form of piracy known as casual
+                                    copying, or the sharing of software between people in a way that violates the
+                                    license agreement. Activation helps protect the intellectual property that lies at
+                                    the heart of the software industry. It is designed to have minimal impact on users.
+                                </p>
+                                <p class="comment78305">There are various software activation mechanisms. Examples
+                                    include:</p>
+                                <ul>
+                                    <li>Hashing product keys and hardware serial numbers may be used to generate unique
+                                        installation keys and numbers; these are then sent to the software publisher for
+                                        verification of authenticity.</li>
+                                    <li>The software manufacturer provides the user with a unique product serial number
+                                        that is used during the product installation and verified with the vendor over
+                                        the internet. Any applicable limitations pertaining to the software license will
+                                        then be applied.</li>
+                                </ul>
+                                <p class="comment78305">Software that is not activated will typically remind users to
+                                    activate at startup or at certain frequencies when limitations are reached. After
+                                    activation, it is also possible for the software to make activation validity
+                                    verification at certain frequencies. If verification cannot be made, it is possible
+                                    that software may stop working.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="892dffc9-3092-4531-a4de-1f6c7ebefcbf" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Security Policy Implementation<br />
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5eaaaf6d-1934-4a87-bf82-7f83a452cbba" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Security policy should set the tone for hardening the entire
+                                    environment for security. Software installation and deployment of software may
+                                    require creating accounts, directory structures, and configuration files, copying
+                                    binaries, generating keys, or installing certificates. Security policy should
+                                    address the following software installation and deployment issues:</p>
+                                <ul>
+                                    <li>Password complexity, aging, and expiration</li>
+                                    <li>Granting privileges to roles and not users while adhering to the least-privilege
+                                        principles</li>
+                                    <li>Secure generation and protection of encryption keys</li>
+                                    <li>Secure configuration settings for the software</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="screengrid comment78305">
+            <footer class="screen__margin screen__footer u-hide-element vstdonthighlight">
+                <div class="feedback comment78305">
+                    <div class="feedback__content js-feedback-focus comment78305" tabindex="-1"></div>
+                </div>
+                <div class="control-btns comment78305"></div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay-root vstdonthighlight rendered comment78305 u-hidden" style="overflow-y: auto;">
+        <div class="modal-cover-holder comment78305">
+            <div class="modal-cover-outer comment78305">
+                <div class="modal-cover comment78305"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

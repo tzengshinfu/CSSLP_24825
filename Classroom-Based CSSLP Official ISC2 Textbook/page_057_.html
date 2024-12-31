@@ -1,0 +1,403 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"
+    style="padding: 0px; font-size: 100%; --USER__lineHeight: 1; --USER__pageMargins: 1; --USER__view: readium-scroll-on;"
+    class="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Documentation Verification and Validation (6.3)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="overflow: hidden auto;">
+    <div xmlns:epub="http://www.idpf.org/2007/ops" epub:type="pagebreak" id="pagebreak_57"
+        class="hidden-pagebreak comment78305" title="57"></div>
+
+    <div xmlns:epub="http://www.idpf.org/2007/ops" id="36f080bf-cb74-43f6-8c84-2a40ddda444f"
+        class="screen rendered comment78305" aria-hidden="false">
+        <div class="screengrid comment78305">
+            <header class="screen__margin screen__header u-hide-element vstdonthighlight">
+
+                <div class="screen__heading u-float--clearfix comment78305">
+                    <div class="screen__icon u-float--left comment78305"></div>
+                    <h2 class="screen__title comment78305" tabindex="-1"></h2>
+                </div>
+
+
+                <div class="screen__instructions comment78305"></div>
+            </header>
+        </div>
+
+        <div class="screen__content comment78305">
+
+            <div class="block rendered comment78305">
+                <div id="02273f56-aba3-4eef-9d25-b0f1abb9134c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Documentation Verification and
+                                Validation (6.3)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d6cca426-ab2b-4026-a0ce-a7422e856b70" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Documentation and other non-source artifacts need to be
+                                    validated and verified. Security practitioners should ensure documentation
+                                    verification and validation are incorporated into the security testing strategy and
+                                    that testing exists within the system engineering life cycle. This is especially
+                                    true for regulated industries or sensitive information, when lack of diligence may
+                                    result in undo risk. All supporting artifacts, including documents, must be
+                                    accurate, complete, and compliant with organization-defined standards and
+                                    requirements.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7177bdd9-883a-4844-ac56-586ea1920aa9" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Objectives<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="812fe458-0db2-4d81-8efc-707ac65a8b31" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>Describe documentation verification and validation.</li>
+                                    <li>Explain the structure and goals of OWASP’s Application Security Verification
+                                        Standard (ASVS).</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e11a9b96-7ffc-426d-b383-bfda0e3346a7" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Overview<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e7ca61d5-1edf-48ae-aaf2-7d7ee379b10b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Software documentation includes installation procedures and
+                                    setup instructions, error messages, and documents that inform customers of features
+                                    after a new build. Almost all software is accompanied and delivered with some level
+                                    of documentation. Installation and setup instructions, documentation of error
+                                    messages, user guides, and release notes are common artifacts that need to be
+                                    verified and validated. General tools and techniques are similar across various
+                                    artifacts. For brevity, this section will simply refer to all non-source code
+                                    artifacts as documents for the remainder of the section.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1af7273e-c229-4a56-8414-8c8eaf02a37b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Documentation Verification<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="61fba3b5-7525-46c3-b600-bfa450769e6e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Software document verification is the process of ensuring the
+                                    authenticity and integrity of documentation. Organizations may opt to review the
+                                    author identity, origin, and integrity of the documents. Document verification, like
+                                    other testing, can be done manually or automatically. Tools such as encryption,
+                                    watermarking, or digital signatures can provide confidence during verification.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="67c97ff3-b47e-4c8b-a595-7649369cd9c6" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Documentation Validation<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1e80b394-6f73-48b2-9c02-0a68f7374b8f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Software document validation is the process of ensuring the
+                                    correctness, standards conformity, policy conformity, and consistency of documents.
+                                    Organizations may opt to review contents, format, or document structure. This
+                                    process also includes data validation, especially with artifacts such as logs or
+                                    test results. As with verification, document validation can be done manually or
+                                    automatically. Tools such as style guides, checkers (e.g., grammar, spelling), or
+                                    schema validators can assist with validation. The format of artifacts has a large
+                                    impact on the feasibility of document test automation.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="76726eee-edf2-40a3-9637-c7a019a85f3d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Manual and Automated Document
+                                Review<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0aae999a-30a7-45b4-a6e1-292d50d6d868" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Document verification and validation can be achieved manually by
+                                    leveraging Quality Assurance, Security, or other stakeholders to review, inspect,
+                                    and test the documents. Manual verification and validation can be time-intensive and
+                                    prone to errors. To safeguard against these potential issues, organizations
+                                    typically implement policies, procedures, checklists, and guidelines to increase
+                                    consistency and reduce efforts.</p>
+                                <p class="comment78305">Software tools can be used to automate some document review by
+                                    scanning and analyzing documents. Documents are generally checked against
+                                    organizationally defined rules and criteria. Automatic document checking can be
+                                    faster, cheaper, and more accurate than manual methods, but it is generally cost
+                                    prohibitive to automate everything. A phased approach of two passes—a first
+                                    automatic and a second manual review based on the automation generated
+                                    results—generally provides the best balance. Security practitioners should recognize
+                                    that automation requires greater technical skill and includes maintenance
+                                    considerations. </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="861b3ab8-0559-4959-8727-8ee5c3e1569e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">OWASP Application Security
+                                Verification Standard (ASVS)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a042c876-ad55-4f8e-8f7b-e400b76e7c17" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">OWASP’s Application Security Verification Standard (ASVS) lays
+                                    out control objectives and security verification requirements for software. It may
+                                    be used to assess the degree of trust in Web applications, provide developers with
+                                    guidance on security controls, and provide a basis for specifying application
+                                    security verification requirements in contracts.</p>
+                                <p class="comment78305">The OWASP Application Security Verification Standard (ASVS) has
+                                    two main goals:</p>
+                                <ol>
+                                    <li>Help organizations develop and maintain secure applications.</li>
+                                    <li>Allow security service vendors, security tool vendors, and consumers to align
+                                        their requirements and offerings.</li>
+                                </ol>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e7a0ac38-11c8-4c80-b038-1a60b0940cb1" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Application Security Verification
+                                Levels<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f3b9b3fc-47e6-444f-b750-48bfb4e7cfc7" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">ASVS defines three security verification levels, with each level
+                                    increasing in depth. Each ASVS level contains a list of security requirements. Each
+                                    of these requirements can also be mapped to security-specific features and
+                                    capabilities that must be built into software by developers.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="471acd80-1fad-4862-9873-f790f40c8813" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--100 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_057_01.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_057_01.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 121.641px; left: 565.719px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 7: OWASP Application Security Verification Standard
+                                        4.0 Levels<sup>9</sup></em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="12435527-8320-49b8-e508-408617336e73"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8857cbc7-052e-4626-9525-94fd9eab00d6" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li><em>ASVS Level 1. </em>An application achieves ASVS Level 1 if it adequately
+                                        defends against application security vulnerabilities that are easy to discover
+                                        and included in the OWASP Top 10 and other similar checklists. Level 1 is the
+                                        bare minimum that all applications should strive for.</li>
+                                    <li><em>ASVS Level 2. </em>An application achieves ASVS Level 2 (or Standard) if it
+                                        adequately defends against most of the risks associated with software today.
+                                        Level 2 is typically appropriate for applications that handle significant
+                                        business-to-business transactions, including those that process healthcare
+                                        information, or implement business-critical or sensitive functions.</li>
+                                    <li><em>ASVS Level 3. </em>ASVS Level 3 is the highest level of verification within
+                                        the ASVS. This level is typically reserved for applications that require
+                                        significant levels of security verification, such as those that may be found
+                                        within areas of military, health and safety, critical infrastructure,
+                                        etc.<sup>10</sup></li>
+                                </ul>
+                                <p class="comment78305">ASVS lays out control objectives and security verification
+                                    requirements in more than a dozen areas. The requirements were developed with the
+                                    following objectives in mind:</p>
+                                <ul>
+                                    <li><em>Use as a metric. </em>Provide application developers and application owners
+                                        with a yardstick with which to assess the degree of trust that can be placed in
+                                        their Web applications.</li>
+                                    <li><em>Use as guidance. </em>Provide guidance to security control developers as to
+                                        what to build into security controls to satisfy application security
+                                        requirements.</li>
+                                    <li><em>Use during procurement. </em>Provide a basis for specifying application
+                                        security verification requirements in contracts.<sup>11</sup></li>
+                                </ul>
+                                <p class="comment78305">Requirement areas include:</p>
+                                <ul>
+                                    <li>Architecture, Design and Threat Modeling</li>
+                                    <li>Authentication</li>
+                                    <li>Session Management</li>
+                                    <li>Access Control</li>
+                                    <li>Validation, Sanitization and Encoding</li>
+                                    <li>Stored Cryptography</li>
+                                    <li>Error Handling and Logging</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="9e28596c-d90c-4e14-ac7f-6b60d91b5af6" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>9</sup> OWASP Application Security Verification Standard
+                                    4.0; <a
+                                        href="https://owasp.org/www-pdf-archive/OWASP_Application_Security_Verification_Standard_4.0-en.pdf"
+                                        target="_blank">https://owasp.org/www-pdf-archive/OWASP_Application_Security_Verification_Standard_4.0-en.pdf</a>;
+                                    retrieved July 2023.</p>
+                                <p class="comment78305"><sup>10</sup> Ibid.</p>
+                                <p class="comment78305"><sup>11</sup> Ibid.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="screengrid comment78305">
+            <footer class="screen__margin screen__footer u-hide-element vstdonthighlight">
+                <div class="feedback comment78305">
+                    <div class="feedback__content js-feedback-focus comment78305" tabindex="-1"></div>
+                </div>
+                <div class="control-btns comment78305"></div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay-root vstdonthighlight rendered u-hidden comment78305" style="overflow-y: auto;">
+        <div class="modal-cover-holder comment78305">
+            <div class="modal-cover-outer comment78305">
+                <div class="modal-cover comment78305"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

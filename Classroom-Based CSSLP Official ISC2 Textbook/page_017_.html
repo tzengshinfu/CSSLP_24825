@@ -1,0 +1,767 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"
+    style="padding: 0px; font-size: 100%; --USER__lineHeight: 1; --USER__pageMargins: 1; --USER__view: readium-scroll-on;"
+    class="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Secure Operation Processes (2.9)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="overflow: hidden auto;">
+    <div xmlns:epub="http://www.idpf.org/2007/ops" epub:type="pagebreak" id="pagebreak_17"
+        class="hidden-pagebreak comment78305" title="17"></div>
+
+    <div xmlns:epub="http://www.idpf.org/2007/ops" id="965991ae-7b30-446a-b90a-1026824ab993"
+        class="screen rendered comment78305" aria-hidden="false">
+        <div class="screengrid comment78305">
+            <header class="screen__margin screen__header u-hide-element vstdonthighlight">
+
+                <div class="screen__heading u-float--clearfix comment78305">
+                    <div class="screen__icon u-float--left comment78305"></div>
+                    <h2 class="screen__title comment78305" tabindex="-1"></h2>
+                </div>
+
+
+                <div class="screen__instructions comment78305"></div>
+            </header>
+        </div>
+
+        <div class="screen__content comment78305">
+
+            <div class="block rendered comment78305">
+                <div id="dfecb8c6-23fe-4c41-a56b-8bde97a12772" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Secure Operation Processes (2.9)<br />
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2d50d056-50af-4c07-b1b2-6be91fe1a8bb" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Operational application security requires controlling software
+                                    deployment and configuration baselines, verifying and validating the software in
+                                    production using continuous monitoring, and maintaining continuity efforts by
+                                    planning for incident response. Showing due care during operations using continued
+                                    assessment is essential for maintaining authorization.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8597f35a-dbde-4111-a4dd-09560ae2131f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Objectives<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ed257b06-f268-477d-afbb-25355b70f441" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>Review the implantation of secure operation processes.</li>
+                                    <li>Identify security considerations within the container life cycle.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="971fb52f-6e1b-474a-8e2b-15ae60fb10e8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Overview<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1296c1dc-624a-4efa-b8dd-0c78bd6cfc25" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Technology for software application deployment has changed over
+                                    time. When technology evolves it can often change security considerations throughout
+                                    the life cycle. Security practitioners must understand SDLC and security impacts
+                                    from operational process and technology shifts.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e8fd65bb-6ef7-4a3b-86cc-7bfe33296e42" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Deployment Environment<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d04aff18-29ba-41c8-bb7c-13fba0afd60f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">For our discussion, a deployment environment is the collective
+                                    consisting of various components including servers, operating systems, databases,
+                                    middleware, and any other component that is configured to collaborate and provide an
+                                    environment for hosting a software application.</p>
+                                <p class="comment78305">Deployment of software is not free of risk, whether it takes
+                                    place in on-premises data centers or in the cloud. Service offerings from cloud
+                                    service providers (CSP) have given organizations the opportunity to rent virtualized
+                                    servers and associated service for running existing applications or developing and
+                                    testing new ones. It is no longer uncommon for an organization to have its
+                                    development, QA, staging, and production environment all as separate instances in
+                                    the cloud as part of minimizing their on-premises IT footprint. Regardless of whom
+                                    the hosting infrastructure belongs to, security controls of various types and nature
+                                    must be assured to protect against the threats to, and mitigate the risks of,
+                                    disclosure, tampering, and destruction of information assets.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a89cd22a-c8f6-45d1-ba35-1017b8722eb6" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Maintenance of the Deployment
+                                Environment<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="69832a36-9e6f-4d83-a58f-5103635c7d7d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Maintaining the security of the deployment/production
+                                    environment is crucial. Any risks to the environment must be identified and
+                                    analyzed, including those risks that may stem from:</p>
+                                <ul>
+                                    <li>Lack of redundancy mechanisms in place to address the availability requirements
+                                    </li>
+                                    <li>Lack of secure configuration standards for various infrastructure components
+                                        that make up the production environment</li>
+                                    <li>Excessive physical access to the data centers or logical access to production
+                                        environment</li>
+                                    <li>Improper patch/update mechanisms that could cause disruptions</li>
+                                    <li>Improper segregation of production environment from nonproduction environments
+                                    </li>
+                                    <li>Flawed change management processes</li>
+                                    <li>Insufficient logging and auditing</li>
+                                    <li>Insufficient documentation of the production environment</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3fe18bde-6774-4456-aab5-30664d79e488" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Virtualization and
+                                Containerization<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c9eeb5e7-ffa1-4d01-aa60-b2291f303a5f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Operational software can be deployed using <strong><button
+                                            data-definition title="The simulation of the software and/or hardware upon which other software runs; this simulated environment is called a virtual machine Source(s): NISTIR 8006 from NIST SP 800-125—Adapted"
+                                            class="rendered">virtualization</button> </strong>and/or <strong><button
+                                            data-definition title="A software deployment process that bundles application source code and dependencies (e.g., files and libraries) needed to run on any platform."
+                                            class="rendered">containerization</button>. </strong>According to NIST,
+                                    virtualization is a methodology for emulation or abstraction of hardware resources
+                                    that enables complete execution stacks, including software applications, to run on
+                                    it. Basically, traditional hardware can be allocated to multiple virtual machines
+                                    (VMs) using an operating system called a hypervisor. There are two types of
+                                    hypervisors: Type I and Type II. A Type I hypervisor runs directly on computing
+                                    hardware while Type II relies on software to make a virtual layer.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e491efef-1bb8-4737-b54f-a5311e098635" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--75 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_017_01.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_017_01.png"
+                                    style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 215.531px; left: 490px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 12: Graphic of Type I and Type II Hypervisor </em>
+                                </p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="c2e7f71b-c77a-45c3-9cba-2cc9b2602934"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c86a672c-0a25-49b9-8181-82b9f470c636" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">A VM is essentially an entire virtual computer—OS, CPU, memory,
+                                    storage, etc. In contrast, containerization is a lighter weight packaging of the
+                                    minimum dependencies and applications required to run a software—frameworks,
+                                    libraries, and software. This minimum packaging is isolated and modular by design.
+                                    VMs can be moved across hypervisors and underlying resources can generally be scaled
+                                    up or down as required. Containers may be moved across platforms and infrastructures
+                                    provided the contain orchestration software is available.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d0271844-b340-4a32-b481-88043831c5ee" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Container Technology Life-Cycle
+                                Security Considerations<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="fad90d52-2d59-427c-acc6-58d397efa9e1" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><em>NIST SP 800-190—Application Container Security Guide
+                                    </em>primarily describes core components of containerization, major risks, and
+                                    corresponding mitigation techniques. However, there is also guidance on the
+                                    container life cycle—creation, testing, and accreditation.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0f1195c2-0957-489e-bf6a-c80d23a4c428" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Initiation<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5ad81eaa-d2d5-4a97-907f-a845a7be3239" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Security practitioners should consider container impact on
+                                    security policies and posture and make adjustments to account for security gaps.
+                                    Incident response and forensic analysis polices will undoubtably be impacted.
+                                    Vulnerability management and assessment will need to be tailored for containers. New
+                                    processes and training can be considered to address any potential culture shock
+                                    introduced by the technology change.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="37ba7815-097c-4d73-b538-047bec32e91d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Planning and Design<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1e4f4e0b-3ea4-48e7-b859-9f852e843802" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Containers are immutable by nature, which can improve forensic
+                                    analysis when accounted for properly within an organization’s continuity and
+                                    response efforts. This opportunity is directly related to a greater separation
+                                    between the OS and application software, which simplifies efforts.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="48527bf9-7889-4740-af85-adb1f402b2ce" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Implementation<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0479b4ee-45b5-4c4e-8cad-fa578966c58d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">After a container is designed it should be tested prior to being
+                                    released for production. <em>NIST SP 800-125—Guide to Security for Full
+                                        Virtualization Technologies </em>outlines several infrastructure assessment
+                                    considerations that should occur before production containerization deployment:</p>
+                                <ul>
+                                    <li>Authentication</li>
+                                    <li>Connectivity</li>
+                                    <li>Networking</li>
+                                    <li>App functionality</li>
+                                    <li>Management</li>
+                                    <li>Performance</li>
+                                    <li>Technology Security (including isolation capabilities)</li>
+                                </ul>
+                                <p class="comment78305">New infrastructure without sunsetting preexisting infrastructure
+                                    is correlated with an increased organizational attack surface. New security tools
+                                    may be required to properly analyze the attack surface. Security controls and
+                                    technologies will also need to be adjusted (e.g., event logging, network logging).
+                                    To reduce potential negative impacts while minimizing risk use a phased deployment
+                                    of containers within the organization.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="eaeb56fb-8fd4-4db7-9c96-778d854ab8ca" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Operations and Maintenance<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0a2d7658-5a22-4369-967c-6de4aa3cc298" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Operational security processes are equally important to app
+                                    security for containerization. Organizational container technology should be updated
+                                    and assessed regularly. Policies and procedures must be updated in conjunction with
+                                    technology maintenance. Container monitoring should be integrated with preexisting
+                                    security infrastructure such as security information and event management (SIEM)
+                                    tools to ensure reporting mechanisms are effective.</p>
+                                <p class="comment78305"><em>NIST SP 800-61—Computer Security Incident Handling Guide
+                                    </em>applies to containerization and should be considered by security practitioners.
+                                    Incident response teams must be able to know the roles, owners, and sensitivity
+                                    levels of containers, and be able to integrate this data into processes. Regardless,
+                                    predefined procedures should describe response steps for container incidents.
+                                    Updating incident response plans is an integral part of maintenance.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="75c81d6e-a090-4ea9-ab78-7e01ab99ac00" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Disposition<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="62b8c49a-ac74-4873-9f12-ac3c861d3d0d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Containers can be instantiated and deprovisioned automatically
+                                    based on organizational needs. This is a strength for resource utilization and a
+                                    challenge for record retention and forensics. Organizations must ensure mechanisms
+                                    satisfy data retention policies. Data storage devices for containers must be
+                                    accounted for in organizational disposal plans.<sup>25</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="72dfc1f1-1978-4774-b536-22cf4fd96849" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>25</sup> National Institute of Standards and Technology;
+                                    <em>NIST Special Publication 800-190—Application Container Security Guide; </em><a
+                                        href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-190.pdf"
+                                        target="_blank">https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-190.pdf;
+                                    </a>retrieved May 2023.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ee9a5b82-6887-44cd-91b5-c2919dccb697" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">System Integration<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1935dca2-4c49-4fee-bf59-5854ceb93b68" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Systems seldom run in silos and without dependencies on other
+                                    software systems and processes upstream and downstream. System integration testing
+                                    must assure the verification of proper execution and functionality of software
+                                    components and interfaces between modules within the solution.</p>
+                                <p class="comment78305">There are various areas of concern when it comes to system
+                                    integration. One example would be integration with legacy applications developed
+                                    using older technologies/frameworks that may not support certain features and
+                                    capabilities (e.g., SSO) resulting in the expansion of the attack surface and
+                                    presenting a new attack vector. Another example would be encrypted data exchanged
+                                    to/from downstream/upstream processes that would require exchange of encryption
+                                    keys; this could also introduce a weakness related to the key management processes.
+                                    Many more examples can be listed, but ultimately all such risks must be identified
+                                    and analyzed for proper handling.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ef6984d9-74b2-4d95-b003-ee9412f1c93a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Continuous Improvement<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="923fa3ed-1bda-489e-a20a-0de301ffc61f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The quality, security, and resiliency of software products is
+                                    closely related to the overall software development process. This is evident in
+                                    Capability Maturity Model Integration (CMMI) developed by SEI, the multipart
+                                    standard from the International Security Organization, and ISO/IEC 27034, among many
+                                    more examples. What is common in all such frameworks or standards is the emphasis on
+                                    the need for the continuous process improvement.</p>
+                                <p class="comment78305">Continuous improvements in SDLC processes are recommended
+                                    regardless of the software development processes used by the organization. Actual
+                                    implementation of how these improvements is made is affected by various factors,
+                                    including the development methodology that is adopted and the development team’s
+                                    culture, among other factors. One implementation method for continuous and
+                                    incremental improvements would be “Retrospectives” in Agile environments.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a1d1df60-d139-4fa5-bc6b-490bf3b2d221" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Continuous Monitoring (CM)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0e07228f-5181-44a3-93e0-2e2e422b838a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Information Security Continuous
+                                Monitoring (ISCM)<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="147936b6-dd6a-4a15-bfe8-af04e9cfda6e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><strong><button
+                                            data-definition title="NIST 800-137 defines information security continuous monitoring (ISCM) as “maintaining ongoing awareness of information security, vulnerabilities, and threats to support organizational risk management decisions.”"
+                                            class="rendered">Information security continuous monitoring (ISCM)</button>
+                                    </strong>is defined by NIST as “maintaining ongoing awareness of information
+                                    security, vulnerabilities, and threats to support organizational risk management
+                                    decisions.” The terms “continuous” and “ongoing” in this context mean that security
+                                    controls and organizational risks are assessed and analyzed at a frequency
+                                    sufficient to support risk-based security decisions to adequately protect
+                                    organization information.<sup>26</sup></p>
+                                <p class="comment78305">In NIST SP 800-137 Rev. 1, this is described as a disciplined
+                                    and structured process that integrates information security and risk management
+                                    activities into the system-development life cycle. Ongoing monitoring is a critical
+                                    part of that risk management process. In addition, an organization’s overall
+                                    security architecture and accompanying security program are monitored to ensure that
+                                    organization-wide operations remain within an acceptable level of risk, despite any
+                                    changes that occur. Timely, relevant, and accurate information is vital,
+                                    particularly when resources are limited, and organizations must prioritize their
+                                    efforts.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="066be3f3-ed67-4c75-9d40-c1f54816d19f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>26 </sup>National Institute of Standards and Technology;
+                                    <em>SP 800-137—Information Security Continuous Monitoring (ISCM) for Federal
+                                        Information Systems and Organizations;<a
+                                            href="https://csrc.nist.gov/publications/detail/sp/800-137/final"
+                                            target="_blank"> </a></em><a
+                                        href="https://csrc.nist.gov/publications/detail/sp/800-137/final"
+                                        target="_blank">https://csrc.nist.gov/publications/detail/sp/800-137/final</a>;
+                                    retrieved May 2023.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8a56daf7-9a6d-4291-b16b-156dc2066b2d" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--75 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_017_02.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_017_02.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 326.25px; left: 476.594px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 13: ISCM Collection System</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="9c2200a6-6741-47ff-f630-992d13c0195c"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="483aa68c-7082-40a7-9b88-25cfa8cf49f2" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The process of implementing ISCM is described follows:</p>
+                                <ul>
+                                    <li>Define the ISCM strategy</li>
+                                    <li>Establish an ISCM program</li>
+                                    <li>Implement the ISCM program</li>
+                                    <li>Analyze and report findings</li>
+                                    <li>Respond to findings</li>
+                                    <li>Review and update ISCM strategy and program</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="31101319-7652-4600-ad8b-2bccba7b0643" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Verification and Validation<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c14f458d-4c0f-4ff5-9933-ccee34dce292" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">NIST SP 800-160 vol. 1 defines <strong><button
+                                            data-definition title="The process of producing objective evidence that sufficiently demonstrates that the system satisfies its security requirements and security characteristics with the level of assurance that applies to the system"
+                                            class="rendered">verification</button> </strong>as the process of producing
+                                    objective evidence that sufficiently demonstrates that the system satisfies its
+                                    security requirements and security characteristics with the level of assurance that
+                                    applies to the system. Validation is the confirmation that requirements for a
+                                    specific intended use or application have been fulfilled and that the system, while
+                                    in use, fulfills its mission or business objectives while being able to provide
+                                    adequate protection for stakeholder and mission or business assets, minimize or
+                                    contain asset loss and associated consequences, and achieve its intended use in its
+                                    intended operational environment with the desired level of trustworthiness.</p>
+                                <p class="comment78305">Trustworthy software is achieved by leveraging security
+                                    throughout the life cycle both operationally and from a secure software development
+                                    perspective. These efforts demonstrate security controls and assessment activities
+                                    that aid in the <strong><button
+                                            data-definition title="A structured approach used to oversee and manage risk for an enterprise."
+                                            class="rendered">risk management framework (RMF)</button>
+                                    </strong>authorization process and support general engineering best practices.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0c86f653-7784-43f4-94f2-eb97f938c744" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Assessment and Authorization
+                                (A&amp;A)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8498d641-e926-44ea-8422-1c25be3343a2" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><em>NIST SP 800-37—Risk Management Framework for Information
+                                        Systems and Organizations: A System Life Cycle Approach for Security and Privacy
+                                    </em>transitions certification and accreditation (C&amp;A) language to <em>DoD
+                                        Information Assurance Risk Management Framework (DIARMF) Assessment and
+                                        Authorization (A&amp;A). </em>NIST SP 800-37 encourages organizations to
+                                    leverage automation to increase effectiveness of executing the RMF process.
+                                    Assessment and continuous monitoring of controls can be matured by automation of
+                                    development pipelines using modern practices such as DevSecOps and modern
+                                    technologies such as virtualization and containerization. All this automation can
+                                    report and feed into a system authorization package that allows executives to make
+                                    timely decisions about the trustworthiness of the system.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="screengrid comment78305">
+            <footer class="screen__margin screen__footer u-hide-element vstdonthighlight">
+                <div class="feedback comment78305">
+                    <div class="feedback__content js-feedback-focus comment78305" tabindex="-1"></div>
+                </div>
+                <div class="control-btns comment78305"></div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay-root vstdonthighlight rendered u-hidden comment78305" style="overflow-y: auto;">
+        <div class="modal-cover-holder comment78305">
+            <div class="modal-cover-outer comment78305">
+                <div class="modal-cover comment78305"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

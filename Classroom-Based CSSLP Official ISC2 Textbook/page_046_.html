@@ -1,0 +1,1503 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"
+    style="padding: 0px; font-size: 100%; --USER__lineHeight: 1; --USER__pageMargins: 1; --USER__view: readium-scroll-on;"
+    class="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Analyzing Code for Security Risks (5.2)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="overflow: hidden auto;">
+    <div xmlns:epub="http://www.idpf.org/2007/ops" epub:type="pagebreak" id="pagebreak_46"
+        class="hidden-pagebreak comment78305" title="46"></div>
+
+    <div xmlns:epub="http://www.idpf.org/2007/ops" id="c1cb97ec-73bc-42ce-a0fc-c1e147c87cd4"
+        class="screen rendered comment78305" aria-hidden="false">
+        <div class="screengrid comment78305">
+            <header class="screen__margin screen__header u-hide-element vstdonthighlight">
+
+                <div class="screen__heading u-float--clearfix comment78305">
+                    <div class="screen__icon u-float--left comment78305"></div>
+                    <h2 class="screen__title comment78305" tabindex="-1"></h2>
+                </div>
+
+
+                <div class="screen__instructions comment78305"></div>
+            </header>
+        </div>
+
+        <div class="screen__content comment78305">
+
+            <div class="block rendered comment78305">
+                <div id="eac34d9d-4d89-4cb6-a048-e6df361285ae" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Analyzing Code for Security Risks
+                                (5.2)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4ff72b3b-aea6-4ddc-97f7-484506e96d61" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Software risk can never be reduced to zero. Even software
+                                    developed with high-security programs will undoubtedly include unintentional defects
+                                    that result in the degradation of confidentiality, integrity, and availability of
+                                    production software systems. However, these security defects should likely be
+                                    considered zero days—an attack that exploits a previously unknown hardware,
+                                    firmware, or software vulnerability. If software weaknesses are known and documented
+                                    with the security community, using various databases such as MITRE CWE, then
+                                    software assurance efforts throughout the software implementation phase should
+                                    prevent those defects from being incorporated into an organization’s source
+                                    repository.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a5ff89e7-1c62-43b9-acb4-a360ca546253" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Objectives<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="13a19eef-a919-4b6c-93c2-a77949096e84" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>Identify software weaknesses listed in the most common vulnerability lists and
+                                        databases.</li>
+                                    <li>Describe the function and methods of software assurance tools.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c0e1bba0-4159-4075-93ab-bbb6178e2efc" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Overview<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ee4a408e-f274-4063-890d-01d730621b97" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">To manage known software risks they must first be documented.
+                                    The collection of CWEs represents known weaknesses that when left unaddressed will
+                                    result in vulnerabilities. CWEs provide a means to analyze source code security
+                                    during development. Once a software system is fielded with defects, realized
+                                    weaknesses in specific software are considered vulnerabilities stored as CVEs within
+                                    the National Vulnerability Database (NVD). Using both together provides a means to
+                                    understand software risks during various life cycle stages.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8b97e74d-f72c-4665-8821-e1406344d34b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Vulnerability Databases and
+                                Lists<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6a466d34-7534-4948-a6f6-cce0b2a073d7" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">It has been stated that a successful attack involves the
+                                    existence of a susceptibility, access to the susceptibility, and finally the
+                                    capability to exploit the susceptibility.</p>
+                                <p class="comment78305">Vulnerability databases and lists maintain information about
+                                    discovered vulnerabilities that target information systems. In addition to the
+                                    description of the vulnerability, other information maintained may include an
+                                    assessment of the potential damage, workarounds, and associated remediation
+                                    strategies.</p>
+                                <p class="comment78305">In this section, NVD, CVE, CWE, and CAPEC will be discussed,
+                                    followed by OWASP.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="83b30311-a3c9-407f-a15a-0d410bca2226" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">National Vulnerability Database
+                                (NVD)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="52bd47b5-f411-4920-b41c-1634b440d4c7" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">NVD is the U.S. government’s repository of standards-based
+                                    vulnerability management data represented using the Security Content Automation
+                                    Protocol (SCAP). This data enables automation of vulnerability management, security
+                                    measurement, and compliance. The NVD includes databases of security checklist
+                                    references, security related software flaws, misconfigurations, product names, and
+                                    impact metrics.</p>
+                                <p class="comment78305">The NVD is the CVE List augmented with additional analysis, a
+                                    database, and a fine-grained search engine. The NVD is synchronized with CVE such
+                                    that any updates to CVE appear immediately on the NVD.<sup>13</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="58df8c74-5806-41ae-9d0d-792a9aa92bf1" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>13</sup> National Institute of Standards and Technology;
+                                    National Vulnerability Database General FACs; <a
+                                        href="https://nvd.nist.gov/general/FAQ-Sections/General-FAQs#7abed157-1ec6-45c9-9ef4-b923ae7824a7"
+                                        target="_blank">https://nvd.nist.gov/general/FAQ-Sections/General-FAQs#7abed157-1ec6-45c9-9ef4-b923ae7824a7</a>;
+                                    retrieved July 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="483d2bea-a70c-46c7-a065-a87492a3e602" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Common Weakness Enumerations
+                                (CWE)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="26cf654a-9e46-4956-ad8e-983e0516ab85" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">CWE™ is a community-developed list of common software and
+                                    hardware security weaknesses. It serves as a common language, a measuring stick for
+                                    security tools, and as a baseline for weakness identification, mitigation, and
+                                    prevention efforts. Each individual CWE represents a single vulnerability type. CWE
+                                    is currently maintained by the MITRE Corporation.</p>
+                                <p class="comment78305">The Common Weakness Enumeration (CWE™) Top 25 Most Dangerous
+                                    Software Errors (CWE Top 25) is a demonstrative list of the most widespread and
+                                    critical weaknesses that can lead to serious vulnerabilities in software. These
+                                    weaknesses are often easy to find and exploit. They are dangerous because they will
+                                    frequently allow adversaries to completely take over the execution of software,
+                                    steal data, or prevent the software from working. The CWE Top 25 is a community
+                                    resource that can be used by software developers, software testers, software
+                                    customers, software project managers, security researchers, and educators to provide
+                                    insight into some of the most prevalent security threats in the software
+                                    industry.<sup>14</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="274531f1-c569-4c8e-9d57-4bd8cb2420c7" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Common Vulnerabilities and Exposures
+                                (CVE)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="576bb3dd-9850-4679-a766-da9e1a311d78" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">CVE is a dictionary that provides definitions for publicly
+                                    disclosed cybersecurity vulnerabilities and exposures. The goal of CVE is to
+                                    facilitate the sharing of data across separate vulnerability capabilities (tools,
+                                    databases, and services) with these definitions. CVE entries are comprised of an
+                                    identification number, a description, and at least one public
+                                    reference.<sup>15</sup></p>
+                                <p class="comment78305">The CVE List is built by CVE Numbering Authorities (CNAs). Every
+                                    CVE entry added to the list is assigned by a CNA.</p>
+                                <p class="comment78305">CVE Numbering Authorities (CNAs) are organizations from around
+                                    the world that are authorized to assign CVE IDs to vulnerabilities affecting
+                                    products within their distinct, agreed-upon scope, for inclusion in first-time
+                                    public announcements of new vulnerabilities. These CVE IDs are provided to
+                                    researchers, vulnerability disclosers and information technology vendors.</p>
+                                <p class="comment78305">The CVE List feeds the U.S. National Vulnerability Database
+                                    (NVD).</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="eaf6e791-e3c4-4c92-b6f8-aca325aafe9f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Common Attack Pattern Enumeration and
+                                Classification (CAPEC)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="343cd2c0-54b2-4520-8453-71c16dacae1d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Developed by leveraging CWE and CVE, CAPEC is a comprehensive
+                                    dictionary and classification taxonomy of known attacks that can be used by
+                                    analysts, developers, testers, and educators to advance community understanding and
+                                    enhance defenses.<sup>16</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="281dca73-796e-4d63-ac18-64a9be27e361" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>14</sup> CWE; <em>2023 CWE Top 25 Most Dangerous Software
+                                        Weaknesses; </em><a href="https://cwe.mitre.org/"
+                                        target="_blank">https://cwe.mitre.org/</a>; retrieved July 2023.</p>
+                                <p class="comment78305"><sup>15</sup> CVE; CVE List Home; <a
+                                        href="https://cve.mitre.org/cve/"
+                                        target="_blank">https://cve.mitre.org/cve/</a>; retrieved July 2023.</p>
+                                <p class="comment78305"><sup>16</sup> CVE, Related Efforts; <a
+                                        href="https://cve.mitre.org/cve_cwe_capec_relationships"
+                                        target="_blank">https://cve.mitre.org/cve_cwe_capec_relationships</a>; retrieved
+                                    July 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a8ff3b46-b22f-41cb-b63d-7aba0067ce86" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Open Web Application Security Project
+                                (OWASP)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="61965836-7c3e-4ca9-8dfc-fda1bb2299f0" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The Open Web Application Security Project (OWASP) is a nonprofit
+                                    foundation that works to improve the security of software.<sup>17</sup></p>
+                                <p class="comment78305">OWASP provides numerous resources to address the needs of
+                                    various software security stakeholders in each phase of the software-development
+                                    life cycle. Providing an exhaustive list of these resources is not possible in this
+                                    course, but a partial list (in no specific order) includes:</p>
+                                <ul>
+                                    <li>OWASP Software Assurance Maturity Model (SAMM)</li>
+                                    <li>OWASP Application Security Verification Standard (ASVS)</li>
+                                    <li>OWASP Cheat Sheet Series</li>
+                                    <li>OWASP Code Review Guide</li>
+                                    <li>OWASP Testing Guide</li>
+                                </ul>
+                                <p class="comment78305">Top 10 lists from OWASP (in no specific order) include:</p>
+                                <ul>
+                                    <li>Top 10 Web Application Security Risks</li>
+                                    <li>Top 10 Proactive Controls</li>
+                                    <li>Top 10 Mobile Risks</li>
+                                    <li>API Security Top 10</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a72061f7-351b-4b6e-bd07-5176bcf5c835" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">OWASP Top 10 Web Application Security
+                                Risks<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="fa5060a9-0b90-4fbd-bd9e-af4af7c4b2ad" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><span style="color:#3c3c3c;" class="comment78305">The OWASP Top
+                                        10<sup>18</sup> is a standard awareness document for developers and web
+                                        application security. It represents a broad consensus about the most critical
+                                        security risks to web applications.</span></p>
+                                <p class="comment78305"><span style="color:#3c3c3c;" class="comment78305">At the time of
+                                        this writing, the Top 10 Web Application Security Risks included the
+                                        following:</span></p>
+                                <ol>
+                                    <li><span style="color:#3c3c3c;" class="comment78305"><em>2021-Broken Access
+                                                Control. </em>Thirty-four CWEs mapped to Broken Access Control were the
+                                            most prevalent defect.</span></li>
+                                    <li><span style="color:#3c3c3c;" class="comment78305"><em>2021-Cryptographic
+                                                Failures.</em> Failures related to cryptography can lead to sensitive
+                                            data exposure or system compromise.</span></li>
+                                    <li><span style="color:#3c3c3c;" class="comment78305"><em>2021-Injection.</em>
+                                            Thirty-three CWEs mapped to injection and represent the second most frequent
+                                            defect. Cross-site scripting is now included.</span></li>
+                                    <li><span style="color:#3c3c3c;" class="comment78305"><em>2021-Insecure Design.</em>
+                                            New in 2021, focuses on risks related to design flaws. Highlights the
+                                            importance of software security throughout the lifecycle.</span></li>
+                                    <li><span style="color:#3c3c3c;" class="comment78305"><em>2021-Security
+                                                Misconfiguration.</em> Most applications tested suffered from
+                                            misconfiguration which correlates with business drivers for configurability
+                                            and reuse of modern software. XML External Entities (XXE) are now included
+                                            in this category.</span></li>
+                                    <li><span style="color:#3c3c3c;" class="comment78305"><em>2021-Vulnerable and
+                                                Outdated Components. </em>Changed from “Using Components with Known
+                                            Vulnerabilities” and is a known issue that security practitioners struggle
+                                            to test and assess risk.</span></li>
+                                    <li><span style="color:#3c3c3c;" class="comment78305"><em>2021-Identification and
+                                                Authentication Failures. </em>Changed from “Broken Authentication” and
+                                            now includes CWEs that are related to identification failures.</span></li>
+                                    <li><span style="color:#3c3c3c;" class="comment78305"><em>2021-Software and Data
+                                                Integrity Failures. </em>New in 2021, focuses on assumptions related to
+                                            software updates and CI/CD pipelines without guaranteeing integrity.</span>
+                                    </li>
+                                    <li><span style="color:#3c3c3c;" class="comment78305"><em>2021-Security Logging and
+                                                Monitoring Failures.</em> Changed from “Insufficient Logging &amp;
+                                            Monitoring” and now includes types of failures which directly impact
+                                            visibility, incident alerting, and forensics.</span></li>
+                                    <li><span style="color:#3c3c3c;" class="comment78305"><em>2021-Server-Side Request
+                                                Forgery. </em>Included based on member surveys indicating importance
+                                            despite data indicating low incidence rate and above average test
+                                            coverage. </span></li>
+                                </ol>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8f6f173f-8b14-4145-842a-2b91250d4192" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>17</sup> OWASP Foundation; <em>About the OWASP
+                                        Foundation</em>; <a href="https://owasp.org/about/"
+                                        target="_blank">https://owasp.org/about/</a>; retrieved 2023.</p>
+                                <p class="comment78305"><sup>18</sup> OWASP; OWASP Top 10; <a
+                                        href="https://owasp.org/Top10/" target="_blank">https://owasp.org/Top10/</a>;
+                                    Retrieved July 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="db59f6f4-cf68-47a8-98c7-a029c51c82d3" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Other Common Application
+                                Vulnerabilities<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="bd1d7279-09ed-4e7a-9ebf-f6da658fd95a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">As stated earlier, CWE Top 25 is a list of the most widespread
+                                    and critical weaknesses that can lead to serious vulnerabilities in software. The
+                                    current list (2023) is presented in this table:</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a5f8bbc2-c13e-43a2-bfc0-bbc2c89a7e9f" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--100 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_046_01.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_046_01.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 384.578px; left: 550.406px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Table 1: Weaknesses in the 2023 CWE Top 25</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="4ee81bce-9c4b-497a-c46d-d2740c007a4f"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b0c3b9f1-c63d-4da3-8282-7247353630bb" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Buffer Overflows<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c3f300d4-34d8-408f-8109-ebb3f63ce4d3" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Buffer overflows are a common software vulnerability in numerous
+                                    products, both commercial and open source. They have led to exploits including
+                                    malicious code execution or denial-of-service attacks. As described in Common
+                                    Weakness Enumeration (CWE):</p>
+                                <p class="comment78305">“A buffer overflow condition exists when a program attempts to
+                                    put more data in a buffer than it can hold, or when a program attempts to put data
+                                    in a memory area outside of the boundaries of a buffer. The simplest type of error,
+                                    and the most common cause of buffer overflows, is the classic case in which the
+                                    program copies the buffer without restricting how much is copied.”<sup>19</sup></p>
+                                <p class="comment78305">A good example of this classic case is the function “strcpy (…)”
+                                    from the standard library of C/C++, which will copy a string from one memory
+                                    location to another without regard to the destination buffer size. There are many
+                                    more functions like this in the standard library.</p>
+                                <p class="comment78305">From a discoverability and exploitability perspective, OWASP
+                                    suggests that buffer overflows are not easy to discover, and even when one is
+                                    discovered, it is generally extremely difficult to exploit. Nevertheless, attackers
+                                    have managed to identify buffer overflows in a staggering array of products and
+                                    components.</p>
+                                <p class="comment78305">Variations of this problem exist in terms of stack overflow,
+                                    heap overflow, and other processes. Nonetheless, this issue is primarily associated
+                                    with languages such as C/C++, where the language was designed with certain
+                                    flexibility requirements and objectives in mind (e.g., the ability for direct memory
+                                    manipulation through pointers and pointer operations).</p>
+                                <p class="comment78305">Buffer overflow can lead to severe memory issues; it may even
+                                    crash the system. Attackers may also use this vulnerability to execute arbitrary
+                                    code, which can lead to compromise in confidentiality, integrity, and availability
+                                    security objectives.</p>
+                                <p class="comment78305">From the basic description of this vulnerability described
+                                    above, the following is a list of a few prevention strategies for buffer overflow:
+                                </p>
+                                <ul>
+                                    <li>Validation of input</li>
+                                    <li>Buffer boundary checking and enforcement</li>
+                                    <li>Avoiding use of unsafe APIs</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a89e3c1d-bbf9-418e-bd5d-b69e3d8bccce" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Buffer Overflow in Action<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d63ad813-8f7d-41e7-b917-e383a9124d9b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">CWE-121: Stack Based Buffer Overflow is an example of a relevant
+                                    CWE that describes a condition where the buffer being overwritten is allocated on
+                                    the stack. Stack overflow is commonly used interchangeably with the more proper
+                                    phrasing “stack-based buffer overflow” but may also reference resource exhaustion.
+                                    The example function below allocates a 64-byte buffer to store a client machine
+                                    name. This is a weakness though because there is no guarantee the client machine
+                                    name will be less than 64 bytes. If an adversary willfully specifies a large
+                                    name—the function below may overwrite data or give undo access to the threat.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="59c2c95f-7b3e-46b2-9862-fa845ecf64d9" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>19</sup> CWE; <em>CWE-120: Buffer Copy without Checking
+                                        Size of Input ('Classic Buffer Overflow'); </em><a
+                                        href="https://cwe.mitre.org/data/definitions/120.html"
+                                        target="_blank">https://cwe.mitre.org/data/definitions/120.html</a>; retrieved
+                                    July 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="46b052a3-4df0-4555-80ff-0bed11761bc2" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--75 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_046_02.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_046_02.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 119.297px; left: 490px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 9: Possible Stack-Based Buffer Overflow in C</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="ce24fdd4-12fb-4af8-b31d-43892703b66c"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7d94287f-4ef0-40cb-a3f6-e1a1441ca073" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Secure Code Reuse<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e9474ffb-e581-4c9c-a076-ed0de47a7c1f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">OWASP Top 10 contains an entry on the risk of using components
+                                    with known vulnerabilities. OWASP Dependency-Check and Dependency-Track tools can
+                                    help identify publicly disclosed vulnerabilities and reduce the risk of using
+                                    third-party and open-source components. </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="382a4f75-24fe-4736-a996-cc693487d79b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">OWASP Dependency-Check<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="92df9441-2fee-41e3-87b2-b0958a9277a2" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">OWASP Dependency-Check is a Software Composition Analysis (SCA)
+                                    tool that attempts to detect publicly disclosed vulnerabilities contained within a
+                                    project’s dependencies. It does this by determining whether there is a Common
+                                    Platform Enumeration (CPE) identifier for a given dependency. If found, it will
+                                    generate a report linking to the associated CVE entries. Dependency-check
+                                    automatically updates itself using the NVD Data Feeds hosted by NIST.<sup>20</sup>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="bb9e3ed2-c7ae-4fdf-8fbf-1a1f72665b96" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">OWASP Dependency-Track<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6d3dce84-ec23-4ccf-a595-e613a9b322ce" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Dependency-Track is an intelligent Supply Chain Component
+                                    Analysis platform that allows organizations to identify and reduce risk from the use
+                                    of third-party and open-source components. Dependency-Track takes a unique and
+                                    highly beneficial approach by leveraging the capabilities of Software
+                                    Bill-of-Materials (SBOM). This approach provides capabilities that traditional
+                                    Software Composition Analysis (SCA) solutions cannot achieve.</p>
+                                <p class="comment78305">Dependency-Track monitors component usage across all versions of
+                                    every application in its portfolio in order to proactively identify risk across an
+                                    organization. The platform has an API-first design and is ideal for use in
+                                    Continuous Integration (CI) and Continuous Delivery (CD) environments.<sup>21</sup>
+                                </p>
+                                <p class="comment78305">OWASP Dependency-Track can help identify multiple forms of risk
+                                    including:</p>
+                                <ul>
+                                    <li>Components with known vulnerabilities</li>
+                                    <li>Out-of-date components</li>
+                                    <li>Modified components</li>
+                                    <li>License risk</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="287ee254-25ff-45b8-96d5-859b6602ad3e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>20</sup> OWASP; OWASP Dependency Check; <a
+                                        href="https://owasp.org/www-project-dependency-check/"
+                                        target="_blank">https://owasp.org/www-project-dependency-check/</a>; retrieved
+                                    2023.</p>
+                                <p class="comment78305"><sup>21</sup> OWASP; OWASP Dependency-Track; <a
+                                        href="https://owasp.org/www-project-dependency-track/"
+                                        target="_blank">https://owasp.org/www-project-dependency-track/</a>; retrieved
+                                    July 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="994747ee-69bc-4010-825e-0cdba7fc1080" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Software Assurance Tools<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4934ab9d-6904-4662-aa5f-8ebefde96af0" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><strong><button
+                                            data-definition title="The level of confidence that software is free from vulnerabilities either intentionally designed into the software or accidentally inserted at any time during its lifecycle and that it functions in the intended manner."
+                                            class="rendered">Software assurance</button>, </strong>commonly abbreviated
+                                    as SwA, is the level of confidence that software is free from vulnerabilities,
+                                    either intentionally designed into the software or accidentally inserted at any time
+                                    during its life cycle, and that the software functions as intended by the purchaser
+                                    or user. Security practitioners have several tool capabilities to analyze software
+                                    source code for risks. The following table provides an overview of tool types.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e722db73-9bf4-41f5-9d84-43f64b93e309" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin vst-draggable comment78305">
+                            <div class="c-x-scroll vst-draggable comment78305" style="width: 100%;">
+                                <div class="js-x-scroll c-x-scroll__scrollbox comment78305" style="">
+                                    <table class="c-table js-x-scroll-component" style="width: 100%;"
+                                        data-orig-width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col"><span style="color:#007FAD;" class="comment78305">Tool
+                                                        Type</span></th>
+                                                <th scope="col"><span style="color:#007FAD;"
+                                                        class="comment78305">Capability</span></th>
+                                                <th scope="col"><span style="color:#007FAD;"
+                                                        class="comment78305">Description</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="4" colspan="1"
+                                                    style="text-align: center; vertical-align: middle;">Architectural
+                                                    Analysis</td>
+                                                <td style="text-align: center; vertical-align: middle;">Configuration
+                                                    Analysis</td>
+                                                <td>A good SCM plan includes the secure, baseline configurations of
+                                                    software. Documenting and enforcing these secure baseline standards
+                                                    helps to reduce the attack surface of the software.</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: center; vertical-align: middle;">Component
+                                                    Decomposition</td>
+                                                <td>Many software products have dependencies, existing components, and
+                                                    coupled modules that are delivered as part of the application, often
+                                                    not readily transparent to the user. In these cases, Component
+                                                    Decomposition is necessary prior to other forms of analysis.</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: center; vertical-align: middle;">Software Supply
+                                                    Chain Analysis</td>
+                                                <td>Some manufacturers have a pedigree of fixing issues, maintaining
+                                                    community transparency, and making wise security decisions. By
+                                                    analyzing a software manufacturer’s history, a proper level of
+                                                    iterative assessment of its products can be established.</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: center; vertical-align: middle;">Software
+                                                    Assurance Cases</td>
+                                                <td>An assurance case includes a top-level claim for a property of a
+                                                    system or product (or set of claims), systematic argumentation
+                                                    regarding this claim, and the evidence and explicit assumptions that
+                                                    underlie this argumentation.</td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="3" colspan="1"
+                                                    style="text-align: center; vertical-align: middle;">Dynamic Analysis
+                                                </td>
+                                                <td style="text-align: center; vertical-align: middle;">Specialized
+                                                    Application Testing</td>
+                                                <td>Many types of applications can be attacked in ways that are unique
+                                                    from other types. Specialized application testing includes Web
+                                                    Application Analysis, Database Analysis, and Functional Testing.
+                                                    Each of these levels of testing must optimally, include testing for
+                                                    potentially exploitable vulnerabilities in the application.</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: center; vertical-align: middle;">Dynamic Binary
+                                                    Analysis</td>
+                                                <td>When an application binary is executed, usually in a sandboxed
+                                                    environment, a dynamic binary analysis can record and verify the
+                                                    behaviors of the binary, specifically for potential vulnerabilities.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: center; vertical-align: middle;">Dynamic Source
+                                                    Analysis</td>
+                                                <td>Many interpreted languages, especially those that are popular for
+                                                    use in web applications and maintenance scripts, can be debugged and
+                                                    analyzed dynamically.</td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="2" colspan="1"
+                                                    style="text-align: center; vertical-align: middle;">Static Analysis
+                                                </td>
+                                                <td style="text-align: center; vertical-align: middle;">Static Binary
+                                                    Analysis</td>
+                                                <td>Application binaries that are not executed directly can be
+                                                    decompiled and disassembled into control flow graphs and processor
+                                                    instructions that can then be analyzed.</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: center; vertical-align: middle;">Static Source
+                                                    Analysis</td>
+                                                <td>When source code is available, it can be reviewed for defects and
+                                                    weaknesses.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="c-x-scroll__gradient c-x-scroll__gradient--left comment78305"></div>
+                                <div class="c-x-scroll__gradient c-x-scroll__gradient--right comment78305"></div>
+                            </div>
+                            <p class="comment78305"><sup><em>Table 2: Overview of tool types.</em></sup></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="31dc83a7-533d-46cb-afe8-54f388334d8a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Architectural and Design
+                                Analysis<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7b0a0139-eb73-48f3-80bb-86b0ed0b32b9" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Architectural Analysis refers to the system architecture,
+                                    requirements, and design that comprise an application development life cycle. While
+                                    the system’s mission and environment are more closely aligned with Mission
+                                    Assurance, the specific software components that make up a mission must be secured.
+                                    A thorough Architectural Analysis is conducted in four main areas: Configuration
+                                    Analysis, Component Decomposition, Software Supply Chain Analysis, and Open Sources
+                                    Analysis.</p>
+                                <ul>
+                                    <li><em>Configuration Analysis. </em>Software components can be configured in an
+                                        insecure way, so it is important to monitor the configuration on a regular
+                                        basis. It is also important to verify that a secure baseline for an application
+                                        exists. This can prevent attackers from using legitimate software features to
+                                        enact exploits on a system. Many software components include hardening
+                                        guidelines that should be followed and evaluated during security testing. A
+                                        Software Configuration Management (SCM) policy should include all hardening
+                                        guidelines and application-specific configuration options to operate the
+                                        software in a known, secure state.</li>
+                                    <li><em>Component Decomposition. </em>In the realm of composition analysis,
+                                        component decomposition extracts dependencies from even cryptic pieces of
+                                        software. A good composition analysis platform will perform Software Supply
+                                        Chain Analysis and Open Sources Analysis after unpacking/decomposing the
+                                        software.</li>
+                                    <li><em>Software Supply Chain Analysis. </em>Software Supply Chain Analysis
+                                        determines the lineage of a software product. Many Software Supply Chain
+                                        Analysis techniques use a component’s popularity and history of fixing security
+                                        issues to determine a pedigree score for a manufacturer or product. If the
+                                        software hasn’t been used or trusted before, has an unverifiable origin, or has
+                                        not been maintained with security updates, it imposes higher risks to the
+                                        application. Software Supply Chain Analysis also includes verifying that the
+                                        dependency in use within the software product is the correct one coming from the
+                                        origin under analysis. The component under analysis is also checked for license
+                                        compliance by making sure that OSS licenses are not violated and that commercial
+                                        licenses are being used appropriately. Software Supply Chain Analysis is often
+                                        performed as an extra step after Component Decomposition.</li>
+                                    <li><em>Software Assurance Cases. </em>An assurance case is a practical alternative
+                                        to an overwhelming list or other unstructured methods for recording what was
+                                        done or not done in a way that can lead to greater confidence in the result. An
+                                        assurance case includes a top-level claim for a property of a system or product
+                                        (or set of claims), systematic argumentation regarding this claim, and the
+                                        evidence and explicit assumptions that underlie this argumentation. Arguing
+                                        through multiple levels of subordinate claims, this structured argumentation
+                                        connects top-level claims to evidence and assumptions.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="07409cfa-00be-45a4-bb89-76a47aead86c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Dynamic Analysis<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="fe05f7ae-0531-4c9a-a3b4-d4984677eebe" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><strong><button
+                                            data-definition title="A process of testing an application or software product in an operating state."
+                                            class="rendered">Dynamic application security testing (DAST)</button>
+                                    </strong>tools analyze applications in their dynamic running state during testing or
+                                    operational phases. They simulate attacks against an application (typically
+                                    web-enabled applications, services, and APIs), analyze the application’s reactions,
+                                    and determine whether it is vulnerable. DAST tools go one step further than SAST and
+                                    spin up a copy of the production environment inside the CI job to scan the resulting
+                                    containers and executables. The dynamic aspect helps the system catch dependencies
+                                    that are being loaded at launch time, such as those that would not be caught by
+                                    SAST.<sup>22</sup> When the software is scanned during execution, even if only
+                                    partial portions of the code are executed, a dynamic analysis is being conducted.
+                                    Hybrid, concolic, symbolic, and simulated execution methods are included as dynamic
+                                    analysis techniques. While dynamic analysis is typically associated with binary
+                                    analysis, interpreted languages can be executed to perform certain analysis.</p>
+                                <ul>
+                                    <li><em>Specialized Application Testing. </em>Many applications provide specialized
+                                        tools for penetration testing and analysis. When developers or business
+                                        stakeholder constructs use cases, they create specialized testing tools for
+                                        their application. These testing tools and environments must include testing
+                                        that is specifically designed to elicit the behaviors that may occur when secure
+                                        coding best practices are not optimal, and a potential vulnerability were to be
+                                        exploited. An application that has unit tests, functional test cases, and
+                                        acceptance criteria should document how to perform tests to verify not only the
+                                        functionality of the code, but evidentiary behavior were a vulnerability in the
+                                        code to be exploited. When a test fails, each test should be documented for its
+                                        potential security impact on the software.</li>
+                                    <li><em>Dynamic Binary Analysis. </em>Scanning a binary for weaknesses by executing
+                                        it (usually in a sandboxed environment) can help an analyst quickly observe and
+                                        determine anomalous behavior in an application. Dynamic binary analysis is
+                                        useful whether or not access to an application’s source code is available.</li>
+                                    <li><em>Dynamic Source Analysis. </em>Some tools interpret source code for analysis
+                                        or analyze source code while performing a dynamic analysis of an application.
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8ef1d43b-f1aa-46ed-86f1-1ac4f987f5eb" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>22</sup> National Institute of Standards and Technology;
+                                    <em>NIST SP.800-204C—Implementation of DevSecOps for a Microservices-based
+                                        Application with Service Mesh; </em><a
+                                        href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-204C.pdf"
+                                        target="_blank">https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-204C.pdf</a>;
+                                    retrieved July 2023.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="719024bd-6d52-4787-a45e-8d2f28f4b83f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Static Analysis<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="839da7ab-2f8e-43cc-b939-5582c3192ec8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><strong><button
+                                            data-definition title="Also known as static source code analysis, these are tools which examine the source code for a variety of errors such as data type errors, loop and structure bounds violations, and unreachable code. Since SAST tools do not attempt to execute or simulate the execution of the code being analyzed, it’s a bit of a misnomer to call them “testing” tools."
+                                            class="rendered">Static application security testing (SAST)</button>
+                                    </strong>tools analyze an application’s source, bytecode, or binary code for
+                                    security vulnerabilities, typically at the programming and/or testing software life
+                                    cycle (SLC) phases. Specifically, this technology involves techniques that look
+                                    through the application in a commit and analyze its dependencies. If any
+                                    dependencies contain issues or known security vulnerabilities, a commit will be
+                                    marked as insecure and will not be allowed to proceed to deployment. This can also
+                                    include finding hardcoded passwords/secrets in code that should be
+                                    removed.<sup>23</sup> Static analysis enables an application to be assessed without
+                                    executing it. Static analysis techniques use software source code, build processes,
+                                    binaries, and metadata to perform testing. </p>
+                                <ul>
+                                    <li><em>Static Binary Analysis. </em>Static binary analysis operates on a binary
+                                        without utilizing the application’s source code. Static binary analysis looks
+                                        for programmatic weaknesses in executable code, often using the experience of a
+                                        subject matter expert.</li>
+                                    <li><em>Static Source Analysis. </em>Static source analysis scans software code for
+                                        weaknesses. In some cases, static source analysis tools require the software to
+                                        build in order to reveal the composition of data structures, control flow
+                                        graphs, and dependencies with linked components. Once the analysis platform
+                                        exposes the structure of these resources, it can analyze their usage directly in
+                                        source code without executing the software.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="66d4d6b2-1371-4a2c-9056-a32c47c1f27d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Interactive Application Security
+                                Testing (IAST)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="89a56584-86a4-4ffa-97b7-960ef98e6420" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><strong><button
+                                            data-definition title="Interactive AST (IAST) tools combine elements of DAST with the instrumentation of the application under test. They are typically implemented as an agent within the test runtime environment that observes operations or identifies and attacks vulnerabilities. Source: NIST SP 800-204c"
+                                            class="rendered">Interactive application security testing (IAST)</button>
+                                    </strong>tools combine elements of DAST with instrumentation of the application
+                                    under test. They are typically implemented as an agent within the test runtime
+                                    environment (e.g., instrumenting the Java Virtual Machine [JVM] or .NET CLR) that
+                                    observes operations or identifies and attacks vulnerabilities.<sup>24</sup> Best
+                                    suited for web applications and web APIs, IAST aims to perform behavioral analysis.
+                                    It relies on a combination of SAST and DAST to achieve its goal through its
+                                    visibility into both the source code and the execution flow during the runtime.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="44e448d3-f6a3-4e28-bed0-17adc42aad9e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Software Assurance Tools Mapped to
+                                SDLC<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="96f6314e-724f-44ab-9b5f-b99a2c18717d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">While the consequences of exploitable vulnerabilities are
+                                    realized during the operation and maintenance phases of the SDLC, the actions of
+                                    anticipating, preventing, identifying, mitigating, and remediating exploitable
+                                    vulnerabilities must take place throughout the entire process. To ensure exploitable
+                                    vulnerabilities are identified and mitigated prior to software deployment, SwA
+                                    processes must be applied throughout the entire SDLC. The following table provides a
+                                    list of recommended SwA capabilities to be applied during each phase of the SDLC.
+                                    Each SDLC phase is further defined in <em>ISO/IEC 15288: Systems and Software
+                                        Engineering—System Life Cycle Processes.</em></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7def9150-d035-415e-b1c2-f9df125e00ec" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>23</sup> Ibid.</p>
+                                <p class="comment78305"><sup>24</sup> Ibid.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2f6de087-8ac0-4952-9399-e285659c52c1" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin vst-draggable comment78305">
+                            <div class="c-x-scroll vst-draggable comment78305" style="width: 100%;">
+                                <div class="js-x-scroll c-x-scroll__scrollbox comment78305" style="">
+                                    <table class="c-table js-x-scroll-component c-table--fixed" style="width: 100%;"
+                                        data-orig-width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th scope="row">SDLC Phase</th>
+                                                <th scope="col">Capability</th>
+                                                <th scope="col">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Architectural Design</th>
+                                                <td style="text-align: center; vertical-align: middle;">Configuration
+                                                    Analysis</td>
+                                                <td>If the foundation of the system is bad, then it will be nearly
+                                                    impossible to make the final product secure. That is why it is
+                                                    critical during the design phase to ensure certain baseline security
+                                                    standards are followed.</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    Implementation<br />Integration<br />Verification<br />Validation
+                                                </th>
+                                                <td style="text-align: center;">Configuration Analysis<br />Component
+                                                    Decomposition<br />Software Supply Chain Analysis<br />Software
+                                                    Composition Analysis<br />Open-Source Analysis<br />Specialized
+                                                    Application Testing<br />Dynamic Binary Analysis<br />Dynamic Source
+                                                    Analysis<br />Static Binary Analysis<br />Static Source Analysis
+                                                </td>
+                                                <td>A significant portion of the SwA work will be performed during these
+                                                    middle phases of development. To prevent exploitable vulnerabilities
+                                                    from reaching production, the system should be thoroughly tested and
+                                                    analyzed.</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Operation</th>
+                                                <td style="text-align: center; vertical-align: middle;">Configuration
+                                                    Analysis<br />Software Composition Analysis<br />Specialized
+                                                    Application Testing</td>
+                                                <td>While the software is in operation, the opportunity for SwA
+                                                    activities includes analyzing for misconfigurations and running
+                                                    specialized tests that do not interfere with operation.</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Maintenance</th>
+                                                <td style="vertical-align: middle;">
+                                                    <p style="text-align: center;" class="comment78305">Configuration
+                                                        Analysis<br />Component Decomposition<br />Software Supply Chain
+                                                        Analysis<br />Open Sources Analysis<br />Specialized Application
+                                                        Testing<br />Dynamic Binary Analysis<br />Dynamic Source
+                                                        Analysis<br />Static Binary Analysis<br />Static Source Analysis
+                                                    </p>
+                                                </td>
+                                                <td>SwA during the maintenance phase should look similar to the
+                                                    implementation through validation phases, with each new bug fix,
+                                                    updates and feature release being thoroughly tested and analyzed to
+                                                    ensure no exploitable vulnerabilities are introduced.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="c-x-scroll__gradient c-x-scroll__gradient--left comment78305"></div>
+                                <div class="c-x-scroll__gradient c-x-scroll__gradient--right comment78305"></div>
+                            </div>
+                            <p class="comment78305"><sup><em>Table 3: Recommended SwA Capabilities</em></sup></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="9b697a5e-be95-4dfc-9e49-af68ef4bd32e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Security Code Review<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ca864442-dfad-410d-9247-c8cc82f9cb4f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Security code reviews are a combination of human effort and
+                                    technological support. When resources are limited, it becomes essential to
+                                    prioritize what features and components must be securely reviewed with a risk-based
+                                    approach. Secure code review is probably the single most effective technique for
+                                    identifying security bugs early in the system development life cycle. When used
+                                    together with automated and manual penetration testing, code review can
+                                    significantly increase the cost-effectiveness of an application security
+                                    verification effort.</p>
+                                <p class="comment78305">The objective of code review is to detect development errors
+                                    that may cause vulnerabilities and hence give rise to an exploit. Code review can
+                                    also be used to measure the progress of a development team in their practice of
+                                    secure application development. It can pinpoint areas where the development practice
+                                    is weak, areas where secure development practice is strong, and give a security
+                                    practitioner the ability to address the root cause of the weaknesses within a
+                                    developed solution. It may give rise to investigation into software development
+                                    policies and guidelines and the interpretation of them by the users; communication
+                                    is the key.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c9db4152-7468-41cd-add0-c92dbdf2f475" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Manual Security Code Review<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8c4acbde-15a6-4a79-9be4-d9423f4a1148" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Relying on tools in lieu of manual checks is not advised because
+                                    tools cannot completely emulate human experience and decision-making capabilities.
+                                    True indication of security maturity implies that the tool is part of a more
+                                    holistic security program and not just the sole measure to secure software.</p>
+                                <p class="comment78305">The ability of human reviewers to understand context can lead to
+                                    more accurate estimates of the likelihood and impact of vulnerabilities’ discovery
+                                    and exploitation.</p>
+                                <p class="comment78305">Much work goes into manual security code reviews; thus,
+                                    conducting this activity requires preparation to make it effective. Examples of the
+                                    type of preparation involved include developing an understanding of the business
+                                    purpose of the application and the most critical business impacts, understanding of
+                                    threat agents, motivations, and the threat targets (assets), and understanding the
+                                    attack surface.<sup>25</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="60c54521-b704-490f-b0ee-c1fa58b7821a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>25</sup> OWASP Foundation; Code Review Guide 2.0; <a
+                                        href="https://owasp.org/www-pdf-archive/OWASP_Code_Review_Guide_v2.pdf"
+                                        target="_blank">https://owasp.org/www-pdf-archive/OWASP_Code_Review_Guide_v2.pdf</a>;
+                                    retrieved July 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8b0283fa-834d-4575-8d36-c4fbaf3ef3fb" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Peer Review<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="52eee281-b569-4b7f-ae3d-c0fe09982063" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Code reviews are also frequently referred to as peer reviews.
+                                    Peer reviews involve the examination of source code authored by one developer by
+                                    peer developers.</p>
+                                <p class="comment78305">Historically, development teams have relied on peer reviews to
+                                    produce software with fewer defects, ensure compliance with coding standards, share
+                                    knowledge among team members, and perform verification of consistency in
+                                    implementations.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="bfbd427a-e1f5-48aa-8e78-63df8e321d7c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Looking for Malicious Code<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="277eb128-cc8a-4e78-a63c-31e8b6ffc5af" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Software code, particularly when not developed in house (e.g.,
+                                    third-party code), must be subjected to secure code reviews and inspections where
+                                    possible, specifically to identify embedded malicious code. This includes logic
+                                    bombs and even backdoors that may have been left in place for legitimate reasons by
+                                    developers.</p>
+                                <p class="comment78305">OWASP Application Security Verification Standard (ASVS) points
+                                    out the challenge with respect to finding malicious code: “Finding malicious code is
+                                    proof of the negative, which is impossible to completely validate. Best efforts
+                                    should be undertaken to ensure that the code has no inherent malicious code or
+                                    unwanted functionality.”<sup>26</sup></p>
+                                <p class="comment78305">The ASVS malicious code verification requirements offer guidance
+                                    in this regard. Following are a few examples:</p>
+                                <ul>
+                                    <li>Verify the use of a code analysis tool that can detect potentially malicious
+                                        code, such as time functions, unsafe file operations and network connections.
+                                    </li>
+                                    <li>Verify that the application does not ask for unnecessary or excessive
+                                        permissions to privacy related features or sensors, such as contacts, cameras,
+                                        microphones, or location.</li>
+                                    <li>Verify that the application source code and third-party libraries do not contain
+                                        time bombs by searching for date and time-related functions.</li>
+                                    <li>Verify that the application source code and third-party libraries do not contain
+                                        malicious code, such as salami attacks, logic bypasses, or logic bombs.</li>
+                                    <li>Verify that the application source code and third-party libraries do not contain
+                                        Easter eggs or any other potentially unwanted functionality.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="23ffeb85-7ae1-4502-98ad-86ef3c85be44" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Backdoors<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e01bb396-9b80-4d9f-807a-67321945b24c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Maintenance hooks are implanted intentionally in development or
+                                    by error, usually by an insider. A maintenance hook may be deliberate and useful.
+                                    Software developers often introduce backdoors in their code to enable reentry to the
+                                    system and to perform certain functions; this is known as a maintenance hook. The
+                                    backdoor can be left in a fully developed system either by design or accident.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="66905937-8b5d-4a27-a14e-2b7c3d9ce001" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Logic Bombs<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a7982b8f-d75d-4caa-8755-2431983d8dd7" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">A logic bomb is malicious code hidden within software that is
+                                    set to activate under certain conditions. It is triggered when a specific event (or
+                                    series of events) occurs within the system. A logic bomb represents embedded
+                                    malicious code inside the source code of the software and is normally associated
+                                    with an insider threat.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="screengrid comment78305">
+            <footer class="screen__margin screen__footer u-hide-element vstdonthighlight">
+                <div class="feedback comment78305">
+                    <div class="feedback__content js-feedback-focus comment78305" tabindex="-1"></div>
+                </div>
+                <div class="control-btns comment78305"></div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay-root vstdonthighlight rendered u-hidden comment78305" style="overflow-y: auto;">
+        <div class="modal-cover-holder comment78305">
+            <div class="modal-cover-outer comment78305">
+                <div class="modal-cover comment78305"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

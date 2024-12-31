@@ -1,0 +1,258 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"
+    style="padding: 0px; font-size: 100%; --USER__lineHeight: 1; --USER__pageMargins: 1; --USER__view: readium-scroll-on;"
+    class="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Secure Operational Architecture (4.7)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="overflow: hidden auto;">
+    <div xmlns:epub="http://www.idpf.org/2007/ops" epub:type="pagebreak" id="pagebreak_40"
+        class="hidden-pagebreak comment78305" title="40"></div>
+
+    <div xmlns:epub="http://www.idpf.org/2007/ops" id="10dad4fa-3fc0-4013-9613-259bcff75436"
+        class="screen rendered comment78305" aria-hidden="false">
+        <div class="screengrid comment78305">
+            <header class="screen__margin screen__header u-hide-element vstdonthighlight">
+
+                <div class="screen__heading u-float--clearfix comment78305">
+                    <div class="screen__icon u-float--left comment78305"></div>
+                    <h2 class="screen__title comment78305" tabindex="-1"></h2>
+                </div>
+
+
+                <div class="screen__instructions comment78305"></div>
+            </header>
+        </div>
+
+        <div class="screen__content comment78305">
+
+            <div class="block rendered comment78305">
+                <div id="19915e35-8ae7-4ff8-a7d0-1952910e4444" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Secure Operational Architecture
+                                (4.7)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="af37f000-071d-40fe-9025-351bd98910d9" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Security practitioners must consider implications for securing
+                                    operational architecture in addition to system-specific properties and constraints.
+                                    Design decisions will impact production operations such as deployment topology and
+                                    operational interfaces. Depending on business requirements for confidentiality,
+                                    integrity, and availability, continuous integration and continuous delivery (CI/CD)
+                                    may be required to facilitate the evolution of software securely throughout the life
+                                    cycle.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="02e701c6-4b3f-4b78-be27-dd4f0aab6bbe" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Objectives<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e64e7f84-1907-4182-995e-0638ac41f584" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>Identify secure operational architecture considerations.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c5add5e3-9058-4ce8-8bb2-cf9ba9406f44" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Overview<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3c8f4a95-0c2b-4526-b19b-317bdf44b5a8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Enterprise security design guidance generally flows from
+                                    business leadership at the top of a large organization down to technical leadership
+                                    and eventually resides with software and security architects. The following diagram,
+                                    which is supported by NIST 800-160 vol. 1 and ISO/IEC 15288 guidance, depicts the
+                                    organizational stakeholders who play a vital role in orchestrating a secure
+                                    operational architecture.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4779d52c-79d9-4463-ab87-c4fbc1ea7857" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--100 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_040_01.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_040_01.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 246.906px; left: 565.719px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 17: Operational Security Guidance</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="1c847e0b-2633-4b7f-c811-836825664b85"
+                            style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(613px, -330px);"
+                            data-popper-placement="top-end"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="19ea4ffd-fc2e-4061-abf9-e3510ab9e8ac" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Security Operations<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3111105e-1f23-494f-95bd-71ac3093084e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Analyzing security roles to better understand security
+                                    operations is a worthwhile exercise. Based on business analysis, opportunities are
+                                    identified which could constitute developing a new software application. To
+                                    capitalize on opportunities, plans must be drafted that contain security governance
+                                    and compliance considerations. For simplicity, consider a linear process; the
+                                    application implementation occurs following planning activities. Implementation
+                                    includes cyber-resilient designs and security control considerations that together
+                                    form the basis for software security preventions. After the application is
+                                    implemented, it can be integrated into business operations. Once operational, the
+                                    response to threats in production will constitute security operations. Security
+                                    practitioners must consider the impact of design decisions made earlier in the
+                                    systems engineering process on security operations. See the orchestration diagram
+                                    below to better highlight security roles and dependencies for security operations.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="463bb41e-030d-4282-81aa-47ca0b7002f4" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--100 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_040_02.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_040_02.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 188.172px; left: 565.719px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 18: Security Operations Roles within the development
+                                        life cycle</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="0796098e-8633-4fb1-9b18-c4dc99305fd2"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c8832298-185e-4ddc-9e05-d9bfd6da5571" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Continuous Integration and Continuous
+                                Delivery<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2a4bcc70-7353-4593-82f4-495d22816850" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">DevSecOps covers development, security, and operations
+                                    considerations. DevSecOps, when implemented, blurs the separation between building,
+                                    testing, and deploying source code updates via continuous integration/continuous
+                                    deployment (CI/CD) pipelines. The inclusion of CI/CD efforts has drastically
+                                    improved the security and quality of software while introducing new threat vectors
+                                    related to software pipeline workflows. Security practitioners must ensure software
+                                    pipelines include adequate assurances for developing cyber-resilient software while
+                                    maintaining the business-driven level of security for development operations.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="screengrid comment78305">
+            <footer class="screen__margin screen__footer u-hide-element vstdonthighlight">
+                <div class="feedback comment78305">
+                    <div class="feedback__content js-feedback-focus comment78305" tabindex="-1"></div>
+                </div>
+                <div class="control-btns comment78305"></div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay-root vstdonthighlight rendered u-hidden comment78305" style="overflow-y: auto;">
+        <div class="modal-cover-holder comment78305">
+            <div class="modal-cover-outer comment78305">
+                <div class="modal-cover comment78305"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

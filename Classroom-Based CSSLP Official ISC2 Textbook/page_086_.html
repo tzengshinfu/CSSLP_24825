@@ -1,0 +1,416 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"
+    style="padding: 0px; font-size: 100%; --USER__lineHeight: 1; --USER__pageMargins: 1; --USER__view: readium-scroll-on;"
+    class="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Pedigree and Provenance (8.3)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="overflow: hidden auto;">
+    <div xmlns:epub="http://www.idpf.org/2007/ops" epub:type="pagebreak" id="pagebreak_86"
+        class="hidden-pagebreak comment78305" title="86"></div>
+
+    <div xmlns:epub="http://www.idpf.org/2007/ops" id="aafa7a70-495e-43af-b67f-0a09001cfdec"
+        class="screen rendered comment78305" aria-hidden="false">
+        <div class="screengrid comment78305">
+            <header class="screen__margin screen__header u-hide-element vstdonthighlight">
+
+                <div class="screen__heading u-float--clearfix comment78305">
+                    <div class="screen__icon u-float--left comment78305"></div>
+                    <h2 class="screen__title comment78305" tabindex="-1"></h2>
+                </div>
+
+
+                <div class="screen__instructions comment78305"></div>
+            </header>
+        </div>
+
+        <div class="screen__content comment78305">
+
+            <div class="block rendered comment78305">
+                <div id="ed8ea06c-b3fb-4923-ab59-5d6767ae08ad" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Pedigree and Provenance (8.3)<br />
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="12ad7833-7053-4b2e-a49a-d4f323fe65d9" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>Associate the risks with peer-to-peer applications and file sharing.</li>
+                                    <li>Interpret code repository and environment security.</li>
+                                    <li>Express cryptographically hashed, digitally signed components.</li>
+                                </ul>
+                                <p class="comment78305">“Modern software is assembled using third-party and open-source
+                                    components, glued together in complex and unique ways, and integrated with original
+                                    code to provide the desired functionality. A component’s pedigree (sometimes
+                                    referred to as <strong>‘<button
+                                            data-definition title="A reference to the origin and license of third- party components included and used in the software."
+                                            class="rendered">provenance</button>’</strong>)<strong> </strong>refers to
+                                    the traceability of all changes (i.e., commits), releases, modifications, packaging,
+                                    and distribution across the entire supply chain,” writes Steve Springett in the
+                                    OWASP report, <em>Component Analysis.<sup>10</sup> </em>“In physical supply chains
+                                    this is referred to as the chain of custody." Obtaining a component's pedigree may
+                                    involve a mixture of automation across multiple systems and suppliers, along with
+                                    legal and verifiable supporting documentation. A component's pedigree includes all
+                                    supporting documentation of lineage and the attributes that make a component
+                                    unique. </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="09d90c34-8dd2-44fe-bd50-61a0e237282d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Secure Transfer<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="27124931-4c48-4947-a63d-54b9ba83ca24" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Transferring files securely in the supply chain requires secure
+                                    communication protocols. The Transmission Control Protocol/Internet Protocol
+                                    (TCP/IP) stack contains many insecure protocols at various layers, such as File
+                                    Transfer Protocol (FTP) and Telnet; you should avoid using these protocols to
+                                    transmit sensitive content. Instead, alternatives such as Secure Shell (SSH) file
+                                    transfer or Secure File Transfer Protocol (SFTP) should be used.</p>
+                                <p class="comment78305">Alternatives to insecure protocols should at minimum provide a
+                                    confidentiality mechanism for otherwise plaintext transmission—that is, a way to
+                                    encrypt data being transmitted—and a method of authenticating clients and servers.
+                                    An example of protocols intended for secure remote access is IPsec, which is the
+                                    name for a suite of protocols that rely on public-key technology for securing
+                                    communication.</p>
+                                <p class="comment78305">The leading general purpose secure web communication protocol is
+                                    the Transport Layer Security (TLS) protocol, based on Secure Sockets Layer (SSL).
+                                    TLS is widely used to provide secure channels for confidential TCP/IP communication
+                                    on the web.</p>
+                                <p class="comment78305">Always follow best practices regarding the usage of protocols:
+                                    use the latest versions and consider the identified known vulnerabilities.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="aad5ff1d-064c-4198-9dac-c53a3ce2b436" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>10</sup> Steve Springett; Component Analysis; OWASP
+                                    Foundation; <a href="https://owasp.org/www-community/Component_Analysis"
+                                        target="_blank">https://owasp.org/www-community/Component_Analysis</a> ;
+                                    retrieved June 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3723b27e-0c2b-404d-8ab6-7831c57d7d51" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">System Sharing<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d073a867-0886-48a2-be54-168b12014f47" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">System sharing involves multiple individuals, often with
+                                    separate roles and permissions, sharing organizational infrastructure such as a
+                                    computer or network printer. Confidentiality issues may arise on shared computer
+                                    systems when a user with higher privileges accesses organizational data, such as
+                                    source code stored in a repository, and stores a local copy using software such as
+                                    Git. If the local storage is accessible by any user, then the next user to access
+                                    the machine will have undue access to the organization's intellectual property. The
+                                    same issue can arise from organizational printers storing recent print media in
+                                    memory that is accessible for reprint by anyone with physical access to the device.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0e6916f6-9963-48f3-9c23-c49edc3a8a2a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">File-Sharing Technology Risks<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4b2aaddb-1a3f-47b7-8d60-413ceef1de4e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">File sharing involves using technology that allows internet
+                                    users to share files that are housed on their individual computers. Peer-to-peer
+                                    (P2P) applications, such as those used to share music files, are some of the most
+                                    common forms of file-sharing technology. However, P2P applications introduce
+                                    security risks that may put your information or computer in jeopardy.</p>
+                                <p class="comment78305">Work-from-home has extended the need for information sharing
+                                    across more complex networking situations, which extends to transversing the
+                                    internet. In this work setup, you are unable to print and hand-deliver a sensitive
+                                    document to a coworker. Getting information to flow securely while supporting
+                                    business needs in a distributed environment is a challenging prospect.</p>
+                                <p class="comment78305">Many ad hoc file exchange methods have major security issues.
+                                    Some fail to provide confidentiality via encryption, even though files are
+                                    traversing untrusted paths on the internet. Unsecured file exchanges are at risk of
+                                    man-in-the-middle and sniffing attacks. Storing files on unknown servers might
+                                    result in undesirable data sharing, tampering, or retention.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5312a2fa-9438-448e-8259-5a8b4b17d22c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Improving File-Sharing Security<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="26d1b6cd-a342-4547-85f7-708714dd5bfe" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">There are many viable solutions for facilitating secure
+                                    file-sharing across the internet. All solutions should seek to maintain
+                                    organizationally defined confidentiality and integrity of files from the entire path
+                                    between sender and receiver. Below is a summary of NIST general guidance for
+                                    securing file exchanges:</p>
+                                <ol>
+                                    <li>Organizations should identify user data access requirements. to exchange files.
+                                        Needs should include defining senders, receivers, and sensitivity of the data.
+                                    </li>
+                                    <li>After defining needs, organizations should provide training and solutions to
+                                        address the identified file exchange needs; this will reduce the risk that users
+                                        will seek ad hoc means of file sharing. </li>
+                                    <li>Organizations should leverage encryption that meets organizational goals for
+                                        confidentiality and integrity using well known industry encryption standards.
+                                    </li>
+                                    <li>Organizations should monitor file sharing for compliance and adoption.</li>
+                                    <li>Organizations should ensure incident response includes sensitive data leak
+                                        responses.</li>
+                                </ol>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="37d8c442-a78a-44a7-af8a-9d8d1ee060dc" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Code Repository Security<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="96ab492d-4603-418a-8ce7-95fc4ff209ac" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">A code repository is a file-based storage structure for software
+                                    source code and metadata pertaining to that code. The structure can be centralized
+                                    (e.g., a file archive on a local server) or distributed (e.g., on a web-based
+                                    repository). A key element of a code repository is that it enforces both access
+                                    control and version control. The access control is typically either role based or by
+                                    individual identification. In both cases, the three core principles of
+                                    confidentiality, integrity, and nonrepudiation with respect to the source code need
+                                    to be enforced.</p>
+                                <p class="comment78305">The specific operations will be derived from the code repository
+                                    requirements, as will the level of access control to be performed. The type of
+                                    access control may depend on the capabilities of the code repository:</p>
+                                <ul>
+                                    <li>Will it support project-level roles?</li>
+                                    <li>Is there a default or preferred version-control system?</li>
+                                    <li>Does it support local and remote user bases?</li>
+                                    <li>Does it include integrated development environment support?</li>
+                                    <li>Is there support for authentication systems, such as OpenID or SSH keys?</li>
+                                    <li>Does it support additional security plug-ins and tools?</li>
+                                </ul>
+                                <p class="comment78305">The code repository must be sufficiently secured to address the
+                                    risk of unauthorized access and modification of the code base by malicious subjects,
+                                    resulting from compromise of access credentials or breach of the underlying service.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d26eccbb-bbef-418a-9482-10bd7e342025" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Build Environment Security<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="9b165147-4f89-4338-8e8b-09c5f9e49e21" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Historically, the term “build” has been used to refer to
+                                    compiling the source code into binary code, assembling, and packaging the software
+                                    and its various dependencies, and preparing it for release and deployment. </p>
+                                <p class="comment78305">Realistically, the “build process” may be complex and involve
+                                    various tools and technologies depending on the nature of the software. A consistent
+                                    build requires the proper build environment, comprising the right structure and
+                                    elements. It must include not only the source-code repositories, compilers, and
+                                    linkers, but also libraries, configuration files, build-automation scripts, and test
+                                    suites.</p>
+                                <p class="comment78305">Given the advancements in tools and technologies, some tools may
+                                    be a collection of tools that provide a large array of functionality and facilitate
+                                    compilation from within developers’ integrated development environments (IDEs).</p>
+                                <p class="comment78305">Most organizations that engage in software development have
+                                    development, test, and production environments, so build deliverables go through
+                                    development and QA before they enter production. Organizations must ensure security
+                                    and integrity of each environment.</p>
+                                <p class="comment78305">Although it is true that it’s more efficient to automate
+                                    functions such as building code, running tests, and deployment, the build and
+                                    deployment tooling should also include security considerations for risks (e.g., risk
+                                    of compromise in code integrity) that are relevant at this stage.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="10a5ecff-88e4-4711-90cd-d7714665a49c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Cryptographically Hashed, Digitally
+                                Signed Components<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="db58badd-7e9b-487c-8d66-d90bf7cd5c34" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">According to the <em>Information Technology Laboratory Bulletin
+                                    </em>article, “Protecting Software Integrity Through Code Signing,” “An effective
+                                    and common method of protecting software is to apply a digital signature to the
+                                    code. When securely implemented, digitally signing code provides both data integrity
+                                    to prove that the code was not modified, and source authentication to identify who
+                                    was in control of the code at the time it was signed. Verifying the signature
+                                    assures the recipient that the code came from the source that signed it, and that it
+                                    has not been modified in transit.”<sup>11</sup></p>
+                                <p class="comment78305">The security considerations for code signing solutions to
+                                    protect the software supply chain are beyond the scope of this course. Still, it
+                                    must be noted that code signing provides assurance that the software is authentic
+                                    and has not been tampered with during the distribution and maintenance phases, and
+                                    the verifier can validate these properties at runtime.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="03bdcdf4-76f3-418c-a049-0339fecfc85d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>11</sup> David Cooper, Larry Feldman,1 and Greg Witte,
+                                    <em>Information Technology Laboratory Bulletin; </em>May 2018; <a
+                                        href="https://csrc.nist.gov/CSRC/media/Publications/Shared/documents/itl-bulletin/itlbul2018-05.pdf"
+                                        target="_blank">https://csrc.nist.gov/CSRC/media/Publications/Shared/documents/itl-bulletin/itlbul2018-05.pdf</a>;
+                                    Retrieved May 2023.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="screengrid comment78305">
+            <footer class="screen__margin screen__footer u-hide-element vstdonthighlight">
+                <div class="feedback comment78305">
+                    <div class="feedback__content js-feedback-focus comment78305" tabindex="-1"></div>
+                </div>
+                <div class="control-btns comment78305"></div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay-root vstdonthighlight rendered comment78305 u-hidden" style="overflow-y: auto;">
+        <div class="modal-cover-holder comment78305">
+            <div class="modal-cover-outer comment78305">
+                <div class="modal-cover comment78305"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

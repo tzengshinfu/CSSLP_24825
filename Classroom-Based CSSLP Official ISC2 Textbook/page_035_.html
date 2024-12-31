@@ -1,0 +1,369 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"
+    style="padding: 0px; font-size: 100%; --USER__lineHeight: 1; --USER__pageMargins: 1; --USER__view: readium-scroll-on;"
+    class="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Secure Interface Design (4.2)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="overflow: hidden auto;">
+    <div xmlns:epub="http://www.idpf.org/2007/ops" epub:type="pagebreak" id="pagebreak_35"
+        class="hidden-pagebreak comment78305" title="35"></div>
+
+    <div xmlns:epub="http://www.idpf.org/2007/ops" id="fc914e06-b995-4159-b27a-bc8b9a827787"
+        class="screen rendered comment78305" aria-hidden="false">
+        <div class="screengrid comment78305">
+            <header class="screen__margin screen__header u-hide-element vstdonthighlight">
+
+                <div class="screen__heading u-float--clearfix comment78305">
+                    <div class="screen__icon u-float--left comment78305"></div>
+                    <h2 class="screen__title comment78305" tabindex="-1"></h2>
+                </div>
+
+
+                <div class="screen__instructions comment78305"></div>
+            </header>
+        </div>
+
+        <div class="screen__content comment78305">
+
+            <div class="block rendered comment78305">
+                <div id="15aec619-379a-4c4b-b769-54f0f44717a7" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Secure Interface Design (4.2)<br />
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="aa168db4-80a5-4df4-8a2f-7ccc82697c55" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Interface and integration points are critical, but often
+                                    under-protected parts of systems. Whether an interface is machine-to-machine or
+                                    human-to-machine, security practitioners must ensure that cyber resiliency at points
+                                    of interaction are addressed. When designed components are secured individually and
+                                    then integrated into a larger system without security being considered, additional
+                                    risk-mitigating actions are necessary. Further, where human-to-machine interactions
+                                    include configuration, choices must be intuitive and easy to make for software
+                                    users.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c3dea46e-cd9c-49bc-bb88-833c8eca7fa1" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Objectives<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="fe0f88b9-dd15-48d8-93f8-c2eb4287647b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>Recognize the security criteria of interfaces design.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c60c6f4d-369c-4c8d-9c99-7b0ff1c18fb6" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Overview<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="73e5e987-11f6-468b-9ee6-d91c11c90fd9" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Interactions with software and its functionality happen via
+                                    interfaces, and failure to protect these interfaces can result in a software breach.
+                                    Security management interfaces that are used to configure security features,
+                                    out-of-band interfaces that are used for remote management, and log interfaces that
+                                    are used in logging and auditing all need to be designed securely with
+                                    authentication and authorization controls. </p>
+                                <p class="comment78305">Interface security is part of the overall security of the
+                                    software. To protect against common threats and mitigate associated risks, various
+                                    considerations for secure interface design should be taken into account.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="764218cb-5b96-4a42-a58b-4e0b937aef19" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Security Management Interfaces
+                                (SMI)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6d3a529d-dd03-4514-9ea0-cb82f1e12fa1" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Security Management Interfaces (SMI) are administrative
+                                    interfaces for an application that have the highest level of privileges on the
+                                    system and perform tasks such as:</p>
+                                <ul>
+                                    <li>User provisioning—adding/deleting/enabling user accounts</li>
+                                    <li>Granting rights to different user roles</li>
+                                    <li>System restart</li>
+                                    <li>Changing system security settings</li>
+                                    <li>Accessing audit trails, user credentials, exception logs</li>
+                                </ul>
+                                <p class="comment78305">Strong controls must be designed and built in when developing
+                                    SMI because a compromise can be devastating—ranging from complete compromise to
+                                    installing backdoors to disclosure, alteration, and destruction (DAD) attacks on
+                                    audit logs, user credentials, exception logs, and more.</p>
+                                <p class="comment78305">Given that administration interfaces are typically operated
+                                    using elevated privileges, compromise can lead to magnified adverse impact and
+                                    severe consequences. Considerations for securing administration interfaces include:
+                                </p>
+                                <ul>
+                                    <li>Requiring strong authentication (e.g., using certificates).</li>
+                                    <li>Disallowing or limiting remote administration, if possible, or requiring secure
+                                        channels (e.g., VPN).</li>
+                                    <li>Enforcing role-based authorization and separation/segregation of roles.</li>
+                                    <li>Using multifactor authentication.</li>
+                                    <li>Auditing (logging) access to administrative interfaces and functionality.</li>
+                                </ul>
+                                <p class="comment78305">Also consider the following guidelines:</p>
+                                <ul>
+                                    <li><em>Using secure defaults. </em>Where and when possible, use secure default
+                                        settings. History tells us that in most cases the defaults (secure or not) will
+                                        be used, and only a few make the effort to do otherwise.</li>
+                                    <li><em>Using user notification. </em>Ensure that the user is informed if an
+                                        operation is not secure. An example is placing a visual (e.g., a lock icon
+                                        displayed in the browser’s address bar) when secure protocols such as SSL/TLS
+                                        are used on the login page of an online banking portal.</li>
+                                    <li><em>Revocable authorization. </em>Wherever possible, the ability to revoke an
+                                        authorization granted previously must be in place. The process of revoking an
+                                        authorization must be straightforward and understandable.</li>
+                                    <li><em>Files placed in secure locations. </em>Restrict the locations where
+                                        sensitive files are saved. If the option of specifying other locations is
+                                        provided to the user, assure that security implications of each choice are
+                                        conveyed.</li>
+                                    <li><em>Clear security choices. </em>When presenting users with choices, any
+                                        security implications of such choices should be clear concerning consequences
+                                        and trade-offs.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b5a992e9-352b-48af-9aad-4356cf2fd922" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Out-of-Band Management<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="24ce76c8-ff35-4de1-8aeb-2d39e6a6b8d6" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Out-of-band (OOB) management allows an administrator to connect
+                                    to a computer’s management controller when the computer is turned off, in sleep or
+                                    hibernate modes, or otherwise unresponsive through the operating system. By way of
+                                    contrast, in-band management is the classic approach whereby an agent runs in the
+                                    full operating system on the managed computer and the management controller
+                                    accomplishes tasks by communicating with the management agent.</p>
+                                <p class="comment78305">Also known as lights-out management (LOM), OOB involves the use
+                                    of a dedicated management channel (interface) for remote access and management.
+                                    Remote management can be enabled on many computers (not only servers) by adding a
+                                    remote management card. Access to the remote management card using the management
+                                    channel should be protected.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2f829281-02f4-4ea7-9cee-04c5f536a0bc" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Log Interfaces<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c9e9b9d7-e922-4921-925c-5df19c8723c3" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Software design should consider interfaces to turn logging on or
+                                    off in development, test, and production environments as needed. Additionally, an
+                                    interface to configure what to log (e.g., errors, application events, operating
+                                    system events) and how much to log (e.g., status, informational messages, warnings,
+                                    full stack) is recommended to address capacity issues. Further, visual user
+                                    interfaces to graphically represent log data to correlate threats and discern
+                                    patterns should be planned for and designed to help with auditing.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c1385f4e-127e-4e0a-9baa-0a9258782722" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Upstream and Downstream
+                                Dependencies<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="534578ec-c7ce-47b9-b47b-a810ca0b2114" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The terms upstream and downstream can be used in various
+                                    contexts. In the context of software projects, upstream or downstream dependencies
+                                    may represent tasks to be started and completed (or things that may need to happen)
+                                    prior to starting another task (before something else can happen). Although this
+                                    type of dependency is common, other types of dependencies could also exist where two
+                                    tasks/processes need to start or finish at the same time, or even when one task is
+                                    not allowed to finish until another task has started. Understanding the dependences
+                                    between tasks is a necessity when creating project schedules.</p>
+                                <p class="comment78305">Dependencies may be internal (in the scope of the project) or
+                                    external (outside the scope of the project). Dependencies may also exist in software
+                                    development, when one component has dependencies on other components. Consider an
+                                    example of an upstream process X that may have encrypted data that subsequently
+                                    needs to be passed to downstream process Y for processing. Before processing in the
+                                    downstream process can begin, the encryption key must be securely retrieved from a
+                                    key store (i.e., key vault). Changes in upstream processes or software components
+                                    may affect processes or components downstream.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c44c757a-9858-4078-a9aa-1cf58d89db0a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Protocol Design Choices<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="33068479-1a81-4071-8c50-5cabce8a0a87" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Protocols are specifications of technical agreements to control
+                                    the exchange of information between connected devices. Protocols are agreed-upon
+                                    rule sets that define the type and content of the data being exchanged.</p>
+                                <p class="comment78305">A cardinal security rule in protocol design is to disallow
+                                    information to be exchanged in an insecure fashion. Network security protocols, such
+                                    as IPsec, TLS, and SSH, are all designed to provide a secure connection between two
+                                    connected devices to allow for the secure transmission of the data.</p>
+                                <p class="comment78305">Network security protocols are designed to enforce the following
+                                    principles:</p>
+                                <ul>
+                                    <li>Confidentiality (preventing unauthorized data disclosure)</li>
+                                    <li>Integrity (preventing unauthorized data modification or destruction)</li>
+                                    <li>Availability (ensuring authorized users have access to data)</li>
+                                </ul>
+                                <p class="comment78305">As well as ensuring integrity and confidentiality, network
+                                    security protocols provide a standardized set of encryption algorithms (both
+                                    symmetric and asymmetric) and hashing algorithms. This means that using network
+                                    security protocols ensures the design will also provide the following:</p>
+                                <ul>
+                                    <li>Authentication (mitigating against identity theft or masquerading attacks by
+                                        using user authentication such as certificates)</li>
+                                    <li>Message integrity (ensuring that the message contents haven’t been altered by
+                                        using digital signatures and HMACs)</li>
+                                    <li>Nonrepudiation (ensuring accountability)</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="screengrid comment78305">
+            <footer class="screen__margin screen__footer u-hide-element vstdonthighlight">
+                <div class="feedback comment78305">
+                    <div class="feedback__content js-feedback-focus comment78305" tabindex="-1"></div>
+                </div>
+                <div class="control-btns comment78305"></div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay-root vstdonthighlight rendered comment78305 u-hidden" style="overflow-y: auto;">
+        <div class="modal-cover-holder comment78305">
+            <div class="modal-cover-outer comment78305">
+                <div class="modal-cover comment78305"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

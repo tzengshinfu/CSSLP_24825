@@ -1,0 +1,745 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"
+    style="padding: 0px; font-size: 100%; --USER__lineHeight: 1; --USER__pageMargins: 1; --USER__view: readium-scroll-on;"
+    class="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Software Security Requirements (3.1)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="overflow: hidden auto;">
+    <div xmlns:epub="http://www.idpf.org/2007/ops" epub:type="pagebreak" id="pagebreak_22"
+        class="hidden-pagebreak comment78305" title="22"></div>
+
+    <div xmlns:epub="http://www.idpf.org/2007/ops" id="522d3fa0-48d3-47ce-9f0c-50e838b74d02"
+        class="screen rendered comment78305" aria-hidden="false">
+        <div class="screengrid comment78305">
+            <header class="screen__margin screen__header u-hide-element vstdonthighlight">
+
+                <div class="screen__heading u-float--clearfix comment78305">
+                    <div class="screen__icon u-float--left comment78305"></div>
+                    <h2 class="screen__title comment78305" tabindex="-1"></h2>
+                </div>
+
+
+                <div class="screen__instructions comment78305"></div>
+            </header>
+        </div>
+
+        <div class="screen__content comment78305">
+
+            <div class="block rendered comment78305">
+                <div id="e7e2b447-e084-4a86-af31-e033a49d1fe8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Software Security Requirements
+                                (3.1)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5f99b925-413b-4a63-8da2-cf5dba18a859" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Organizations must ensure that their overall activities and
+                                    operations are aligned with applicable laws, regulations, and standards. These
+                                    mandates may impose requirements including protections for sensitive information. In
+                                    the Information Technology (IT) context, organizations need to assure—and be able to
+                                    show—that IT systems are properly secured, and the information contained in those
+                                    systems is protected adequately. IT controls must be evaluated to ensure that there
+                                    are no gaps and that controls are effective, meaning that they are working as
+                                    intended.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7fcf3606-6cf2-47f6-b2bf-ec0612523b72" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Objectives<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ef8bbbd8-3515-4246-b057-b570d3278d7f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>Describe requirements management.</li>
+                                    <li>Recognize functional and nonfunctional requirements.</li>
+                                    <li>Explain the impact of security-focused stories in SCRUM/SCRUM-like
+                                        methodologies.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3401f836-2771-4d4b-8ce0-3ec224ca5a12" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Overview<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d0af23da-629a-48ae-8fba-defe9b8a1c74" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Organizations need mature processes to effectively manage
+                                    requirements. To do this, they must capture and specify software security
+                                    requirements as part of the overall requirements for the software product. Whatever
+                                    methods the organization uses to achieve this goal must be monitored to ensure
+                                    effectiveness and success.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a06dde93-4313-4c0d-8656-a75bc4148e02" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Requirements Management<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="957faf46-a974-456f-8282-66788b1f8cca" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">In short, software requirements define the capabilities,
+                                    business rules, qualities, constraints, and other elements in a software product
+                                    that satisfy the needs of the intended user base. Requirements management processes
+                                    need to be adequate and effective. If these processes are absent or insufficient,
+                                    the likelihood of partial or complete project failure is increased. Failures can
+                                    happen for various reasons, such as scope creep, unrealistic expectations, or even
+                                    creating a software product that does not meet the needs of the intended users.</p>
+                                <p class="comment78305">The process for requirements management must include gathering,
+                                    defining and refining, clarifying, prioritizing, documenting, and tracing the
+                                    requirements through their implementation and verification.</p>
+                                <p class="comment78305">A three-tiered approach addresses requirements-related concerns
+                                    at the following levels:</p>
+                                <ul>
+                                    <li><em>Organization. </em>Long-term strategic and organizational level
+                                        requirements.</li>
+                                    <li><em>Business. </em>Mid-term strategic and business function level requirements.
+                                    </li>
+                                    <li><em>Technical. </em>Immediate impact and implementable requirements.</li>
+                                </ul>
+                                <p class="comment78305">With that noted, the focus will remain on technical
+                                    requirements, which can be implemented at the software level. These requirements can
+                                    then be further broken down into functional and nonfunctional requirements and
+                                    represented as use and abuse (misuse) cases. This breakdown is shown in the figure
+                                    below.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="30960ae5-3350-460e-8c2a-0171d0fea86b" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--100 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_022_01.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_022_01.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 266.094px; left: 550.406px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 1: Organizational, Business and Technical
+                                        Requirements</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="b83e85f4-52f2-44ef-d556-76a9288bba24"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="84136f27-ae74-4a1a-910f-29736d36fb90" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Functional Requirements<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="da5fcd78-05f2-4af9-880d-f180cf84d415" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">A functional requirement specifies something the system must do
+                                    or describes a necessary product feature. Best practices for developing functional
+                                    requirements necessitate that software requirements must be both complete and
+                                    documented. Historically, functional requirements have been elicited and captured
+                                    through interviews, workshops, and similar methods involving the target audience
+                                    users and other business stakeholders.</p>
+                                <p class="comment78305">Functional software security requirements describe the needed
+                                    security functionality and features of a software product. They provide
+                                    specifications for security functionality in software in support of confidentiality,
+                                    integrity, and availability. Software development projects that lack proper security
+                                    requirements can result in compromise of security objectives.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="720f9280-6ca2-4467-bc31-6e3cf444e97d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">OWASP Application Security
+                                Verification Standard (ASVS)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="20479001-557c-4751-9228-0f3a380a77b9" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The OWASP Application Security Verification Standard (ASVS) will
+                                    be covered in detail in subsequent domains. ASVS not only provides application
+                                    security verification criteria; it may also be used as a catalog and a standard
+                                    source of security requirements that are categorized and placed into various
+                                    buckets.</p>
+                                <p class="comment78305">Development teams may choose and include applicable requirements
+                                    from ASVS for each release of their software. These requirements can serve as basic
+                                    verifiable statements and expanded upon through user stories as needed.</p>
+                                <p class="comment78305">ASVS defines three verification and assurance levels that are
+                                    appropriate for different types of applications requiring various levels of trust.
+                                    An example is provided in the table to demonstrate this concept.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f60f6feb-d219-4fea-bb32-0490260dc4c5" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--75 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_022_02.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_022_02.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 142.189px; left: 476.594px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Table 1: Secure Software Development Life Cycle
+                                        Requirements—Partial List</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="a2c95ac8-2f8c-4d2d-99ba-b9f27f04a70e"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="dedb278f-a4c6-46b6-ae19-c7402bf0faea" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Business Requirements<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="aa367114-f90f-46a4-ab4b-efb1239dc47b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Business requirements represent the blueprints that guide
+                                    software design and implementation. The quality of requirements will directly
+                                    correlate to the usefulness and acceptability of the completed software. On software
+                                    projects where business needs are evolving—managing and satisfying requirements
+                                    become more challenging. Other issues that may contribute to requirements management
+                                    challenges for software include improper elicitation, specification, or validation
+                                    of the requirements.</p>
+                                <p class="comment78305">Without properly understood, well-documented and tracked
+                                    software requirements, businesses cannot expect the software to meet the
+                                    expectations of the intended users. It is vital to define and explicitly articulate
+                                    software requirements to be built or acquired. Software development projects that
+                                    lack software requirements are prone to a plethora of issues, including but not
+                                    limited to poor product quality, extensive timelines, scope creep, and increased
+                                    costs for rearchitecting, missed requirements, detects, and stakeholder
+                                    dissatisfaction.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="cf709c67-1182-413a-97e5-ca0516860d33" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Use Cases<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e61e415e-8bb5-4817-a8e6-5b75da9a2640" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">According to the Institute of Electrical and Electronics
+                                    Engineers (IEEE), use cases are narrative descriptions of the interactions between
+                                    users and a software system. They should inform functional system requirements.
+                                    <strong>Use cases </strong>are an essential part of requirements engineering. They
+                                    are closely bound to requirements, describing user-focused scenarios that represent
+                                    what a system does when used in the ways for which it was designed. Use cases are
+                                    especially helpful when it comes to eliciting functional requirements and getting
+                                    clarifications on such requirements.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8bf40a90-edbd-4322-9589-3d19b6074737" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Use Case Scenarios<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="60b2a437-a38d-4435-bbec-8c54b9cfcd0f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">A use case defines the software functional requirements, but not
+                                    necessarily the internal structure of the software. This point is highlighted by
+                                    Carnegie Mellon University’s Software Engineering Institute (SEI), which states, “A
+                                    use case, in its sequences of actions, describes abstract and general behavior, but
+                                    it does not describe what happens when a specific actor performs a specific action
+                                    with specific values. Capturing the specific executions of a use case is referred to
+                                    as a use case scenario or, sometimes, as a use case instance.”<sup>1</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="33bc776f-240b-4967-9c1d-9222df2b42c9" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>1</sup> Len Bass, John Bergey, Paul Clements, Paulo Merson,
+                                    Ipek Ozkaya, Raghvinder Sangwan; <em>A Comparison of Requirements Specification
+                                        Methods from a Software Architecture Perspective; </em>August 2006; <a
+                                        href="https://resources.sei.cmu.edu/asset_files/TechnicalReport/2006_005_001_14786.pdf"
+                                        target="_blank">https://resources.sei.cmu.edu/asset_files/TechnicalReport/2006_005_001_14786.pdf</a>;
+                                    retrieved June 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="271b2051-8664-42bb-a1e6-244890e85a77" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Use Case Modeling and Diagrams<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="481c6b81-fb4b-411e-9d22-f2a4c69b1616" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Use case modeling is an analysis technique by which software
+                                    functional requirements can be elicited, understood, and defined.</p>
+                                <p class="comment78305">Use case modeling includes identifying actors, intended system
+                                    behavior (also known as use cases), and sequences of actions and relationships
+                                    between the actors and the use cases. Actors may be individuals, workers or users
+                                    fulfilling a certain role, or nonhuman processes; actors can generically be referred
+                                    to as subjects. <strong><button
+                                            data-definition title="Passive system-related entity, including devices, files, records, tables, processes, programs, and domains that contain or receive information. Access to an object (by a subject) implies access to the information it contains. NIST SP 800-53rev5"
+                                            class="rendered">Objects</button>, </strong>also known as components, are
+                                    items that a <strong><button
+                                            data-definition title="An individual, process, or device that causes information to flow among objects or change to the system state. NIST 800-53rev5"
+                                            class="rendered">subject</button> </strong>can act upon. Higher-level
+                                    objects must be broken down into more granular objects for better accuracy of
+                                    subject-object relationship representations.</p>
+                                <p class="comment78305">Use case diagrams describe actors’ perspectives and goals during
+                                    an interaction with the system through visual elements and accompanying textual
+                                    descriptions. Actors are represented through stick figures and use cases through
+                                    ovals, as shown in this figure.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="22d940cc-7900-435a-be10-9ae4dd3e2692" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--100 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_022_03.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_022_03.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 294.297px; left: 565.719px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 2: Sample Partial Use Case Diagram<sup>2</sup></em>
+                                </p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="cb389384-507a-4bb9-cfb6-0473166bfacd"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="370a8a78-564a-4e5f-8830-5ca8dad66874" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>2</sup> Ibid.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d7c3906d-41f1-4c48-91f2-48486f7dff74" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Stories<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0327df8f-3959-484f-8441-063cde2cbea7" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The term user story was first introduced as part of the
+                                    implementation of Agile methods in the late 1990s. In Agile methodologies, a
+                                    <strong>user story </strong>(or story and sometimes task, for short) represents a
+                                    high-level description of a user requirement, typically originating from a business
+                                    user need. This contrasts with traditional requirements specification documents that
+                                    delve into fine detail about how a certain area of software should work.
+                                </p>
+                                <p class="comment78305">User stories do not replace well-understood and agreed-upon
+                                    requirements. Rather, they are helpful when it may not be possible to define full
+                                    and detailed sets of requirements early in the process. In fact, sometimes defining
+                                    detailed requirements too early in the process can be counterproductive. A user
+                                    story translates requirements into a language that can be understood and executed by
+                                    software developers.</p>
+                                <p class="comment78305">User stories are chunks of desired behavior of a software
+                                    system. They are widely used in Agile software approaches to divide up a large
+                                    amount of functionality into smaller pieces for planning purposes. You also hear the
+                                    same concept referred to as a feature, but the term story or user story has become
+                                    prevalent in agile circles.</p>
+                                <p class="comment78305">Kent Beck first introduced the term as part of Extreme
+                                    Programming to encourage a more informal and conversational style of requirements
+                                    elicitation than long written specifications. Stories are deliberately not fleshed
+                                    out in detail until they are ready to be developed, there only needs to be enough
+                                    understanding to allow prioritization with other stories.<sup>3</sup></p>
+                                <p class="comment78305">The acronym INVEST can help you remember characteristics for
+                                    good stories:</p>
+                                <ul>
+                                    <li><em>Independent. </em>Stories can be delivered in any order.</li>
+                                    <li><em>Negotiable. </em>The details of what’s in the story are created by the
+                                        programmers and customers during development.</li>
+                                    <li><em>Valuable. </em>Functionality is seen as valuable by the customers or users
+                                        of the software.</li>
+                                    <li><em>Estimable. </em>The programmers can provide a reasonable estimate for
+                                        building the story.</li>
+                                    <li><em>Small. </em>Stories should be built in a small amount of time, usually a
+                                        matter of person-days. Several stories should be able to be built within one
+                                        iteration.</li>
+                                    <li><em>Testable. </em>Tests should be written to verify the software for this story
+                                        works correctly.</li>
+                                </ul>
+                                <p class="comment78305">These concepts have matured over several decades and best
+                                    practices have been proposed for building user stories.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="bb9d352c-c3f1-4fa8-bba9-e6206a0ce45b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>3</sup> Martin Fowler; “User Story”; 22 April, 2013; <a
+                                        href="https://martinfowler.com/bliki/UserStory.html"
+                                        target="_blank">https://martinfowler.com/bliki/UserStory.html</a>; retrieved
+                                    June 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="470552ff-06f4-4409-9259-60e58958816a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Security-Focused Stories<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c97251b4-1822-45cc-a96e-cbadb98a4922" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Software development teams understand the importance of managing
+                                    <button
+                                            data-definition title="The consequences of software development actions that intentionally or unintentionally prioritize client value and/or project constraints such as delivery deadlines, over more technical implementation, and design considerations."
+                                        class="rendered"><strong xmlns="http://www.w3.org/1999/xhtml">technical
+                                            debt</strong></button>—the consequences of software development actions that
+                                    intentionally or unintentionally prioritize client value and project
+                                    constraints—must recognize that managing security debt and addressing uncompleted
+                                    security-relevant tasks are equally important.
+                                </p>
+                                <p class="comment78305">While stories and epics in Agile methods (e.g., SCRUM) capture
+                                    business requirements and expected use cases, security-focused stories are typically
+                                    developed based on identified <button
+                                            data-definition title="A reference to a use case from a hostile actor’s perspective. Created from use cases and likely representing an interaction with the system in ways that the system was not designed to be used."
+                                        class="rendered"><strong xmlns="http://www.w3.org/1999/xhtml">abuse (misuse)
+                                            cases</strong></button><sup>4</sup><strong> </strong>and the threat
+                                    landscape.</p>
+                                <p class="comment78305">Skipping, postponing, deprioritizing, or otherwise ignoring
+                                    applicable security-focused stories or security tasks will build accumulated “debt”
+                                    that leaves the application vulnerable. Sometimes this is addressed by performing
+                                    security sprints that try to clear or reduce this debt, but it is recommended to try
+                                    to avoid building debt in the first place. When an organization intentionally
+                                    accepts security debt, it is simultaneously accepting organizational risk. Risk
+                                    decisions should not be made at the IT level and must be divulged to organizational
+                                    and mission tiers of the business.<sup>5</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c292fcce-6199-415c-9995-07eb37db41d5" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>4 </sup>Misuse and abuse cases describe unintended and
+                                    malicious use scenarios of the application, describing how an attacker could do
+                                    this. Create misuse and abuse cases to misuse or exploit the weaknesses of controls
+                                    in software features to attack an application. Use abusecase models for an
+                                    application to serve as fuel for identification of concrete security tests that
+                                    directly or indirectly exploit the abuse scenarios.</p>
+                                <p class="comment78305">Source: OWASP Foundation; “Abuse Case Cheat Sheet;” <a
+                                        href="https://cheatsheetseries.owasp.org/cheatsheets/Abuse_Case_Cheat_Sheet.html"
+                                        target="_blank">https://cheatsheetseries.owasp.org/cheatsheets/Abuse_Case_Cheat_Sheet.html</a>;
+                                    retrieved June 2023.</p>
+                                <p class="comment78305"><sup>5</sup> Software Assurance Forum for Excellence in
+                                    Code; <em>Practical Security Stories and Security Tasks for Agile Development
+                                        Environments; </em>2012; <a
+                                        href="https://safecode.org/publication/SAFECode_Agile_Dev_Security0712.pdf"
+                                        target="_blank">https://safecode.org/publication/SAFECode_Agile_Dev_Security0712.pdf</a>;
+                                    retrieved June 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="de4d8351-6a4e-4d1f-a356-302fe2e344da" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Nonfunctional Requirements<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5772969c-5b43-40f3-ab09-ca6caa07bf94" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">A nonfunctional requirement specifies how a system should
+                                    behave. Nonfunctional requirements include performance, scalability, and
+                                    interoperability requirements, among many more. Some organizations categorize
+                                    security requirements as nonfunctional.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2acb699d-9ea2-41cd-b4a3-d12334a78b69" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Nonfunctional Security
+                                Requirements<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="3ccbdf78-5e0d-46de-9d39-6a23dd71c11c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Nonfunctional security requirements place constraints on
+                                    software development. If security requirements are purely nonfunctional, it is
+                                    possible that security gaps may occur since there are no functional security
+                                    requirements built into the software system. Additionally, it may be challenging to
+                                    verify nonfunctional security requirements through testing. Nonfunctional security
+                                    requirements should therefore be mapped to functional software requirements.</p>
+                                <p class="comment78305">From a pragmatic point of view, to build a secure application,
+                                    it is important to identify the attacks that the application must defend against,
+                                    according to its business and technical context.<sup>6</sup></p>
+                                <p class="comment78305">Security requirements are derived in different ways. One
+                                    approach is to use a framework such as the Carnegie Mellon University Software
+                                    Engineering Institute (CMU SEI)’s Security Quality Requirements Engineering
+                                    (SQUARE), which offers purpose-built methodologies for software security
+                                    requirements engineering. SQUARE delineates and supports (through manual processes,
+                                    checklists, cheat sheets, etc.) a requirements specification process that explicitly
+                                    considers and addresses security throughout the software’s functionality.</p>
+                                <p class="comment78305">Methodologies such as SQUARE help to verify that all of the
+                                    requirements for a software application or system are complete, clear, and testable.
+                                    Verifying completeness ensures the existence of requirements that explicitly
+                                    acknowledge anticipated misuses and abuses of the software, and provide for the safe
+                                    handling of the inputs, stimuli, and outputs associated with such anomalous usage
+                                    conditions.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1a583107-0c95-4a37-82be-231d163e6716" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>6</sup> Ibid.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="screengrid comment78305">
+            <footer class="screen__margin screen__footer u-hide-element vstdonthighlight">
+                <div class="feedback comment78305">
+                    <div class="feedback__content js-feedback-focus comment78305" tabindex="-1"></div>
+                </div>
+                <div class="control-btns comment78305"></div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay-root vstdonthighlight rendered u-hidden comment78305" style="overflow-y: auto;">
+        <div class="modal-cover-holder comment78305">
+            <div class="modal-cover-outer comment78305">
+                <div class="modal-cover comment78305"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

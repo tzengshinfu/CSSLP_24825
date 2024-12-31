@@ -1,0 +1,441 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"
+    style="padding: 0px; font-size: 100%; --USER__lineHeight: 1; --USER__pageMargins: 1; --USER__view: readium-scroll-on;"
+    class="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Security Reporting Mechanisms (2.7)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="overflow: hidden auto;">
+    <div xmlns:epub="http://www.idpf.org/2007/ops" epub:type="pagebreak" id="pagebreak_15"
+        class="hidden-pagebreak comment78305" title="15"></div>
+
+    <div xmlns:epub="http://www.idpf.org/2007/ops" id="da8fa9f7-1069-49cb-bd34-1934b47cd2ef"
+        class="screen rendered comment78305" aria-hidden="false">
+        <div class="screengrid comment78305">
+            <header class="screen__margin screen__header u-hide-element vstdonthighlight">
+
+                <div class="screen__heading u-float--clearfix comment78305">
+                    <div class="screen__icon u-float--left comment78305"></div>
+                    <h2 class="screen__title comment78305" tabindex="-1"></h2>
+                </div>
+
+
+                <div class="screen__instructions comment78305"></div>
+            </header>
+        </div>
+
+        <div class="screen__content comment78305">
+
+            <div class="block rendered comment78305">
+                <div id="27ee68a0-aa21-46e7-b9ba-b26b2607c910" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Security Reporting Mechanisms
+                                (2.7)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2fea1020-5465-402e-b208-2ee0f09b8177" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Security practitioners must understand the various levels,
+                                    categorizations, and mechanisms related to reporting within the context of a secure
+                                    software-development life cycle. Reporting occurs at different levels of the
+                                    organization from the board of directors down to the system level. Reports and
+                                    report information can generally be grouped or categorized making aggregation and
+                                    collection more feasible. Reporting mechanisms will trigger report artifact
+                                    generation at various stages within the lifecycle. Reporting is only comprehensive
+                                    when a security practitioner ensures reporting occurs at the correct time with
+                                    actionable information sent to the appropriate stakeholders.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="16dee7d1-76ed-4eee-9557-ea77cba1f37b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Objectives<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7c166c17-3737-4db5-a560-9ab8ac9441ed" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>Explain security reporting mechanisms within DevSecOps.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="68dff4b4-1d9c-43a6-befc-8b7b37ecaea0" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Overview<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="aa1aa12a-4358-4ba4-b2bc-79c86f8ee953" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">There are two overarching ways to separate organizational
+                                    reporting on security—software security reporting through organizationally defined
+                                    development processes and operational security reporting, which deals more with
+                                    various levels of reporting within an organizational structure.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="70e5e66e-88d3-46e2-abbb-01cba286f55f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Organizational Security
+                                Reporting<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="81c819c8-4705-450d-929e-eee7227a65ce" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">There are several ways to define an organizational structure for
+                                    reporting and other purposes. As an example, <em>NIST SP 800-39—Managing Information
+                                        Security Risk </em>describes a multitiered security reporting structure of three
+                                    tiers: organizational, business process, and information systems.</p>
+                                <p class="comment78305">The organizational tier provides the strategy and context for
+                                    the entire organization, which includes lower-level reports. This level of the
+                                    organization includes stakeholders such as the C-suite and the board of directors,
+                                    as reporting must provide information that can be actioned at a high level. It would
+                                    be unusual to present a 42-page report listing all high and moderate CVEs for
+                                    currently deployed software in the enterprise. Instead, a leader from security might
+                                    present the total quantity for high and moderate CVEs, and three potential
+                                    approaches for addressing them that include costs.</p>
+                                <p class="comment78305">The next tier down, business process, might be synonymous within
+                                    some organizations with a department (e.g., IT department, security operations
+                                    center). At this tier, reporting is likely consolidated from each system, software,
+                                    or network appliance into dashboards and other visual methods that allow for
+                                    situational awareness within the mission or operation of the organization.</p>
+                                <p class="comment78305">At the lowest tier, we have information systems—end points.
+                                    Reporting at this level is detailed and quantitative, with system logs, network
+                                    logs, configuration baselines, and CVEs for particular software installed on
+                                    hardware within the organization. The following figure demonstrates one possible
+                                    structure for the flow of security reporting within an organization.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4e2a727e-4168-4831-acd8-9793471bb928" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--100 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_015_01.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_015_01.png"
+                                    style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 276.766px; left: 550.406px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 10: Multitiered Security Reporting Structure</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="5dd01ad8-0372-4b41-9da7-1b53ee7afd2b"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="51e711ab-29c0-4750-9824-d07efc46e285" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Software Development Security
+                                Reporting<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2b5e5cb9-e065-45ba-b430-f7acd3af58be" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The development life cycle provides many opportunities for
+                                    reporting the status of activities related to the maturation or enhancement of an
+                                    organization’s source code. The figure below was used earlier to introduce
+                                    DevSecOps. Now let’s observe reporting mechanisms during each phase of the life
+                                    cycle.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="91f9c9dc-1a1f-4193-97b1-d1b224b26ce4" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--75 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_015_02.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_015_02.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 159.781px; left: 476.594px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 11: DevSecOps</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="d340bb41-f038-4cb8-c300-1650b57730ea"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7f564afe-a027-4b60-9750-4bba2d0f7e43" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Reporting mechanisms throughout the software life cycle:</p>
+                                <ul>
+                                    <li><em>Plan. </em>Opportunities and risks can be captured and recorded within the
+                                        risk register. If using Agile then the backlog could provide context for
+                                        reporting—for example, do user stories have acceptance criteria that include
+                                        security considerations?</li>
+                                    <li><em>Code/Build/Test. </em>Some Integrated development environments (IDE) can
+                                        provide developers trustworthiness of third-party libraries or linter
+                                        suggestions based on language style guides. Often before source code can be
+                                        committed to a repository it must pass a gated check-in where unit, integration,
+                                        and/or static analysis tests review the source code for defects. If the source
+                                        code is found deficient, it is often shelved (i.e., shelveset) instead of
+                                        committed into the code base as a changeset. There is often reporting on the
+                                        CWEs or style issues and emails sent about failing to commit the change.</li>
+                                    <li><em>Release/Deploy/Operate/Monitor. </em>Once the source is branched into an
+                                        official release there will likely be a final statement regarding the software
+                                        risks and mitigations. The organization or authorizing official will use a
+                                        document such as a system authorization package, sometimes referred to as SAP,
+                                        to decide whether the software system is authorized to operate. Once software is
+                                        deployed and operating, it is monitored. Monitoring and reporting mechanisms are
+                                        established at the various tiers of the organization such as in the example
+                                        given on organizational security reporting—at the information system level,
+                                        business level, and strategic tier.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="64b9fb72-76a9-47ad-89c7-b692caed05fe" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Feedback<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a4b82827-31c8-4d87-b3b4-adf337abbe36" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Continuous improvement leads to higher levels of maturity. Both
+                                    BSIMM and SAMM, as described earlier in this domain, define maturity levels for
+                                    respective security practices. SAMM defines three maturity levels as objectives.
+                                    Each level within a security practice is characterized by a successively more
+                                    sophisticated objective defined by specific activities, with more stringent success
+                                    metrics than the previous level. Additionally, each security practice can be
+                                    improved independently, though related activities can lead to optimizations.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="fecd9916-0be9-4700-ab62-f08ddcef7692" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Retrospective<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ba462f1e-c289-44b2-8166-e5c6031837da" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Continuous improvement in Agile development environments hinges
+                                    on creating the opportunity for teams to regularly and frequently reflect on what
+                                    was done well, and to identify what can be improved upon. In fact, incorporating
+                                    security in this type of environment relies upon these retrospectives that can help
+                                    teams uncover opportunities for continuous and incremental improvements.</p>
+                                <p class="comment78305">The frequency of running these retrospectives is up to the team;
+                                    they could be scheduled at the end of each sprint, or less frequently as the
+                                    organization sees fit. Regardless of the frequency, for these retrospectives to be
+                                    effective, a key requirement is to embrace a positive spirit and open mindset to
+                                    encourage team members to step forward and share what they believe can result in
+                                    improvements for the team.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a8386cc4-6472-4ee6-a639-caa435b1a3b9" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Lessons Learned<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="462fbb72-bb90-4f48-b999-def64632b2b5" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">A major lesson learned in software development is that the
+                                    quality of the processes used to build software is usually reflected in the quality
+                                    of the software product itself. Failure to make improvements to processes despite
+                                    the attempt could be due to various reasons, including:</p>
+                                <ul>
+                                    <li>Over-emphasis on assessments and insufficient commitments to making improvements
+                                    </li>
+                                    <li>Starting quickly and not planning properly for the process improvement</li>
+                                    <li>Poorly managing the implementation of the improvements</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="50b0c206-684e-4dc3-9312-8d151a9e7184" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Importance of Feedback Loops<br />
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="55291536-30da-49a3-a1a8-ce7018c4bb2f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">There is a similarity between security reporting information
+                                    flowing from one tier of an organization to another and feedback loops integrated
+                                    into processes and systems. Feedback loops are integrally important to ensure
+                                    stability within development processes.</p>
+                                <p class="comment78305">Continuing the thread on gated check-in: Suppose Jeramie was a
+                                    developer at your organization, and he attempted to commit source code that
+                                    contained several critical security defects. As a result, the build and test portion
+                                    of the pipeline would hopefully reject his changes. This would be good for the
+                                    overall status of the branch of software he was attempting to advance with a commit.
+                                    However, Jeramie needs to know his changes were not committed. He needs feedback.
+                                    Perhaps, the team needs to assist with remediation; in that case, they would require
+                                    notification also.</p>
+                                <p class="comment78305">Feedback loops help ensure corrective actions are taken before a
+                                    process can progress. In dynamic and automatic systems, output from the system
+                                    action is directly input into the system to inform the next action. Feedback can be
+                                    positive or negative. When feedback is positive, inputs into a system accelerate or
+                                    advance a process. When feedback is negative, inputs back into the system reduce
+                                    processing to preserve a stable state— much like the gated check-in slowed Jeramie’s
+                                    ability to commit code with defects but with the result being more secure software.
+                                    In the most general sense, feedback loops also provide the opportunity for improving
+                                    processes in the future.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="screengrid comment78305">
+            <footer class="screen__margin screen__footer u-hide-element vstdonthighlight">
+                <div class="feedback comment78305">
+                    <div class="feedback__content js-feedback-focus comment78305" tabindex="-1"></div>
+                </div>
+                <div class="control-btns comment78305"></div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay-root vstdonthighlight rendered comment78305 u-hidden" style="overflow-y: auto;">
+        <div class="modal-cover-holder comment78305">
+            <div class="modal-cover-outer comment78305">
+                <div class="modal-cover comment78305"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

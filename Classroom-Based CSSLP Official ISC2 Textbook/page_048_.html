@@ -1,0 +1,311 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"
+    style="padding: 0px; font-size: 100%; --USER__lineHeight: 1; --USER__pageMargins: 1; --USER__view: readium-scroll-on;"
+    class="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Security Risks (5.4)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="overflow: hidden auto;">
+    <div xmlns:epub="http://www.idpf.org/2007/ops" epub:type="pagebreak" id="pagebreak_48"
+        class="hidden-pagebreak comment78305" title="48"></div>
+
+    <div xmlns:epub="http://www.idpf.org/2007/ops" id="73d5024a-9582-472b-a357-2c6c12c72cd3"
+        class="screen rendered comment78305" aria-hidden="false">
+        <div class="screengrid comment78305">
+            <header class="screen__margin screen__header u-hide-element vstdonthighlight">
+
+                <div class="screen__heading u-float--clearfix comment78305">
+                    <div class="screen__icon u-float--left comment78305"></div>
+                    <h2 class="screen__title comment78305" tabindex="-1"></h2>
+                </div>
+
+
+                <div class="screen__instructions comment78305"></div>
+            </header>
+        </div>
+
+        <div class="screen__content comment78305">
+
+            <div class="block rendered comment78305">
+                <div id="69550296-936a-4175-83ba-718e663cca6c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Security Risks (5.4)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="662dafa8-ff57-4dc4-8be4-f41390460792" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Organizations operate under a resource-constrained equation.
+                                    There is rarely enough time, money, or business justification for perpetuating the
+                                    prevention of every software defect. Organizations must be strategic in the pursuit
+                                    of fixing or accepting technical and security debt (i.e., risks).</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4ee0b89a-80e3-4b9e-9e73-14ecffc9619c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Objectives<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c229e531-2af3-4007-b326-a47e77c4f3b2" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>Describe the process for defining a security strategy that includes
+                                        considerations for software risks.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a6cd9dad-8b1c-4466-8c05-7a490b908f14" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Overview<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a47dadb9-7f2c-4fa5-882f-97696e8029d6" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Every organization has a different risk appetite, tolerance, and
+                                    landscape that make the tasks of identifying and ameliorating risks unique to each
+                                    organization. This concept remains true when we focus on more specific areas of
+                                    concentration such as secure software development. For example, software development
+                                    projects will accept a certain level of risk by configuring DevSecOps pipelines to
+                                    accept certain categories of issues while rejecting others. Perhaps a SAST (i.e.,
+                                    static analysis at gated check-in) tool is configured to detect only critical
+                                    defects while potential moderate or warning-level findings are suppressed. In this
+                                    case, the organization accepts any technical debt in the form of potential security
+                                    defects within the source code by refraining from a more comprehensive scan.
+                                    Analysis tools can produce many potential findings that may include many false
+                                    positives (i.e., falsely reported issues) which could be prohibitively expensive to
+                                    review in entirety. How do organizations cope with resource constraints?</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="875bd556-c274-4d00-9d2c-de3e8b8076b5" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Software Security Strategy Flow
+                                Down<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f82a3216-3df5-4275-bd32-7dd1c5d87b5c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Organizations must define a security strategy that includes
+                                    considerations for software risks. The organizational strategy should capture the
+                                    risk appetite and tolerance of the organization. There are several key software
+                                    documents that, when drafted correctly, incorporate considerations for security
+                                    based on the software engineering life cycle. The table below attempts to provide a
+                                    map.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="841969de-1016-4478-a018-efda1145c87d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin vst-draggable comment78305">
+                            <div class="c-x-scroll vst-draggable comment78305" style="width: 100%;">
+                                <div class="js-x-scroll c-x-scroll__scrollbox comment78305" style="">
+                                    <table class="c-table js-x-scroll-component" style="width: 100%;"
+                                        data-orig-width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Development Phase</th>
+                                                <th scope="col">Description</th>
+                                                <th scope="col">Supporting Document</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Requirements Specification</td>
+                                                <td>An information item that identifies, in a complete, precise,
+                                                    verifiable manner, the requirements, design, behavior, or other
+                                                    expected characteristics of a system, service, or process.</td>
+                                                <td>Draft Statement of Work (SoW),<br />Draft Requirements Description
+                                                    Document (RDD)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Analysis</td>
+                                                <td>The examination of acquired data for its significance and probative
+                                                    value to the case.</td>
+                                                <td>Leverage Statement of Work (SoW),<br />Leverage Requirements
+                                                    Description Document (RDD), Draft Software Requirements
+                                                    Specification (SRS)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Design</td>
+                                                <td>Process to define the architecture, system elements, interfaces, and
+                                                    other characteristics of a system or system element.</td>
+                                                <td>Leverage Software Requirements Specification (SRS), Draft Software
+                                                    Design Document (SDD), Draft Software Development Plan (SDP)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Implementation</td>
+                                                <td>Specific requirements or instructions for implementing software.
+                                                </td>
+                                                <td>Draft Software Test Plan (STP), Leverage Software Design Document
+                                                    (SDD), Leverage Software Development Plan (SDP)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Test</td>
+                                                <td>Determination of one or more characteristics of an object of
+                                                    conformity assessment, according to a procedure.</td>
+                                                <td>Leverage Software Test Plan (STP)</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="c-x-scroll__gradient c-x-scroll__gradient--left comment78305"></div>
+                                <div class="c-x-scroll__gradient c-x-scroll__gradient--right comment78305"></div>
+                            </div>
+                            <p class="comment78305"><sup><em>Table 4: Software Security Strategy Flow Down</em></sup>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6ae0cf51-70de-4591-97fd-fc6dfe672a9a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Organizations flow strategic security to policies as shown
+                                    above. The policies are then enforced using organizationally defined procedures.
+                                    Having policy and procedure document artifacts makes it possible for the
+                                    organization to define and conduct auditing and monitoring to ensure compliance.
+                                    This describes how security strategy results in guidance at all levels for secure
+                                    software activities throughout the life cycle, but it does not address creating a
+                                    strategy specifically.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ee113fc9-35d6-4414-afb0-5c895030d0f7" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Creating a Software Security
+                                Strategy<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="fe348ac2-cae6-4ac1-8810-9be58ce2d043" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Before an organization can mitigate software risks it must
+                                    identify reasonable threats and important infrastructure. Not all threat sources
+                                    possess the same capability to deliver negative impacts. Likewise, not all
+                                    organizational assets are of the same importance. The standard risk approach
+                                    starting with asset classification and protection needs can be applied to software
+                                    development or even production software infrastructure.</p>
+                                <p class="comment78305">First, organizations should define the critical software
+                                    functions or components of the system when confidentiality, integrity, or
+                                    availability are degraded, which result in unacceptable disruptions to the
+                                    continuity of software operations. This exercise establishes priorities for which
+                                    components may require a higher level of development scrutiny—prioritization by
+                                    component criticality. Further, organizations may use threat intelligence
+                                    information and a framework like MITRE ATT&amp;CK to identify which adversarial
+                                    events may be of higher likelihood of occurrence or greater impact to an
+                                    organization—prioritization by adversarial forces. Prioritization may also be based
+                                    on security budget or resources. If an organization has limited resources, it may
+                                    only conduct static code analysis for critical defects while utilizing peer code
+                                    reviews. Each software has different security and safety requirements based on the
+                                    use case and operating environment. You would like the firmware on the airplane
+                                    you’re traveling in to work every time. If you cannot log in to pay your bills
+                                    today, you might not mind waiting until service is restored tomorrow.</p>
+                                <p class="comment78305">Each organization’s decision to manage software risk is anchored
+                                    on the aggregation of priorities as related to risks with the goal of reducing risk
+                                    to an acceptable level for production software environments. Strategies should
+                                    facilitate addressing defects in the highest criticality components starting with
+                                    the highest impact items first to maximize value.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="screengrid comment78305">
+            <footer class="screen__margin screen__footer u-hide-element vstdonthighlight">
+                <div class="feedback comment78305">
+                    <div class="feedback__content js-feedback-focus comment78305" tabindex="-1"></div>
+                </div>
+                <div class="control-btns comment78305"></div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay-root vstdonthighlight rendered comment78305 u-hidden" style="overflow-y: auto;">
+        <div class="modal-cover-holder comment78305">
+            <div class="modal-cover-outer comment78305">
+                <div class="modal-cover comment78305"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,663 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"
+    style="padding: 0px; font-size: 100%; --USER__lineHeight: 1; --USER__pageMargins: 1; --USER__view: readium-scroll-on;"
+    class="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Secure Software Release (7.3)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="overflow: hidden auto;">
+    <div xmlns:epub="http://www.idpf.org/2007/ops" epub:type="pagebreak" id="pagebreak_69"
+        class="hidden-pagebreak comment78305" title="69"></div>
+
+    <div xmlns:epub="http://www.idpf.org/2007/ops" id="c105cbf4-0839-4e5d-9c95-d34d5add41b0"
+        class="screen rendered comment78305" aria-hidden="false">
+        <div class="screengrid comment78305">
+            <header class="screen__margin screen__header u-hide-element vstdonthighlight">
+
+                <div class="screen__heading u-float--clearfix comment78305">
+                    <div class="screen__icon u-float--left comment78305"></div>
+                    <h2 class="screen__title comment78305" tabindex="-1"></h2>
+                </div>
+
+
+                <div class="screen__instructions comment78305"></div>
+            </header>
+        </div>
+
+        <div class="screen__content comment78305">
+
+            <div class="block rendered comment78305">
+                <div id="d0e1f343-4c30-4794-ba64-18b05bc959f5" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Secure Software Release (7.3)<br />
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="fe4b73b3-db3e-4b0f-8756-435f6cc45ed8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Proper deployment ensures the security of software and its
+                                    operating environment. Software security and integrity may be adversely affected if
+                                    appropriate controls are not incorporated into the integration and deployment
+                                    processes.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="737f519a-52a7-4d07-acda-630e67db7d0b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Learning Objectives<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b9b49cc7-b969-462d-9404-3f9b14e59a47" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>Identify the elements of the Secure Continuous Integration and Continuous
+                                        Delivery (CI/CD) pipeline.</li>
+                                    <li>Explain the application security toolchain.</li>
+                                    <li>Identify the steps to identify app vulnerabilities.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4875bdd8-c27d-41fd-852e-2c9e603756fe" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Overview<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="433aa00d-bf6d-44d6-9def-752ef5812d5c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Inconsistent methods and lack of automation and integration of
+                                    security testing tools contribute to application security challenges. To ensure the
+                                    legitimacy of artifacts that are used during the build, safeguards can be
+                                    implemented. Verification in terms of checksums, hashes, and signatures may be used
+                                    to avoid integrating compromised dependencies. Mobile platform vendors provide
+                                    security mechanisms to protect the ecosystem from malicious or misbehaving apps.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2322fec7-0091-4018-8db4-5f272d393b93" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Secure Software Deployment<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="be3e6e14-0d72-4006-95c2-eda4db600b5f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">One of the final stages in delivering secure software is
+                                    ensuring that neither the security nor integrity of developed applications is
+                                    compromised during deployment. The Secure Deployment (SD) practice focuses on this.
+                                    To this end, the practice’s first stream focuses on removing manual error by
+                                    automating the deployment process as much as possible and making its success
+                                    contingent upon the outcomes of integrated security verification checks. It also
+                                    fosters separation of duties by making adequately trained non-developers responsible
+                                    for deployment.<sup>2</sup></p>
+                                <p class="comment78305">The actions involved in deploying software securely depend on
+                                    the maturity of organizational processes. Secure deployment may require the
+                                    organization to:</p>
+                                <ul>
+                                    <li>Formalize the deployment process and secure the used tooling and processes.</li>
+                                    <li>Automate the deployment process over all stages and introduce sensible security
+                                        verification tests.</li>
+                                    <li>Automatically verify integrity of all deployed software regardless of whether
+                                        it's internally or externally developed.<sup>3 </sup></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e406d3d8-62c3-49e6-a0b1-9076a3bb9b14" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>2</sup> OWASP Foundation Software Assurance Security Model;
+                                    <a href="https://owaspsamm.org/model/implementation/secure-deployment/"
+                                        target="_blank">https://owaspsamm.org/model/implementation/secure-deployment/</a>;
+                                    retrieved June 2023.
+                                </p>
+                                <p class="comment78305"><sup>3</sup> Ibid.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="082f9c7f-be04-4eb6-bb7b-678971c811cf" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Secure Continuous Integration and
+                                Continuous Delivery (CI/CD) Pipeline<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7de47c83-8b7e-448b-ae9d-fdcf42c860ee" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">DevOps requires tasks such as builds, testing, and deployment to
+                                    occur frequently and naturally. For that to happen, such tasks must be automated.
+                                    Continuous Integration/Continuous Delivery (CI/CD) practice relies on the automation
+                                    of much of the routine work of transforming code changes into working software,
+                                    including delivering tested code into production.</p>
+                                <p class="comment78305">Continuous integration is a reference to the build and test
+                                    cycle. Continuous integration (CI) servers build the project from scratch when
+                                    developers merge their changes into a shared version control repository. Continuous
+                                    delivery (CD) is a reference to the code movement from one environment to another
+                                    (e.g., dev to QA to UAT). CI and CD typically go hand in hand, and the same CI
+                                    server will likely also handle CD.</p>
+                                <p class="comment78305">Traced back to build servers like Hudson, Jenkins, and Microsoft
+                                    Team Foundation Server, CI/CD has become a collection of technologies and practices
+                                    that support the mission of releasing new code changes while keeping things stable.
+                                </p>
+                                <p class="comment78305">In practice, CI/CD would rely on a system to trigger the process
+                                    of compilation and run all tests and checks that have been automated.</p>
+                                <p class="comment78305">Clearly, inconsistent methods, lack of automation and
+                                    integration of security testing tools, and excessive false positives can contribute
+                                    to the application security challenges in CI/CD workflows.</p>
+                                <p class="comment78305">A distinction between continuous delivery and continuous
+                                    deployment must be made. Whereas continuous integration (CI) is part of both
+                                    continuous delivery and continuous deployment (the step that involves deployment to
+                                    production is manual in the case of continuous delivery), continuous deployment goes
+                                    one step further than continuous delivery. With this practice, every change that
+                                    passes all stages of the production pipeline is released to customers with no human
+                                    intervention, and only a failed test will keep a new change from being deployed to
+                                    production. </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ea80e0bf-df68-4f4c-8f55-812d76034845" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Application Security Toolchain<br />
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e8c6f447-19dd-49e3-abfc-5a90b5f2df5a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Implementing an entire security toolchain into an existing
+                                    pipeline is challenging. Hooks for pre-commit checks, commit-time checks, build-time
+                                    checks, test-time checks, and deploy-time checks may all be needed. For example:</p>
+                                <ul>
+                                    <li>Using IDE security plugins to run scans before code is checked into the shared
+                                        repository.</li>
+                                    <li>Performing static code analysis with limited rulesets (e.g., top three
+                                        vulnerabilities) to provide developers with quick feedback upon committing
+                                        changes to the repository.</li>
+                                    <li>Running even more in-depth security checks (e.g., OWASP Top 10), and software
+                                        composition analysis of open-source components at build time.</li>
+                                    <li>Performing dynamic analysis or fuzzing.</li>
+                                </ul>
+                                <p class="comment78305">Note that references above to IDE Plugins, SAST and DAST tools,
+                                    SCA tools, and fuzz tools were only used as examples among other tools in the
+                                    toolchain.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ddc47011-650a-4a4c-a8fa-7e141c8abc3b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Build Artifact Verification<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b8a3a784-7769-4e37-8777-aabf7bb689dc" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Builds with external dependencies may require safeguards to
+                                    ensure the legitimacy of artifacts (e.g., binaries) that are used during the build.
+                                    This is especially true when software relies on artifacts that are published on
+                                    third-party repositories.</p>
+                                <p class="comment78305">Software composition analysis (SCA) tools can also be useful in
+                                    this regard. Keep in mind that these tools can generate an inventory report of all
+                                    open-source components in the software, including all direct and transitive
+                                    dependencies.</p>
+                                <p class="comment78305">Verification in terms of checksums, hashes, and signatures may
+                                    be used to avoid integrating compromised dependencies.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="96dc4e78-fee2-45e1-a0ad-5afed0b249c8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Verified and Trusted Mobile Apps<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b3760306-6595-4a82-94ac-6fa008c300f8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">App vulnerabilities are caused by several factors, including
+                                    design flaws and programming errors, which may have been inserted intentionally or
+                                    inadvertently. Unfortunately, in the app marketplace, apps containing
+                                    vulnerabilities are prevalent due in part to the submission of apps by developers
+                                    who may trade security for functionality to reduce cost and time to market.</p>
+                                <p class="comment78305">Platform vendors provide various mechanisms to enforce security,
+                                    and there is much to discuss about the security models for each platform. In this
+                                    course, only a few security aspects at a high level for iOS and Android will be
+                                    discussed.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b41774bc-142d-441f-a3d8-5388eb793767" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h5 class="heading heading--subheadingc comment78305">Anti-tamper<br /></h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="bb18e70d-1eb5-4ac3-a716-00947dba7de5" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Publication of malicious versions of an app by bad actors on
+                                    third-party markets may be possible. Consider anti-tamper techniques,
+                                    tamper-detection mechanisms, or other safeguards that can help thwart bad actors’
+                                    attempts to reverse engineer an app and introduce malicious functionality. </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="994b41c5-efde-4a3d-a163-20fd9ca632fd" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h5 class="heading heading--subheadingc comment78305">iOS<br /></h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="64995410-0198-4628-9345-7d7fb4adc948" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">With security at the core of the iOS platform design, there is a
+                                    tight integration of hardware, software, and services that protect the entire
+                                    ecosystem.</p>
+                                <p class="comment78305">iOS only allows apps that it considers safe. First, it must
+                                    verify the source of the app and its integrity. The only executable code that iOS
+                                    will allow apps to run must be signed with an Apple-issued certificate. This is true
+                                    regardless of whether the app came with the device or is a third-party app. This
+                                    certificate validates the iOS app developers’ identity and tells iOS that they are
+                                    known to and verified by Apple. iOS developers are required to join the Apple
+                                    Developer Program. iOS apps are also reviewed to ensure adherence to certain
+                                    requirements for operations and bugs.</p>
+                                <p class="comment78305">As part of iOS security, every third-party app is sandboxed.
+                                    This is done for several reasons, including preventing misbehaving apps from
+                                    compromising the system or other apps and accessing user data.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e8a9d7be-abde-48bc-8f70-0262bddd1292" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h5 class="heading heading--subheadingc comment78305">Android<br /></h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="03fe1106-4258-4ca2-9c15-79826317e037" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Android was designed to be open, with an eye toward creating a
+                                    developer-friendly platform. Securing an open and developer-oriented platform
+                                    involves various layers of security and a strong security architecture.</p>
+                                <p class="comment78305">For starters, although some developers are security experts,
+                                    some are not. Android’s approach was to cater to both types of developers, offering
+                                    flexible controls to the security-savvy and protecting the not-so-savvy through
+                                    secure defaults and built-in controls. Android relies on mechanisms to protect
+                                    against hacks and corruption through a chain of trust. For example, during the
+                                    verified boot process, each stage ensures the integrity and authenticity of the next
+                                    stage, before execution gets handed over.</p>
+                                <p class="comment78305">Like iOS, Android sandboxes its apps. This keeps apps separate
+                                    from each other and protects apps and the system from misbehaving and malicious
+                                    apps. Android also has a read-only system partition that contains the kernel, OS
+                                    libraries, application runtime, platform apps, and other features. This partition
+                                    protects the most crucial parts of the operating system from malicious apps, as well
+                                    as from users who might accidentally delete or change a vital part of the OS.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="66a51a93-4d97-43ce-9b48-44e2084750d6" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">App Security Requirements<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="41d84838-41b7-4163-8af8-836a99ef95d5" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">General app security requirements define the software and
+                                    behavioral characteristics of an app that should or should not be present to ensure
+                                    security. These requirements are considered general since they can be applied across
+                                    all mobile applications and tailored to meet the security needs and risk tolerance
+                                    of an organization. General app security requirements may be derived from several
+                                    available standards, best practices, and resources, including those specified by
+                                    NIAP, OWASP, MITRE, and NIST.<sup>4</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="465c1746-6abf-43c9-a863-5448c138658f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">OWASP’s Mobile Application Security
+                                Verification Standard (MASVS)<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a82d6133-240c-41e8-9637-d6672129b47b" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">MASVS can be used to establish a level of confidence in the
+                                    security of mobile apps. The requirements were developed with the following
+                                    objectives in mind:</p>
+                                <ul>
+                                    <li>Use as a metric to provide a security standard against which existing mobile
+                                        apps can be compared by developers and application owners.</li>
+                                    <li>Use as guidance during all phases of mobile app development and testing.</li>
+                                    <li>Use during procurement to provide a baseline for mobile app security
+                                        verification.<sup>5</sup></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e01299e7-39f8-4163-92a1-cffe9951d1f7" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>4</sup> Josh Franklin, Michael Ogata, Stephen Quirolgico,
+                                    Vincent Sritapan, Jeffrey Voas; National Institute of Standards and Technology;
+                                    <em>NIST SP 800-163 Rev. 1—Vetting the Security of Mobile Applications; </em><a
+                                        href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-163r1.pdf"
+                                        target="_blank">https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-163r1.pdf</a>;
+                                    retrieved June 2023.
+                                </p>
+                                <p class="comment78305"><sup>5</sup> OWASP Foundation; OWASP-MASVS Ver. 1.2; <a
+                                        href="https://github.com/OWASP/owasp-masvs/releases/tag/v1.2"
+                                        target="_blank">https://github.com/OWASP/owasp-masvs/releases/tag/v1.2</a>;
+                                    Retrieved June 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b44642cf-7acb-4ce7-a228-c8e359e1a609" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Trusted Application Stores<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8e70cade-7edd-4c86-8d9b-7396aec6e915" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Modern computing devices use application stores to distribute
+                                    signed applications to users, including software developed by third parties.
+                                    Different platforms perform code signing in different ways, but in most cases,
+                                    application stores are operated by the OS or platform vendor to distribute only
+                                    those applications that have undergone some level of vetting based on a defined
+                                    policy. While individual developers may have their own signing keys, either for
+                                    development purposes or to authenticate to the store, the private keys used to sign
+                                    applications are under the control of the store, which serves as the Code Signing
+                                    System (CSS). Developers submit their applications to the store, and their
+                                    identities are verified before the apps undergo vetting. If everything is in order,
+                                    the store signs the app and publishes it, making it available for download. Devices
+                                    can be configured to only install apps that have been signed by a key controlled by
+                                    the application store.<sup>6</sup></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="04691198-9bdb-4638-a148-0f06cc5c2b73" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Mobile App Software Assurance<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="fe1f7188-c7d7-45d8-8270-5f04a41b057d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Software assurance activities for a mobile application may occur
+                                    in one or more phases of the mobile application life cycle: 1) during the
+                                    development of the app (i.e., the app development phase), 2) after receiving a
+                                    developed app but prior to its deployment by the end user organization (i.e., the
+                                    app acquisition phase) or 3) during deployment of the app by the end user
+                                    organization (i.e., the app deployment phase). These three phases of the mobile
+                                    application life cycle are shown in this figure.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="9d1e8cb6-56c3-4599-a398-126cd4235ddc" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--75 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_069_01.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_069_01.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 115.266px; left: 490px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 1: Software Assurance During the Mobile App Life
+                                        Cycle<sup>7</sup></em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="627bab3c-bde5-4037-ba42-fdb996e72c09"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b8ff14e4-846f-4a95-8674-eb93012dd8e6" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>6 </sup>Christopher Bean, Mike Boyle, Dorothy Cooley, David
+                                    Cooper, Michael Jenkins, Andrew Regenscheid, Murugiah Souppaya; National Institute
+                                    of Standards and Technology; <em>Security Considerations for Code Signing; </em><a
+                                        href="https://csrc.nist.gov/CSRC/media/Publications/white-paper/2018/01/26/security-considerations-for-code-signing/final/documents/security-considerations-for-code-signing.pdf"
+                                        target="_blank">https://csrc.nist.gov/CSRC/media/Publications/white-paper/2018/01/26/security-considerations-for-code-signing/final/documents/security-considerations-for-code-signing.pdf</a>;
+                                    retrieved Juy 2023.</p>
+                                <p class="comment78305"><sup>7</sup> Josh Franklin et al.; <em>NIST SP 800-163 Rev.
+                                        1—Vetting the Security of Mobile Applications; </em><a
+                                        href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-163r1.pdf"
+                                        target="_blank">https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-163r1.pdf</a>.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="screengrid comment78305">
+            <footer class="screen__margin screen__footer u-hide-element vstdonthighlight">
+                <div class="feedback comment78305">
+                    <div class="feedback__content js-feedback-focus comment78305" tabindex="-1"></div>
+                </div>
+                <div class="control-btns comment78305"></div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay-root vstdonthighlight rendered u-hidden comment78305" style="overflow-y: auto;">
+        <div class="modal-cover-holder comment78305">
+            <div class="modal-cover-outer comment78305">
+                <div class="modal-cover comment78305"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

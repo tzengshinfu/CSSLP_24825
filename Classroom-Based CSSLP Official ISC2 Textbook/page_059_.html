@@ -1,0 +1,463 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"
+    style="padding: 0px; font-size: 100%; --USER__lineHeight: 1; --USER__pageMargins: 1; --USER__view: readium-scroll-on;"
+    class="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Security Implications of Test Results (6.5)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="overflow: hidden auto;">
+    <div xmlns:epub="http://www.idpf.org/2007/ops" epub:type="pagebreak" id="pagebreak_59"
+        class="hidden-pagebreak comment78305" title="59"></div>
+
+    <div xmlns:epub="http://www.idpf.org/2007/ops" id="6ea3712c-d910-4b92-99c1-7011b41b04a9"
+        class="screen rendered comment78305" aria-hidden="false">
+        <div class="screengrid comment78305">
+            <header class="screen__margin screen__header u-hide-element vstdonthighlight">
+
+                <div class="screen__heading u-float--clearfix comment78305">
+                    <div class="screen__icon u-float--left comment78305"></div>
+                    <h2 class="screen__title comment78305" tabindex="-1"></h2>
+                </div>
+
+
+                <div class="screen__instructions comment78305"></div>
+            </header>
+        </div>
+
+        <div class="screen__content comment78305">
+
+            <div class="block rendered comment78305">
+                <div id="0d15ee4b-490f-4df0-9b84-e545ee0feb88" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Security Implications of Test Results
+                                (6.5)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2723f5ed-b5f1-4d28-b15d-d9cc4d058f3d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Security test results can provide evidence in support of various
+                                    specific objectives. These objectives include enhancement of the security posture of
+                                    the application (e.g., reduction of application’s attack surface) and compliance
+                                    with security regulations and information security standards.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="dc1a509b-77af-4b2f-9988-7b4bf6f021c6" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Objectives<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="53ad36ce-4766-48b6-93ac-c37b438d8152" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>Explain the security implications of test results.</li>
+                                    <li>Differentiate the types of test results.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c42f114e-fe4a-44f1-a6ad-9fc316c3e234" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Overview<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c8e6e97d-6ff8-4b02-9ecd-7109d07fe339" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Analyzing security test results can help provide an initial
+                                    measure of risk. Test results impact product management and remediation
+                                    prioritization. Security checks must be performed at various checkpoints during the
+                                    build process.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6cfdcad2-441e-41bc-94f7-a988fdb412a7" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Measure of Risk<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c50b6066-c1fe-42c1-be15-167feb4ce445" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Adopting short-term strategies in favor of development speed and
+                                    taking shortcuts during development can result in the accumulation of unaddressed
+                                    security issues and increase the security technical debt.</p>
+                                <p class="comment78305">Analyzing security test results can help provide an initial
+                                    measure of risk. A measure of risk (i.e., high, medium, low) for the vulnerabilities
+                                    identified during security testing can be calculated by considering likelihood and
+                                    impact and by validating the vulnerability findings with penetration tests.</p>
+                                <p class="comment78305">The risk metrics associated with vulnerabilities found during
+                                    security testing can enhance risk management decisions, including the decision to
+                                    mitigate or accept the risk for business or technical reasons.</p>
+                                <p class="comment78305">When evaluating the security posture of an application, it is
+                                    important to take into consideration certain factors, such as the size of the
+                                    application. Application size has been statistically proven to be related to the
+                                    number of issues found in the application during testing. One measure of application
+                                    size is the number of lines of code (LOC). Generally, the larger the application,
+                                    the larger the number of defects.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="43effef4-8888-4566-a1b6-779e425d7a5f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Implications of Security Test
+                                Results<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ade3da17-279e-45f6-b55a-3d57cc8463af" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Security test results provide an insight into the overall
+                                    security posture of the software. Additionally, test results can produce evidence in
+                                    support of compliance with policies, regulations, and standards.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e9b7e9df-3b4a-47cb-8ada-d7cc8b16bf28" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Impact on Product Management<br />
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="24f7ca7d-60d4-4cdf-a224-e8f64f2d81cc" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Stakeholders with significant interest in and reliance on
+                                    security test results include the product management team. This is true considering
+                                    the broad product management responsibilities and the fact that security test
+                                    activities are primarily performed to validate a system’s conformance to security
+                                    requirements.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="26eb1769-8767-44ed-ab67-0e2dfbfcd235" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Remediation Prioritization<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f08856d5-875d-4c58-84d3-c83a210872d9" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">When security testing results reveal security flaws and
+                                    vulnerabilities in software, the product team, in coordination with other
+                                    stakeholders (e.g., business), needs to prioritize the remediation efforts. Various
+                                    factors could impact the prioritization of remedies/fixes with a few of the
+                                    following:</p>
+                                <ul>
+                                    <li>Risk associated with likelihood and resulting impact from exploitation.</li>
+                                    <li>Severity and criticality of a vulnerability.</li>
+                                    <li>Affected users.</li>
+                                    <li>Efforts involved in remediation.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2368ae69-d2dc-41b7-8e9e-73890e32d275" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Break Build Criteria<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="93ed6251-d045-4b8e-bbd8-91945d160859" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Aside from the obvious reason for a break in the build process
+                                    due to the inability to compile the code, the software build process may be broken
+                                    due to several other reasons.</p>
+                                <p class="comment78305">Software builds may also be broken when security checks are
+                                    performed at various checkpoints during the build process. This necessitates the
+                                    clear definition and establishment of pass/fail conditions and criteria.</p>
+                                <p class="comment78305">A good example would be the breaking of the build in the CI/CD
+                                    pipeline to treat security issues with the same level of importance as quality and
+                                    business requirements, and requiring the issues to be addressed through appropriate
+                                    activities (e.g., trigger code review).</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2535ed41-861d-43b8-9e69-c89c4e668e7c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Types of Results<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8b5c1685-4b3f-4269-ae07-034323b9b0a8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Efficient and comprehensive testing relies on the understanding
+                                    of the test data outputs. The following are some considerations when analyzing test
+                                    results.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8c979664-d41f-4ee7-86d2-0e2ea15eef92" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Type I and Type II Errors<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a02706bb-7f2c-4a8f-accb-88e53df59c26" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Software test plans (STP) should include criteria or thresholds
+                                    that determine if the test is successful before it is executed. Consider the example
+                                    of executing a nonfunctional static analysis tool against a recently developed API.
+                                    First, an organization should provide policy guidance stating what should be scanned
+                                    for and what conditions are unsatisfactory. Perhaps something like the following:
+                                </p>
+                                <p style="margin-left: 40px;" class="comment78305"><em>“All source code shall be subject
+                                        to static analysis and determined reasonable free of MITRE CWE Top 25 before
+                                        commits can be made into the main source branch.” </em></p>
+                                <p class="comment78305">Second, static analysis would need to be implemented into gated
+                                    check-in and preconfigured to check for a known set of defects such as MITRE CWE Top
+                                    25. Finally, an attempt to commit the new API to the main branch in the repository
+                                    would automatically execute the static analysis. Pending the results, the code would
+                                    be committed or rejected.</p>
+                                <p class="comment78305">However, sometimes processes and testing are more complicated.
+                                    How do we know there were no defects from the MITRE CWE Top 25? Suppose CWE-787:
+                                    <em>Out-of-bounds Write </em>is not included in the checks for the static analysis
+                                    tool. Or worse yet, the tool fails to identify CWE-787 as indicated. In both cases,
+                                    it would be possible to have false negatives, also known as Type II errors in
+                                    statistics. <strong><button
+                                            data-definition title="Incorrectly classifying malicious activity or software defects as benign. Also referred to as False Negatives."
+                                            class="rendered">Type II errors</button> </strong>may be detected by
+                                    validating the coverage of the present static analysis tool with alternate tools.
+                                </p>
+                                <p class="comment78305">Likewise, it is possible that our static analysis tool produces
+                                    many findings for CWE-20: <em>Improper Input Validation </em>that are all incorrect.
+                                    When testing produces an issue that is a non-issue, the result is said to be a false
+                                    positive, which is also referred to as a <strong><button
+                                            data-definition title="An instance in which a security tool or test incorrectly classifies benign content as malicious. Also referred to as False Positives. Adapted from NIST SP 800-83 Rev. 1"
+                                            class="rendered">Type I error</button>. </strong>Manual review of test
+                                    results can determine the validity of findings. Type II errors are typically
+                                    considered worse. Security practitioners cannot ameliorate unknown issues. Another
+                                    way to classify test results post review would be predicted vs actual, as shown
+                                    below.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ce435e5d-f44b-439f-bdec-c66ea61f4066" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--50 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_059_01.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_059_01.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 261.344px; left: 414.281px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 11: False Positives and Negatives</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="1c9c42df-5c6e-4e6a-ee5b-4a9dd20acf5e"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="bdd89891-4620-4a66-9d9b-05e7160053af" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Accuracy vs Precision<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="96b20e0f-31a3-4c13-9f43-7af2730c0c5c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">In addition to the potential for error within test results,
+                                    there are also varying levels of accuracy and precision. Accuracy and precision are
+                                    unfortunately used interchangeably in communications, but they are distinctly
+                                    different and have implications on test results. Accuracy describes how close a test
+                                    measurement is to correct value. Precision describes how close a sample of test
+                                    results are relative to each other.</p>
+                                <p class="comment78305">From earlier, consider static analysis results that always
+                                    incorrectly report CWE-20 defects to be precise but not accurate. If three or true
+                                    positive defects were all reported as CWE-20 when they were really three different
+                                    CWEs, that would be considered accurate but not precise. The figure below
+                                    illustrates accuracy and precision as being mutually exclusive using a target board
+                                    and makes the concept easier to grasp.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="6dcff25a-ddce-4f8e-890d-88592c04e4ff" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--50 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_059_02.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_059_02.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 162px; left: 414.281px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 12: Accuracy vs Precision</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="cf0e588b-7caf-4ead-9a5a-ab4596dd1aa8"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="screengrid comment78305">
+            <footer class="screen__margin screen__footer u-hide-element vstdonthighlight">
+                <div class="feedback comment78305">
+                    <div class="feedback__content js-feedback-focus comment78305" tabindex="-1"></div>
+                </div>
+                <div class="control-btns comment78305"></div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay-root vstdonthighlight rendered u-hidden comment78305" style="overflow-y: auto;">
+        <div class="modal-cover-holder comment78305">
+            <div class="modal-cover-outer comment78305">
+                <div class="modal-cover comment78305"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,370 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"
+    style="padding: 0px; font-size: 100%; --USER__lineHeight: 1; --USER__pageMargins: 1; --USER__view: readium-scroll-on;"
+    class="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Misuse and Abuse Cases (3.6)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="overflow: hidden auto;">
+    <div xmlns:epub="http://www.idpf.org/2007/ops" epub:type="pagebreak" id="pagebreak_27"
+        class="hidden-pagebreak comment78305" title="27"></div>
+
+    <div xmlns:epub="http://www.idpf.org/2007/ops" id="beaecfe2-8838-4915-8569-bc86b0477edf"
+        class="screen rendered comment78305" aria-hidden="false">
+        <div class="screengrid comment78305">
+            <header class="screen__margin screen__header u-hide-element vstdonthighlight">
+
+                <div class="screen__heading u-float--clearfix comment78305">
+                    <div class="screen__icon u-float--left comment78305"></div>
+                    <h2 class="screen__title comment78305" tabindex="-1"></h2>
+                </div>
+
+
+                <div class="screen__instructions comment78305"></div>
+            </header>
+        </div>
+
+        <div class="screen__content comment78305">
+
+            <div class="block rendered comment78305">
+                <div id="d207556e-8adb-456a-9f82-0746599e6809" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Misuse and Abuse Cases (3.6)<br />
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="36d6a46d-afad-4e17-9aab-2e4bdfea43b8" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Objectives<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a8e143a1-893f-4b76-a815-d3abb2ff91f1" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>Describe misuse and abuse cases and their relevance to known attack patterns.
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="42d5c328-1709-48d7-8e67-3743f3d533f3" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Misuse and Abuse Cases<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d4fd28fc-aac9-4143-acf4-fabec5c61e22" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Use cases are undoubtedly helpful when it comes to eliciting
+                                    software functional requirements and reaching requirements maturation but for
+                                    security practitioners this is only half the equation. To engineer trustworthy,
+                                    secure systems, practitioners must also advocate for abuse and misuse cases. Each
+                                    phase of the secure software life cycle has its own relevant security activities.
+                                    Various security-oriented methodologies (e.g., Microsoft SDL) regard misuse and
+                                    <strong><button
+                                            data-definition title="A reference to a use case from a hostile actor’s perspective. Created from use cases and likely representing an interaction with the system in ways that the system was not designed to be used."
+                                            class="rendered">abuse cases</button> </strong>as an effective tool for
+                                    modeling security requirements.
+                                </p>
+                                <p class="comment78305">To contrast use cases, misuse and abuse cases incapsulate
+                                    thinking with the perspective of malicious subjects aiming to inflict damage rather
+                                    than end-user activities. When considering the security of an application, abuse
+                                    cases can be indispensable. They can aid development teams by identifying specific
+                                    attacks against the application. With these attacks identified:</p>
+                                <ul>
+                                    <li>The business risk from each corresponding attack can be evaluated.</li>
+                                    <li>Security requirements can be developed.</li>
+                                    <li>Safeguards and countermeasures can be determined.</li>
+                                    <li>Impact on the project timelines, schedules and resources can be better
+                                        estimated.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4612f537-b2d3-42ec-88f3-bea32fcdfb6c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Notion of an Abuse Case<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a4dd39b9-9f6d-44d3-85f6-4e56aa8c0b83" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">OWASP describes the notion of abuse cases as “a way to use a
+                                    feature that was not expected by the implementer, allowing an attacker to influence
+                                    the feature or outcome of use of the feature based on the attacker action (or
+                                    input).”<sup>25</sup></p>
+                                <p class="comment78305">The software company Synopsys, Inc., enumerates various ways
+                                    that security requirements can be driven by abuse cases: “Misuse and abuse cases
+                                    describe how users can misuse or exploit weak controls in software features to
+                                    attack an application. A direct attack against business functionalities, which may
+                                    bring in revenue or provide a positive user experience, can have a tangible business
+                                    impact. Abuse cases can be an effective way to drive security requirements to
+                                    properly protect these critical business use cases.”<sup>26</sup></p>
+                                <p class="comment78305">An example of an abuse case could be adding large quantities of
+                                    an item to a shopping cart to reduce the buying opportunity for other users. Another
+                                    possibility would be using automated means (e.g., botnets) to create shopping carts
+                                    and make periodic item reservations in large quantities.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="c0f0d086-016c-4770-926c-c3b6e5315c43" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><sup>25</sup> OWASP Foundation; <em>Abuse Case Cheat Sheet;
+                                    </em><a
+                                        href="https://cheatsheetseries.owasp.org/cheatsheets/Abuse_Case_Cheat_Sheet.html"
+                                        target="_blank">https://cheatsheetseries.owasp.org/cheatsheets/Abuse_Case_Cheat_Sheet.html</a>;
+                                    retrieved June 2023.</p>
+                                <p class="comment78305"><sup>26</sup> Synopsys; <em>3 ways abuse cases can drive
+                                        security requirements; </em>2015; <a
+                                        href="https://www.synopsys.com/blogs/software-security/abuse-cases-can-drive-security-requirements/"
+                                        target="_blank">https://www.synopsys.com/blogs/software-security/abusecases-can-drive-security-requirements/</a>;
+                                    retrieved 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0c7a63fa-1b9c-46d2-8891-f13b358dea7f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Developing <strong><button
+                                            data-definition title="A reference to a use case from a hostile actor’s perspective. Created from use cases and likely representing an interaction with the system in ways that the system was not designed to be used."
+                                            class="rendered">misuse cases</button> </strong>can also benefit the
+                                    security testing phase of the life cycle, where test cases can be created to assure
+                                    protection against identified abuse scenarios.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="f5c4efea-2da0-4f00-8d6d-1a29f69303a4" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Process to Develop Misuse and Abuse
+                                Cases<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="35744979-706d-45e1-9f54-3615aa04e648" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">The process for developing meaningful or useful misuse cases is
+                                    not trivial. It requires the ability to think like attackers and to be experienced
+                                    with attack patterns,<strong> </strong>among other relevant skills.</p>
+                                <p class="comment78305">The process involves development of use cases as the first step,
+                                    followed by creation of data-flow diagrams (DFDs) for implementation of the use
+                                    cases. With the understanding of the data flows, potential threats are subsequently
+                                    identified, and misuse cases based on the identified threats are enumerated. At this
+                                    stage, the knowledge of the relevant attack patterns must be used to derive the
+                                    “abusive interaction” with the system to create the misuse cases.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5d48c7ee-b8c9-4780-b21e-5ee03c30a172" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Dictionary of Known Attack
+                                Patterns<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0aa5fdc3-9b84-4953-b25e-9301ce228364" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">A dictionary of known patterns of attack commonly utilized by
+                                    bad actors can aid in understanding how common attacks work (i.e., understanding the
+                                    anatomy of an attack).</p>
+                                <p class="comment78305"><strong>Common Attack Pattern Enumeration and Classification
+                                        (CAPEC) </strong>is a good example of a publicly available catalog of common
+                                    attack patterns, where patterns are presented by the mechanism or the domain of
+                                    attacks. CAPEC was developed by the U.S. Department of Homeland Security.</p>
+                                <p class="comment78305">Some well-known attack patterns include:</p>
+                                <ul>
+                                    <li>HTTP Response Splitting (CAPEC-34)</li>
+                                    <li>Session Fixation (CAPEC-61)</li>
+                                    <li>Cross Site Request Forgery (CAPEC-62)</li>
+                                    <li>SQL Injection (CAPEC-66)</li>
+                                    <li>Cross-Site Scripting (CAPEC-63)</li>
+                                    <li>Buffer Overflow (CAPEC-100)</li>
+                                    <li>Clickjacking (CAPEC-103)</li>
+                                    <li>Relative Path Traversal (CAPEC-139)</li>
+                                    <li>XML Attribute Blowup (CAPEC-229)</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7ac5c172-4f16-492d-af01-813efb194833" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">MITRE Adversarial Tactics, Techniques,
+                                and Common Knowledge (ATT&amp;CK)<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e2d20dc5-2fca-4425-8308-6399ed46278a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">ATT&amp;CK is a project started in 2013 by The MITRE Corporation
+                                    to document common tactics, techniques, and procedures used by advanced persistent
+                                    threats.</p>
+                                <p class="comment78305">ATT&amp;CK is largely a knowledge base of adversarial
+                                    techniques—a breakdown and classification of offensively oriented actions that can
+                                    be used against platforms such as Windows. Unlike prior work in this area, the focus
+                                    isn’t on the tools and malware that adversaries use but on how they interact with
+                                    systems during an operation.<sup>27</sup></p>
+                                <p class="comment78305"><sup>27</sup> Blake Strom, Mitre.org; <em>ATT&amp;CK 101,
+                                    </em><a href="https://medium.com/mitre-attack/att-ck-101-17074d3bc62"
+                                        target="_blank">https://medium.com/mitre-attack/att-ck-101-17074d3bc62</a>;
+                                    retrieved June 2023.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="e0571955-8c0e-4be4-b1ae-81b3df8923b2" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">ATT&amp;CK Techniques and
+                                Tactics<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="cbe4c478-b4bc-4c99-8902-fec6293c89e9" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">MITRE describes techniques and tactics as follows:</p>
+                                <ul>
+                                    <li><em>Techniques. </em>These are <em>how </em>an adversary may achieve its
+                                        objective by performing an action. They may also represent <em>what </em>an
+                                        adversary gains by performing an action. An example of a technique to gain
+                                        initial foothold within a network would be “Drive-by Compromise.” Another
+                                        example would be taking advantage of a weakness (e.g., a bug, a glitch, or a
+                                        design vulnerability) in an internet-facing system/software.</li>
+                                    <li><em>Tactics. </em>These are the <em>why </em>of an ATT&amp;CK technique. They
+                                        cover things that adversaries do during an operation: discover information, move
+                                        laterally, execute files, and exfiltrate data.</li>
+                                </ul>
+                                <p class="comment78305">The relationship between tactics and techniques can be
+                                    visualized in the ATT&amp;CK matrices. Currently, matrices for common platforms
+                                    (e.g., Windows, macOS, Linux, AWS, Azure) are available.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="screengrid comment78305">
+            <footer class="screen__margin screen__footer u-hide-element vstdonthighlight">
+                <div class="feedback comment78305">
+                    <div class="feedback__content js-feedback-focus comment78305" tabindex="-1"></div>
+                </div>
+                <div class="control-btns comment78305"></div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay-root vstdonthighlight rendered comment78305 u-hidden" style="overflow-y: auto;">
+        <div class="modal-cover-holder comment78305">
+            <div class="modal-cover-outer comment78305">
+                <div class="modal-cover comment78305"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

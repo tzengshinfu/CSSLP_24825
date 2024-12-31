@@ -1,0 +1,506 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"
+    style="padding: 0px; font-size: 100%; --USER__lineHeight: 1; --USER__pageMargins: 1; --USER__view: readium-scroll-on;"
+    class="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Data Security Testing (6.7)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="overflow: hidden auto;">
+    <div xmlns:epub="http://www.idpf.org/2007/ops" epub:type="pagebreak" id="pagebreak_61"
+        class="hidden-pagebreak comment78305" title="61"></div>
+
+    <div xmlns:epub="http://www.idpf.org/2007/ops" id="bc74b844-0fd3-4822-9b89-2648fd0d413d"
+        class="screen rendered comment78305" aria-hidden="false">
+        <div class="screengrid comment78305">
+            <header class="screen__margin screen__header u-hide-element vstdonthighlight">
+
+                <div class="screen__heading u-float--clearfix comment78305">
+                    <div class="screen__icon u-float--left comment78305"></div>
+                    <h2 class="screen__title comment78305" tabindex="-1"></h2>
+                </div>
+
+
+                <div class="screen__instructions comment78305"></div>
+            </header>
+        </div>
+
+        <div class="screen__content comment78305">
+
+            <div class="block rendered comment78305">
+                <div id="e1d0b5d0-86eb-4de2-975c-32d2e7736f14" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Data Security Testing (6.7)<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="9cf85761-1e96-4e2f-84ef-cd0a3011abc9" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Securing test data is no different from securing any other type
+                                    of data in terms of the reasons for doing it (ensure confidentiality and integrity)
+                                    and how to do it (apply safeguards and countermeasures).</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="16c8886b-b83e-453b-9da3-ad295621d7e2" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Objective<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="bfe32af6-669e-4a68-a2bd-84a9067238bd" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <ul>
+                                    <li>Explain the generation of test data and ramifications of using production data.
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="26e5abe7-6211-4d2e-b92a-df6e0c116019" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Overview<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d5875666-0063-4778-b14d-48d8dd637747" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Test data must be precise and complete. In most cases, using
+                                    production data in a test environment is not acceptable, especially when dealing
+                                    with privacy data. Safeguards must be put in place to protect nonconfidential
+                                    information in every environment as deemed necessary. </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="b7f33b67-b061-4001-8c38-be9803b8882a" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Generate Test Data<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1a6fb0e6-477f-410f-a2fa-b5ecaf5daa61" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Test data is data that has been specifically identified for use
+                                    in tests. Test data must be managed carefully to ensure confidentiality and privacy.
+                                </p>
+                                <p class="comment78305">Test data is often overlooked by those using it as well as those
+                                    who are charged to protect it. Often test databases are compiled from production
+                                    data. This production database may contain specific, if not sensitive, data such as
+                                    employee information, payroll data, sales forecasts, and customer information.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="2d3ed1a5-6479-401e-9460-6db7a17d55d4" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Large Volumes of Data<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="cca3292f-331a-47d0-9165-6d212d610528" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">When large volumes of test data are needed to test an
+                                    application (e.g., for performance testing, load testing, or stress testing), manual
+                                    insertion of data in a database is not a practical option. Test data generation
+                                    tools may be used for this purpose.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7513bc75-67a4-47d5-a6d5-30bda194dcb0" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Production Data<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="8501e51e-940c-4777-854b-eb23224f7816" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">If sensitive data is extracted from production databases and
+                                    moved or used as test data, the security of the sensitive data may be compromised.
+                                    This data must be sanitized by whatever means possible before it can be used. Once
+                                    data has been moved out of production, security controls are often not as
+                                    restrictive. Often it is moved to a less restrictive site, and access is given to a
+                                    wide variety of developers and QA personnel. To avoid this situation, test data
+                                    should be generated from generic data or sanitized to eliminate security issues
+                                    regarding sensitive data.</p>
+                                <p class="comment78305">In cases where production data needs to be migrated, only
+                                    nonconfidential information must be migrated or the data must be obfuscated or
+                                    masked. Referential integrity constraints may pose a challenge.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d2b214f8-976d-4ba2-af84-e655ef4d5ae1" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Referential Integrity<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a20d7eac-ac96-44ea-8817-bf6d7bd12f42" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Relational database management systems (RDBMSs) must provide
+                                    methods for preserving the consistency and integrity of data in the database. Nearly
+                                    all RDBMS products on the market today, whether commercial or open source, have a
+                                    way of enforcing the referential integrity rules.</p>
+                                <p class="comment78305">Referential integrity relies on the concept of primary keys
+                                    (unique identifiers) and foreign keys when relationships are set up in the database.
+                                    To maintain integrity, operations performed on one table may require operations to
+                                    be performed on other tables as well.</p>
+                                <p class="comment78305">As an example, if a record is removed from one table,
+                                    corresponding records may also have to be removed (e.g., through cascade delete
+                                    operation) from a related table to maintain the integrity of the database and
+                                    prevent records from becoming orphaned, as shown in this figure. There is a foreign
+                                    key (Artist_ID) value in the album table that references a nonexistent artist.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="a24f0fb0-1c8f-47db-b458-b38bbc3ac9b3" class="block-content engine comment78305">
+                    <div class="static u-float--clearfix screen__margin comment78305">
+                        <figure class="fig fig--100 fig--center">
+                            <div class="image-zoom-holder comment78305">
+                                <img class="zoomable-image vst-click" src="./page_061_01.png" alt=""
+                                    mosaic-plugin-image-tools-active-img="true" style="cursor: zoom-in;" /><img
+                                    class="image-zoom-proxy" src="./page_061_01.png" style="display: none;" />
+                                <button class="image-zoom-button"
+                                    style="display: block; position: absolute; top: 377.406px; left: 565.719px;"><span
+                                        class="visuallyhidden comment78305">zoom image</span></button>
+                            </div>
+                            <figcaption class="fig-caption fig__caption--bottom">
+                                <p class="comment78305"><em>Figure 13: Broken Link</em></p>
+                            </figcaption>
+                        </figure><mosaic-plugin-image-tools class="vstskip vstignore vst-skip-enhanced-formatting"
+                            data-markup-id="ef788b83-0176-44d6-c53c-61673ff561ca"
+                            style="position: absolute; left: -1000px; top: -1000px;"></mosaic-plugin-image-tools>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="65ee33d6-6322-4f3d-b3e5-cb3b8603797c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Statistical Quality<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="5f43e3e0-511f-4f96-800b-952de0596406" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Depending on the type and the objective of the test, selected
+                                    test data may need to meet certain quality requirements. When these quality
+                                    requirements are not met, results of the test may not be accurate and test goals may
+                                    not be reached.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ed004bc4-ff88-4312-bc58-3c67b8d1da0d" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Production Representative<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="bb6b032f-84a9-4b52-af10-7b8d2860d22c" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">One possibility is for organizations to attempt to use subsets
+                                    of production databases that are relevant to the test cases.</p>
+                                <p class="comment78305">Creating referentially intact data subsets of production data
+                                    for modern enterprise applications can be a daunting task. Enterprise applications
+                                    may be complex, spanning multiple schemas containing thousands of tables governed by
+                                    myriad business rules. The reason for the difficulty lies in the large and often
+                                    complex data models that govern the relationships between the columns of the tables
+                                    that sometimes span across different schemas.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="42bf9236-793c-427a-871f-0113390eb0fc" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h3 class="heading heading--subheadinga comment78305">Production Data Reuse<br /></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="0c4ea2b2-5f50-43a3-88c3-2b240df8032e" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Prior to the use of production data for testing, security and
+                                    privacy risks must be weighed against the potential benefits of reuse. Generally,
+                                    the use of production data for testing requires altering or removing sensitive
+                                    information. <strong><button
+                                            data-definition title="The processes of hiding, replacing, or omitting sensitive information from a specific data set."
+                                            class="rendered">Obfuscation</button> </strong>(i.e., masking),
+                                    anonymization, and tokenization are different techniques for protecting data without
+                                    encryption.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="bc10295b-320a-4c5c-8d22-5ad36707cd63" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Obfuscation<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d7b9c74e-e8b6-4bc3-a4c8-16ec165af025" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305">Data masking and data obfuscation are the processes of hiding,
+                                    replacing, or omitting sensitive information from a specific data set. Data masking
+                                    is usually used to protect specific data sets such as PII or commercially sensitive
+                                    data or to comply with certain regulations such as HIPAA or PCI-DSS. Data masking
+                                    and obfuscation are also widely used for test platforms (where suitable test data is
+                                    not available). Both techniques are typically applied when migrating test or
+                                    development environments to the cloud or when protecting production environments
+                                    from threats such as data exposure by insiders or outsiders.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="7ab0a8dd-dc37-4068-aae7-4e7789d36d5f" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Anonymization<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="4460770e-9e3b-4afc-8b37-150b532ce645" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><strong><button
+                                            data-definition title="The process of removing identifiers to prevent identification of individuals or sensitive information."
+                                            class="rendered">Anonymization</button> </strong>is the process of removing
+                                    identifiers to prevent identification of individuals or sensitive information. The
+                                    process of anonymization is similar to masking and includes identifying the relevant
+                                    information to anonymize and choosing a relevant method for obscuring the data.</p>
+                                <p class="comment78305">Since true anonymization is difficult to achieve, some
+                                    organizations may consider the use of pseudonymization techniques, which involve
+                                    replacing actual data with pseudonyms. GDPR has defined pseudonymization as the
+                                    processing of personal data in such a way that the data can no longer be attributed
+                                    to a specific data subject without the use of additional information.</p>
+                                <p class="comment78305">Techniques to pseudonymize data have been proposed, including
+                                    scrambling, encryption, tokenization, and data blurring. It is important to
+                                    understand that pseudonymization does not equate to anonymization.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="d63d5c99-0c02-4096-a5d6-a731085698ef" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Tokenization<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="928c3d68-48ce-47d1-af1f-45a3fc5c9f15" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><strong><button
+                                            data-definition title="A system to prevent identification of individuals or leakage of sensitive information by swapping sensitive data, with a generated identifier. This system is used frequently in the payment card industry."
+                                            class="rendered">Tokenization</button>, </strong>like anonymization, aims to
+                                    prevent identification of individuals or leakage of sensitive information. Unlike
+                                    anonymization, tokenization involves swapping sensitive data with a generated
+                                    identifier (i.e., token). Further, tokens cannot be reverse engineered to reveal the
+                                    original data because the token was not derived from the data it represents. The
+                                    system of origin must be used to perform de-tokenization. Tokenization is used
+                                    frequently in the payment card industry.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="ea2732ed-2e40-488c-a6ac-bab416879562" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+
+                            <h4 class="heading heading--subheadingb comment78305">Sanitization<br /></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block rendered comment78305">
+                <div id="1d69804b-6292-42ee-b9b0-c0c1fd28c2ec" class="block-content engine comment78305">
+                    <div class="static comment78305">
+                        <div class="screen__margin comment78305">
+                            <div class="static__text--indent comment78305">
+                                <p class="comment78305"><strong><button
+                                            data-definition title="A process at the end of the data life cycle that renders access to data infeasible for a given level of effort. Actions to achieve this can include Clear, Purge, and Destroy."
+                                            class="rendered">Sanitization</button> </strong>marks the end of the test
+                                    data life cycle. More specifically, sanitization is a process to render access to
+                                    data on the media infeasible for a given level of effort. Clear, Purge, and Destroy
+                                    are actions that can be taken to sanitize media. NIST SP 800-88 Guidelines for Media
+                                    Sanitization provides techniques which can easily be adapted to support software
+                                    testing data.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="screengrid comment78305">
+            <footer class="screen__margin screen__footer u-hide-element vstdonthighlight">
+                <div class="feedback comment78305">
+                    <div class="feedback__content js-feedback-focus comment78305" tabindex="-1"></div>
+                </div>
+                <div class="control-btns comment78305"></div>
+            </footer>
+        </div>
+    </div>
+    <div class="overlay-root vstdonthighlight rendered u-hidden comment78305" style="overflow-y: auto;">
+        <div class="modal-cover-holder comment78305">
+            <div class="modal-cover-outer comment78305">
+                <div class="modal-cover comment78305"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>
