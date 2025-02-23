@@ -910,3 +910,61 @@ https://dodcio.defense.gov/cmmc/About/
     Level1. Foundational: 14 based on FAR 52.204-21 cross referenced to NIST SP 800-171 rev 2
     Level2. Advanced: 110 practices aligned with NIST SP 800-171
     Level3. Expert: 110+ practices based on NIST SP 800-171 plus a subset of the security requirements in NIST SP 800-172
+
+ISA/IEC 62443-4-1
+https://s3.us-east-1.amazonaws.com/fonteva-customer-media/00D1I000002JB6nUAG/TalCgZtJ_S_62443_4_1_2018_2nd_printing_TOC_pdf
+    Practice 1 – Security management
+        SM-1: Development process
+        SM-2: Identification of responsibilities
+        SM-3: Identification of applicability
+        SM-4: Security expertise
+        SM-5: Process scoping
+        SM-6: File integrity
+        SM-7: Development environment security (IT)
+        SM-8: Controls for private keys (IT)
+        SM-9: Security requirements for externally provided components (Supply Chain)
+        SM-10: Custom developed components from third-party suppliers (Supply Chain)
+        SM-11: Assessing and addressing security-related issues
+        SM-12: Process verification
+        SM-13: Continuous improvement
+    Practice 2 – Specification of security requirements
+        SR-1: Product security context
+        SR-2: Threat model
+        SR-3: Product security requirements
+        SR-4: Product security requirements content
+        SR-5: Security requirements review
+    Practice 3 – Secure by design
+        SD-1: Secure design principles
+        SD-2: Defense in depth design
+        SD-3: Security design review
+        SD-4: Secure design best practices
+    Practice 4 – Secure implementation
+        SI-1: Security implementation review
+        SI-2: Secure coding standards
+    Practice 5 – Security verification and validation testing
+        SVV-1: Security requirements testing
+        SVV-2: Threat mitigation testing
+        SVV-3: Vulnerability testing
+        SVV-4: Penetration testing
+        SVV-5: Independence of testers
+    Practice 6 – Management of security-related issues
+        DM-1: Receiving notifications of security-related issues
+        DM-2: Reviewing security-related issues
+        DM-3: Assessing security-related issues
+        DM-4: Addressing security-related issues
+        DM-5: Disclosing security-related issues
+        DM-6: Periodic review of security defect management practice
+    Practice 7 – Security update management
+        SUM-1: Security update qualification
+        SUM-2: Security update documentation
+        SUM-3: Dependent component or operating system security update documentation
+        SUM-4: Security update delivery
+        SUM-5: Timely delivery of security patches
+    Practice 8 – Security guidelines
+        SG-1: Product defense in depth
+        SG-2: Defense in depth measures expected in the environment
+        SG-3: Security hardening guidelines
+        SG-4: Secure disposal guidelines
+        SG-5: Secure operation guidelines
+        SG-6: Account management guidelines
+        SG-7: Documentation review
